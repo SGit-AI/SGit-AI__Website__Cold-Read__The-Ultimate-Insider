@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "re-checked since 4a71ede: nothing new; debrief 2026-10-30__wake-6-quiet.md; status.json idle, quiet 1 of 2",
    "at": "2026-10-30T06:34:22Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "9481290 touches only team/security (debrief, status.json, wake record); 0 outside scope; build, gate and agents check pass. No keys, tokens, personal details, agent-directing text or em-dashes.",
+   "at": "2026-10-30T06:34:51Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Only the quiet-wake debrief, status.json and the wake record changed: items 1-2 done, item 3 kept (no letters, board or register changes). Conditions kept: no pause or finish, no comms or schedule touched. Nothing unplanned.",
+   "at": "2026-10-30T06:34:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:34:51Z",
+ "outcome": "idle"
 }
