@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T07:33:19Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (conductor__005 in done/; no board, requests, To-grc: trailers or HOLD). 2. governance.md step 7: out-of-order wakes across the source from post_check verdicts; members' agreed_by against the conductor's records; cited at 298be4e or 'the record does not say'. 3. status.json and a debrief. All inside policy.json.",
+   "at": "2026-10-30T07:33:40Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/grc/**; reads this repo and the source at 298be4e; no requests, HOLD or stop condition; no secret, other-member path, rule change, main or version. Conditions: cite only 298be4e or 'the record does not say'; read conductor records only; vault_check if comms touched.",
+   "at": "2026-10-30T07:33:56Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md step 7 (sections 19 and 20; O12, O13 in section 18); debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T07:34:44Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

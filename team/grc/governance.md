@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 6 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 7 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -168,6 +168,28 @@ The source kept one register of decisions put to the editor: `evidence/proposals
 - **Answer 6 (the editor lane, "no longer a blocker"):** not traced in this step.
 - **Answer 7 (`api.newsroom.sgit.ai`):** not in `src/` at `298be4e`. It appears only in the night's articles, so the confirmation reached no page.
 
+## 19. The five steps in practice: 162 wake records
+
+All wake records at `298be4e` (`team/*/wakes/*.json`), read as data.
+
+- **162 records.** Post-check verdicts: 148 `as-planned`, 12 `partial`, and 2 with no post-check. Outcomes: 148 `ok`, 6 `partial`, 6 `idle`, 2 never closed.
+- **No step ever said `stop`.** The one hold in the record (18:44, section 9) came from the editor's word about his usage limit, not from a review.
+- **Three wakes did the work before the reviews,** each at the editor's word or in his presence:
+  - `team/deck/wakes/20261029T141943Z.json` ("editor's request"). Its post-check says: "the five steps ran out of order because the editor was waiting live".
+  - `team/deck/wakes/20261029T172130Z.json` (17:20, the live slides; section 16).
+  - `team/dev/wakes/20261029T162458Z.json` ("the editor's wake, in session"). Its post-check says: "released before the post steps, against WAKE.md".
+- **Two wakes were never closed.**
+  - `team/dev/wakes/20261029T174850Z.json` (the scheduled wake at 17:47) has no work step and no post-check.
+  - `team/deck/wakes/20261029T182009Z.json` (fired 18:19) has a plan and nothing after it.
+  - Both opened before the hold of 18:44. What they did, if anything: the record does not say.
+- **The pattern.** Every out-of-order wake in the record is an editor's-request wake. The rule "you work only after both say go" (`CLAUDE.md` at `298be4e`) gave way when the editor was present. No record says he waived it, and no rule says his presence may.
+- **Members' records of the 17:40 agreement.** dev and the storyteller record the editor's "So I agree with all those policies" by citing the conductor (`c3f546e`, mail 042 and 016), not their own sessions. motion records separate words in its own session at the same time ("Yes I agree on the policy"). So for three of the six policies of 17:40, the only record of the editor's words is the conductor's, and the members copied it (section 3).
+
+## 20. Open decisions, continued
+
+O12. **The five steps gave way to the editor's presence** three times, with no recorded waiver (section 19).
+O13. **Two wakes left open** before the hold, never closed (section 19).
+
 ## 18. Every open decision, one list (was section 15)
 
 For the signed version, every decision this map has found open at `298be4e`. The numbers here replace the running numbers in sections 4, 7, 10 and 13.
@@ -184,10 +206,11 @@ For the signed version, every decision this map has found open at `298be4e`. The
 | O8 | no written rule on who may release to the default branch | 12 |
 | O9 | the live Linux slide: the editor's words in two sessions disagree (a link at 17:16, iframes at 17:20); the later shipped, built before its plan and pre-review, and no review checked security's conditions of 17:2x | 14, 16 |
 | O11 | the source's security role was never held: every security verdict is a sub-agent in another member's wake | 16 |
+| O12 | the five steps gave way to the editor's presence three times, with no recorded waiver | 19 |
+| O13 | two wakes (dev 17:47, deck 18:19) never closed | 19 |
 | O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
 
 ## Next steps
 
 - Answers 2, 4 and 6 of 17:15, and the decisions of 15:00, against the files.
-- The members' own `changes_since_draft` and `agreed_by` against the conductor's records of the same words.
-- Other wakes in the record that ran out of order, from the `post_check` verdicts of every member's wakes.
+- Put section 18 last and renumber, for the signed version; then sign it.
