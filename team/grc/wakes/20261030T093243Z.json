@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T09:32:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none new (conductor__005 in done/; no board, requests or To-grc: trailers since ab38fa6). 2. Confirm nothing new (no HOLD, no unexplained change in team/grc); record the first of two quiet wakes in team/grc/status.json and the wake record. 3. Gate and release to dev. No finish yet.",
+   "at": "2026-10-30T09:33:10Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Only team/grc/status.json and the wake record; gate and release to dev. No secrets, cross-member writes or rule changes; no schedule; no finish yet. Conditions: confirm no HOLD and no unexplained change in team/grc; never push to main.",
+   "at": "2026-10-30T09:33:24Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "none",
+   "comment": "idle: nothing new; status.json records the first quiet wake; gate clean",
+   "at": "2026-10-30T09:33:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Only team/grc/status.json and the wake record; no key, token, vault key or personal detail; no directive text; gate clean; agents check 0 outside scope.",
+   "at": "2026-10-30T09:33:56Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "No new requests; quiet wake recorded in status.json and the wake record; gate clean; no finish or schedule change; conditions kept; nothing unplanned.",
+   "at": "2026-10-30T09:33:56Z"
+  }
+ },
+ "closed": "2026-10-30T09:33:56Z",
+ "outcome": "idle"
+}

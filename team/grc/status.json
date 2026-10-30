@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 8,
- "state": "active: eighth wake (scheduled), governance.md signed on dev (sha256:6cda488564949dfa), open list O1 to O14 last",
+ "round": 9,
+ "state": "idle: ninth wake (scheduled, 09:32 UTC) found nothing new: no hold, no mail, no requests, no change in team/grc; the first of two quiet wakes before finishing",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -38,7 +38,7 @@
  ],
  "next": [
   {
-   "what": "two wakes checking for anything new; if none, a closing debrief and finish (WAKE.md, Finishing)"
+   "what": "10:32 UTC wake: if again nothing new, the closing debrief and finish (WAKE.md, Finishing)"
   }
  ],
  "asks": [],
