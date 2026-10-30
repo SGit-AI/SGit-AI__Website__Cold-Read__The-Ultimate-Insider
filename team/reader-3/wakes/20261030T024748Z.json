@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "notice 010 filed to inbox and done; review.md draft 2 (verdict, price, put-down, three new findings with paths at 298be4e); debrief with timings and a screenshot; status.json without the vault-key ask; build and gate clean before commit",
    "at": "2026-10-30T02:51:18Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Commit 2685787: 7 files, all in team/reader-3/** and comms/mail/reader-3/**. Build and gate clean; agents.py 0 outside scope; vault_check comms clean. No key, token or personal detail; no agent-directing text; mailroom original untouched.",
+   "at": "2026-10-30T02:51:52Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "Commit 2685787. 1 mail: done, notice 010 in inbox and done, original untouched, no reply. 2 review draft 2: done, price, put-down, new findings, debrief with screenshot. 3 status.json: done, vault-key ask dropped. Conditions kept.",
+   "at": "2026-10-30T02:51:52Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:51:52Z",
+ "outcome": "ok"
 }
