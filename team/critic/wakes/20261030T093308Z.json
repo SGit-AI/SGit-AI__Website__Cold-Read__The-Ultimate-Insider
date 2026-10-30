@@ -24,8 +24,22 @@
    "verdict": "none",
    "comment": "idle: quiet wake 1 of 2; the grc map signed (section 21, O14, renumbered list) changes nothing a finding relies on; status.json updated",
    "at": "2026-10-30T09:33:48Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 370e5e1..HEAD touches only team/critic/status.json and the wake record, inside scope.writes (0 outside); gate clean; no key, token or personal detail; no instruction-like text; nothing harms another member.",
+   "at": "2026-10-30T09:34:17Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Idle wake (quiet wake 1 of 2) editing only status.json and the wake record, critique.md untouched; the diff shows exactly those two files. Nothing unplanned.",
+   "at": "2026-10-30T09:34:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T09:34:17Z",
+ "outcome": "idle"
 }
