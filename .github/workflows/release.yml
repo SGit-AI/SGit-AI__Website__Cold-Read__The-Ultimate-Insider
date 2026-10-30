@@ -28,6 +28,22 @@ jobs:
           fi
       - name: build (pending) and gate
         run: python3 admin/build/build.py --version pending && python3 admin/build/validate.py
+      - name: guard, the key tool matches its published copy
+        # the editor, 30 October 2026: protect admin/tools/. A pin in the repository changes with its file; this compares
+        # both with the copy published at pki.sgit.ai, a source outside the repository. A mismatch fails; an unreachable
+        # host only warns, so an outage never blocks the team. The workflow itself is editable too: the editor's GitHub
+        # ruleset on admin/tools/** and .github/workflows/** is what closes that (comms/issues/conductor/issues/007).
+        run: |
+          PIN=$(cut -d' ' -f1 admin/tools/pki-agent.mjs.sha256)
+          FILE=$(sha256sum admin/tools/pki-agent.mjs | cut -d' ' -f1)
+          [ "$PIN" = "$FILE" ] || { echo "::error::admin/tools/pki-agent.mjs does not match its pin"; exit 1; }
+          CODE=$(curl -sS --max-time 30 --retry 2 -o "$RUNNER_TEMP/published.mjs" -w '%{http_code}' https://pki.sgit.ai/agents/pki-agent.mjs || echo 000)
+          if [ "$CODE" != 200 ] || [ ! -s "$RUNNER_TEMP/published.mjs" ]; then
+            echo "::warning::pki.sgit.ai not reachable (HTTP $CODE): the key tool was not compared with its published copy"; exit 0; fi
+          PUB=$(sha256sum "$RUNNER_TEMP/published.mjs" | cut -d' ' -f1)
+          echo "pin $PIN"; echo "published $PUB"
+          [ "$PUB" = "$PIN" ] || { echo "::error::the pinned key tool differs from the copy published at pki.sgit.ai"; exit 1; }
+          echo "the key tool matches its pin and its published copy"
 
   release:
     needs: gate

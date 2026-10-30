@@ -34,7 +34,7 @@ What is in this repository now, kept current by whoever ships. Last updated by c
 
 ## Not working yet
 
-- **The key tool's pin** is checked by the gate (since 482c9b6), but a commit that changes `admin/tools/pki-agent.mjs` and its `.sha256` together still passes: a pin in the same repository cannot stop whoever can push. The stronger control waits on the editor (`comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md`).
+- **The key tool's pin** is checked by the gate (since 482c9b6), and CI compares the tool and its pin with the copy published at pki.sgit.ai (the editor's word, 30 October 2026): a commit changing both together now fails, unless it also edits the workflow. The GitHub ruleset that closes that waits on the editor (`comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md`).
 
 - **The editor's pane** (`src/static/assets/pane.js`): ported, but `lane.json` pointed at the source's lane vault and the source conductor's key. It now holds no lane, so a note cannot be sent anywhere; this team never writes to the source's lane.
 - **The site**: live at https://the-ultimate-insider.cold-read.sgit.ai (Pages, source "GitHub Actions", custom domain set by the editor).
