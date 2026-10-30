@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Item 1: no requests. Item 2: review.md section 6 (live-demo half as a buyer, external demo sites not loaded) and section 7 (verdict); signed at its head. Item 3: debrief 2026-10-30__live-demo.md with two screenshots, status.json.",
    "at": "2026-10-30T03:51:17Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 06a9dfa..HEAD touches only team/reader-1/** (review.md, status.json, debrief and two screenshots, wake record); comms/ untouched. Only a public key fingerprint; no secrets, personal detail or agent-directing text. Build and gate clean; agents.py check 0 outside scope.",
+   "at": "2026-10-30T03:51:44Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 No requests: done. 2 Live-demo half: review.md sections 6 and 7, signed at head (24d8a29). 3 Wake record, debrief 2026-10-30__live-demo.md with two screenshots, status.json: done. Conditions kept: only 298be4e, external demo sites blocked, no em-dashes, no key, writes only in team/reader-1. Nothing unplanned.",
+   "at": "2026-10-30T03:51:44Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:51:44Z",
+ "outcome": "ok"
 }
