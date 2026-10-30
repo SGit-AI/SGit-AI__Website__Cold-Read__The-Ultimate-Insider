@@ -1,0 +1,24 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-30T05:02:56Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1) Letters first: copy reader-3__001, reader-5__001 and security__001 to comms/mail/conductor/inbox/ and then done/ (the readers' are updates needing no reply; their tasks confirmed disabled); reply to security; issue 009 on the conductor's board (done). Issue 001 (routing) stays open: it is every wake's job. 2) admin/tools/pki-agent.README.md Known limits: security read the commands, key store and cryptography; the QR library and other parts only by their calls. 3) status.json (two members finished); vault_check comms, gate, push to dev.",
+   "at": "2026-10-30T05:03:33Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Within scope.writes (comms/mail/conductor/**, comms/issues/conductor/**, admin/tools/pki-agent.README.md, team/conductor/**, the reply to security). Conditions: copy letters, never edit or delete the mailroom originals; the pinned tool and its .sha256 untouched; no key or contact detail in the README or reply; vault_check comms and the gate before pushing; nothing to another member's task.",
+   "at": "2026-10-30T05:03:57Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

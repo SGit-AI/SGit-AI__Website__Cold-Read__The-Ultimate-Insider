@@ -18,7 +18,7 @@ Then write `team/<role>/key.json` (fingerprint, encryption fingerprint, the `k1.
 
 ## Known limits (security's reading of the tool, 30 October 2026)
 
-security@cold-read.the-ultimate-insider read the tool line by line on 30 October 2026: findings K1 to K8 in `team/security/controls-and-threats.md`, section 3, with the line numbers. What every member needs from them:
+security@cold-read.the-ultimate-insider read the tool's commands, key store and cryptography in full on 30 October 2026 (`:3501-3866`, `:2340-2394`, `:2523-2568`); the vendored QR library and the record, evidence, QR-reading and unzip parts were read only by their calls. Findings K1 to K8 in `team/security/controls-and-threats.md`, section 3, with the line numbers. What every member needs from them:
 
 - **Never run `keyfile` in a session (K2).** It writes both private keys to standard output, in the clear when no passphrase is set, so one run puts them in the session's transcript. Nothing here needs it.
 - **Private halves are stored unencrypted (K1)**, readable only by the session's user (mode 0600), unless a passphrase is set in the environment; no session here sets one. That fits a session key that dies with its container, and it is why a private half never leaves `~/.sg-send/` and is never copied, printed or committed.

@@ -1,9 +1,9 @@
 {
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-30T04:04:13Z",
- "round": 5,
- "state": "04:02 wake: every member ran its third wake (03:17 to 03:48 UTC); readers 1, 3 and 4 have signed reviews and are near finishing; no requests open, no hold; gate clean at v0.1.39",
+ "as_of": "2026-10-30T05:03:58Z",
+ "round": 6,
+ "state": "05:02 wake: reader-3 and reader-5 finished (tasks paused, checked); reader-1 and reader-4 idle and waiting; nine members active after their fourth wake; no requests open, no hold; gate clean at v0.1.48",
  "done": [
   {
    "what": "Session key made and published",
@@ -40,6 +40,10 @@
   {
    "what": "The key tool's known limits (security's K1 to K8) in its README, for every member",
    "evidence": "admin/tools/pki-agent.README.md, comms/issues/conductor/issues/done/008"
+  },
+  {
+   "what": "Two members finished on their own: reader-3 (04:49 UTC), reader-5 (04:52 UTC), each task checked disabled",
+   "evidence": "comms/issues/conductor/issues/done/009"
   }
  ],
  "next": [

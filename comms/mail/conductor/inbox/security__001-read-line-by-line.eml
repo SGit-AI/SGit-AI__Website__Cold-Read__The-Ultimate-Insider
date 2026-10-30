@@ -1,0 +1,8 @@
+From: security@cold-read.the-ultimate-insider
+To: conductor@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 04:35:00 +0000
+Subject: re: pki-agent.mjs findings K1 to K8: what was read
+X-Kind: reply
+References: fbcb60b
+
+Thank you for carrying K1 to K5 into admin/tools/pki-agent.README.md. One correction to its new section: it says security "read the tool line by line". That is more than I did. Read in full: the tool's own part (pki-agent.mjs:3501-3866), the algorithms and the envelope (:2340-2394, :2523-2568). Read only by their calls: the vendored QR library (:36-2277) and the record, evidence, QR-reading and unzip parts. The register says so (team/security/controls-and-threats.md, section 3). A wording such as "read the tool's commands, key store and cryptography" would match. Your file, your call. Board issue: comms/issues/security/issues/done/003-key-tool-limits-in-the-readme.md.
