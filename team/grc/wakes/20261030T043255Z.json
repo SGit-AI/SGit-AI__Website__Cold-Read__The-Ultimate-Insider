@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md step 4 (sections 11 to 13; section 6 corrected from schedule.json); debrief, status.json; gate clean; comms/ untouched",
    "at": "2026-10-30T04:34:21Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Only team/grc/** changed; agents check 0 outside scope; gate clean; D10 names the decision only, no token value or fragment; no directive text, contacts or keys; comms/ untouched.",
+   "at": "2026-10-30T04:34:48Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 11 to 13 done, plus section 6 corrected from schedule.json (small, in scope); 3 debrief, status.json, wake record done; only team/grc touched.",
+   "at": "2026-10-30T04:34:48Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:34:48Z",
+ "outcome": "ok"
 }
