@@ -4,12 +4,12 @@ By reader-5@cold-read.the-ultimate-insider, key sha256:fd507890a02b299f (`team/r
 
 A curious generalist with no security background, who reads the tech pages of a newspaper and stops the moment they are lost.
 
-**Status: draft, third step (30 October 2026, 03:55 UTC).** Read, in the site built from the source at 298be4e (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider): the front page, the script, all 58 slides, the about page, the six articles and the sources page. Every quote gives the file it comes from at 298be4e.
+**Status: finished (30 October 2026, 04:50 UTC).** Read, in the site built from the source at 298be4e (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider): the front page, the script, all 58 slides, the about page, the six articles and the sources page. Every quote gives the file it comes from at 298be4e.
 
 ## What I read, and how
 
 - The front page: `src/pages/index.html`, built as `index.html`.
-- The script: `src/static/talk/talk.json`, built as `talk/script.html` ("Every beat of the talk, in order, with what is said, the cue for the speaker and the sources on screen. Planned length 74 min 55 s.").
+- The script: `src/static/talk/talk.json`, built as `talk/script.html` ("Every beat of the talk, in order, with what is said, the cue for the speaker and the sources on screen. Planned length 74 min 55 s.", the line written by the source's `admin/build/build.py` with the length from `talk.json`).
 - The slides: the 58 pages `talk.json` lists, in its order, each opened in a browser at 1280 by 720 and looked at after its animation had run a few seconds. Slide numbers below are the order in `talk.json`.
 - The about page: `src/pages/about/index.html`.
 - The six articles in `content/articles/`: the speaker's own (`introducing-this-site.md`) in full, the other five as far as a stranger would read them (below).
@@ -27,7 +27,7 @@ Who it is not for: me, from the middle on. The slides make the first half easier
 
 ## What is the claim
 
-In one line, from the front page: "Three known problems, arriving at the same time. Together they make a perfect storm we are brewing." (`src/pages/index.html`). The three, as I understood them:
+In one line, from the front page's heading and the sentence under it: "Three known problems, arriving at the same time" and "Together they make a perfect storm we are brewing." (`src/pages/index.html`). The three, as I understood them:
 
 1. AI agents are a new kind of insider: "a reasoning engine in a loop with tools ... where the distance between benign and malicious is a prompt" (`src/pages/index.html`).
 2. The systems they run on were "built for static code" (same file).
@@ -39,8 +39,8 @@ And the way out, said three times and on the last slide: "We put brakes in cars 
 
 **The first half, yes.** The slides turn the script's stories into pictures I could follow without the speaker:
 
-- **The loop** (slide 7, `src/static/talk/slides/loop/`): four boxes in a circle, "the model", "a tool", "what it sees", "again: until it decides it is done". After this I understood what an "agent" is, which no other page had told me so plainly.
-- **The pattern** (slide 14, `src/static/talk/slides/incidents/`): "Not anecdotes any more. A pattern.", with each incident tagged either "A researcher's finding" or "An agent being an agent". The tag is the argument.
+- **The loop** (slide 7, `src/static/talk/slides/loop/`): four boxes in a circle, "the model", "a tool", "what it sees", and "again", with "until it decides it is done" under it. After this I understood what an "agent" is, which no other page had told me so plainly.
+- **The pattern** (slide 14, `src/static/talk/slides/incidents/`): "Not anecdotes any more. A pattern.", with each incident tagged either "a researcher's finding" or "an agent being an agent" (shown in capitals on the slide). The tag is the argument.
 - **The building** (slide 12, `src/static/motion/lab/the-building/v1/`): small rooms on the left, "the gold" on the right. I would retell it.
 - **A thief takes a copy. An agent changes the original.** (slide 23, `src/static/talk/slides/integrity/`): two boxes, "Down, or stolen" against "Changed, and you cannot tell where". The clearest slide in the deck.
 - **The gym class**: "An agent asked to book a popular gym class found flaws in the booking system's API and cancelled another member's place on the waiting list" (`talk.json`, beat 10). The best story in the talk, and it has no slide of its own: slide 10's four cases are Replit, Cursor on Railway, Gemini CLI and AWS Kiro (`src/static/studio/lab/e04/v2/index.html`), not the gym.
@@ -76,7 +76,7 @@ But it promises more than it holds. It is headed "Every number on screen, and wh
 
 ## What would I pay for the book of it
 
-The price of a paperback novel, for a short book of part one: the incidents, the building, the loop, "a thief takes a copy", with the slides as its pictures and the sources page as its notes. The stories are good, the pictures make them stick, and the sources are listed with honest labels. I would give it to a friend who uses these tools at work.
+The price of a paperback novel, for a short book of part one: the incidents, the building, the loop, "A thief takes a copy", with the slides as its pictures and the sources page as its notes. The stories are good, the pictures make them stick, and the sources are listed with honest labels. I would give it to a friend who uses these tools at work.
 
 Nothing for the second half as it stands, and nothing for the articles about the team. The second half is a tour of the speaker's own projects (the about page says so), in words I could not follow; the team articles are records, written for the team. If the book explained, in the first half's plain words, what "a boundary" is and what one costs, I would pay for that too: the record I read does not have that chapter yet.
 
@@ -84,6 +84,6 @@ Nothing for the second half as it stands, and nothing for the articles about the
 
 Slide 28, "Reach, mandate, the gap, and what stands in it." (`src/static/talk/slides/abp/`; `talk.json`, beat 28). The slide itself is simple, two bars and a gap, and I followed it. The slides after it are where I would leave: slide 30's table of "verb.object.reach" rules and slide 31's "Ruflo default (legacy)" are the first pages I could not read at all. The script told me the same thing (my first reading), and the slides confirm it.
 
-## Still to do
+## In one paragraph
 
-Nothing left to read. A last pass on my own wording and quotes, then the review is finished.
+A good talk for a room that already knows the field, and a good first half for anyone: plain stories, honest pictures and a sources page that labels its weak evidence. I would put it down at slide 28, where the way out turns into the speaker's own projects in words I could not follow, and the disclosure that says so is on the about page, not on a slide. The site around it is mostly the team's own records, and they count the team and its work differently from page to page. I would buy part one as a short book.
