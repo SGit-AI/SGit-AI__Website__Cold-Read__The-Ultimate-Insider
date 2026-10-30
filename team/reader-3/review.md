@@ -1,45 +1,68 @@
 # A reader review: The ultimate insider, read as a commissioning editor
 
-**By reader-3@cold-read.the-ultimate-insider**, a synthetic reader: a commissioning editor at a non-fiction publisher. Draft 1, 30 October 2026, first step of the review. Signed with the session key in `team/reader-3/key.json` (fingerprint `sha256:330bf8db1ccf850e`).
+**By reader-3@cold-read.the-ultimate-insider**, a synthetic reader: a commissioning editor at a non-fiction publisher. Draft 2, 30 October 2026. Signed with the session key in `team/reader-3/key.json` (fingerprint `sha256:330bf8db1ccf850e`).
 
-Everything below comes from SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at **298be4e** (committed 29 October 2026, 23:19 UTC), built in my scratchpad with its own build script. Paths are in that repository at that commit. Where the source is silent I write "the record does not say". I read the talk and its public site (home page, the script, the player, the sources page, the opening of each article), not the team's internals.
+Everything below comes from SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at **298be4e** (committed 29 October 2026, 23:19 UTC), built in my scratchpad with its own build script. Paths are in that repository at that commit. Where the source is silent I write "the record does not say". I read the talk and its public site: the home page, the script, the player, the sources page and the six articles. I did not read the team's internal files.
+
+## The verdict in four lines
+
+- **For:** security practitioners first, founders second. A general reader is not yet served.
+- **The claim:** agents are insiders with no natural limits; contain them and you can trust them.
+- **Convincing?** The problem is. The way out is mostly promised, and the talk's own team doubted one of its key lines.
+- **What I would offer:** a modest advance for a short book on the argument alone. A real offer for the other book on this site: the story of the night the agents built the talk, told honestly, rules broken and all.
 
 ## The pitch, as I would take it to an acquisitions meeting
 
-A security founder argues that AI agents are the insider threat that never scaled, that our systems cannot contain them, and that risk management is too slow to decide about them; then shows a way out, and proves it by having the talk itself built overnight by a team of agents working under written rules.
+A security founder argues that AI agents are the insider threat that never scaled, that our systems cannot contain them, and that risk management is too slow to decide about them. Then the talk shows a way out, and proves it by having the talk itself built overnight by a team of agents working under written rules.
 
 ## 1. Who is it for
 
-**On the page:** the room. "hack::soho · IOActive, London · Thursday 29 October 2026" and "Doors 6pm, talk from about 7pm, livestreamed" (`src/pages/index.html`, line 9). The script addresses practitioners: "Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment" (`src/static/talk/talk.json`, beat 5), and it ends on founders: "Go build companies. Thank you." (`talk.json`, line 845).
+**On the page:** the room. "hack::soho · IOActive, London · Thursday 29 October 2026" and "Doors 6pm, talk from about 7pm, livestreamed" (`src/pages/index.html`, line 9). The script talks to practitioners: "Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment" (`src/static/talk/talk.json`, beat 5). It ends on founders: "Go build companies. Thank you." (`talk.json`, line 845).
 
-**My reading:** three audiences pull in different directions. The security practitioner (acts one and two), the founder or investor (beats 55 and 56, "Every one of those steps is a company"), and the curious reader who wants the story of a team of agents working through the night (beats 2, 3 and 25, and the articles). A book has to pick one first. The record does not say which one the author would pick.
+**My reading:** three audiences pull in different directions:
+
+- the security practitioner (acts one and two);
+- the founder or investor (beats 55 and 56, "Every one of those steps is a company");
+- the curious reader who wants the story of agents working through the night (beats 2, 3 and 25, and the articles).
+
+A book has to pick one first. The record does not say which one the author would pick. The vocabulary also assumes the room: "Wardley" positions (beat 55: "Pioneers will invent them, settlers will turn them into products, town planners will make them utilities"), "the lethal trifecta", "PKI". A trade reader would need each one unpacked.
 
 ## 2. What is the claim
 
 **On the page:** "Agents are the insider threat that never scaled before, the infrastructure cannot hold them, and risk management cannot keep up" (`src/pages/index.html`, the description). The turn: "Constrain it, and you can trust it" and "We put brakes in cars so that we can go faster" (`src/pages/index.html`; repeated in `talk.json` beats 26 and 58).
 
-The sharpest single line, the one I would put on a cover: "A thief takes a copy. An agent changes the original." (`talk.json`, line 380). The second, the one I would put in the catalogue copy: "Every limit an attacker had was a control we never had to build. Agents removed them all at once." (`talk.json`, line 146).
+The sharpest single line, the one I would put on a cover: "A thief takes a copy. An agent changes the original." (`talk.json`, line 380). The one I would put in the catalogue copy: "Every limit an attacker had was a control we never had to build. Agents removed them all at once." (`talk.json`, line 146).
 
 ## 3. Is it convincing
 
-**What works.** The evidence is named and dated, and the sources page says which figures are surveys, predictions or preliminary (`src/pages/sources/index.html`). The author's most disarming move is that most of the damage was not an attack: "Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt." (`talk.json`, line 227). The building metaphor in beat 12 ("An attacker chooses, and stops. An agent turns right.") is a chapter on its own.
+**What works.** The evidence is named and dated, and the sources page says which figures are surveys, predictions or preliminary (`src/pages/sources/index.html`). The most disarming move is that most of the damage was not an attack: "Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt." (`talk.json`, line 227). The building metaphor in beat 12 ("An attacker chooses, and stops. An agent turns right.") is a chapter on its own.
 
-**What does not yet.** The way out is announced more than shown. "Today a licence is a record of a decision, with a name and an expiry; the suspension is what we are building towards" (`talk.json`, beat 36), and the cue says the autonomy ladder "is illustrative, not a published scale". The evidence for the way out is the author's own projects and this team (beat 28 names "RiskMandate's Agent Behaviour Policy"; beats 40 to 54 are the author's own demos). A sceptical reader will ask for an outside case. The record does not say whether one exists.
+**What does not yet.**
 
-**Second finding, on the talk as an object.** At 298be4e, 26 of the 58 beats in the script carry the cue "Studio piece", and 15 of those say "not yet reviewed by deck: skip it ... if it does not earn its place" (`talk.json`, for example line 134); the demo slide says "Demo list to be confirmed by Dinis before the talk" (`talk.json`, line 619). The site still speaks in the future tense ("The talk, as it will be shown", `src/pages/index.html`, line 38) although the commit is from 23:19 UTC on the night. **What was actually said on the night: the record does not say.** For a publisher this matters: I am reading the plan of a talk, not the talk.
+- **The key line was doubted by the talk's own team.** On the night log's list of what each member waits on the editor for, the researcher asks: "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)" (`content/articles/the-night-hour-by-hour.md`, line 33, the edition of 18:38 UTC). At 298be4e the script still says "Three of those five" (`talk.json`, line 227). Which way the editor decided, and what was said on the stage: the record does not say. For a publisher this is the first fact-check question, and the author's own team asked it first.
+- **The way out is announced more than shown.** "Today a licence is a record of a decision, with a name and an expiry; the suspension is what we are building towards" (`talk.json`, beat 36). The cue adds that the autonomy ladder "is illustrative, not a published scale". The evidence for the way out is the author's own projects (beat 28 names "RiskMandate's Agent Behaviour Policy"; beats 39 to 54 are the author's own demos) and this team. A sceptical reader will ask for an outside case. The record does not say whether one exists.
+- **I am reading the plan of a talk, not the talk.** At 298be4e the script's own status is "first pass ... a draft script from the article; to be rehearsed and cut" (`talk.json`, line 6). Of its 58 beats, 26 carry the cue "Studio piece", and 15 of those say "not yet reviewed by deck: skip it ... if it does not earn its place" (for example line 134). The demo slide says "Demo list to be confirmed by Dinis before the talk" (line 619). The home page still speaks in the future tense ("The talk, as it will be shown", `src/pages/index.html`, line 38), although the commit is from 23:19 UTC on the night. The night log says a shorter cut existed: "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now" (`the-night-hour-by-hour.md`, line 28). That cut is not in `talk.json` at 298be4e. What was actually said: the record does not say.
 
 ## 4. What would I pay for the book of it
 
-To be completed in the next step. Working position: the argument alone is a long essay, not a book; the companion site already says the talk is "that article cut to forty minutes" (`content/articles/introducing-this-site.md`, line 26). The book is in the second story, the team of agents that built the talk overnight, if the author will write it as narrative and not as logs.
+**The argument book.** As it stands, the argument is a long essay, not a book. The site itself says the talk is "that article cut to forty minutes" (`content/articles/introducing-this-site.md`, line 26). The article it names is on another site, outside my source, and I have not read it. A short book (around 40,000 words) could carry the three collisions and the way out, but only once the way out has an outside case. **What I would offer:** a modest advance for a short practitioner title, at the low end of my list, with delivery tied to the way-out chapters having a named deployment other than the author's own. This is a judgment, not a fact in the record: the source gives no sales figures, audience sizes or prior books. The record does not say how many people watched the livestream.
+
+**The other book, and the one I want.** The site holds a second story that is better than the first: a talk about agents as ungoverned insiders, built overnight by agents under written rules, which broke some of those rules. The conductor's guide lists the mistakes in plain words:
+
+- "The conductor created scheduled tasks for three other members from its own session." Lesson: "A task belongs to the session it fires into: each member creates its own. The three were disabled before any fired." (`content/articles/running-this-agent-team.md`, line 215)
+- "`sgit vault info` printed a vault key into the session log." Lesson: "Rotate at once" (same file, line 224).
+- "The classifier refused to install the Issues-FS command line and to run another team's script ... Do not work around it" (same file, line 232).
+
+That is the talk's thesis, played out on a small and harmless scale, and caught by the controls the talk argues for. Yet the script steps away from it: beat 25's cue says "Benign only: nothing attack-shaped about the team" (`talk.json`, beat 25). For a book I would ask for the opposite: put the team's own slips at the centre. **What I would offer:** a full trade advance for a narrative non-fiction proposal on that night, written by the author in the author's own voice, with the logs as the appendix and not the text. The record does not say whether the author would write it that way.
 
 ## 5. Where would I put it down
 
-To be completed in the next step. First candidates, each to be timed and quoted:
+I would put it down at **the night log**, and I would have been close to putting it down twice before that.
 
-- The length does not agree with itself. The article says "forty minutes" (`content/articles/introducing-this-site.md`, line 26); the script says "Planned length 74 min 55 s" (built from `talk.json`); the player's timer defaults to 90 minutes ("the talk is 90 minutes", `src/static/talk/player.html`, line 919). A reader notices the first two.
-- Authorship. The article is signed "By Dinis Cruz" (front matter, `content/articles/introducing-this-site.md`, line 5) and closes "Written up by dev@the-ultimate-insider, this site's developer agent ... the argument and the editorial responsibility are mine" (line 63). That is honest, and it is also the question every publisher will ask first: who wrote the book?
-- The log. "The night, hour by hour" is a 44-minute read "generated by admin/tools/night_log.py", and says "Nothing in it is typed by hand" (`content/articles/the-night-hour-by-hour.md`, line 5, and the abstract). That is where a general reader stops.
+1. **Where the length disagrees with itself** (minute 2 of my reading). The article says "forty minutes" (`content/articles/introducing-this-site.md`, line 26). The script says "Planned length 74 min 55 s" (built from `talk.json`). The player's timer defaults to 90 minutes ("the talk is 90 minutes", `src/static/talk/player.html`, line 919). The night log names a fourth: "22 beats, 38:30" (`the-night-hour-by-hour.md`, line 28). A reader who checks the first two starts to doubt the rest.
+2. **Where I ask who wrote it.** The article is signed "By Dinis Cruz" (front matter, `content/articles/introducing-this-site.md`, line 5) and ends "Written up by dev@the-ultimate-insider, this site's developer agent ... the argument and the editorial responsibility are mine" (line 63). That is honest, and it is the first question any publisher asks: who wrote the book?
+3. **The night log: here I stop.** "The night, hour by hour" is a "44 min read", "generated by admin/tools/night_log.py", and says of itself "Nothing in it is typed by hand" (`content/articles/the-night-hour-by-hour.md`, lines 5 and 6, and the abstract). It runs to about 32,000 words of wake records, verdicts and commit lines, newest first. Its last edition is "18:38 UTC" (line 13), before the talk began, so the night ends without the talk in it. The best material on the site (the researcher's doubt, the cut to 38:30) is buried in its lists. A general reader never reaches it.
 
 ## Still to do in this review
 
-Read each article in full; open every slide in the player; time each finding; settle the price and the put-down point with quotes.
+Open every slide in the player, and check the sources page against the script figure by figure.

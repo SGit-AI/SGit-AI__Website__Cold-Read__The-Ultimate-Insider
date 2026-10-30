@@ -1,6 +1,6 @@
 # The story pitches
 
-By journalist@cold-read.the-ultimate-insider. Draft, part 1 of the deliverable (five to ten pitches by Sunday 1 November 2026). Started 30 October 2026, first wake.
+By journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026. Draft: four pitches so far, of the five to ten due by Sunday 1 November 2026. Part 1 (pitches 1 to 3) at the first wake, 01:52 UTC; part 2 (pitch 4, and the answer to "was the talk given?") at the 02:47 UTC wake.
 
 Every claim cites the source, SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider, at commit `298be4e` or an earlier commit in its history, as `path@commit` or a commit hash. Where the record is silent, the pitch says "the record does not say". Times are UTC; on 29 October 2026 London was on UTC, which the source's own hold notice also states (`team/conductor/HOLD.md@298be4e`).
 
@@ -58,9 +58,31 @@ The deck agent fixed three items in its 02:17 wake: the ASRS figures, the CIRCIA
 - A loose end, not resolved in this pass: the register at 18:20 still marks the ASRS claim "does not hold" and lists `slide:unreported` among its places, though the slide's source line was changed at 02:17. Whether the register is stale or reads the article's wording, the record does not say.
 - Whether the editor acted on the remaining items: the record does not say (not found in this pass).
 
+## 4. The talk that was meant to be finished while it was being given
+
+**Headline:** At 16:55 the speaker decided to give the talk in three parts, with his agents still building the later parts while he presented the first. Then the work stopped.
+
+**Pitch.** Two hours before the talk, the editor changed its shape. His words, as the conductor recorded them: "we have 90 minutes ... the team is still working on this. So what's going to be powerful is to even show some of our workflows happening ... in action ... break the presentation into three parts ... you guys can still be making changes to the second part while I present". The plan put part 1 on stage at 19:00, locked at 18:30; part 2 at 19:30, locked at 19:30; part 3 at 20:00, locked at 20:00. "Locked means locked": a locked part "never changed again". The team at work would itself be part of the show, with the editor free to open its live pages on stage. Within fifteen minutes a second brief set out what parts 2 and 3 should hold, "for work behind the scenes while part 1 is on stage": the attacks as blast radius, the solution in depth, and an invitation to the room to "try to escape the harness".
+
+The plan needed a faster heartbeat than the platform allowed: "A recurring scheduled task cannot run more often than hourly (the platform refused 15 minutes on the conductor's own task at 16:58)", so each member was to schedule one-off follow-ups into its own session until 20:30. It is a vivid, specific bet: a live talk whose second half would be written by agents during its first half. By the record, the bet was never run: at 18:44, sixteen minutes before part 1, the hold (pitch 1) told every member to stop, and not one commit to the talk, the deck or the story lands after it. The next act in the record is the editor merging the whole day into `main` at 23:19. Whether parts 2 and 3 were presented, and in what form, the record does not say.
+
+**Why now.** It is the most ambitious idea in the record, stated in the speaker's own words, with a clean answer to "what happened next" as far as the repository goes.
+
+**Evidence.**
+- The editor's words, the three parts and their locks, "Locked means locked", the hourly limit and the follow-ups: `team/conductor/briefs/2026-10-29__editor/3-three-parts-and-locks-1700.md@298be4e`, added in `3342cff` (16:59:22).
+- Parts 2 and 3, "for work behind the scenes while part 1 is on stage": `team/conductor/briefs/2026-10-29__editor/5-parts-2-and-3-1715.md@298be4e`, added in `e86b0aa` (17:08:41).
+- The arc split for the locks: `team/storyteller/story/three-parts.md@298be4e` (written 17:55 London, last changed in `14998b5`).
+- No commit to `team/deck`, `team/storyteller` or `src/static/talk` after the hold: `git log 867f8c2..298be4e` on those paths is empty.
+- The merge: `b859ff0` (23:19:09), "Merge pull request #1 from SGit-AI/dev", authored by the editor; the first parent before it is the repository's initial commit `2e4b1f4` (00:16:23), so the day's work reached `main` only then.
+- Whether parts 2 and 3 were presented: the record does not say.
+
+## Was the talk given? What the record says
+
+Searched at the second wake: the last commit before the release is `cb5b996` at 18:46; nothing in the tree at `298be4e` was written after it except the merge `b859ff0` and CI's release commit `298be4e` (23:19, "site v0.2.0"). Every mention of the stage in the tree is a plan written before 19:00 (for example `team/storyteller/story/three-parts.md`, "On stage"; `team/dev/debriefs/2026-10-29__the-overview-offline-and-the-showcase.md`, items deferred "after the talk"). **Whether the talk was given, from which build, and how it went: the record does not say.** The merge at 23:19 by the editor is the only act in the record after the hold. A story that needs the answer must get it from outside the record, which this cold read does not do.
+
 ## Not stood up yet
 
-- That the talk was delivered at all, and from which build: not found in this pass.
+- That the talk was delivered at all, and from which build: the record does not say (searched at the second wake, above).
 - What "the incidents" in "it could have been much worse after the incidents" (`b1c9bab`, `f45028c`) refers to: the record names Midnight Blizzard and Amazon Q in motion's M02; whether it also means the team's own incidents, not yet read.
 
 ## Candidates for the next wakes
@@ -69,4 +91,4 @@ The deck agent fixed three items in its 02:17 wake: the ASRS figures, the CIRCIA
 - "Do not touch the deck": what else the editor froze, and when, through the day.
 - The team's own key, vault and hold machinery, adopted at 01:39 to 01:43 (`09f13d5`, `d8f3300`, `b620234`), and the first time it was used for real (pitch 1).
 
-journalist@cold-read.the-ultimate-insider, 30 October 2026
+journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026

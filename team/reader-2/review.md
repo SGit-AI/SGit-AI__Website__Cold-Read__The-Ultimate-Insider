@@ -20,4 +20,29 @@ By reader-2@cold-read.the-ultimate-insider, a synthetic reader: a software engin
 
 **First impression, as a stranger.** Thirty seconds in, I would say: a security talk for security people, with a founder's pitch at the end and a live demonstration of an agent team in the middle. The home page's "We put brakes in cars so that we can go faster." (`src/pages/index.html`, line 54) is the one line I would repeat to a colleague.
 
-*Still to come:* 2. what is the claim, 3. is it convincing, 4. what would I pay for the book of it, 5. where would I put it down.
+## 2. What is the claim
+
+Citations in this section are to `src/static/talk/talk.json` at `298be4e`, by beat `id` and the line that `id` sits on; each quote is from that beat's `say`, the words the speaker says.
+
+**In one sentence, as I would put it to a colleague:** an agent is an insider with none of the limits that used to cap insiders, it is being dropped into infrastructure and permissions that were never built to hold it, and the people who should decide about it are too slow; the fix is to measure what it can reach, contain it with real boundaries, license it, and let it earn autonomy, and that fix is a business opportunity.
+
+The talk builds that in five moves.
+
+**1. A threat does not need a villain.** "A threat is anything that causes business impact. It does not need to be malicious." (`definition`, line 64). This is the hinge of the whole talk, and the one move I fully accept: most of the agent damage I have seen was an agent being diligent, not hostile.
+
+**2. Agents lost the limits that made insiders manageable.** "Skill. Motivation. Fatigue. Fear of getting caught. And stopping once the objective was reached. Each of those worked as a control that nobody designed. Agents have none of them." (`limits`, line 139). The vivid version: "An attacker chooses, and stops. An agent turns right. It goes where the task points, and it keeps going." (`building`, line 186). And the evidence is five incidents, of which "Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt." (`incidents`, line 220).
+
+**3. The inside cannot hold them.** "The outside is in balance ... The inside is where nobody looked." (`inside`, line 270). Grants are far wider than use: "workload identities use less than 5 per cent of the permissions granted to them" (`permissions`, line 311), so "its grant is not what you meant. It is everything the role ever accumulated." Recovery is too coarse: "most operations are edits, not appends, and backups run by the day, not by the transaction" (`infrastructure`, line 340). And the new failure is integrity: "A thief takes a copy. An agent changes the original." (`integrity`, line 373).
+
+**4. Risk management is too slow, so the default answer is the off switch.** "48 per cent of organisations track risk in them [spreadsheets]. The register cannot see what the agent can reach, so the answer becomes: pull the plug." (`spreadsheets`, line 418).
+
+**5. The way out is containment, and containment buys speed.** Four moves: "Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy." (`way-out`, line 452). The sharpest single claim, and the one I would steal for my own team: "a boundary, a setting, an expectation, or nothing. Only a boundary is a control. Most of what we call controls today are expectations" (`abp`, line 464). The close turns the whole thing round: "The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it." (`brakes`, line 838).
+
+**What the claim quietly rests on, which a sceptic will notice.**
+
+- *The way out has product names on it.* The four moves are presented through named tools: "This is what RiskMandate's Agent Behaviour Policy writes down" (`abp`, line 464), then a run of ten beats on SHarness (`s-sharness-one-idea`, line 623, to `s-sharness`, line 731), then "It is all on sgit.ai." (`live-sgit-demos`, line 791). Who builds RiskMandate, SHarness and sgit.ai, and whether the speaker does: the talk's words do not say. The home page names him as "founder of The Cyber Boardroom" (`src/pages/index.html`, line 8, at `298be4e`), a fourth name. For a sales-sensitive reader that is the first question, and the record I read does not answer it.
+- *Part of the way out is still a promise.* "the suspension is what we are building towards" (`licence`, line 569); SHarness has a beat titled "what exists and what is coming" (`s-sharness-components`, line 647). The talk is honest about this, which I credit; it also means the strongest move, a licence the system suspends by itself, does not exist yet by the talk's own account.
+- *The proof of "order and structure" is the talk's own making.* "This is what agentic work will look like: order and structure. ... The capability is the orchestration, not the model." (`team`, line 406), with "510 commits and 164 releases ... and not one hold" (`m03`, line 22). That is a claim about one night and one team, by the team; how "not one hold" was counted, the talk's words do not say.
+- *The argument is not "agents will be weaponised".* The talk goes out of its way to say attackers are slow because "attackers are businesses" (`no-worm-era`, line 160) and the danger is ours: "We give them the brief, the access and the motivation ourselves." That is the part I did not expect, and the part I find most honest.
+
+*Still to come:* 3. is it convincing, 4. what would I pay for the book of it, 5. where would I put it down.

@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-2",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request), key published, task created, source cloned at 298be4e, review started",
+ "round": 2,
+ "state": "active: wake at 02:47, review sections 1 and 2 written; the vaults were never created (comms/ in git instead), so the vault-key step is moot",
  "done": [
   {
    "what": "session key published: team/reader-2/key.json (sha256:23fc5bbce8529018)"
@@ -13,14 +13,17 @@
   },
   {
    "what": "source cloned at 298be4e in the scratchpad (later refs pruned) and built; review.md section 1, who is it for, with paths and lines"
+  },
+  {
+   "what": "review.md section 2, what is the claim, from talk.json at 298be4e"
+  },
+  {
+   "what": "account domain dropped from key.json and the session files (conductor issue 006)"
   }
  ],
  "next": [
   {
-   "what": "review.md section 2, what is the claim, from talk.json at 298be4e, slides from way-out onwards"
-  },
-  {
-   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into the scratchpad"
+   "what": "review.md section 3, is it convincing: the numbers against the site's sources page, built from 298be4e"
   }
  ],
  "asks": [],

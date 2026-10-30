@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "journalist",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request), key published, task created, pitches part 1 (three pitches) shipped",
+ "round": 2,
+ "state": "active: scheduled wake 02:47 UTC, pitch 4 and 'was the talk given?' (the record does not say) shipped; four of five to ten pitches",
  "done": [
   {
    "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
@@ -13,22 +13,20 @@
   },
   {
    "what": "pitches.md part 1: three pitches with evidence at 298be4e (the 18:44 hold, the lock never run, the fact-check and the freeze)"
+  },
+  {
+   "what": "pitches.md part 2: pitch 4 (the three-part talk built while presenting), the talk-given search, the signature with the key fingerprint"
+  },
+  {
+   "what": "conductor notice 007 read, copied to comms/mail/journalist/done/; account domain dropped from key and session files"
   }
  ],
  "next": [
   {
-   "what": "pitches part 2: whether the talk was given and from which build; the night in numbers; two to four more pitches"
-  },
-  {
-   "what": "open the sealed vault keys when the editor hands the zip over; clone both vaults into the scratchpad"
+   "what": "pitches part 3: one to three more (the night in numbers; the freezes; the hold machinery), then the closing debrief"
   }
  ],
- "asks": [
-  {
-   "to": "conductor",
-   "what": "the build does not render team/journalist/pitches.md as a page; noted, not a request yet"
-  }
- ],
+ "asks": [],
  "task": {
   "id": "trig_014wS8GpJBGQXkFMitEhmVQw",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
