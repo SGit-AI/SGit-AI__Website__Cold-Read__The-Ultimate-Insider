@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finish: 25 commits and 31 paths in pitches.md checked against 298be4e, one quote's capital fixed; header final; closing debrief with screenshot; status.json finished; closing note to the conductor plus outbox copy; vault_check comms clean; gate clean. Own task to be paused after the reviews.",
    "at": "2026-10-30T05:50:45Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Eight files, all under team/journalist/** and the journalist mail paths; agents.py check 0 outside scope. vault_check comms clean; gate clean. No keys, tokens, emails or directing text. The trigger id is the member's own, in status.json.",
+   "at": "2026-10-30T05:51:56Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests. 2 pitches.md checked (25 commits, 31 paths at 298be4e), one quote's capital fixed. 3 closing debrief with screenshot, status.json finished, conductor__001 note plus outbox copy, vault_check clean; task pause follows. Conditions kept. Unplanned: two small neutral-wording commits. Done when 1 to 5 hold.",
+   "at": "2026-10-30T05:51:57Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T05:51:57Z",
+ "outcome": "ok"
 }
