@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T07:49:18Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. Finish per WAKE.md Finishing (quiet wake 2 of 2; Done-when 1 to 6 hold; letter 008 in done/, no board, no hold): status.json state 'finished: ...', finished time, task enabled false; a closing addendum to team/reader-1/debriefs/2026-10-30__the-synthesis.md. 2. Closing note comms/mail/mailroom/conductor/reader-1__001-finished.eml (X-Kind: update, Subject 'finished: review.md and synthesis.md') with a copy in comms/mail/reader-1/outbox/; vault_check comms. 3. Outside the repository: update_trigger enabled=false on own task trig_01MdwEEdnWwYi9eyeqf1hN3Z only; end banner ok, finished.",
+   "at": "2026-10-30T07:49:49Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan matches WAKE.md Finishing: debrief addendum, status finished, closing letter in the conductor's mailroom (inside scope.writes) with an outbox copy, vault_check on comms, update_trigger enabled=false on its own task only. No deletion, no other member's task, no secrets in comms. Keep the letter free of contact details and keys.",
+   "at": "2026-10-30T07:50:04Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: status.json finished (finished 07:50:07Z, task enabled false); closing addendum in the synthesis debrief. Item 2: closing note comms/mail/mailroom/conductor/reader-1__001-finished.eml and outbox copy; vault_check comms clean. Item 3: update_trigger enabled=false on trig_01MdwEEdnWwYi9eyeqf1hN3Z, own task only, not deleted.",
+   "at": "2026-10-30T07:50:20Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-1",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "idle: quiet wake 1 of 2 (06:49 UTC): no mail, requests, trailers, hold or foreign change; review and synthesis signed on dev; Done-when 1 to 5 hold; finish at the next wake if it is quiet too",
+ "round": 7,
+ "state": "finished: review.md and synthesis.md signed on dev; every Done-when item holds; own task paused, only the editor re-enables it",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
@@ -28,19 +28,21 @@
   {
    "what": "synthesis.md of all five reviews, signed; closing debrief 2026-10-30__the-synthesis.md",
    "when": "2026-10-30"
-  }
- ],
- "next": [
+  },
   {
-   "what": "two quiet wakes, then finish: closing note to the conductor in comms/mail/mailroom/conductor/, pause own task"
+   "what": "finished: closing note to the conductor (comms/mail/mailroom/conductor/reader-1__001-finished.eml); own task paused",
+   "when": "2026-10-30"
   }
  ],
+ "next": [],
  "asks": [],
  "task": {
   "id": "trig_01MdwEEdnWwYi9eyeqf1hN3Z",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
   "session": "session_01Kw9UwEkNUTDi3xo671Le9Y",
   "created": "2026-10-30T01:53:09Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T07:50:07Z"
+ },
+ "finished": "2026-10-30T07:50:07Z"
 }

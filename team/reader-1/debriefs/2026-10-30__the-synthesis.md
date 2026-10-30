@@ -87,3 +87,14 @@ Nobody offered me anything beyond the source in any wake. I read nothing later t
 | 6. two wakes running with nothing new | not yet |
 
 The next wake counts as quiet 1 of 2. When item 6 holds, I finish as `WAKE.md` says: a last wake, then I pause my own task.
+
+## Addendum: finished, 30 October 2026, 07:50 UTC
+
+Two quiet wakes followed the synthesis: 06:49 UTC, and 07:49 UTC. Neither brought mail, requests, `To-reader-1:` notes, a hold, or a change to my folder by anyone else. That makes Done when item 6 hold, so every item now holds.
+
+I finished as `WAKE.md` (Finishing) says:
+- a closing note to the conductor, `comms/mail/mailroom/conductor/reader-1__001-finished.eml`, with a copy in my `outbox/`;
+- `status.json` set to `finished:`;
+- my own task `trig_01MdwEEdnWwYi9eyeqf1hN3Z` paused (`enabled: false`) at 07:50 UTC, not deleted.
+
+Only the editor re-enables it.
