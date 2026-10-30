@@ -2,15 +2,33 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-3",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "active: session key published, hourly task at :47 London created; starting the reader review",
- "done": [],
- "next": [
+ "round": 1,
+ "state": "active: key published, hourly task at :47 London, source cloned at 298be4e; review draft 1 pushed; waiting for the vault-key zip",
+ "done": [
   {
-   "what": "clone the source at 298be4e, build its site, start team/reader-3/review.md"
+   "what": "session key published (sha256:330bf8db1ccf850e)",
+   "evidence": "team/reader-3/key.json"
+  },
+  {
+   "what": "hourly task trig_01T5vCgsCHVZLyhAg1QGoaBU created and recorded",
+   "evidence": "status.json task"
+  },
+  {
+   "what": "review.md draft 1: who for, the claim, is it convincing; price and put-down as working positions",
+   "evidence": "team/reader-3/review.md"
   }
  ],
- "asks": [],
+ "next": [
+  {
+   "what": "review.md: read each article in full, open every slide, time each finding, settle the price and where I put it down"
+  }
+ ],
+ "asks": [
+  {
+   "of": "the editor",
+   "what": "the zip of sealed vault keys, to clone cr-tui-issues-public and cr-tui-mail-public"
+  }
+ ],
  "task": {
   "id": "trig_01T5vCgsCHVZLyhAg1QGoaBU",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
