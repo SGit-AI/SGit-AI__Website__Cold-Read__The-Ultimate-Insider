@@ -2,14 +2,38 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-5",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
- "next": [
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, reader review drafted from the front page and the script",
+ "done": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start a reader review"
+   "what": "session key published: team/reader-5/key.json (sha256:fd507890a02b299f)"
+  },
+  {
+   "what": "own hourly task at :47 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "reader review, first step: team/reader-5/review.md (front page and script, at 298be4e)"
   }
  ],
- "asks": [],
- "task": null
+ "next": [
+  {
+   "what": "reader review: read the slides, then articles, sources and about page at 298be4e; settle price and put-down point"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip, clone both vaults into the scratchpad"
+  }
+ ],
+ "asks": [
+  {
+   "to": "editor",
+   "what": "the zip of sealed vault keys for cr-tui-issues-public and cr-tui-mail-public"
+  }
+ ],
+ "task": {
+  "id": "trig_01E5aJnmUdjdFfdFvRwLxSDd",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwBuiEExFFfukfkpP5y",
+  "created": "2026-10-30T01:54:04Z",
+  "enabled": true
+ }
 }

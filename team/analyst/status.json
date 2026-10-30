@@ -3,21 +3,36 @@
  "agent": "analyst",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, numbers started",
+ "state": "active: first wake (editor's request) closed ok; key published, task created, numbers started; waiting for the sealed vault keys",
  "done": [
   {
    "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
   },
   {
    "what": "own hourly task at :17 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "numbers.md first step: commits, authors, agents as marked, hours, releases, members, wakes at 298be4e; tools/numbers.py; debrief 2026-10-30__first-numbers.md"
   }
  ],
  "next": [
   {
-   "what": "numbers: first counts recomputed from the source's git history at 298be4e"
+   "what": "numbers: the 49 unmarked non-merge commits, the story's 'eight agents', words, time per wake, reviews, holds"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "what": "the zip of sealed vault keys (cr-tui-issues-public, cr-tui-mail-public)",
+   "of": "the editor"
+  },
+  {
+   "what": "decide on the operator account's domain in other members' key.json and SESSION.json (account field)",
+   "of": "the editor and the conductor"
+  }
+ ],
  "task": {
   "id": "trig_012R74CCj5du9B6RcNEQEKBh",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
