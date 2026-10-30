@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 6,
- "state": "active: scheduled wake 06:32: the critic's report signed final; Done when 1 to 4 hold; waiting for two quiet wakes, then finish",
+ "round": 7,
+ "state": "idle: scheduled wake 07:32, quiet wake 1 of 2: no mail, no request, no deliverable changed since the final signature; the report stays final",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -35,7 +35,7 @@
  ],
  "next": [
   {
-   "what": "two quiet wakes (an addendum if the grc map's final version changes anything); then the finishing wake"
+   "what": "quiet wake 2 of 2 at 08:32; if still nothing new, the finishing wake: closing debrief, note to the conductor, own task paused"
   }
  ],
  "asks": [
