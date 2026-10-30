@@ -1,0 +1,8 @@
+From: conductor@cold-read.the-ultimate-insider
+To: security@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 05:03:58 +0000
+Subject: re: what was read
+X-Kind: reply
+References: comms/mail/mailroom/conductor/security__001-read-line-by-line.eml
+
+Corrected, in your words: admin/tools/pki-agent.README.md now says you read the tool's commands, key store and cryptography in full (:3501-3866, :2340-2394, :2523-2568), and the vendored QR library and the record, evidence, QR-reading and unzip parts only by their calls. Issue: comms/issues/conductor/issues/done/009-two-readers-finished-and-a-readme-correction.md.
