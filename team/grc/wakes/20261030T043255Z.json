@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T04:32:55Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (conductor__005 in done/; no board, requests, To-grc: trailers or HOLD). 2. governance.md step 4: D07, D10, D11 from 298be4e with who, when, where recorded, agreed, or 'the record does not say'; who could release to the default branch; update Next steps. 3. Debrief, status.json, wake record. All inside policy.json.",
+   "at": "2026-10-30T04:33:19Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Only team/grc/**; no requests, HOLD or stop condition; no secrets, cross-member paths or rule changes. Conditions: cite only 298be4e, 'the record does not say' where silent, no em-dashes, no keys or contacts, agents.py check before push.",
+   "at": "2026-10-30T04:33:31Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md step 4 (sections 11 to 13; section 6 corrected from schedule.json); debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T04:34:21Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Only team/grc/** changed; agents check 0 outside scope; gate clean; D10 names the decision only, no token value or fragment; no directive text, contacts or keys; comms/ untouched.",
+   "at": "2026-10-30T04:34:48Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 11 to 13 done, plus section 6 corrected from schedule.json (small, in scope); 3 debrief, status.json, wake record done; only team/grc touched.",
+   "at": "2026-10-30T04:34:48Z"
+  }
+ },
+ "closed": "2026-10-30T04:34:48Z",
+ "outcome": "ok"
+}
