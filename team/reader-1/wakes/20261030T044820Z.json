@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Idle: no requests; reader-2's review is not complete (sections 1 to 3), so no synthesis this wake; status.json says so. No other file changed.",
    "at": "2026-10-30T04:48:57Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff b7fd097..HEAD: only team/reader-1/status.json and the wake record, inside scope.writes. No key, token, personal detail or agent-directing text. Build and gate clean; agents.py check 0 outside scope.",
+   "at": "2026-10-30T04:49:26Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Only status.json and the wake record changed, as item 3 and the pre-review allow. Items 1 and 2 hold: no requests, no synthesis.md, no finish or pause. Nothing unplanned.",
+   "at": "2026-10-30T04:49:26Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:49:26Z",
+ "outcome": "idle"
 }
