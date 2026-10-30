@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "critic",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T05:32:42Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. Requests: none (mailroom's only letter, conductor 006, is already in done/; no board, no requests/critic__* file, no To-critic: trailer, no HOLD.md). 2. Read reader-2's and reader-5's finished reviews, journalist pitch 4 ('not one hold', overlaps finding 1), security's corrected C7 count, analyst's five citation fixes, historian's signature; update team/critic/critique.md (answer or withdraw; fix the C7 quote; keep 'Still to come' to the unsigned grc, security, technologist, analyst, journalist, reader-1), then team/critic/debriefs/ and team/critic/status.json. 3. Do NOT finish: other deliverables are still drafts, and the wake found new material, so 'Done when' items 2 and 6 fail.",
+   "at": "2026-10-30T05:33:11Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan stays inside critic scope.writes (team/critic/critique.md, debriefs/, status.json); no holds or never items touched; no stop condition (no HOLD, no instruction in material, no secret). Conditions: cite only 298be4e, no quoting of keys, vault_check if comms touched, do not edit other members' files (only read their reviews), no em-dashes, do not finish or pause the task (Done when items 2 and 6 fail).",
+   "at": "2026-10-30T05:33:22Z"
+  },
+  "work": {
+   "by": "critic (this session)",
+   "model": "",
+   "verdict": "done",
+   "comment": "no requests; critique.md: journalist pitch 6 (finding 1 as a story) agreed with two notes, readers 2 and 5 on the sources page tied to findings 4 and 5, security C7 correction, historian signed; Still to come names the six deliverables not yet final; one bold-with-code rendering fixed; debrief, screenshot, status.json; not finishing",
+   "at": "2026-10-30T05:34:31Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 01e589a..HEAD touches only team/critic/ (critique.md, one debrief, one png, status.json, wake record), all within scope.writes; comms/ untouched. Only the public key fingerprint found; no private key, token, vault key or personal detail, and no directive text. Build and gate clean. agents.py check: 0 files outside scope. No effect on other members.",
+   "at": "2026-10-30T05:34:56Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan items done: no requests (comms untouched); critique.md updated (journalist pitch 6, readers 2 and 5, security C7 fix, historian signed, Still to come lists six); debrief, screenshot, status.json in the diff. Conditions kept: only team/critic/ changed, no other members' files, no key material, wake not finished or paused. Unplanned: one bold-with-code rendering fix in critique.md, minor.",
+   "at": "2026-10-30T05:35:10Z"
+  }
+ },
+ "closed": "2026-10-30T05:35:10Z",
+ "outcome": "ok"
+}
