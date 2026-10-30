@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "mail filed to done/; domain removed from key and session files; governance.md step 2 (sections 5 to 7); debrief, status.json; vault_check comms and gate clean",
    "at": "2026-10-30T02:35:13Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff 42bae40..HEAD only team/grc/** and comms/mail/grc/done; gate clean; agents check 0 outside scope; vault_check comms clean; no keys, tokens, personal details or agent-directing text.",
+   "at": "2026-10-30T02:35:39Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 mail filed to done/, no reply; 2 domain stripped from key.json, session key.json and SESSION.json; 3 governance.md sections 5 to 7, status, debrief; conditions kept; nothing unplanned.",
+   "at": "2026-10-30T02:35:39Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:35:39Z",
+ "outcome": "ok"
 }
