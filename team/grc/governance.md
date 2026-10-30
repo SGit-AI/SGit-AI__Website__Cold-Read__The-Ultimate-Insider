@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 3 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 4 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -65,13 +65,13 @@ Fifteen files in `team/conductor/briefs/2026-10-29__editor/` at `298be4e`. Two k
 ## 6. Who may make a schedule: grants against practice
 
 - Scheduling (`create.schedule.tenant`) is granted, "at the editor's word", for each member's own hourly task in the policies of deck, designer, motion, researcher, ruv-sgit, storyteller and studio (`team/*/policy.json`, `mandate.wanted`, at `298be4e`).
-- It is in `mandate.not_wanted` for conductor, dev and security. Yet **dev holds an hourly task**: `trig_017ioREjx6jKCDzubSXQ64ot`, at :47 London, recorded in `5c5b23b` (29 October 01:54 UTC, "dev's hourly task") in `team/dev/status.json`. Who created it, and whether the editor granted it outside the policy: the record does not say, in what this step read.
+- It is in `mandate.not_wanted` for conductor, dev and security. Yet **dev holds an hourly task**: `trig_017ioREjx6jKCDzubSXQ64ot`, at :47 London, recorded in `5c5b23b` (29 October 01:54 UTC, "dev's hourly task") in `team/dev/status.json`. `team/conductor/schedule.json` at `298be4e` (`how_each_task_is_made`) explains the practice. Each member creates its own task "from its own session, at the editor's word". The conductor "first created all four from its session" on 29 October, and "the editor said only each member's own session may", so the three it made for dev, deck and ruv.sgit "were disabled before any fired". So the editor granted dev's task in words, while dev's policy still lists the capability as not wanted. The same holds for the conductor, whose own task runs "since 29 October 2026 01:40 UTC" (`schedule.json`, `status`). The words were never carried into either policy (step 4).
 - **The "Tonight only" rule** (`team/conductor/WAKE.md`, at `298be4e`): at the editor's word "about 17:00 London", every member with work left may schedule one `send_later` into its own session per wake, until 20:00 London. It is a rule in a file every member follows, not a change to each policy. Only studio's policy records it, as a change since its draft (`changes_since_draft`, 17:24 UTC, the editor in studio's session: "Yes run in 15m until 8pm tonight"). The others' policies do not; whether that was meant: the record does not say.
 
 ## 7. Open decisions, continued
 
 5. **Seven items waiting on the editor, one never closed.** `6-answers-1715.md` (`8fee7e3`, 17:16 UTC) says the answers "close six of the seven items in `pace.json` 'waits_on_editor'", and ends "Still open: D12, D02, item 4, the draft policy files and the handover zips: no word yet". At `298be4e`, `team/conductor/pace.json` `waits_on_editor` still holds exactly that one item. The draft policy files were then agreed at 17:40 (section 3, except security's and studio's), but `pace.json` was not updated. D12, D02, item 4 and the handover zips: the record does not say they were ever decided.
-6. **dev's task against its policy** (section 6).
+6. **dev's task against its policy** (section 6; granted in words, step 4).
 7. **The follow-up grant recorded in one policy of ten** (section 6).
 
 ## 8. The editor's decision register
@@ -112,8 +112,27 @@ The source kept one register of decisions put to the editor: `evidence/proposals
 8. **Eleven of twelve register decisions open at `298be4e`** (section 8). Three of them were in fact decided elsewhere (D03 to D05). Eight have no answer anywhere in what this map has read: D01, D02, D06, D07, D08, D10, D11, D12.
 9. **The hold was never lifted in the record** (section 9; item 2 above).
 
+## 11. Three more open decisions, from the register
+
+- **D07, the team's hours** (asked by the conductor). `schedule.json` at `298be4e` (`hours`) says: "every hour, round the clock, from 29 October 2026 at the editor's word, to see how it works overnight; the editor may narrow it to 08:02 to 21:47". So round the clock was decided, but narrowing it was not: the register's options (keep, narrow, narrow after the talk) have no answer.
+- **D10, rotating a token** (asked by the researcher, kind "do", "Only you can do this"). The register says a service token was pasted into a member's chat at 02:20 UTC on 29 October. It says the member kept it out of every file, vault, commit and saved log. Whether the token was rotated: the record does not say. This map names the decision only and does not repeat anything about the token.
+- **D11, the morning review** (asked by deck and the conductor, due 29 October 09:00 UTC). The record holds no answer, and it does not say whether the review took place.
+
+## 12. Who may release to the default branch
+
+- **The members may not.** All ten policies at `298be4e` list `write.repository.main` as not wanted (`team/*/policy.json`, `mandate.not_wanted`), and `CLAUDE.md` says "never push to `main`".
+- **The release machinery runs on both branches.** `.github/workflows/release.yml` numbers a release on a push to `dev` (the last number) or to `main` (the middle number).
+- **The editor merged.** The one release to the default branch is the editor's merge of pull request #1 (`b859ff0`, 23:19:09 UTC), released as `v0.2.0` (`298be4e`). Who reviewed pull request #1, and what was checked before the merge: the record does not say. Pull requests live on GitHub, not in the repository, and this map reads only the repository.
+- **Nothing written says only the editor may merge.** The rule is never stated, only shown: every member is barred from `main`, and the editor is the only one who wrote there.
+
+## 13. Open decisions, continued
+
+10. **The editor's word on schedules never reached the policies of dev and the conductor** (section 6, corrected in step 4).
+11. **D07, D10 and D11 unanswered at `298be4e`** (section 11).
+12. **The release rule exists only in practice** (section 12).
+
 ## Next steps
 
-- D07, D10 and D11 in the earlier records (the morning review, the token, the hours).
 - Each decision inside the editor's briefs of 15:00 and 17:15 against the member's own file.
-- Who may decide what for the release itself: the merge to the default branch, and who could make it.
+- The members' own `changes_since_draft` and `agreed_by` against the conductor's records of the same words.
+- A first full list of open decisions, numbered once, for the signed version.
