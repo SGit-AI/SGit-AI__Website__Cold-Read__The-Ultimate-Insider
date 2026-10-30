@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "critic",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T04:33:18Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Requests: none (mailroom letter 006 is already in done/, no board, no requests file, no To-critic trailer). 2) Read the signed reader reviews 1 to 3, historian part 4, technologist sections 4 and 5, analyst step 4, then argue with them in team/critic/critique.md; closing pass on findings 1 to 7 against 298be4e, all inside team/critic/**. 3) Move the signature to the head of critique.md (fingerprint, date), write the debrief team/critic/debriefs/ and update team/critic/status.json. Do not finish this wake: new material arrived, so 'Done when' item 6 (two quiet wakes) fails; no file outside policy.",
+   "at": "2026-10-30T04:33:45Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan stays inside team/critic/** (scope.writes; holds empty): critique.md edits, signature move, debrief, status.json. No requests, no cross-member paths, no rule changes, no secrets mentioned. Not finishing the wake is correct and creates no stop condition. Conditions: use only 298be4e for source cites, no em-dashes, never print or commit a private key (the signature carries fingerprint and date only), run the gate before pushing to dev.",
+   "at": "2026-10-30T04:33:56Z"
+  },
+  "work": {
+   "by": "critic (this session)",
+   "model": "",
+   "verdict": "done",
+   "comment": "no requests; other members' signed work answered in critique.md (reader-4 510 argued, reader-5 answered, reader-1 s6 agreed, journalist pitch 5, historian part 4); closing pass re-ran findings 1 to 7 at 298be4e, all hold; signed draft at the head; debrief, screenshot, status.json; not finishing (Done when 2 and 6 do not hold)",
+   "at": "2026-10-30T04:35:16Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
