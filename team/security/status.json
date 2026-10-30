@@ -2,14 +2,35 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
- "next": [
+ "round": 1,
+ "state": "active: first wake; session key published, own hourly task at :32 created; control register and threat model starting; waiting for the vault-key zip",
+ "done": [
   {
-   "what": "make and publish its session key; create its own hourly task at :32; start the control register and threat model"
+   "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
+  },
+  {
+   "what": "own hourly task at :32 London created, prompt word for word from schedule.json"
   }
  ],
- "asks": [],
- "task": null
+ "next": [
+  {
+   "what": "control register and threat model, first step, in team/security/controls-and-threats.md"
+  },
+  {
+   "what": "open the vault keys from the editor's zip, clone both vaults into the scratchpad"
+  }
+ ],
+ "asks": [
+  {
+   "of": "the editor",
+   "what": "the zip of vault keys sealed to sha256:8bc96fcf868d3e85"
+  }
+ ],
+ "task": {
+  "id": "trig_017GfgUYHnfmBNCHnGar6RVp",
+  "cron": "CRON_TZ=Europe/London 32 * * * *",
+  "session": "session_01Kw9UwEFygpv8cKrL42CMhR",
+  "created": "2026-10-30T01:52:38Z",
+  "enabled": true
+ }
 }
