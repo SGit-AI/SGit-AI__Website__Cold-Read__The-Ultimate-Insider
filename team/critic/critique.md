@@ -1,6 +1,6 @@
 # The critic's report
 
-What is weak, overclaimed, missing or contradictory in the talk and in the source team's own record. By critic@cold-read.the-ultimate-insider. Draft: parts 1 and 2, written 30 October 2026.
+What is weak, overclaimed, missing or contradictory in the talk and in the source team's own record. By critic@cold-read.the-ultimate-insider. Draft: parts 1 to 3, written 30 October 2026.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (2026-10-29 23:19:51 UTC) and its history only, read in a scratchpad clone with every later ref removed and pruned. Nothing here comes from anywhere else. A commit is cited by its short hash; a path without a hash is the file as it stands at `298be4e`.
 
@@ -18,6 +18,7 @@ What is weak, overclaimed, missing or contradictory in the talk and in the sourc
 | 4 | low | The talk's own header says every number on screen is from the newsroom article, and that the talk is a first pass to be rehearsed. Neither is true of the talk at `298be4e`. | `src/static/talk/talk.json`, keys `source` and `status` |
 | 5 | high | The team's evidence register cannot check the talk it was built for: 44 of the 58 beats, 48 min 35 s of 74 min 55 s, are named by no claim, and 33 of its talk places name beats the talk no longer has. | `evidence/claims/claims.json` (last changed `d7df71a`, 18:23:50); `src/static/talk/talk.json` |
 | 6 | medium | A claim the register leaves "not checked", from one interested party, is said on stage as fact: "invented data for about four thousand users". | `talk.json` beat `integrity`; `evidence/claims/claims.json`, `story-r3-replit-fake-users` |
+| 7 | high | The live demos: six beats load other sites, every one promises "the recorded fallback", and the record holds one recording; "everything ... is open source" is said twice and graded A0, not checked. | `src/static/talk/slides/live/*/index.html`; `talk.json` beats `demos`, `live-*`, `s-sharness-recorded`; `claims.json`, `demos-all-open-source` |
 
 ### 1. "Not one hold", and the hold
 
@@ -90,14 +91,32 @@ So the register was built against a talk that had already changed. `talk.json` l
 
 **What the record does not say.** Whether the speaker said the number on the night.
 
+### 7. The live demos
+
+**What is wrong.** Six beats are live: `live-sharness-linux` (120 s), `live-sharness-playground` (90 s), `live-vault-risk-mandate` (90 s), `live-abp` (60 s), `live-what-can-it-do` (60 s) and `live-sgit-demos` (30 s), 450 s in all. Each slide creates an iframe to another site when shown (`src/static/talk/slides/live/abp/index.html`: `createElement('iframe')`, `.src = 'https://abp.sgit.ai/'`; the others frame `sharness.ai`, `sgit.ai` and `what-can-it-do.games.sgit.ai`). All six slides carry the same footer: "if the network fails, open it in a new tab or use the recorded fallback" (6 of 6 files under `src/static/talk/slides/live/`). The `demos` beat's cue asks for "a recorded fallback for each".
+
+At `298be4e` one recording exists: `s-sharness-recorded` plays `studio/lab/sharness/kernel-in-a-tab/v1/`, "The offline fallback for the live Linux slide (the editor's answer, 17:15)" (its cue). No file under `src/static/` is a video or a recording of the other five, and no beat plays one. Opening the page "in a new tab" needs the same network that failed. The site's offline cache cannot help: `src/static/sw.js` caches "same-origin GET requests only" (`url.origin === self.location.origin`), so REALITY.md's "After one load online it plays the whole talk with no network" (finding 3) holds for every beat but these six.
+
+Twice the speaker says the demos are open source: "Everything you are about to see is open source, and running in this slide" (`demos`, `say`) and "Everything you have just seen is open source, and runs in the browser" (`live-sgit-demos`, `say`). The abstract promises "Live demos, all open source" (`BRIEF.md`). The register grades it `demos-all-open-source`, **A0, not checked**, with the note: "RiskMandate's ABP page is a commercial product page; whether every demo's code is under an open licence needs checking per demo once the list is fixed." The record holds no later check.
+
+**Why it matters.** The way out is the talk's answer, and the live demos are its proof. For 330 s of the 450 s there is no fallback in the record, and the talk's one claim about all of them is the one its own researcher flagged and never checked.
+
+**The strongest other side.** Each footer prints the live address, so a room with a network sees the real thing, and a live page is better evidence than a recording. The Linux boot, the slowest and riskiest demo, is the one with a recording. The `demos` cue says the list was "to be confirmed by Dinis before the talk", so the open-source line may have been checked off the record. All fair. The record still promises five recordings it does not hold, and says "open source" without the check its own register asked for.
+
+**What the record does not say.** Whether the network held on the night; which demos were shown; the licence of any demo's code (the record does not say, for any of the six).
+
 ## Other members' findings
 
-- **The hold.** Security (`team/security/controls-and-threats.md`, C8 and T6), the journalist (`team/journalist/pitches.md`, pitch 1) and the technologist (`team/technologist/architecture.md`, "A fact for the timeline") each record `team/conductor/HOLD.md` at `867f8c2`. Agreed, and not repeated. Finding 1 is a different point: the talk tells the room there was none, and `team_numbers.py` could not have counted one that had been lifted. The historian's timeline marks 18:46 to 23:19 as a "quiet gap" in its overview and leaves the gap to its part 3; the hold at 18:44:13 is the record's only stated reason for it, and the security member's T6 shows one commit (`88b8f00`, 82 s later) landing after it.
+- **The hold.** Security (`team/security/controls-and-threats.md`, C8 and T6), the journalist (`team/journalist/pitches.md`, pitch 1) and the technologist (`team/technologist/architecture.md`, "A fact for the timeline") each record `team/conductor/HOLD.md` at `867f8c2`. Agreed, and not repeated. Finding 1 is a different point: the talk tells the room there was none, and `team_numbers.py` could not have counted one that had been lifted. The historian's timeline, part 3, now records the hold at 18:44 and the merge at 23:19 (`team/historian/timeline.md`), and the analyst gives the hold as the reason for the gap (`team/analyst/numbers.md`, "When"). Agreed.
 - **The analyst's "159 wakes ... since 01:40" (`team/analyst/numbers.md`, "Members and wakes").** The analyst agrees with the count and adds: "The first wake record starts 02:14:16 UTC, not 01:40." That is right about the records and, I think, wrong as a correction to the article. The scheduled tasks ran from 01:40 (`d8f3300`, "The four scheduled tasks are running"), and the conductor named a wake of 02:02 in `c81df64` (02:05:52), before `wake.py` existed (`8c66751`, 02:16:00). No record exists for that wake: the first record in `team/*/wakes/` at `298be4e` is `team/conductor/wakes/20261029T021416Z.json`. So "since 01:40" is the right window, and "159 wakes" undercounts it by the wakes that ran before records were kept. How many there were, the record does not say.
 - **The analyst's "Eight agents" check.** I tested it and agree: at `2afe0d7` (16:04:05) nine members had a `key.json` and wake records (conductor, deck, designer, dev, motion, researcher, ruv-sgit, storyteller, studio).
+- **Reader-4's point 5** (`team/reader-4/review.md`, "The prelude's evidence is the team's own record, and part of it was stale before the talk began") reaches finding 1 independently, from the script page. Agreed. Finding 1 adds how `holds` was counted (files present, `team_numbers.py` line 53), which reader-2 says "the talk's words do not say" (`team/reader-2/review.md`, "The proof of 'order and structure'").
+- **Security's C7** (`team/security/controls-and-threats.md`) records that the five-step review is "defence in depth inside one session, not a separate identity", with no `stop` in 162 records. Agreed; one addition for the talk. Beat `team` offers the same review as the proof of "order and structure": "a review before and after every wake. ... This is what agentic work will look like" (`talk.json`, beat `team`, `say`). The source's own brief for those reviews says what the talk leaves out: "the reviewers have the same reach as the member" (`team/conductor/reviews/README.md`, line 14, at `298be4e`). And the one time the team stopped, a reviewer did not stop it: the editor's usage limit did (`team/conductor/HOLD.md`, `867f8c2`).
+- **The analyst's holds and verdicts** (`team/analyst/numbers.md`, "Holds", "Reviews and verdicts") count what finding 1 and C7 rely on. No disagreement; finding 2's 510 against 405 is not in it, and stands.
+- **The licence as a promise.** Readers 1 to 4 each note that "the suspension is what we are building towards" (`talk.json`, beat `licence`). Agreed, and not repeated here.
 
 ## Still to come
 
-The talk's way out set against the source: the live demos (`live-*` beats) and what each one runs at `298be4e`; the licence and the earned autonomy, against how the source team granted its own; the team's review verdicts (`five_step_verdicts` in `team-in-numbers.json`: 254 go, 4 findings) against its wake records; and the readers' reviews, once all five are on `dev`.
+The readers' final reviews and the other deliverables once signed, read before this report is signed; then a closing pass on every finding against `298be4e`.
 
 Signed: critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`).

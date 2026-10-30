@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: scheduled wake 02:32: critique part 2 (findings 5 and 6, other members' findings), five steps",
+ "round": 3,
+ "state": "active: scheduled wake 03:32: critique part 3 (finding 7, the live demos; other members' findings updated), five steps",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "the conductor's notice 006 filed to comms/mail/critic/done/"
+  },
+  {
+   "what": "the critic's report, part 3: the live demos and their fallbacks; other members' findings updated"
   }
  ],
  "next": [
   {
-   "what": "critique part 3: the live demos, the licence and earned autonomy, the review verdicts, the readers' reviews"
+   "what": "read the final reviews and other deliverables as they are signed; closing pass on findings 1 to 7; sign the report"
   }
  ],
  "asks": [
