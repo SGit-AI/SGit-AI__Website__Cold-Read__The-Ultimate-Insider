@@ -67,3 +67,8 @@ for m in members:
     out(f"wake records / debriefs: {m}", f"{len(wakes)} / {len(debriefs)}", "git ls-tree team/<m>/wakes/*.json, debriefs/*.md")
 out("wake records, all", sum(outcomes.values()), "sum of the above")
 out("wake outcomes", ", ".join(f"{k}:{v}" for k, v in outcomes.most_common()), "field 'outcome' in each wake record")
+
+unmarked = [s for s in git("log", "--no-merges", "--author=Claude", "--format=%s", REV).splitlines() if not s.startswith("@")]
+heads = collections.Counter(s.split(":")[0] if s.split(":")[0] in ("ruv-sgit", "conductor", "Player") else "(other)" for s in unmarked)
+out("unmarked non-merge commits by Claude", len(unmarked), "subjects not starting '@'")
+out("unmarked, by subject start", ", ".join(f"{k}:{v}" for k, v in heads.most_common()), "text before the first ':'")

@@ -1,6 +1,6 @@
 # The numbers
 
-The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, first step: 30 October 2026.
+The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, second step: 30 October 2026.
 
 **Source:** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`), a read-only clone in the analyst's scratchpad, with every ref later than `298be4e` removed before reading. Every number below comes from history reachable from `298be4e` or from files at `298be4e`.
 
@@ -44,7 +44,18 @@ The author name does not say which agent made a commit; the subject prefix and t
 | motion | 9 | 0 |
 | **marked** | **390** | **211** |
 
-Method: subjects starting `@<id>:` (`git log --format=%s`), and the values of `git log --format='%(trailers:key=Agent,valueonly)'`. The two markings disagree for five of nine agents: four agents (deck, designer, storyteller, motion) never used the trailer. Of Claude's 603 commits, 213 carry no `@<id>:` prefix: 164 of them are merges (more than one parent, `%p`) and 49 are not; what the 49 are is the next step.
+Method: subjects starting `@<id>:` (`git log --format=%s`), and the values of `git log --format='%(trailers:key=Agent,valueonly)'`. The two markings disagree for five of nine agents: four agents (deck, designer, storyteller, motion) never used the trailer. Of Claude's 603 commits, 213 carry no `@<id>:` prefix: 164 of them are merges (more than one parent, `%p`) and 49 are not.
+
+**The 49 unmarked commits** (`git log --no-merges --author=Claude --format=%s 298be4e`, subjects not starting `@`; none carries an `Agent:` trailer):
+
+| Subject starts | Commits | What they are |
+|---|---|---|
+| `ruv-sgit:` (no `@`) | 30 | ruv-sgit's wakes, 08:43 to 18:40 UTC |
+| `conductor:` (no `@`) | 6 | the conductor's first hour, 00:53 to 01:35 UTC |
+| `Player:` | 8 | the talk's player, files under `src/static/` |
+| other subjects | 5 | `97b98d9` "Conductor joins: roster, first five agents...", `4a2481b` "Locked parts...", `bd32d97` "The showcase slide template...", `8289d50` "Linux in the browser tonight...", `c33e86a` "E08 v1 and E04 v2..." |
+
+So 36 of the 49 name an agent without the `@`, and 13 name none. Three of the 13 (`4a2481b`, `bd32d97`, `28fe01d`) write in `team/dev/`, which suggests dev; who made the other ten, the record does not say. Counting the bare `<id>:` prefix too, ruv-sgit has 84 commits and the conductor 105.
 
 ### When
 
@@ -90,7 +101,10 @@ The 211 release commits are the 211 commits by GitHub Actions.
 | motion | 4 | 4 |
 | security | 0 | 0 |
 
-**A number the source states, not yet reconciled:** "Eight agents with mandates, scopes, keys, hourly wakes" (`team/storyteller/story/tree.md` line 147 at `298be4e`). The record at `298be4e` shows ten team folders and nine agents with marked commits. Which eight the story means, and at what hour, is the next step.
+**Numbers the source states, recomputed:**
+
+- "Eight agents with mandates, scopes, keys, hourly wakes" (`team/storyteller/story/tree.md` line 147 at `298be4e`, written in `2afe0d7`, 16:04 UTC, `git log -S'Eight agents'`). At `2afe0d7` the team already had the same ten folders (`git ls-tree 2afe0d7 team/`), and security never woke. **Disagrees:** nine agents woke. Which eight the story counts, the record does not say. The source itself says nine elsewhere: "nine agents, one editor" (`src/pages/motion/meet-the-team/index.html` line 10 at `298be4e`) and "by **9 members**" (below).
+- "Since 01:40 UTC: **159 wakes** by **9 members**, 5 idle, 145 ok, 3 open, 6 partial" (`content/articles/the-night-hour-by-hour.md` line 13, last changed in `2ed6427`, 18:39 UTC). At `2ed6427` there are 159 wake records (`git ls-tree -r 2ed6427 team/`, `wakes/*.json`). **Agrees** on the count. By `298be4e` the count is 162: one wake started after the article (designer, 18:40 UTC), and two records started before 18:39 were committed after it. At `298be4e` two records have no outcome, against the article's "3 open". The first wake record starts 02:14:16 UTC, not 01:40.
 
 ## Not yet counted
 
