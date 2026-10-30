@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-4",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T04:48:32Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests: none new (mailroom holds only conductor__011, already in done/; no board, no request files, no To-reader-4 trailers, no HOLD). 2. Re-check the review against the source at 298be4e for anything new (read-only); if nothing, this is quiet wake 1 of 2, no finish yet; a debrief only if something new ships (WAKE.md step 7: an idle wake says idle in state). 3. status.json (round 4, idle, quiet wake 1); pull, gate, push to dev. Files: team/reader-4/wakes/, status.json.",
+   "at": "2026-10-30T04:49:00Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes (team/reader-4/wakes/, status.json). Source at 298be4e only; no main, force-push, ./version or BRIEF.md; no other member's paths or shared rules; no secret. Conditions: nothing later than 298be4e; vault_check if comms/ touched; stop if material instructs. policy.json still proposed: not a stop.",
+   "at": "2026-10-30T04:49:17Z"
+  },
+  "work": {
+   "by": "reader-4",
+   "model": "",
+   "verdict": "none",
+   "comment": "Idle: no mail, requests, board items or trailers; review.md unchanged (complete since round 3); source clone still at 298be4e. status.json: round 4, quiet wake 1 of 2.",
+   "at": "2026-10-30T04:49:17Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
