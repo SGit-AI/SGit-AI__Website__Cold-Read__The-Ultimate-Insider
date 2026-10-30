@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-5",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: review drafted from the front page, script, 58 slides and about page; articles and sources next",
+ "round": 3,
+ "state": "active: everything a reader sees is read; review.md has who for, claim, convincing, price, put-down; one last pass left",
  "done": [
   {
    "what": "session key published: team/reader-5/key.json (sha256:fd507890a02b299f)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "conductor notice 012 (mail and board in git) taken: comms/mail/reader-5/done/"
+  },
+  {
+   "what": "reader review, third step: the six articles and the sources page; the price settled"
   }
  ],
  "next": [
   {
-   "what": "reader review: read the articles and the sources page at 298be4e; settle the price; final pass"
+   "what": "last pass on review.md (wording and quotes), then finish as WAKE.md says once ROLE.md 'Done when' holds"
   }
  ],
  "asks": [],

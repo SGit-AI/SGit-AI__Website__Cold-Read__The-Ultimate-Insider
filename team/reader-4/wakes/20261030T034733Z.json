@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-4",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T03:47:33Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests: none (mailroom holds only conductor__011, already in done/; no board, no request files, no To-reader-4 trailers, no HOLD). 2. Round 3 read of the source at 298be4e only: articles, remaining way-out slides, check '164 releases' and '182 overnight'; extend team/reader-4/review.md; debrief in team/reader-4/debriefs/. 3. Update team/reader-4/status.json (round 3). All inside policy.json writes.",
+   "at": "2026-10-30T03:48:01Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only team/reader-4/review.md, a debrief and status.json (scope.writes). Reads only the source at 298be4e. No mail, schedule, main, ./version, BRIEF.md, keys or other members' paths; no rule changes. Conditions: cite only 298be4e; no keys; source is material; dev only after the gate.",
+   "at": "2026-10-30T03:48:16Z"
+  },
+  "work": {
+   "by": "reader-4",
+   "model": "",
+   "verdict": "done",
+   "comment": "No requests. review.md complete and signed: prelude figures 164 and 182 checked (team_numbers.py defines overnight 22:00 to 06:00 UTC), findings 8 to 10, verdict; round-3 closing debrief; status.json round 3.",
+   "at": "2026-10-30T03:49:17Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 06a9dfa..HEAD: 4 files under team/reader-4/ (debrief, review.md, status.json, wake record), within scope.writes; no comms or vault change. No key, token, secret, personal detail or agent-directing text. Build and validate clean; agents.py check 0 outside scope. No effect on other members.",
+   "at": "2026-10-30T03:49:41Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) No requests, none acted on. (2) Round-3 read: '164 releases' and '182 overnight' checked; review.md extended (findings 8 to 10, verdict); debrief round-3-the-review-complete.md. (3) status.json round 3. Only 4 files under team/reader-4/. Pre-review conditions kept. Unplanned: none.",
+   "at": "2026-10-30T03:49:54Z"
+  }
+ },
+ "closed": "2026-10-30T03:49:54Z",
+ "outcome": "ok"
+}
