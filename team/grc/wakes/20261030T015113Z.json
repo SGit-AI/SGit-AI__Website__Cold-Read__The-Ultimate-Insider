@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md first step (authority map, ten policies and their agreement, four open items), debrief, status.json; gate clean",
    "at": "2026-10-30T01:54:52Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff a557864..HEAD only team/grc/**; agents.py 0 outside scope; build and gate clean; key files hold public keys only; no secrets, personal details or agent-directing text; no other member affected.",
+   "at": "2026-10-30T01:55:23Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1) no requests, recorded in debrief; 2) governance.md first step done; 3) status.json and debrief done; only team/grc/** changed, nothing unplanned. Did not verify citation wording.",
+   "at": "2026-10-30T01:55:23Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T01:55:23Z",
+ "outcome": "ok"
 }
