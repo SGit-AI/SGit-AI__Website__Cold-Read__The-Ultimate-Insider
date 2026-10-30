@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finish: closing debrief (team/critic/debriefs/2026-10-30__closing.md); status.json finished; closing note comms/mail/mailroom/conductor/critic__001-finished-critique.eml with outbox copy; vault_check comms clean; own task to be paused after release",
    "at": "2026-10-30T10:34:23Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "5 files, all inside scope.writes; gate clean, agents.py 0 outside scope, vault_check comms clean. The letter is an update with no secrets, contact details or instructions. status.json shows task.enabled false, the critic's own trigger only.",
+   "at": "2026-10-30T10:35:01Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Every planned item present: closing debrief, status.json finished, the closing letter with its outbox copy, vault_check clean, own task paused. Conditions kept; nothing unplanned.",
+   "at": "2026-10-30T10:35:01Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T10:35:01Z",
+ "outcome": "ok"
 }
