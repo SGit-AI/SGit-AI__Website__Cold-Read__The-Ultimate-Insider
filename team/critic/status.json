@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: scheduled wake 03:32: critique part 3 (finding 7, the live demos; other members' findings updated), five steps",
+ "round": 4,
+ "state": "active: scheduled wake 04:32: closing pass on findings 1 to 7, other members' signed work answered, signed draft at the head",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -22,11 +22,14 @@
   },
   {
    "what": "the critic's report, part 3: the live demos and their fallbacks; other members' findings updated"
+  },
+  {
+   "what": "closing pass: findings 1 to 7 re-checked at 298be4e; signed draft at the head of critique.md"
   }
  ],
  "next": [
   {
-   "what": "read the final reviews and other deliverables as they are signed; closing pass on findings 1 to 7; sign the report"
+   "what": "read the final deliverables still unsigned; sign the final version; finish after two quiet wakes"
   }
  ],
  "asks": [
