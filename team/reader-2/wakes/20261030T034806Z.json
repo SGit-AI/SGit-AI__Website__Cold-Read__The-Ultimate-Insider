@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-2",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T03:48:06Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No open requests (conductor__009 in done/, no board, no requests, no To-reader-2 trailers, no HOLD). 2. review.md section 3, is it convincing: the numbers the talk leans on (talk.json) against the sources page of the site built from 298be4e, with path and commit, or the record does not say. 3. Debrief and status.json; all inside policy.json.",
+   "at": "2026-10-30T03:48:30Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan inside policy.json (team/reader-2/** only); no main, no source write, no scheduling; no stop condition. Conditions: cite only 298be4e, never a later commit or the live site; the record does not say where silent; no em-dashes; gate before pushing to dev.",
+   "at": "2026-10-30T03:48:42Z"
+  },
+  "work": {
+   "by": "reader-2",
+   "model": "session",
+   "verdict": "done",
+   "comment": "review.md section 3 (is it convincing): talk.json sources against src/pages/sources/index.html at 298be4e; 13 of 32 source links missing from the sources page; debrief; status.json. Gate and agents check clean.",
+   "at": "2026-10-30T03:50:18Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "All 4 staged files inside scope.writes (team/reader-2/**). No keys, tokens or contact details; no em-dashes. Claims cite talk.json or page lines at 298be4e, with not-said where silent. No outside links opened, no later source commits, nothing harms another member.",
+   "at": "2026-10-30T03:50:32Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1. No open requests, no hold. 2. review.md section 3 written: talk.json numbers against the sources page at 298be4e, with paths and lines, not-said for outside links. 3. Debrief, status.json, wake record, all in team/reader-2. Nothing unplanned, nothing left undone.",
+   "at": "2026-10-30T03:50:45Z"
+  }
+ },
+ "closed": "2026-10-30T03:50:45Z",
+ "outcome": "ok"
+}

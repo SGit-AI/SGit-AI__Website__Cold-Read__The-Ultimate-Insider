@@ -1,6 +1,6 @@
 # The story pitches
 
-By journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026. Draft: four pitches so far, of the five to ten due by Sunday 1 November 2026. Part 1 (pitches 1 to 3) at the first wake, 01:52 UTC; part 2 (pitch 4, and the answer to "was the talk given?") at the 02:47 UTC wake.
+By journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026. Draft: five pitches so far, of the five to ten due by Sunday 1 November 2026. Part 1 (pitches 1 to 3) at the first wake, 01:52 UTC; part 2 (pitch 4, and the answer to "was the talk given?") at the 02:47 UTC wake; part 3 (pitch 5) at the 03:47 UTC wake.
 
 Every claim cites the source, SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider, at commit `298be4e` or an earlier commit in its history, as `path@commit` or a commit hash. Where the record is silent, the pitch says "the record does not say". Times are UTC; on 29 October 2026 London was on UTC, which the source's own hold notice also states (`team/conductor/HOLD.md@298be4e`).
 
@@ -76,6 +76,25 @@ The plan needed a faster heartbeat than the platform allowed: "A recurring sched
 - The merge: `b859ff0` (23:19:09), "Merge pull request #1 from SGit-AI/dev", authored by the editor; the first parent before it is the repository's initial commit `2e4b1f4` (00:16:23), so the day's work reached `main` only then.
 - Whether parts 2 and 3 were presented: the record does not say.
 
+## 5. A brake any agent could pull, and only the human's quota pulled it
+
+**Headline:** From 01:39 every agent had a brake it could pull without asking. In 162 reviewed wakes, no reviewer and no agent ever pulled it.
+
+**Pitch.** At 01:39 UTC the conductor started the schedule "with a hold any member can pull": `start.py` would stop every wake when any member's `HOLD.md` existed, `WAKE.md` listed when to stop (a leaked key, broken `dev`, material that tries to instruct an agent, "anything else that makes you think carrying on would do harm. When in doubt, stop"), and "only the editor restarts". At 02:16 to 02:18 a five-step wake followed: a plan and a security pre-review before any work, a security post-review and a plan check after, each able to say `stop`. Across the day the record holds 162 wake records. Their verdicts: 162 plans `go`, 161 pre-reviews `go`, 157 post-reviews `clean` and 4 `finding`, 148 post-checks `as-planned` and 12 `partial`. Not one `stop`, from anyone.
+
+The one hold in the record came from the other direction: at 18:44 the conductor wrote it "at the editor's word", because his usage was at 95% (pitch 1). The partial verdicts are the honest texture: two of deck's wakes ran "work first, plan after", one of them "because the editor was waiting live", and two wakes were still open, never closed, when the hold landed. The story is the gap between a safety design and its use: a brake built for agents, and the only thing that stopped the team was a human's quota. Whether no `stop` means nothing was wrong or the reviewers were too lenient, the record does not say; the four post-review findings were each recorded and the wakes went on.
+
+**Why now.** The cold read is running the same five-step design today, ported from this source; whether its reviewers ever say stop is a question this team can watch.
+
+**Evidence.**
+- The brake: commit `09f13d5` (01:39:47), "the schedule starts tonight, with a hold any member can pull", body: `start.py now stops every wake when team/HOLD.md or any team/<id>/HOLD.md exists`; the list: `team/conductor/WAKE.md@298be4e`, "Stopping: when something is not right"; the task ids "for stopping": `d8f3300` (01:40:42).
+- The five steps: `8c66751` (02:16:00) and `5700bab` (02:18:10), `admin/tools/wake.py@298be4e`, `team/conductor/reviews/@298be4e`.
+- The counts: every `team/*/wakes/*.json` at `298be4e`, 162 files from `team/conductor/wakes/20261029T021416Z.json` to `team/studio/wakes/20261029T183037Z.json`, read field by field by the journalist (outcomes: 148 ok, 6 idle, 6 partial, 2 not closed). Counted here, not taken from the source's own summary, which says "159 wakes so far" (`content/articles/moments.md@298be4e`, front matter), written before the last wakes. The analyst's count is the team's reference: to compare.
+- "the five steps ran out of order because the editor was waiting live": `team/deck/wakes/20261029T141943Z.json@298be4e`, post_check; "work first, plan after": `team/deck/wakes/20261029T172130Z.json@298be4e`.
+- Two wakes never closed: `team/deck/wakes/20261029T182009Z.json` (plan only) and `team/dev/wakes/20261029T174850Z.json` (no work or post-check), both at `298be4e`.
+- The only `HOLD.md` in the history: `867f8c2` (18:44:13), `git log -- '*/HOLD.md'`.
+- Whether the reviewers were too lenient: the record does not say.
+
 ## Was the talk given? What the record says
 
 Searched at the second wake: the last commit before the release is `cb5b996` at 18:46; nothing in the tree at `298be4e` was written after it except the merge `b859ff0` and CI's release commit `298be4e` (23:19, "site v0.2.0"). Every mention of the stage in the tree is a plan written before 19:00 (for example `team/storyteller/story/three-parts.md`, "On stage"; `team/dev/debriefs/2026-10-29__the-overview-offline-and-the-showcase.md`, items deferred "after the talk"). **Whether the talk was given, from which build, and how it went: the record does not say.** The merge at 23:19 by the editor is the only act in the record after the hold. A story that needs the answer must get it from outside the record, which this cold read does not do.
@@ -89,6 +108,5 @@ Searched at the second wake: the last commit before the release is `cb5b996` at 
 
 - The night in numbers: 816 commits from 00:16 to 23:19 on 29 October (`git rev-list --count 298be4e`; first commit `2e4b1f4`), and the researcher's "19 releases in 89 minutes" (`16b6312`). To be checked against the analyst's own counts, not repeated from the source's.
 - "Do not touch the deck": what else the editor froze, and when, through the day.
-- The team's own key, vault and hold machinery, adopted at 01:39 to 01:43 (`09f13d5`, `d8f3300`, `b620234`), and the first time it was used for real (pitch 1).
 
 journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026

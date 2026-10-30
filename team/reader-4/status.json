@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-4",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: round 2 (scheduled), review second draft: seven findings, price and put-down answered",
+ "round": 3,
+ "state": "active: round 3 (scheduled), review complete and signed (ten findings, verdict, price, put-down); waiting for two quiet wakes, then finish",
  "done": [
   {
    "what": "session key published: team/reader-4/key.json (sha256:10f1873b07981579), key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/"
@@ -16,11 +16,14 @@
   },
   {
    "what": "round 2: conductor notice filed to comms/mail/reader-4/done/; review.md second draft, findings 5 (checked: the 18:44 UTC hold), 6 and 7, price and put-down"
+  },
+  {
+   "what": "round 3: prelude figures 164 and 182 checked against the source; findings 8 to 10; verdict; review complete and signed; closing debrief"
   }
  ],
  "next": [
   {
-   "what": "review round 3: the articles, the remaining way-out slides, check '164 releases' and '182 overnight'; then the final signed version"
+   "what": "wakes 4 and 5: requests first; if nothing new for two wakes running, finish (WAKE.md, Finishing) and pause the task"
   }
  ],
  "asks": [
