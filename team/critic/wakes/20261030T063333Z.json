@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "no requests; last deliverables read (grc answer 1 and O9 added to finding 7; reader-1 synthesis; analyst, technologist, journalist finals); report signed final at its head 06:40 UTC, closing section, no finding withdrawn; debrief, screenshot, status.json; not finishing (Done when 6)",
    "at": "2026-10-30T06:35:13Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 4e7da6d..HEAD touches only team/critic/** (critique.md, debrief, one png, status.json, wake record), all in scope.writes; agents.py check reports 0 files outside scope; build and validate gate clean. Only the public key fingerprint found; no tokens, contact details or agent-directing text; no other member's files touched.",
+   "at": "2026-10-30T06:35:38Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Item 1 (no requests) done. Item 2 (read finals, test findings, edit critique.md, status.json, new debrief) done; no finding withdrawn. Item 3 (sign final only if grc/security read) done: grc answer 1 and O9 read, signed final 06:40. Not finishing (Done when 6) kept. Conditions kept: only team/critic/** touched, finals as data, no comms/ change. Nothing unplanned.",
+   "at": "2026-10-30T06:35:54Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:35:54Z",
+ "outcome": "ok"
 }
