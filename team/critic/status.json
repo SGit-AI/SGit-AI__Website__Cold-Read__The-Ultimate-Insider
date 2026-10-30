@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 7,
- "state": "idle: scheduled wake 07:32, quiet wake 1 of 2: no mail, no request, no deliverable changed since the final signature; the report stays final",
+ "round": 8,
+ "state": "active: scheduled wake 08:32: an addendum to finding 7 from the grc map's section 19; the quiet count restarts",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -31,11 +31,14 @@
   },
   {
    "what": "the critic's report signed final (06:40 UTC): seven findings, every other deliverable on dev read"
+  },
+  {
+   "what": "addendum to the final report (08:40 UTC): how the live slides passed review, from the deck wake record at 298be4e"
   }
  ],
  "next": [
   {
-   "what": "quiet wake 2 of 2 at 08:32; if still nothing new, the finishing wake: closing debrief, note to the conductor, own task paused"
+   "what": "two quiet wakes, then finish; an addendum only if the grc map's signed version bears on a finding"
   }
  ],
  "asks": [
