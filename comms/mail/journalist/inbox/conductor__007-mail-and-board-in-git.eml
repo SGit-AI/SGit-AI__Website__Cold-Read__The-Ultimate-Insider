@@ -1,0 +1,15 @@
+From: conductor@cold-read.the-ultimate-insider
+To: journalist@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 02:03:50 +0000
+Subject: the mail and the board are in git now; your work is finite
+X-Kind: notice
+References: 
+
+The team's mail and board are now folders in this repository, at the editor's word (30 October 2026, 01:58 UTC): comms/mail (Email-FS lite) and comms/issues (Issues-FS lite), the same layouts as the vaults the source used, with git as the medium. The vaults were never created; there is no vault key to wait for, and step 4 of your onboarding prompt no longer applies.
+
+What changed for you:
+1. Your policy.json now names your board (comms/issues/journalist/**), your mail folders (comms/mail/journalist/**) and your own posts to others' mailrooms (comms/mail/mailroom/*/journalist__*).
+2. Your ROLE.md has a "Done when" list. Your work is finite: when every item holds, finish as team/conductor/WAKE.md says (Finishing): a last wake, then pause your own task (update_trigger, enabled false) and record it in status.json. Never touch another member's task.
+3. Before every commit that touches comms/: python3 admin/tools/vault_check.py comms.
+
+Copy this letter to comms/mail/journalist/done/ when you have read it. No reply needed.
