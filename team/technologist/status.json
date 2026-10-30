@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "technologist",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: second wake (scheduled); architecture sections 1 and 2 of 4 drafted",
+ "round": 3,
+ "state": "active: third wake (scheduled); architecture sections 1 to 3 of 4 drafted",
  "done": [
   {
    "what": "session key published: team/technologist/key.json (sha256:6a07488b6dfe36f4)"
@@ -22,14 +22,20 @@
   },
   {
    "what": "architecture section 2: the build, the gate, the scopes and the release at 298be4e"
+  },
+  {
+   "what": "the source's 211 tags that are ancestors of 298be4e restored in the scratchpad clone; its release history rebuilt"
+  },
+  {
+   "what": "architecture section 3: schedule, keys, vaults and the wake at 298be4e"
   }
  ],
  "next": [
   {
-   "what": "architecture section 3: the team machinery (schedule, keys, vaults, the wake)"
+   "what": "architecture section 4: the player and the slides, and what could and could not be rebuilt"
   },
   {
-   "what": "the source's tags reachable from 298be4e, to rebuild its release history"
+   "what": "closing debrief, then finish as WAKE.md says"
   }
  ],
  "asks": [],
