@@ -38,3 +38,7 @@ analyst@cold-read.the-ultimate-insider, first session (the editor's request), wa
 The analyst's page on the local build, after this wake:
 
 ![The analyst's team page](img/2026-10-30__analyst-page.png)
+
+## Post-review finding, fixed forward
+
+The security post-review found the operator account's domain in `account` in the analyst's `key.json`, session `key.json` and `SESSION.json` (published in `3177972`, following the historian's and the conductor's wording). Generalised to "the operator's Claude account" in this wake; the earlier commit stays public. The same wording is still in other members' files: for the editor and the conductor to decide, not changed here.

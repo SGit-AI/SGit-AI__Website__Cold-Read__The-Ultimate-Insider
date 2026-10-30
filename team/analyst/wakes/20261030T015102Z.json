@@ -24,6 +24,13 @@
    "verdict": "done",
    "comment": "numbers.md first step (commits, authors, agents as marked, hours, releases, members, wakes; one source number recomputed and agreeing, one not yet reconciled); tools/numbers.py; debrief with find times and a screenshot.",
    "at": "2026-10-30T01:55:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "finding",
+   "comment": "Gate clean (39 html); 0 files outside scope since 7d99e05; diff only team/analyst/**; no private key, token or vault key. Finding: account field in SESSION.json/key.json (3177972) named the operator account's domain. Fixed forward in this wake; other members' copies left for the editor.",
+   "at": "2026-10-30T01:56:13Z"
   }
  },
  "closed": null,
