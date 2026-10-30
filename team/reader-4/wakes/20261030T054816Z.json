@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-4",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T05:48:16Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Finish. 1. Requests: none (mailroom holds only conductor__011, already in done/; no board, request files, To-reader-4 trailers or HOLD). Done-when 1 to 5 hold, and this is quiet wake 2 of 2, so item 6 holds. 2. team/reader-4/debriefs/2026-10-30__round-5-finished.md; status.json state finished with a finished time; wake record. 3. comms/mail/mailroom/conductor/reader-4__001-finished-review.eml (X-Kind update) with a copy in comms/mail/reader-4/outbox/; vault_check comms; push to dev; then update_trigger enabled false on trig_015Vae8wiRbfeS8NEjiNiyUJ only.",
+   "at": "2026-10-30T05:48:52Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes (team/reader-4/**, comms/mail/reader-4/**, comms/mail/mailroom/conductor/reader-4__001-*). Follows Finishing; pauses only its own task, enabled false, never delete. No secrets. Conditions: vault_check comms before commit; pull before push; not main; no key, contact detail or later source commit in letter or debrief; end banner finished, NEXT none.",
+   "at": "2026-10-30T05:49:17Z"
+  },
+  "work": {
+   "by": "reader-4",
+   "model": "",
+   "verdict": "done",
+   "comment": "Finished: round-5 finishing debrief; status.json finished 2026-10-30T05:50:00Z; closing note comms/mail/mailroom/conductor/reader-4__001-finished-review.eml with outbox copy; vault_check comms clean; own task trig_015Vae8wiRbfeS8NEjiNiyUJ paused (enabled false), not deleted.",
+   "at": "2026-10-30T05:49:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff a031f21..HEAD: 5 files (mail to conductor and outbox copy, debrief, status.json, wake record), all in scope.writes. No key, token, secret, contact detail or agent-directing text. Build and validate clean; agents.py check 0 outside scope; vault_check comms clean. Only reader-4's own task paused.",
+   "at": "2026-10-30T05:49:55Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) No requests; finish. (2) Finishing debrief, status.json finished 05:50:00Z, wake record. (3) Closing note to the conductor with outbox copy; vault_check clean; own task trig_015Vae8wiRbfeS8NEjiNiyUJ enabled false, not deleted. Pre-review conditions kept. Push to dev follows. Nothing unplanned.",
+   "at": "2026-10-30T05:50:11Z"
+  }
+ },
+ "closed": "2026-10-30T05:50:11Z",
+ "outcome": "ok"
+}
