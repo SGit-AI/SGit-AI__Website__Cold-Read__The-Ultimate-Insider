@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "numbers.md checked line by line: five fixes (lost 'Not yet counted' body restored; unpaired replies described correctly; 'written in one day' narrowed; Player files; line citations for the 45-minute limit and wake.py). Debrief 2026-10-30__citations-checked.md; status.json.",
    "at": "2026-10-30T05:19:19Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "666ac37..HEAD touches only team/analyst/** (numbers.md, status.json, debrief, wake record); gate clean (97 html); agents check 0 outside scope; no key, token or personal detail; no instructions aimed at agents.",
+   "at": "2026-10-30T05:19:47Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests, nothing new: done. 2 every numbers.md claim checked against 298be4e, five fixes: done (6a79966). 3 status.json round 5; closing debrief deferred: kept. Conditions kept. Unplanned: a round debrief (not the closing one).",
+   "at": "2026-10-30T05:20:06Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T05:20:06Z",
+ "outcome": "ok"
 }
