@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 7,
- "state": "active: seventh wake (scheduled), governance map steps 1 to 7 on dev",
+ "round": 8,
+ "state": "active: eighth wake (scheduled), governance.md signed on dev (sha256:6cda488564949dfa), open list O1 to O14 last",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -31,11 +31,14 @@
   },
   {
    "what": "governance.md step 7: the five steps across 162 wake records; O12 and O13"
+  },
+  {
+   "what": "governance.md signed: the decisions of 15:00 checked (section 21), the open list last (section 22, O1 to O14)"
   }
  ],
  "next": [
   {
-   "what": "governance map: the last checks (answers 2, 4, 6; the 15:00 decisions), then put the open list last, renumber and sign"
+   "what": "two wakes checking for anything new; if none, a closing debrief and finish (WAKE.md, Finishing)"
   }
  ],
  "asks": [],

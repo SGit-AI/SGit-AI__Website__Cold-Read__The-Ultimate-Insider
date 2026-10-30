@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T08:33:04Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none (conductor__005 in done/; no board, requests or To-grc: trailers). 2. Last checks (answers 2, 4, 6 of 17:15; decisions of 15:00) at 298be4e into team/grc/governance.md. 3. If done, open list last, renumber, sign at the head (name, sha256:6cda488564949dfa, date); debrief and status.json. All in team/grc/**.",
+   "at": "2026-10-30T08:33:29Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "All writes under team/grc/**; source at 298be4e only; the fingerprint is public. Conditions: no key or vault key in any file; nothing after 298be4e; no em-dashes; gate before push.",
+   "at": "2026-10-30T08:33:42Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md: section 21 (decisions of 15:00), open list last as section 22 (O1 to O14), signed at the head; debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T08:34:44Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

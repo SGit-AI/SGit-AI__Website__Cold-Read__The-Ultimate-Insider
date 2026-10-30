@@ -1,8 +1,10 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 7 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+**Signed: grc@cold-read.the-ultimate-insider, key sha256:6cda488564949dfa, 30 October 2026.** Complete for the record this map read (steps 1 to 8, 30 October 2026). Where a check was not made, the section says so.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
+
+The sections keep the numbers they had when each step was pushed, so the debriefs' references still hold. There is no section 15 or 18: both were earlier places of the open list, which is now section 22, last.
 
 ## 1. Who wrote the record
 
@@ -190,9 +192,20 @@ All wake records at `298be4e` (`team/*/wakes/*.json`), read as data.
 O12. **The five steps gave way to the editor's presence** three times, with no recorded waiver (section 19).
 O13. **Two wakes left open** before the hold, never closed (section 19).
 
-## 18. Every open decision, one list (was section 15)
+## 21. The editor's decisions of 15:00: did they land?
 
-For the signed version, every decision this map has found open at `298be4e`. The numbers here replace the running numbers in sections 4, 7, 10 and 13.
+`1-editor-decisions-1500.md` (`78d517d`, 15:16 UTC) routes its decisions to the storyteller, deck, the researcher and ruv.sgit. At `298be4e`, in `src/static/talk/talk.json`:
+
+- **The frame** ("the perfect storm wraps the three known problems"): "perfect storm" appears three times, first in `e1190dc` (15:42 UTC). The abstract's "nobody is presenting them as one story" is gone from the talk. It survives in one page of `src/` and in `BRIEF.md`, which is never edited.
+- **Act three led by explorer coding,** and beats 3a ("accidental controls"), 3b ("attackers are businesses"), 3c ("the orchestration, not the model") and 3g ("very secure"): each is in `talk.json`, first in deck's `ca59986` (16:36 UTC), "the talk in the editor's order". That is one hour and twenty minutes after the brief.
+- **"In recent years"** and the worm era: in `talk.json` from `ca59986`.
+- **3e, the Wardley maps:** not in `talk.json` by name. They are slides of their own in `src/static/talk/slides/maps/`.
+- So the 15:00 decisions are the best-landed decisions in the record. Each traces from the brief, through the conductor's routing, to a commit by the member it was routed to.
+- Answers 2, 4 and 6 of 17:15 (section 17) are still not traced to a file (O14).
+
+## 22. Every open decision, one list
+
+For the signed version, every decision this map has found open at `298be4e`. The numbers here replace the running numbers in sections 4, 7, 10, 13 and 20.
 
 | # | Open decision | Section |
 |---|---|---|
@@ -208,9 +221,9 @@ For the signed version, every decision this map has found open at `298be4e`. The
 | O11 | the source's security role was never held: every security verdict is a sub-agent in another member's wake | 16 |
 | O12 | the five steps gave way to the editor's presence three times, with no recorded waiver | 19 |
 | O13 | two wakes (dev 17:47, deck 18:19) never closed | 19 |
+| O14 | answers 2, 4 and 6 of 17:15 not traced to a file by this map | 17, 21 |
 | O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
 
 ## Next steps
 
-- Answers 2, 4 and 6 of 17:15, and the decisions of 15:00, against the files.
-- Put section 18 last and renumber, for the signed version; then sign it.
+None for the map. It stays open to corrections: a finding against it goes in a debrief, and the change is made here with its date.
