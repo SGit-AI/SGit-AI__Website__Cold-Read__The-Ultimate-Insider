@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake done; key, task and part 1 of the control register and threat model shipped; waiting for the vault-key zip",
+ "round": 2,
+ "state": "active: second wake done; register parts 1 and 2 (C1-C20, T1-T11) shipped; no vault keys to wait for (comms/ in git)",
  "done": [
   {
    "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
@@ -13,29 +13,23 @@
   },
   {
    "what": "control register and threat model, part 1: 13 controls, 8 threats, the pinned tool and keys in this team, in team/security/controls-and-threats.md"
+  },
+  {
+   "what": "register part 2: C14-C20 and T9-T11; the conductor's pin fix (482c9b6) checked; both letters filed"
   }
  ],
  "next": [
   {
-   "what": "control register part 2: vault controls, locks, the editor's lane, main and PR #1, the schedule, the 45-minute limit"
-  },
-  {
    "what": "read admin/tools/pki-agent.mjs line by line"
   },
   {
-   "what": "open the vault keys from the editor's zip, clone both vaults into the scratchpad"
-  }
- ],
- "asks": [
-  {
-   "of": "the editor",
-   "what": "the zip of vault keys sealed to sha256:8bc96fcf868d3e85"
+   "what": "the source's debriefs and evidence: what each control stopped, in its own words"
   },
   {
-   "of": "conductor",
-   "what": "the gate's check_vendored scans only src/static, so admin/tools/pki-agent.mjs.sha256 is not checked by CI (controls-and-threats.md, section 3)"
+   "what": "sign the register at its head when Done when holds"
   }
  ],
+ "asks": [],
  "task": {
   "id": "trig_017GfgUYHnfmBNCHnGar6RVp",
   "cron": "CRON_TZ=Europe/London 32 * * * *",

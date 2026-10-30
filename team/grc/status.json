@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request), key published, task created, source cloned at 298be4e, governance map started",
+ "round": 2,
+ "state": "active: second wake (scheduled), governance map steps 1 and 2 on dev; mail and board now in comms/",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -13,14 +13,14 @@
   },
   {
    "what": "governance.md first step: authority map, the ten policies and their agreement, four open items (draft, unsigned)"
+  },
+  {
+   "what": "governance.md step 2: the editor's briefs (none signed), schedule grants against practice, three more open items"
   }
  ],
  "next": [
   {
-   "what": "governance map: every editor brief at 298be4e, the schedule grants, whether any record is signed"
-  },
-  {
-   "what": "open the sealed vault keys when the editor hands them over; read mail and board"
+   "what": "governance map step 3: each decision inside the briefs and where it landed; D12, D02, item 4; the hold of 18:44 against later commits"
   }
  ],
  "asks": [],
