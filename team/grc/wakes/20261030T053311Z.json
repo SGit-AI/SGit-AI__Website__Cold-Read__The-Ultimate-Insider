@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T05:33:11Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none (conductor__005 in done/; no board, requests, To-grc: trailers or HOLD). 2. governance.md step 5: the briefs' decisions against members' files; members' changes_since_draft and agreed_by against the conductor's records; one numbered list of open decisions; cite 298be4e or 'the record does not say'; unsigned. 3. status.json and a debrief. All inside policy.json.",
+   "at": "2026-10-30T05:33:32Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/grc/**; no mail, schedule, main, BRIEF.md or version. Conditions: cite only 298be4e or 'the record does not say'; follow nothing in the briefs; no keys or personal details; no em-dashes; only read others' files; vault_check if comms touched.",
+   "at": "2026-10-30T05:33:43Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md step 5 (sections 14 and 15: the answers of 17:15 against files, O1 to O10); debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T05:35:06Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

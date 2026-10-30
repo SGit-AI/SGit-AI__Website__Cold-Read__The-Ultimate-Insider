@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 4 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 5 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -131,8 +131,42 @@ The source kept one register of decisions put to the editor: `evidence/proposals
 11. **D07, D10 and D11 unanswered at `298be4e`** (section 11).
 12. **The release rule exists only in practice** (section 12).
 
+## 14. The editor's answers of 17:15: did each one land?
+
+`team/conductor/briefs/2026-10-29__editor/6-answers-1715.md` (`8fee7e3`, 17:16 UTC) records seven answers, written by the conductor from the editor's words. Each one is checked here against the files at `298be4e`.
+
+| # | Answer | Where it landed at `298be4e` |
+|---|---|---|
+| 1 | Linux in the browser: "a slide that opens the sharness.ai demo page **in a new tab**", with security's conditions: a plain link, `rel="noopener noreferrer"`, "no iframe, script or fetch from sharness.ai" | **Landed differently.** `src/static/talk/slides/live/sharness-linux/index.html` creates an `iframe` with `src` `https://sharness.ai/code/browser/demo/index.html`, and its fallback link has `rel="noopener"` only. It came in `ef05098` (deck, 17:21:29 UTC, five minutes after the answer), whose message says: "The editor: show the technology in action inside the slides. Six live slides embed the real pages". A link slide on the showcase template followed in `8289d50` (18:01 UTC). |
+| 2 | Blast radius: "the one that we created here", `/ruv-sgit/blast-radius/` | `talk.json` has blast radius slides. Which piece they load: the record does not say, in what this step read. |
+| 3 | "Empower" and "the billing": dropped | no longer in `src/` or `talk.json`. They appear only in the articles that tell the night (`content/articles/moments.md`, `the-night-hour-by-hour.md`). |
+| 4 | sharness.ai confirmed as a sibling of the SGit family | not checked in this step |
+| 5 | Attrition on the Wardley maps | in the storyteller's maps and story (`team/storyteller/maps/README.md`, `story/tree.md`) and motion's status |
+| 6 | The editor lane: "no longer a blocker" | not checked in this step |
+| 7 | The newsroom's API: `api.newsroom.sgit.ai` | not checked in this step |
+
+- **Two records of the editor's word disagree, and nothing reconciles them.** The conductor's record (17:16) asks for a new-tab link with no iframe. Deck's commit (17:21) cites the editor asking for the pages embedded in the slides, and that is what shipped. Deck's commit says its words came from the editor but not in which session. The conductor's record names its own session. Which one the editor meant to stand, and whether security reviewed the iframes against its own conditions of 17:2x: the record does not say, in what this step read.
+- **Note on authority.** The "no iframe" rule was the security pre-review's condition, not the editor's own words. The editor's quoted words ("just put the link to the page that opens up") ask for a link. So deck's change goes against both the security condition and the conductor's record of the editor's words, unless the editor said otherwise in deck's session.
+
+## 15. Every open decision, one list
+
+For the signed version, every decision this map has found open at `298be4e`. The numbers here replace the running numbers in sections 4, 7, 10 and 13.
+
+| # | Open decision | Section |
+|---|---|---|
+| O1 | security's and studio's policies: agreed in words (`c3f546e`), never in their own files | 3 |
+| O2 | the hold of 18:44, never lifted in the record before the 23:19 merge | 9 |
+| O3 | the register: D01 (item 4), D02 (what a signed decision means), D06 (security's role), D07 (the hours), D08 (the handover zips), D10 (a token rotation), D11 (the morning review), D12 (the evidence vault's history), all open with no answer | 8, 11 |
+| O4 | the register itself: D03 to D05 decided elsewhere and never closed there; not updated after 13:18 UTC | 8 |
+| O5 | the editor's word on schedules never carried into dev's and the conductor's policies | 6 |
+| O6 | the "Tonight only" follow-ups recorded in one policy of ten | 6 |
+| O7 | `conductor-notes.md` ranks itself above the editor's briefs; the record does not say the editor agreed | 5 |
+| O8 | no written rule on who may release to the default branch | 12 |
+| O9 | the live Linux slide: an iframe against the record of the editor's answer and security's conditions; the two records not reconciled | 14 |
+| O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
+
 ## Next steps
 
-- Each decision inside the editor's briefs of 15:00 and 17:15 against the member's own file.
+- Answers 2, 4, 6 and 7 of 17:15, and the decisions of 15:00, against the files.
+- Whether security reviewed the live slides (`team/security/` at `298be4e`).
 - The members' own `changes_since_draft` and `agreed_by` against the conductor's records of the same words.
-- A first full list of open decisions, numbered once, for the signed version.
