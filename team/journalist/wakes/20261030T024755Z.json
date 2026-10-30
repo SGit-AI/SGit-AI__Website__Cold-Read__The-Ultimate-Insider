@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Notice 007 copied to comms/mail/journalist/inbox and done; account domain dropped from key.json and session files; pitches.md signed, pitch 4 and the talk-given search (the record does not say); debrief with screenshot, status.json. Gate clean.",
    "at": "2026-10-30T02:50:40Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff touches only comms/mail/journalist/** and team/journalist/** (agents.py check: 0 outside scope). vault_check comms clean; gate clean. No keys, tokens, emails or account domains added (the key.json edits remove the domain); no agent-directing text; no other member affected.",
+   "at": "2026-10-30T02:51:08Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 notice 007 copied to inbox and done, no reply. 2 account domain dropped from key.json and session files. 3 pitches.md signed, pitch 4, talk-given search ('the record does not say'), debrief with screenshot, status.json. Conditions kept: only journalist and comms paths, no em-dashes, citations present. Nothing unplanned.",
+   "at": "2026-10-30T02:51:08Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:51:08Z",
+ "outcome": "ok"
 }
