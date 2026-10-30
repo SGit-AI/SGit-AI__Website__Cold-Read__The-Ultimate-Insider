@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "active: fourth wake done; register adds the source team's own words; C7 count corrected (12 change verdicts in history)",
+ "round": 5,
+ "state": "active: fifth wake done; register signed (C1-C22, T1-T11, K1-K8); Done when 1-5 hold; waiting for two quiet wakes, then finish",
  "done": [
   {
    "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
@@ -22,11 +22,14 @@
   },
   {
    "what": "the source's debriefs read into the register; C7 corrected; letter 016 filed; a correction to pki-agent.README.md sent to the conductor by mail"
+  },
+  {
+   "what": "C21 and C22 added; the register signed at its head, 30 October 2026 05:40 UTC; letter 017 filed"
   }
  ],
  "next": [
   {
-   "what": "sign-off: check ROLE.md Done when item by item; sign the register at its head"
+   "what": "two wakes with nothing new (Done when 7), then the finishing wake: closing debrief, task paused"
   }
  ],
  "asks": [],
