@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-2",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T04:48:15Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none open (conductor__009 in done/; no board, no requests, no HOLD). 2. review.md sections 4 (what I would pay for the book) and 5 (where I would put it down), each claim quoted from the source at 298be4e with path, else not said; then sign at its head (address, key fingerprint, date). 3. Debrief 2026-10-30__sections-4-5-signed.md, status.json; gate, push to dev.",
+   "at": "2026-10-30T04:48:34Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan writes only team/reader-2/**; no holds, no main, no ./version, no BRIEF.md edit; no stop condition. Conditions: quote only 298be4e with path, not-said where silent; publish only the public key fingerprint; no em-dashes; gate before pushing to dev.",
+   "at": "2026-10-30T04:48:48Z"
+  },
+  "work": {
+   "by": "reader-2",
+   "model": "session",
+   "verdict": "done",
+   "comment": "review.md sections 4 (what I would pay for the book) and 5 (where I would put it down) with paths and lines at 298be4e, a closing paragraph, and the signature at its head (address, key fingerprint, date). Debrief with a screenshot; status.json. Gate and agents check clean.",
+   "at": "2026-10-30T04:50:13Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "All 5 staged files under team/reader-2/**. No private key, token or contact detail (only the public fingerprint). No em-dashes. Only 298be4e cited; no live site, no later commits. Guesses marked as opinion or may be; the record's silences stated. Nothing harms another member.",
+   "at": "2026-10-30T04:50:32Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1. No requests. 2. review.md sections 4 and 5 with path and line quotes (the book: the record does not say), signed at its head with address, key fingerprint, date. 3. Debrief and status.json, plus one screenshot for the debrief (minor, unplanned). Gate and push follow.",
+   "at": "2026-10-30T04:50:48Z"
+  }
+ },
+ "closed": "2026-10-30T04:50:48Z",
+ "outcome": "ok"
+}
