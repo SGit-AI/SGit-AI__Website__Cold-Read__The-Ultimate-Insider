@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-4",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: round 3 (scheduled), review complete and signed (ten findings, verdict, price, put-down); waiting for two quiet wakes, then finish",
+ "round": 4,
+ "state": "idle: round 4 (scheduled), nothing new: no mail, no requests, no board items; review complete since round 3. Quiet wake 1 of 2; finish at the next wake if it is quiet too",
  "done": [
   {
    "what": "session key published: team/reader-4/key.json (sha256:10f1873b07981579), key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/"
@@ -23,7 +23,7 @@
  ],
  "next": [
   {
-   "what": "wakes 4 and 5: requests first; if nothing new for two wakes running, finish (WAKE.md, Finishing) and pause the task"
+   "what": "wake 5: requests first; if quiet, finish (WAKE.md, Finishing): closing note to the conductor, status finished, pause the task"
   }
  ],
  "asks": [
