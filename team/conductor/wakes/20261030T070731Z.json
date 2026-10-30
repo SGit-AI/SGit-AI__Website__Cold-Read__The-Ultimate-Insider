@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Within scope.writes (the conductor's comms folders, status.json, REALITY.md). Letters only copied; no other member's task touched (checks by id are read-only); the conductor's own task stays on. No HOLD.md, no stop condition. Conditions: vault_check comms before commit; no secrets or contact details; push only to dev after the gate; no em-dashes.",
    "at": "2026-10-30T07:08:23Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "efed95c on the branch and dev: two letters copied to the conductor's inbox and done (originals untouched); issue 011 done; status.json; REALITY.md where the team stands. vault_check comms clean, gate clean (114 html), 0 outside scope. The conductor's task stays on.",
+   "at": "2026-10-30T07:08:43Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "efed95c touches only REALITY.md, issue 011, copies of two letters in the conductor's inbox and done, status.json and the wake record, all in scope. No mailroom file edited or deleted; no key, token or personal detail; no directive text. Gate clean (114 html), 0 outside scope, vault_check comms clean. Conditions kept.",
+   "at": "2026-10-30T07:09:05Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 letters copied, mailroom untouched, issue 011 done, issue 001 open. 2 status.json and REALITY.md in efed95c. 3 vault_check, gate, push: efed95c on origin/dev; the conductor's task stays on. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T07:09:05Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T07:09:05Z",
+ "outcome": "ok"
 }
