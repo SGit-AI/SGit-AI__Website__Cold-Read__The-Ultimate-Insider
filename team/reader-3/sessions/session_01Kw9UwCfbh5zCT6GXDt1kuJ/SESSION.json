@@ -7,6 +7,6 @@
  "supersedes": null,
  "fingerprint": "sha256:330bf8db1ccf850e",
  "account": "the operator's Claude account (riskmandate.ai)",
- "task": null,
+ "task": "trig_01T5vCgsCHVZLyhAg1QGoaBU",
  "note": "The first reader-3 session of the cold read. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
 }
