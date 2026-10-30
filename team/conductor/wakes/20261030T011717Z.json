@@ -17,10 +17,31 @@
    "verdict": "go",
    "comment": "Cited lines check out: line 3 says commit BRIEF.md exactly as given (a verbatim add is not an edit); line 23 says write ROLE.md and policy.json per member; status.json is listed with the member records on line 15, keep those stubs minimal. Conditions: BRIEF.md byte-identical; no edits in other members' files beyond first drafts; scopes non-overlapping; no private or vault keys (public keys only in the tree).",
    "at": "2026-10-30T01:18:50Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "bba3e5e pushed to claude/dreamy-keller-0fqntz and dev: BRIEF.md verbatim, the ported machinery, the conductor's key and records, twelve members' first drafts, the round 1 debrief. Gate clean (37 html files); agents.py check lists 37 outside scope, all of them BRIEF.md and the 36 member drafts named in the plan.",
+   "at": "2026-10-30T01:19:36Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Build and gate pass (37 html). agents.py lists 37 outside scope: BRIEF.md (added verbatim) and the 36 first drafts for twelve members, as the plan named. No private or vault keys in the diff (public keys, fingerprints and scanner patterns only). No directive text. The source's vault and lane ids appear nowhere in the tree; lane.json says the team never writes to the source's lane.",
+   "at": "2026-10-30T01:20:15Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 done (bba3e5e: admin/, src/, CLAUDE.md, conductor records). 2 done: BRIEF.md added once, verbatim; twelve members' first drafts, status stubs minimal. 3 done: bba3e5e on origin/dev and the branch. Conditions kept: no overlaps, no other-member edits, public keys only. Unplanned, minor: BRIEF-CORRECTIONS.md, REALITY.md, README.",
+   "at": "2026-10-30T01:20:15Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-30T01:20:15Z",
+ "outcome": "ok",
  "history": [
   {
    "step": "pre_review",
