@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "historian",
  "as_of": "2026-10-30",
- "round": 6,
- "state": "active: wake 06:24 done; closing debrief written; Done when 1 to 5 hold; this wake found nothing new (1 of 2)",
+ "round": 7,
+ "state": "finished: the timeline in team/historian/timeline.md, signed and checked; closing debrief 2026-10-30__closing.md; own task paused",
  "done": [
   {
    "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
@@ -34,19 +34,29 @@
   },
   {
    "what": "closing debrief: team/historian/debriefs/2026-10-30__closing.md"
+  },
+  {
+   "what": "finished: Done when 1 to 6 hold; closing note to the conductor; own task paused (enabled false, not deleted)"
   }
  ],
  "next": [
   {
-   "what": "if nothing new: finish (status finished, note to the conductor, own task paused)"
+   "what": "none: finished, the editor re-enables"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "of": "the editor",
+   "what": "word on onboarding step 4 (vault keys): the conductor says the vaults were never made"
+  }
+ ],
  "task": {
   "id": "trig_011JWP55pMf7Che9hVXffWfd",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
   "session": "session_01Kw9UwEZvw2EdgWgea4BQyC",
   "created": "2026-10-30T01:47:44Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T07:21:33Z"
+ },
+ "finished": "2026-10-30T07:22:00Z"
 }

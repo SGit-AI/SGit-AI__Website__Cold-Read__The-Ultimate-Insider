@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "historian",
+ "kind": "scheduled, hourly at :17 (fired 07:20)",
+ "started": "2026-10-30T07:20:49Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "finish. 1. No requests. 2. Done when 1 to 6 hold (second wake with nothing new): status.json finished with time; comms/mail/mailroom/conductor/historian__001-finished-timeline.eml (X-Kind update, Subject finished: the timeline) and a copy in comms/mail/historian/outbox/. 3. Pause own task trig_011JWP55pMf7Che9hVXffWfd (enabled false, never delete).",
+   "at": "2026-10-30T07:21:18Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Letter and outbox copy inside scope.writes; the task is the historian's own, disable only. Conditions: Done when 1 to 6 confirmed; no key, contact detail or secret in the letter; vault_check comms before commit; no em-dashes; no other member's task.",
+   "at": "2026-10-30T07:21:33Z"
+  },
+  "work": {
+   "by": "historian",
+   "model": "",
+   "verdict": "done",
+   "comment": "Finished: status.json finished at 07:22; closing note in comms/mail/mailroom/conductor/ with outbox copy; own task trig_011JWP55pMf7Che9hVXffWfd paused (enabled false, not deleted).",
+   "at": "2026-10-30T07:21:46Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
