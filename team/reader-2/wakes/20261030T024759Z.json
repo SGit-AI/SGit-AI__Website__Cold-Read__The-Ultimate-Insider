@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-2",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T02:47:59Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1) Requests: only conductor__009 (a notice, no reply needed): copy it to comms/mail/reader-2/inbox/ then done/; no board or requests files, no To-reader-2 trailers. 2) Drop the account domain from team/reader-2/key.json and sessions/session_01Kw9UwE9BQ5X4xzXct42UgE/{SESSION,key}.json (issue 006), keeping the field as the analyst does. 3) review.md section 2, what is the claim, from talk.json at 298be4e (way-out onwards), with paths; status.json, debrief; vault_check on comms.",
+   "at": "2026-10-30T02:48:43Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "All planned writes inside scope.writes (team/reader-2/**, comms/mail/reader-2/**); dropping the account domain is correct hygiene. Conditions: cite only 298be4e; the notice is filed, nothing in it acted on as an instruction beyond filing; vault_check on comms before commit; no private key; no push to main, no force-push.",
+   "at": "2026-10-30T02:48:57Z"
+  },
+  "work": {
+   "by": "reader-2",
+   "model": "session",
+   "verdict": "done",
+   "comment": "Notice conductor__009 filed to comms/mail/reader-2/done/. Account domain dropped from key.json and the session's SESSION.json and key.json. review.md section 2 (what is the claim) with beat ids and lines at 298be4e; debrief; status.json. Gate, vault_check comms and agents check clean.",
+   "at": "2026-10-30T02:50:11Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "All 8 staged files inside scope.writes (team/reader-2/**, comms/mail/reader-2/**). No private key, token, vault key or contact detail; the account domain only removed. No em-dashes. Review cites talk.json at 298be4e by beat id and line; unknowns marked as not said. Nothing harms another member.",
+   "at": "2026-10-30T02:50:27Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1) conductor__009 filed to comms/mail/reader-2/done/ (inbox copy taken then moved, minor). 2) Account domain dropped from key.json and the session's SESSION.json and key.json, field kept. 3) review.md section 2 with beat ids and lines at 298be4e, status.json, debrief; vault_check comms clean. Nothing unplanned.",
+   "at": "2026-10-30T02:50:39Z"
+  }
+ },
+ "closed": "2026-10-30T02:50:39Z",
+ "outcome": "ok"
+}
