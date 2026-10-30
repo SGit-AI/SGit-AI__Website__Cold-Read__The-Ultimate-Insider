@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 6,
- "state": "idle: sixth wake found nothing new since 4a71ede (quiet wake 1 of 2 for Done when 7); register signed",
+ "round": 7,
+ "state": "finished: the control register and threat model, signed (C1-C22, T1-T11, K1-K8); every Done when item holds; task paused",
  "done": [
   {
    "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
@@ -25,11 +25,14 @@
   },
   {
    "what": "C21 and C22 added; the register signed at its head, 30 October 2026 05:40 UTC; letter 017 filed"
+  },
+  {
+   "what": "finished: closing debrief 2026-10-30__closing.md; note to the conductor; own task paused (enabled false), not deleted"
   }
  ],
  "next": [
   {
-   "what": "one more quiet wake, then the finishing wake: closing debrief, task paused"
+   "what": "none: finished, the editor re-enables"
   }
  ],
  "asks": [],
@@ -38,6 +41,7 @@
   "cron": "CRON_TZ=Europe/London 32 * * * *",
   "session": "session_01Kw9UwEFygpv8cKrL42CMhR",
   "created": "2026-10-30T01:52:38Z",
-  "enabled": true
- }
+  "enabled": false
+ },
+ "finished": "2026-10-30T07:34:20Z"
 }
