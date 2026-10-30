@@ -10,11 +10,17 @@
   },
   {
    "what": "own hourly task at :47 London created, prompt word for word from schedule.json (create.schedule.tenant is not_wanted in policy.json: the editor's direct word in this session authorised it)"
+  },
+  {
+   "what": "source cloned at 298be4e in the scratchpad (later refs pruned) and built; review.md section 1, who is it for, with paths and lines"
   }
  ],
  "next": [
   {
-   "what": "reader review, team/reader-2/review.md: build the site from 298be4e and read the talk as a stranger"
+   "what": "review.md section 2, what is the claim, from talk.json at 298be4e, slides from way-out onwards"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into the scratchpad"
   }
  ],
  "asks": [],
