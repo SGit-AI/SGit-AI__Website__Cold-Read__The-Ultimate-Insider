@@ -1,0 +1,24 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-2",
+ "kind": "editor's request",
+ "started": "2026-10-30T01:52:49Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests found (no team/*/requests/reader-2__*.md, no To-reader-2 trailers); mail and board unreadable without a vault key, noted in the debrief. 2. Commit and push the editor-directed key.json, key.png, sessions/, status.json (task id; create.schedule.tenant is in policy not_wanted: record that the editor's direct word authorised it) to dev after the gate. 3. Build the source at 298be4e in the scratchpad, take step one of team/reader-2/review.md (who it is for, quoted with path and commit), then the debrief in team/reader-2/debriefs/. All inside team/reader-2/**.",
+   "at": "2026-10-30T01:54:18Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan stays inside scope.writes (team/reader-2/**; holds empty). key.json holds only public key and fingerprints, no private half, token or vault key. Conditions: push only after the gate, never to main; the scheduled task is not_wanted in policy, so debrief and status record the editor's direct word authorised it; source work stays pinned at 298be4e in the scratchpad.",
+   "at": "2026-10-30T01:54:39Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
