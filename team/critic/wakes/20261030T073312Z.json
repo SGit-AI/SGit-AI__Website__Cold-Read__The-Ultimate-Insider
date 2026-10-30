@@ -24,8 +24,22 @@
    "verdict": "none",
    "comment": "idle: quiet wake 1 of 2; nothing new (no mail, no request, no deliverable changed since a9c7ba7); status.json updated",
    "at": "2026-10-30T07:33:55Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 1202a52..HEAD touches only team/critic/status.json and the wake record, both inside scope.writes; no key, token, personal detail or directing text. Gate clean; agents.py check 0 files outside scope.",
+   "at": "2026-10-30T07:34:27Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan was an idle wake (quiet wake 1 of 2) editing only status.json and the wake record. The diff matches; task not paused or finished. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T07:34:27Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T07:34:27Z",
+ "outcome": "idle"
 }
