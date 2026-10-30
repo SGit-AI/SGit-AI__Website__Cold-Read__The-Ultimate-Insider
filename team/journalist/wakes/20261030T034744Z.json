@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "pitches.md part 3: pitch 5 (the brake nobody pulled, from 162 wake records at 298be4e, own count); debrief, status.json. All inside team/journalist/**. Gate clean.",
    "at": "2026-10-30T03:49:20Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff touches only team/journalist/** (pitches.md, status.json, third-wake debrief and screenshot, wake record); nothing in comms/. Gate clean; agents.py check 0 outside scope. No keys, tokens or personal details; no agent-directing text; no effect on other members.",
+   "at": "2026-10-30T03:50:11Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests. 2 pitches part 3 done: pitch 5 (the brake nobody pulled, 162 wake records at 298be4e). 3 debrief with screenshot and status.json done. Conditions kept: only team/journalist/**, no em-dashes, citations present. Unplanned only the screenshot and the wake record.",
+   "at": "2026-10-30T03:50:11Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:50:11Z",
+ "outcome": "ok"
 }
