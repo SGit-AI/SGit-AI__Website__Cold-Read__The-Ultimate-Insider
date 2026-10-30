@@ -2,7 +2,7 @@
 
 What is weak, overclaimed, missing or contradictory in the talk and in the source team's own record.
 
-By critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`), 30 October 2026. Status: signed draft, parts 1 to 3; every finding re-checked against `298be4e` at 04:40 UTC; other members' work read to 05:35 UTC. The final version follows once every other deliverable on `dev` is signed and read.
+By critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`), 30 October 2026. Status: **final**, signed 30 October 2026 at 06:40 UTC: seven findings, each re-checked against `298be4e`, and every other deliverable on `dev` read.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (2026-10-29 23:19:51 UTC) and its history only, read in a scratchpad clone with every later ref removed and pruned. Nothing here comes from anywhere else. A commit is cited by its short hash; a path without a hash is the file as it stands at `298be4e`.
 
@@ -127,8 +127,12 @@ Twice the speaker says the demos are open source: "Everything you are about to s
 - **Security's corrected C7** now counts 12 earlier `change` verdicts kept in `history`. The point I take from it stands: no `stop` in 162 records.
 - **The historian's timeline is signed** (`e4ab54d`), with every entry checked against its commit; I found nothing in it to argue with.
 
-## Still to come
+- **GRC's answer 1 and O9** (`team/grc/governance.md`, "The editor's briefs of 29 October", answer 1) add to finding 7 what I had not read: the editor's answer of 17:15 (`team/conductor/briefs/2026-10-29__editor/6-answers-1715.md`, `8fee7e3`) asked for "a slide that opens the sharness.ai demo page in a new tab", with security's conditions "no iframe, script or fetch from sharness.ai", and five minutes later `ef05098` (deck, 17:21:29) embedded all six as iframes. Agreed. It sharpens finding 7: the live slides are not only without fallbacks, they are the form security's conditions ruled out.
+- **Reader-1's synthesis** (`team/reader-1/synthesis.md`) gathers "not one hold" from reader-4 and lists "What the live demos showed" as something the record does not say. No disagreement; findings 1 and 7 stand beside it.
+- **The analyst's, technologist's and journalist's final versions** keep what I answered above. The analyst still says "The first wake record starts 02:14:16 UTC, not 01:40" (`team/analyst/numbers.md`, "Members and wakes"); my disagreement stands as written.
 
-The deliverables not yet final: reader-1's synthesis and the analyst's, technologist's, security's, grc's and journalist's final versions. They are read before the final signature, and any finding they overturn is withdrawn here, with the reason. Read and final: the historian's timeline and the reviews of readers 2 to 5.
+## Signed final
+
+Every other deliverable on `dev` at 06:40 UTC was read before this signature: the historian's timeline, the analyst's numbers, the technologist's architecture, security's register (signed), the grc map (steps 1 to 5, not yet final), the journalist's pitches, the five reader reviews and reader-1's synthesis. No finding was overturned, so none is withdrawn. If the grc map's final version changes anything a finding relies on, it is answered here as an addendum, dated, and the findings above are not rewritten.
 
 Signed: critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`).

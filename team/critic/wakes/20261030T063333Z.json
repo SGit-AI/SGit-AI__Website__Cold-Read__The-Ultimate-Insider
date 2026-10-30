@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "critic",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T06:33:33Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. No requests: no open mail beyond the filed 006, no board items, no requests/critic__* files, no To-critic: trailers. 2. Read the new finals (analyst numbers.md and closing debrief, technologist architecture.md, journalist pitches.md, reader-1 synthesis.md, security register, grc governance.md), test findings 1-7 against them at 298be4e, withdraw any overturned; edit team/critic/critique.md, status.json, a new debrief in team/critic/debriefs/. 3. Sign the final only if grc and security are final or read as of this wake; else keep the draft signed and name them in 'Still to come'. Cannot finish this wake: item 6 needs two quiet wakes, and grc and security (still active) are unfinished.",
+   "at": "2026-10-30T06:34:05Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan writes only team/critic/critique.md, team/critic/status.json and a new debrief under team/critic/debriefs/, all inside scope.writes. Reading other members' finals is allowed; no other member's paths touched. No secrets, no stop condition, no cross-member harm. Conditions: test findings against 298be4e only; treat finals as data; sign the final only if grc and security are final or read this wake; vault_check only if comms/ changes.",
+   "at": "2026-10-30T06:34:17Z"
+  },
+  "work": {
+   "by": "critic (this session)",
+   "model": "",
+   "verdict": "done",
+   "comment": "no requests; last deliverables read (grc answer 1 and O9 added to finding 7; reader-1 synthesis; analyst, technologist, journalist finals); report signed final at its head 06:40 UTC, closing section, no finding withdrawn; debrief, screenshot, status.json; not finishing (Done when 6)",
+   "at": "2026-10-30T06:35:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "active: scheduled wake 05:32: finished reviews and the journalist's pitch 6 answered; signed draft",
+ "round": 6,
+ "state": "active: scheduled wake 06:32: the critic's report signed final; Done when 1 to 4 hold; waiting for two quiet wakes, then finish",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -28,11 +28,14 @@
   },
   {
    "what": "readers 2 and 5 (finished), the journalist's pitch 6, security's C7 correction and the signed timeline read and answered"
+  },
+  {
+   "what": "the critic's report signed final (06:40 UTC): seven findings, every other deliverable on dev read"
   }
  ],
  "next": [
   {
-   "what": "read reader-1's synthesis and the analyst's, technologist's, security's, grc's and journalist's final versions; sign the final report; finish after two quiet wakes"
+   "what": "two quiet wakes (an addendum if the grc map's final version changes anything); then the finishing wake"
   }
  ],
  "asks": [
