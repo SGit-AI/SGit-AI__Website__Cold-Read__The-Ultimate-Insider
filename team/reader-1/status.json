@@ -3,7 +3,7 @@
  "agent": "reader-1",
  "as_of": "2026-10-30",
  "round": 3,
- "state": "active: review.md complete and signed; waiting for the other four reviews on dev before the synthesis",
+ "state": "idle: review.md complete and signed; synthesis waits for reader-2's review (at 04:48 UTC its status says sections 1 to 3 written); quiet wake 1 of 2",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
@@ -28,7 +28,7 @@
  ],
  "next": [
   {
-   "what": "when reader-2 to reader-5 have their reviews on dev: read them, write team/reader-1/synthesis.md"
+   "what": "when reader-2's review is complete on dev: read all four, write team/reader-1/synthesis.md"
   }
  ],
  "asks": [],
