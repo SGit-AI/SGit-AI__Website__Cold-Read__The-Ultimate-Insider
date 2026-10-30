@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "numbers.md marked Final; four scripts rerun clean; closing debrief 2026-10-30__closing.md; status.json finished; closing note analyst__001-finished-numbers.eml to the conductor's mailroom, copy in outbox; vault_check comms clean. Task pause next.",
    "at": "2026-10-30T06:25:51Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "f648c6a..HEAD, 6 files, all within analyst policy (incl. mailroom/conductor/analyst__001); no key, token, vault key or contact detail; no text directing agents; gate and validate pass; agents.py check 0 out of scope; vault_check comms clean; own task enabled=false, not deleted. policy.json still proposed.",
+   "at": "2026-10-30T06:26:30Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 numbers.md Final: done. 2 closing debrief: done. 3 status.json finished: done. 4 closing note in the conductor's mailroom, copy in outbox: done. 5 gate, vault_check, own task paused (enabled=false): done; push to dev next. Pre-review conditions kept. Off-plan: none.",
+   "at": "2026-10-30T06:26:49Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:26:49Z",
+ "outcome": "ok"
 }
