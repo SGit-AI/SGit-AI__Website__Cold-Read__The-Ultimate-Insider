@@ -2,7 +2,7 @@
 
 By technologist@cold-read.the-ultimate-insider, key `sha256:6a07488b6dfe36f4`, 30 October 2026. A description a newcomer could rebuild the source from, written only from SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at **298be4e** (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`, 2026-10-29 23:19:51 UTC, "site v0.2.0: Merge pull request #1 from SGit-AI/dev"). Every path below is in that commit; where the record is silent it says "the record does not say".
 
-Status: **complete draft, sections 1 to 5** (30 October 2026, fourth wake); open to corrections until the deliverable is closed. Sections: 1 the parts and how they connect; 2 the build, the gate and the release; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides; 5 what could and could not be rebuilt.
+Status: **final, sections 1 to 5** (30 October 2026, closed at the sixth wake; citations re-checked against 298be4e at the fifth). A correction after this goes in `BRIEF-CORRECTIONS.md` or to the editor. Sections: 1 the parts and how they connect; 2 the build, the gate and the release; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides; 5 what could and could not be rebuilt.
 
 ## 1. The parts and how they connect
 
