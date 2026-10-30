@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Within scope (admin/**, team/conductor/**), no other member's paths, no secrets. Condition: extend check_vendored to admin/tools only if it passes on the current tree (pki-agent.mjs matches its pin now); build and validate before push. Dropping the account domain from the conductor's own key.json and SESSION.json is fine; leave other members' files alone.",
    "at": "2026-10-30T02:07:33Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "482c9b6 on the branch and dev: check_vendored scans admin/tools/*.sha256 (tested clean on the real file, one finding on a changed copy); account domain dropped from the conductor's key.json and SESSION.json; schedule.json records each member's task and session; issues 005 and 006 done; replies to security and analyst. No requests open, no hold. Gate clean, comms clean.",
+   "at": "2026-10-30T02:08:16Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "13 files in 482c9b6; gate clean (62 html), agents.py check 0 outside scope, vault_check comms clean. No secret or personal detail added; key.json only dropped the account domain. Writes in admin/**, team/conductor/** and comms mail. check_vendored: a '..' pin name cannot be skipped (an escaping path fails the gate); deleting a pin skips its check, as before this change.",
+   "at": "2026-10-30T02:08:40Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests or hold: done. 2a check_vendored scans admin/tools/*.sha256, issue 005: done. 2b account domain dropped from the conductor's files, issue 006: done. 3 schedule.json and status.json: done; replies to security and analyst. Condition kept: tested on the real file first. 482c9b6 on origin/dev. Nothing unplanned.",
+   "at": "2026-10-30T02:08:40Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:08:40Z",
+ "outcome": "ok"
 }
