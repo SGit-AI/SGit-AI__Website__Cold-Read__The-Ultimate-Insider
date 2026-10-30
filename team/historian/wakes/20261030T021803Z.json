@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Notice filed in comms/mail/historian/done/; account field dropped from key.json and session files, fingerprint unchanged; timeline part 2 (02:56 to 09:00 UTC, 26 entries); debrief, status. All inside policy.",
    "at": "2026-10-30T02:20:13Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "a9343d0..5488b3d touches only team/historian/** and comms/mail/historian/done/. Account field dropped; no added line names the domain. No em-dashes, private or vault keys, instruction-like text. Gate, agents check and vault_check clean. Others (reader-3, reader-4, journalist) still carry the domain in their own files: theirs to fix.",
+   "at": "2026-10-30T02:21:07Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 notice filed in comms/mail/historian/done/. 2 account field removed from key.json, session key.json and SESSION.json; fingerprint untouched. 3 timeline part 2, debrief with screenshot, status.json. Conditions kept; only team/historian/** and comms/mail/historian/** touched.",
+   "at": "2026-10-30T02:21:24Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:21:24Z",
+ "outcome": "ok"
 }
