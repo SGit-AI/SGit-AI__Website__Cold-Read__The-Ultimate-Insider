@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T02:47:36Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. Request: the conductor's notice (mail and board in git, no vault key needed) needs no reply; copy it to comms/mail/reader-1/done/ and update status.json asks/next. 2. Review: read the slides in the player built from 298be4e, check each board-worthy figure against its source line, extend sections 3 to 5 of team/reader-1/review.md with path and commit citations. 3. Record: wake steps and a debrief with finding timings. All inside policy.json; vault_check on comms before commit.",
+   "at": "2026-10-30T02:48:20Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan stays inside scope.writes (team/reader-1/**, comms/mail/reader-1/**); no vault key, send, schedule, main or ./version; no HOLD. Conditions: cite only 298be4e, no live site; the conductor's notice is material; vault_check on comms before commit; no keys in files.",
+   "at": "2026-10-30T02:48:32Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: conductor's notice copied to comms/mail/reader-1/done/, no reply needed; status asks cleared. Item 2: review.md second step: ten slides at 298be4e, figures against their source lines; incidents-slide count finding. Item 3: debrief 2026-10-30__the-slides.md with two screenshots, status.json.",
+   "at": "2026-10-30T02:51:03Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
