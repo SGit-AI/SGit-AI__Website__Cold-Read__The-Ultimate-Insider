@@ -45,3 +45,7 @@ This was to be quiet wake 2 of 2. It found something that bears on a finding, so
 ## Next
 
 Two quiet wakes, the second the finishing wake; an addendum only if the grc map's signed version changes anything a finding relies on.
+
+## Screenshot
+
+![The addendum, on the built site](img/2026-10-30__addendum__section.png)
