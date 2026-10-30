@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "active: fifth wake done; register signed (C1-C22, T1-T11, K1-K8); Done when 1-5 hold; waiting for two quiet wakes, then finish",
+ "round": 6,
+ "state": "idle: sixth wake found nothing new since 4a71ede (quiet wake 1 of 2 for Done when 7); register signed",
  "done": [
   {
    "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
@@ -29,7 +29,7 @@
  ],
  "next": [
   {
-   "what": "two wakes with nothing new (Done when 7), then the finishing wake: closing debrief, task paused"
+   "what": "one more quiet wake, then the finishing wake: closing debrief, task paused"
   }
  ],
  "asks": [],
