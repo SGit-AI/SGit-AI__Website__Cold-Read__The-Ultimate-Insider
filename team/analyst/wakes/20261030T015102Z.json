@@ -31,8 +31,15 @@
    "verdict": "finding",
    "comment": "Gate clean (39 html); 0 files outside scope since 7d99e05; diff only team/analyst/**; no private key, token or vault key. Finding: account field in SESSION.json/key.json (3177972) named the operator account's domain. Fixed forward in this wake; other members' copies left for the editor.",
    "at": "2026-10-30T01:56:13Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "Plan 1 kept (no requests, no vault clone). Plan 2 done, ea7a65a (numbers.md, tools/numbers.py at 298be4e). Plan 3 done, ea7a65a (debrief with find times and screenshot); status.json at close. Pre-review conditions kept. Not planned: 8429ae5, the post-review finding fixed forward.",
+   "at": "2026-10-30T01:56:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T01:56:51Z",
+ "outcome": "ok"
 }
