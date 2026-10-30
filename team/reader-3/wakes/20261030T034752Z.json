@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "all 58 slides opened (contact sheet); sources page checked against talk.json beat sources (about ten missing, four unused; markdown twin drops sources); review.md final with section 6 and clock times; closing debrief with a correction of overstated finding times; status.json; build and gate clean before commit",
    "at": "2026-10-30T03:51:59Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Commit 55b0561: 5 files in team/reader-3/**; agents.py 0 outside scope; build and gate clean. No key, token or contact detail (only the public fingerprint); contact sheet shows public slide content; comms unchanged; no other member affected.",
+   "at": "2026-10-30T03:52:33Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 requests none, done. 2 all slides opened, sources checked, review.md final: done (55b0561). 3 debrief and status.json: done. Conditions kept: signature, no em-dashes, only 298be4e, task not paused. Unplanned: a correction of overstated finding times in the debrief, minor.",
+   "at": "2026-10-30T03:52:33Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:52:33Z",
+ "outcome": "ok"
 }
