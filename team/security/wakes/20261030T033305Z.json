@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "letter 015 inbox then done, board issue 002; reader-4 key.json checked; my key files without the account domain (key unchanged); pki-agent.mjs findings K1-K8 in controls-and-threats.md section 3; debrief 2026-10-30__third-wake-the-key-tool.md; status.json",
    "at": "2026-10-30T03:35:38Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 4050553..HEAD touches 10 files, all under team/security/ or comms/ (security board and mail); agents.py check 0 outside scope. key.json changed only its account line, fingerprints untouched. vault_check on comms clean, build and validate pass. No em-dashes, no key or secret material, no directive text.",
+   "at": "2026-10-30T03:36:07Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) Mail 015 in inbox/ and done/, board issue 002 done, residual in controls-and-threats.md (f10b40b). 2) reader-4 key checked, no edit to its files; security key files lose the domain, key unchanged, debrief notes history keeps it. 3) pki-agent.mjs findings K1-K8, report only. Status, debrief, wake record updated. All writes in scope; vault_check clean. Nothing unplanned.",
+   "at": "2026-10-30T03:36:07Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:36:07Z",
+ "outcome": "ok"
 }
