@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Quiet wake 1 of 2: nothing new; status.json state updated. No other file changed.",
    "at": "2026-10-30T06:49:40Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 7d72c01..HEAD: only team/reader-1/status.json and the wake record, inside scope.writes. Build, gate and agents.py check pass, 0 outside scope. The sub-agent checked paths, not contents; the member then read both: one state line, and the only match for a secret pattern is the word 'secrets' in the pre-review comment.",
+   "at": "2026-10-30T06:50:20Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Three items as planned: quiet wake 1 of 2, nothing new; only status.json (one line) and the wake record changed; no debrief, no task touched, no finish.",
+   "at": "2026-10-30T06:50:20Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:50:20Z",
+ "outcome": "idle"
 }
