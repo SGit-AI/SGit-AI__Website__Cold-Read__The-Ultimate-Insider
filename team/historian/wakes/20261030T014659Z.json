@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "timeline.md part 1 (36 entries, 00:16 to 02:55 UTC, each with commit and paths), debrief with screenshot, status.json. All inside team/historian/**. Gate clean.",
    "at": "2026-10-30T01:50:38Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Writes confined to team/historian/** (version changed only by CI through the dev merge). Only PUBLIC KEY PEMs in key.json; no private or vault keys. No em-dashes or instruction-like text. Gate clean (38 html); agents.py check: 0 outside scope. No vault touched.",
+   "at": "2026-10-30T01:51:16Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 requests: none, done. 2 timeline.md part 1 with commit and path citations, signed, done. 3 debrief with screenshot, status.json, done. Earlier key and task commits only in team/historian/**. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T01:51:37Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T01:51:37Z",
+ "outcome": "ok"
 }
