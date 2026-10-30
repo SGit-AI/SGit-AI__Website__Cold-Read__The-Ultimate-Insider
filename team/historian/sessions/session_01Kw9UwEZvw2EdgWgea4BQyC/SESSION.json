@@ -1,0 +1,12 @@
+{
+ "agent": "historian@cold-read.the-ultimate-insider",
+ "session": "session_01Kw9UwEZvw2EdgWgea4BQyC",
+ "state": "current",
+ "from": "2026-10-30T01:47:12Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:0b365c753f3456ed",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": null,
+ "note": "The first historian session of the cold read. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}
