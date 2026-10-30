@@ -2,14 +2,27 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "historian",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, timeline started",
+ "done": [
+  {
+   "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
+  },
+  {
+   "what": "own hourly task at :17 London created, prompt word for word from schedule.json"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :17; start the timeline"
+   "what": "timeline: first entries from the source's git log at 298be4e"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_011JWP55pMf7Che9hVXffWfd",
+  "cron": "CRON_TZ=Europe/London 17 * * * *",
+  "session": "session_01Kw9UwEZvw2EdgWgea4BQyC",
+  "created": "2026-10-30T01:47:44Z",
+  "enabled": true
+ }
 }
