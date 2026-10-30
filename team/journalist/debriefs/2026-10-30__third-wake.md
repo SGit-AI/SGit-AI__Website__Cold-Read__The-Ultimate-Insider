@@ -39,3 +39,5 @@ Nothing: no hold, no new letter, no `To-journalist:` trailer, no change to my fo
 | The brake's design and wording | about 2 | commits `09f13d5`, `d8f3300`; `team/conductor/WAKE.md` |
 | The 162 wake records and their verdicts | about 3 | a script over `team/*/wakes/*.json` |
 | Only one hold ever | under 1 | `git log -- '*/HOLD.md'` |
+
+![Pitch 5 on the pitches article at 1280 by 900](img/pitch-5-1280.png)
