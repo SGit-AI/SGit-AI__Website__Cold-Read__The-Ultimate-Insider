@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Item 1: status.json finished (finished 07:50:07Z, task enabled false); closing addendum in the synthesis debrief. Item 2: closing note comms/mail/mailroom/conductor/reader-1__001-finished.eml and outbox copy; vault_check comms clean. Item 3: update_trigger enabled=false on trig_01MdwEEdnWwYi9eyeqf1hN3Z, own task only, not deleted.",
    "at": "2026-10-30T07:50:20Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff (5 files) all inside scope.writes: closing letter and outbox copy, debrief addendum, status.json (finished, task enabled false and paused, id kept), wake record. Contents read: only a public fingerprint and the task id; no keys, tokens, contact details or agent-directing text. Build, gate, agents.py check and vault_check clean.",
+   "at": "2026-10-30T07:50:57Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Exactly the five planned files; own task paused, not deleted; vault_check clean. The end banner (ok, finished, NEXT none) comes last in the report, after this record.",
+   "at": "2026-10-30T07:50:57Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T07:50:57Z",
+ "outcome": "ok"
 }
