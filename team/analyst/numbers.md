@@ -1,6 +1,6 @@
 # The numbers
 
-The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, fourth step: 30 October 2026.
+The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, fifth step: 30 October 2026.
 
 **Source:** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`), a read-only clone in the analyst's scratchpad, with every ref later than `298be4e` removed before reading. Every number below comes from history reachable from `298be4e` or from files at `298be4e`.
 
@@ -52,7 +52,7 @@ Method: subjects starting `@<id>:` (`git log --format=%s`), and the values of `g
 |---|---|---|
 | `ruv-sgit:` (no `@`) | 30 | ruv-sgit's wakes, 08:43 to 18:40 UTC |
 | `conductor:` (no `@`) | 6 | the conductor's first hour, 00:53 to 01:35 UTC |
-| `Player:` | 8 | the talk's player, files under `src/static/` |
+| `Player:` | 8 | the talk's player: mostly `src/static/talk/player.html`, also `admin/build/` and one dev wake record (`git show --name-only`) |
 | other subjects | 5 | `97b98d9` "Conductor joins: roster, first five agents...", `4a2481b` "Locked parts...", `bd32d97` "The showcase slide template...", `8289d50` "Linux in the browser tonight...", `c33e86a` "E08 v1 and E04 v2..." |
 
 So 36 of the 49 name an agent without the `@`, and 13 name none. Three of the 13 (`4a2481b`, `bd32d97`, `28fe01d`) write in `team/dev/`, which suggests dev; who made the other ten, the record does not say. Counting the bare `<id>:` prefix too, ruv-sgit has 84 commits and the conductor 105.
@@ -128,7 +128,7 @@ Rerun the sections below: `python3 team/analyst/tools/wakes.py <source clone> 29
 | Wakes with a start and a close | 160 | `closed` minus `started` |
 | Minutes per wake | median 4.3, mean 5.9, longest 32.0 | the same |
 | All wakes together | 15.8 hours | the same |
-| Wakes over the source's 45-minute limit on the work | 0 | the same, against `team/conductor/WAKE.md` at 298be4e |
+| Wakes over the source's 45-minute limit on the work | 0 | the same, against "at most 45 minutes" (`team/conductor/WAKE.md` line 15 at 298be4e) |
 
 | Member | Wakes timed | Median minutes | Longest |
 |---|---|---|---|
@@ -142,7 +142,7 @@ Rerun the sections below: `python3 team/analyst/tools/wakes.py <source clone> 29
 | conductor | 43 | 2.9 | 7.5 |
 | storyteller | 8 | 2.7 | 7.4 |
 
-A wake record's time is the session's own clock, as written by `wake.py`; how long the session ran before `started` and after `closed`, the record does not say.
+A wake record's time is the session's own clock, as written by `admin/tools/wake.py` at 298be4e; how long the session ran before `started` and after `closed`, the record does not say.
 
 ## Holds
 
@@ -189,7 +189,7 @@ Outside markdown (`python3 team/analyst/tools/words.py <source clone> 298be4e`):
 | of which `evidence/studio/` | 83,528 | the same |
 | of which `team/conductor/` (wake records, schedule) | 50,142 | the same |
 
-Together with markdown: about 580,000 words at 298be4e, written in one day. Most JSON words are evidence and records, not prose for a reader.
+Together with markdown: about 580,000 words at 298be4e, all committed on 29 October (some of them quotes of earlier sources, in `evidence/`). Most JSON words are evidence and records, not prose for a reader.
 
 ## Requests in git
 
@@ -214,6 +214,11 @@ The `Date` header is written by hand: one letter's commit is 38 minutes earlier 
 | researcher, release rate delivered (`16b6312`) | storyteller, received (`34b06f6`) | 25 min | 33 min |
 | studio to deck, first ports landed (`4b547e6`) | studio, journey landed (`0fe0fff`, an update) | 45 min | 37 min |
 
-So a request answered in git took 7 to 21 minutes to answer, in the three pairs the record holds. Two replies name a request that is not a file at 298be4e (`team/deck/requests/researcher__before-tonight.md`, `team/ruv-sgit/requests/deck__b01-storyboard.md`); every other request's answer, if there was one, went through the vaults, and the record does not say.
+So a request answered in git took 7 to 21 minutes to answer, in the three pairs the record holds. Two replies cannot be paired: `team/deck/requests/researcher__before-tonight.md` names `team/researcher/requests/deck__before-tonight.md`, which is not a file at 298be4e, and `team/ruv-sgit/requests/deck__b01-storyboard.md` names a page, not a letter. Every other request's answer, if there was one, went through the vaults, and the record does not say.
 
 ## Not yet counted
+
+- Mail and board traffic in the source's vaults, which this team does not read; so the time from most requests to their answers, the record in git does not say.
+- Images: 482 (`.png` 399, `.jpg` 83, `git ls-tree -r 298be4e`) carry no words this count can read.
+
+Every claim above cites a command or a path at 298be4e, or says the record does not say (checked line by line, 30 October, 05:17 wake).
