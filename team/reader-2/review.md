@@ -1,6 +1,8 @@
 # A reader review: The ultimate insider
 
-By reader-2@cold-read.the-ultimate-insider, a synthetic reader: a software engineer who runs coding agents every day, knows git, CI and Claude Code, and distrusts anything that sounds like a sales pitch. Draft, in progress; due Sunday 1 November 2026.
+By reader-2@cold-read.the-ultimate-insider, key `sha256:23fc5bbce8529018` (`team/reader-2/key.json`), 30 October 2026.
+
+A synthetic reader: a software engineer who runs coding agents every day, knows git, CI and Claude Code, and distrusts anything that sounds like a sales pitch. Complete: all five questions answered.
 
 **What I read.** Only the source, SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` ("site v0.2.0: Merge pull request #1 from SGit-AI/dev", 29 October 2026, 23:19 UTC), built in my scratchpad with its own `run-website-locally.sh` steps (`build.py`, then `validate.py`: "built 217 pages", "gate: clean (304 html files)"). Never a later commit, never the live site. Every quote below names its file at `298be4e`. Where the source is silent, I say "the record does not say".
 
@@ -62,4 +64,33 @@ Mostly yes on the diagnosis, not yet on the cure. The test I applied: for every 
 
 **Verdict on section 3.** Part one (agents as insiders, the incidents, the permissions) convinced me, and the restraint of "three of those five were not attacks" did more for the speaker's credibility than any statistic. Part two leans on vendor numbers. Part three asks me to trust tools whose only evidence is their makers' own pages, with the strongest piece, a licence the system suspends, still "what we are building towards" (`licence`, line 569). I leave convinced of the problem and interested in the cure, not yet convinced by it.
 
-*Still to come:* 4. what would I pay for the book of it, 5. where would I put it down.
+## 4. What would I pay for the book of it
+
+**There is no book in the record.** I searched the source at `298be4e` for one; the only "book" in `src/` and `content/` is the gym-booking story (`src/static/studio/data/pivoting.json`). The long-form version the talk is "built from" is an article on another site (`src/pages/sources/index.html`, line 5), which I may not read. So this answer prices what a book of *this* talk would be, from what the site shows me.
+
+**The material as it stands: nothing, because it is free and short.** The whole script is 4,141 words (`_site/talk/script.md`, built from `298be4e`), about twenty minutes' reading, and it is all on the site with its sources. I would not pay for a printed copy of the script.
+
+**A book that kept part one and finished part three: about the price of a technical paperback, 30 to 40 pounds, and I would expense it.** Part one is already the best short case I have read for treating my own agents as insiders; its incidents and identity numbers are sourced (section 3). What would make it worth paying for is what the talk leaves to its demos and its sister sites:
+
+- the four moves worked through on an ordinary engineering setup, a repository, a CI pipeline and a coding agent, not only on the speaker's own projects (`abp`, `licence`, `s-e14` in `talk.json`);
+- the claim "Only a boundary is a control" (`abp`, line 464) turned into a checklist I can run against my own agent's permissions;
+- the agent team of the prelude (`m03`, `prelude`) written up as a case study, failures included, since "without its policies, a team like this goes off-piste just as fast" (`team`, line 406) is asserted, not shown;
+- the evidence the sources page leaves out (section 3).
+
+**A book that was the talk plus the product pages: nothing.** If the book's part three is RiskMandate, SHarness and sgit.ai as they appear here, I can read the product pages for free, and I would read the book as a brochure.
+
+## 5. Where would I put it down
+
+**On the script page, at beat 6, the first time I met a production note.** Beat 5 is the strongest page of the script; beat 6 reads, in full, "Watch what an agent is: a model, then tools, then a loop, then everything it is wired into. Each step adds reach, and the reach is the point.", and then the cue: "Studio piece, deck kept it: skip it in the build mode if it does not earn its place." (`talk.json`, `s-e01`, line 82; screenshot `debriefs/screenshots/2026-10-30__source-script-cues-298be4e.png`). 27 of the 58 beats carry a cue saying they may be skipped or are "not yet reviewed" (counted over `talk.json`). As a reader I am told, repeatedly, that the author is not sure nearly half of what I am reading belongs. I did not stop there, but that is where I first wanted to.
+
+**For good, at beat 40, "SHarness: the one idea".** Its whole script is "The one idea behind SHarness." (`s-sharness-one-idea`, line 623). From beat 27, "The way out", to beat 54, the talk runs 28 beats and about 28 minutes (1,670 seconds of the planned 4,495, summed from each beat's `dur` in `talk.json`), and 19 of those 28 beats have fewer than 20 words to say, and ten of the 28 are about SHarness. The first 40 minutes argue; the next 28 show. In the room, with a live kernel in a browser tab (`live-sharness-linux`, line 671), that may be the best part of the evening. On the page, it is where the argument stops and I close the tab: the words that carried me through part one ("A thief takes a copy. An agent changes the original.", `integrity`, line 373) have no equal after beat 39.
+
+**What would have kept me reading.** One paragraph per demo, in the script, saying what I would have seen and what it proves; and the closing beats (`evolution`, `next-companies`, `brakes`) moved up to follow "The way out", so the business case comes before the products and not after.
+
+**A smaller snag, before I even start.** The player opens on a splash that says "74:55 · 58 slides" while its own timer says "3:00 / 90:00" (`_site/talk/player.html#three`, built from `298be4e`; screenshot `debriefs/screenshots/2026-10-30__source-slide-three-298be4e.png`). Two lengths on one screen, for a talk whose subject is measuring what something can actually do.
+
+---
+
+## In one paragraph
+
+A security talk for security people and would-be founders, in which I, the engineer running the agents, am the subject. Its diagnosis is sharp, honest and sourced: agents are insiders with no natural limits, dropped into infrastructure and permissions that cannot hold them, judged by risk processes too slow to matter. Its cure is promising and, on this record, still its makers' word. I would recommend part one to my team tomorrow, read part three as a demo reel, and pay for the book only if it finished what the demos start.

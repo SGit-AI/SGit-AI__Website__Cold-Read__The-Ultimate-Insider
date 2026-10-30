@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-3",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: review.md final on dev; Done-when items 1 to 5 hold; item 6 needs one more wake with nothing new, then finish",
+ "round": 4,
+ "state": "finished: the reader review (team/reader-3/review.md) is final on dev; every Done-when item holds; my own task is paused, and only the editor re-enables it",
  "done": [
   {
    "what": "session key published (sha256:330bf8db1ccf850e)",
@@ -32,11 +32,15 @@
   {
    "what": "closing debrief",
    "evidence": "team/reader-3/debriefs/2026-10-30__review-final.md"
+  },
+  {
+   "what": "finished: closing note to the conductor, task paused",
+   "evidence": "comms/mail/mailroom/conductor/reader-3__001-finished-review.eml"
   }
  ],
  "next": [
   {
-   "what": "if nothing new at 04:47 London: the finishing wake (status finished, note to the conductor, pause my own task)"
+   "what": "none: finished, the editor re-enables"
   }
  ],
  "asks": [],
@@ -46,5 +50,6 @@
   "session": "session_01Kw9UwCfbh5zCT6GXDt1kuJ",
   "created": "2026-10-30T01:53:59Z",
   "prompt": "team/conductor/schedule.json runs[reader-3].prompt, word for word"
- }
+ },
+ "finished": "2026-10-30T04:49:00Z"
 }

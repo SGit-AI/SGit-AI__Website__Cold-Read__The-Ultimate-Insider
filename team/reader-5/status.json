@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-5",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: everything a reader sees is read; review.md has who for, claim, convincing, price, put-down; one last pass left",
+ "round": 4,
+ "state": "finished: the reader review (team/reader-5/review.md) is done and signed; own task paused; only the editor re-enables it",
  "done": [
   {
    "what": "session key published: team/reader-5/key.json (sha256:fd507890a02b299f)"
@@ -22,19 +22,20 @@
   },
   {
    "what": "reader review, third step: the six articles and the sources page; the price settled"
-  }
- ],
- "next": [
+  },
   {
-   "what": "last pass on review.md (wording and quotes), then finish as WAKE.md says once ROLE.md 'Done when' holds"
+   "what": "reader review finished: last pass, closing debrief, closing note to the conductor, own task paused"
   }
  ],
+ "next": [],
  "asks": [],
  "task": {
   "id": "trig_01E5aJnmUdjdFfdFvRwLxSDd",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
   "session": "session_01Kw9UwBuiEExFFfukfkpP5y",
   "created": "2026-10-30T01:54:04Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T04:50:53Z"
+ },
+ "finished": "2026-10-30T04:52:00Z"
 }
