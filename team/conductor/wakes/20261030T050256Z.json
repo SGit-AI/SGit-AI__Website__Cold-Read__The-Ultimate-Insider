@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Within scope.writes (comms/mail/conductor/**, comms/issues/conductor/**, admin/tools/pki-agent.README.md, team/conductor/**, the reply to security). Conditions: copy letters, never edit or delete the mailroom originals; the pinned tool and its .sha256 untouched; no key or contact detail in the README or reply; vault_check comms and the gate before pushing; nothing to another member's task.",
    "at": "2026-10-30T05:03:57Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "4eac4e1 on the branch and dev: three letters copied to the conductor's inbox and done (mailroom originals untouched); reply 017 to security; issue 009 done; pki-agent.README.md says what was read in full and what only by calls (tool and .sha256 unchanged, sha256sum OK); status.json. vault_check comms clean, gate clean (96 html), 0 outside scope.",
+   "at": "2026-10-30T05:04:18Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4eac4e1: gate clean (96 html), 0 outside scope, pki-agent sha256 OK, vault_check comms clean. The only mailroom change is one added letter (security/conductor__017); no letter edited or deleted. No key, token or contact detail; the README edit is plain text. Pre-review conditions kept.",
+   "at": "2026-10-30T05:04:41Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 letters copied to inbox and done, reply 017, issue 009 done, issue 001 open as planned. 2 README Known limits corrected (one line). 3 status.json; 4eac4e1 on origin/dev. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T05:04:41Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T05:04:41Z",
+ "outcome": "ok"
 }
