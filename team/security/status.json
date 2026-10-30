@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "security",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: third wake done; register C1-C20, T1-T11, pki-agent.mjs findings K1-K8; reader-4's key checked",
+ "round": 4,
+ "state": "active: fourth wake done; register adds the source team's own words; C7 count corrected (12 change verdicts in history)",
  "done": [
   {
    "what": "session key published: team/security/key.json (sha256:474dded6f57f44b0, encryption sha256:8bc96fcf868d3e85)"
@@ -19,14 +19,14 @@
   },
   {
    "what": "pki-agent.mjs read (K1-K8); reader-4's key.json checked; the pin residual recorded with its owner, the editor; the account domain dropped from my key files"
+  },
+  {
+   "what": "the source's debriefs read into the register; C7 corrected; letter 016 filed; a correction to pki-agent.README.md sent to the conductor by mail"
   }
  ],
  "next": [
   {
-   "what": "the source's debriefs and evidence: what each control stopped, in its own words"
-  },
-  {
-   "what": "sign the register at its head when Done when holds"
+   "what": "sign-off: check ROLE.md Done when item by item; sign the register at its head"
   }
  ],
  "asks": [],

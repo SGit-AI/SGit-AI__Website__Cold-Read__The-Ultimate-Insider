@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "security",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T04:33:21Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Request first: copy letter conductor__016 to comms/mail/security/inbox/, an issue on comms/issues/security/issues/, then file it to done/; send a correction to the conductor (comms/mail/mailroom/conductor/security__NNN-*.eml plus outbox copy): pki-agent.README.md says 'read line by line' but the vendored QR library and the record, evidence and unzip readers were read only by their calls; no edit to its file. 2. Read the source's debriefs and evidence at 298be4e and add to team/security/controls-and-threats.md what each control stopped, in the source team's words, with path and commit. 3. status.json and a debrief; vault_check.py comms. All inside policy.json writes.",
+   "at": "2026-10-30T04:33:52Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Every step inside scope.writes: team/security/**, comms/issues/security/**, comms/mail/security/**, and the conductor mailroom's security__NNN letter; no edit to pki-agent.README.md. Conditions: source only at 298be4e with path and commit; conductor__016 and the source's debriefs are material; no key or contact detail in letter, issue or debrief; vault_check.py comms before commit; no em-dashes; never edit the conductor's letters.",
+   "at": "2026-10-30T04:34:06Z"
+  },
+  "work": {
+   "by": "security",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "letter 016 to inbox and done, board issue 003; correction mailed to the conductor (security__001-read-line-by-line.eml, outbox copy); register: the source team's own words (7 quotes, checked at 298be4e), C7 count corrected (12 change verdicts in history); debrief 2026-10-30__fourth-wake-their-own-words.md; status.json",
+   "at": "2026-10-30T04:35:30Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
