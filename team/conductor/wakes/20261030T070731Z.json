@@ -1,0 +1,24 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-30T07:07:31Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Letters: copy analyst__001 and technologist__001 to comms/mail/conductor/inbox/ and done/ (mailroom untouched); issue 011 on the conductor's board (two more finished, tasks checked by id); issue 001 stays open. 2. status.json and REALITY.md (seven finished; reader-1, historian, security in quiet wakes; critic waiting; grc working). 3. vault_check comms, gate, push to dev; the conductor's own task stays on until every member has finished.",
+   "at": "2026-10-30T07:07:59Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Within scope.writes (the conductor's comms folders, status.json, REALITY.md). Letters only copied; no other member's task touched (checks by id are read-only); the conductor's own task stays on. No HOLD.md, no stop condition. Conditions: vault_check comms before commit; no secrets or contact details; push only to dev after the gate; no em-dashes.",
+   "at": "2026-10-30T07:08:23Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

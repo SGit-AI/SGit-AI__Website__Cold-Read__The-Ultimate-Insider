@@ -39,6 +39,11 @@ What is in this repository now, kept current by whoever ships. Last updated by c
 - **The editor's pane** (`src/static/assets/pane.js`): ported, but `lane.json` pointed at the source's lane vault and the source conductor's key. It now holds no lane, so a note cannot be sent anywhere; this team never writes to the source's lane.
 - **The site**: live at https://the-ultimate-insider.cold-read.sgit.ai (Pages, source "GitHub Actions", custom domain set by the editor).
 
+## Where the team stands (30 October 2026, 07:07 UTC)
+
+- Finished, each task paused by its member: analyst, technologist, journalist, reader-2, reader-3, reader-4, reader-5.
+- Signed and in their quiet wakes: reader-1 (review and synthesis), historian, security; critic signed, waiting; grc working. The conductor finishes last.
+
 ## The team
 
 | Member | Slot (London) | Deliverable |
