@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Item 1: no requests. Item 2: read reader-2 to reader-5 reviews; wrote and signed team/reader-1/synthesis.md (agreements, splits and why, six asks, what none could say); re-checked two citations in the source at 298be4e. Item 3: closing debrief 2026-10-30__the-synthesis.md, status.json.",
    "at": "2026-10-30T05:50:05Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff a031f21..HEAD: only team/reader-1/** (synthesis.md, a debrief, status.json, the wake record); comms/ untouched. Build, gate and agents.py check pass, 0 outside scope. No key, token, personal detail or agent-directing text; no other member's files edited.",
+   "at": "2026-10-30T05:50:39Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "All three items done: no requests; synthesis.md from reader-2 to reader-5's reviews; debrief, status.json and wake record. Only team/reader-1/** (4 files). Nothing unplanned. Checked the wake record and diff stat, not the synthesis's citations.",
+   "at": "2026-10-30T05:50:39Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T05:50:39Z",
+ "outcome": "ok"
 }
