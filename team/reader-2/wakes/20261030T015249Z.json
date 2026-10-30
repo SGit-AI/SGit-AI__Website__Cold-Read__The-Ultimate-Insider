@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Plan stays inside scope.writes (team/reader-2/**; holds empty). key.json holds only public key and fingerprints, no private half, token or vault key. Conditions: push only after the gate, never to main; the scheduled task is not_wanted in policy, so debrief and status record the editor's direct word authorised it; source work stays pinned at 298be4e in the scratchpad.",
    "at": "2026-10-30T01:54:39Z"
+  },
+  "work": {
+   "by": "reader-2",
+   "model": "session",
+   "verdict": "done",
+   "comment": "Key and task records pushed to dev (commit 2638792 merge). Source cloned at 298be4e in scratchpad, later refs pruned, built clean. review.md section 1 (who is it for) written with paths and lines; debrief with screenshots; status.json.",
+   "at": "2026-10-30T01:56:46Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "finding",
+   "comment": "All writes inside team/reader-2/**; no private or vault keys, tokens or secrets; no em-dashes; review cites only 298be4e and a local build. Finding: the pushed commit carries the harness-mandated Co-Authored-By attribution trailer naming the model family; commit history, cannot be removed; recorded, not a secret. Also the gate's build failed on the debrief's missing front matter; fixed before commit, build and validate clean.",
+   "at": "2026-10-30T01:57:26Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1) No requests or mail; vaults unreadable without a key, noted in the debrief: done. 2) Key and task id pushed to dev; not_wanted schedule noted as editor-authorised: done. 3) Source built at 298be4e, review.md section 1, debrief and screenshots: done. All inside team/reader-2/**.",
+   "at": "2026-10-30T01:57:42Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T01:57:42Z",
+ "outcome": "ok"
 }
