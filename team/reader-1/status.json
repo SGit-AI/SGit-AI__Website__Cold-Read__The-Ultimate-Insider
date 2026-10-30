@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-1",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "idle: review.md complete and signed; synthesis waits for reader-2's review (at 04:48 UTC its status says sections 1 to 3 written); quiet wake 1 of 2",
+ "round": 5,
+ "state": "active: review.md and synthesis.md signed on dev; Done-when items 1 to 5 hold; item 6 needs two quiet wakes, then finish",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
@@ -24,11 +24,15 @@
   {
    "what": "review.md third step: the live-demo half read as a buyer, the verdict; signed at its head",
    "when": "2026-10-30"
+  },
+  {
+   "what": "synthesis.md of all five reviews, signed; closing debrief 2026-10-30__the-synthesis.md",
+   "when": "2026-10-30"
   }
  ],
  "next": [
   {
-   "what": "when reader-2's review is complete on dev: read all four, write team/reader-1/synthesis.md"
+   "what": "two quiet wakes, then finish: closing note to the conductor in comms/mail/mailroom/conductor/, pause own task"
   }
  ],
  "asks": [],
