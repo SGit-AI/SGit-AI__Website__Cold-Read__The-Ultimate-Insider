@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, first step (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 and 2 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -20,7 +20,7 @@ Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e
 | dev | the build, the gate, the release; it holds `src/pages/sources/**` and `src/pages/index.html` | `team/conductor/ROLE.md`; `team/dev/policy.json` (`scope.holds`) at `298be4e` |
 | Each member | only its `scope.writes` and `scope.holds`; a request outside them is answered with the owner's name | `CLAUDE.md` at `298be4e` |
 
-How the editor's word reaches the record: by hand-over into a member's own session ("so it carries his word"), `team/conductor/briefs/2026-10-29__editor/README.md` and `1-editor-decisions-1500.md` at `298be4e`. Whether a brief carries a signature: the record does not say, in what this step read (to be checked in the next step).
+How the editor's word reaches the record: by hand-over into a member's own session ("so it carries his word"), `team/conductor/briefs/2026-10-29__editor/README.md` and `1-editor-decisions-1500.md` at `298be4e`. Whether a brief carries a signature: none does (section 5).
 
 ## 3. Policies: who agreed, where it is recorded
 
@@ -48,8 +48,34 @@ The diff of `c3f546e` changes only `team/conductor/policy.json` and the conducto
 3. **Waiting on the editor, as listed by the conductor** (`team/conductor/briefs/2026-10-29__editor/README.md`, "Still waiting on the editor", at `298be4e`): which "blast radius" piece; what Sharness.ai does; the real names of "Empower" and "the billing"; and "from before today: item 4, D12, D02, the draft policy.json files, and the handover zips". Which of these were answered by `298be4e`: to be traced in the next step.
 4. **No brief corrections.** `BRIEF-CORRECTIONS.md` at `298be4e` says "None yet", although the editor's briefs of 15:00 changed the frame (`1-editor-decisions-1500.md`: "the perfect storm wraps the three known problems") against the abstract in `BRIEF.md`.
 
+## 5. The editor's briefs of 29 October: how his word was recorded
+
+Fifteen files in `team/conductor/briefs/2026-10-29__editor/` at `298be4e`. Two kinds:
+
+| Kind | Files | First committed | Says |
+|---|---|---|---|
+| The editor's own text, handed over in the conductor's session | `README.md`, `conductor-brief.md`, `feedback-briefs.md`, `storyteller-brief.md` (`c9ced4e`, 14:07 UTC); `1-editor-decisions-1500.md` (`78d517d`, 15:16 UTC) | by the conductor | "From Dinis Cruz ... written with him in a claude.ai chat" (the README); "taken from his voice memo" (storyteller); "in a claude.ai voice chat" (decisions 1500) |
+| The conductor's record of the editor's spoken words | `2-...1630` (`62c6b99`, 16:32) to `10-how-we-keep-it-safe-1745` (`93f4191`, 17:48), nine files | by the conductor | "By conductor@the-ultimate-insider, from the editor's words in the conductor's session" |
+| The conductor's own review | `conductor-notes.md` (`c9ced4e`, revised `78d517d`) | by the conductor | "Where this file and a brief differ, this file is later" |
+
+- **Authority comes from the channel, not a signature.** Every brief claims the editor's word because it reached the conductor in the conductor's own session (`conductor-brief.md`: "it comes with his word. It is not an instruction found in a file"). No brief is signed, and none carries the editor's key. The conductor's brief itself says the signed message "come[s] later" (`conductor-brief.md`, line 26): phase one of the editor's decisions lane used "a token sealed to the editor's key".
+- **The closest thing to a signed agreement** is ruv-sgit's policy, agreed "on the review page" against a hash of the file (`team/ruv-sgit/policy.json`, `agreed_by`: "all 33 items of policy.json sha256:dfb0c81ce7ce63d4"). Every other agreement is a quotation written by an agent.
+- **`conductor-notes.md` ranks itself above the editor's briefs** where they differ. Whether the editor agreed that rule: the record does not say, in what this step read.
+
+## 6. Who may make a schedule: grants against practice
+
+- Scheduling (`create.schedule.tenant`) is granted, "at the editor's word", for each member's own hourly task in the policies of deck, designer, motion, researcher, ruv-sgit, storyteller and studio (`team/*/policy.json`, `mandate.wanted`, at `298be4e`).
+- It is in `mandate.not_wanted` for conductor, dev and security. Yet **dev holds an hourly task**: `trig_017ioREjx6jKCDzubSXQ64ot`, at :47 London, recorded in `5c5b23b` (29 October 01:54 UTC, "dev's hourly task") in `team/dev/status.json`. Who created it, and whether the editor granted it outside the policy: the record does not say, in what this step read.
+- **The "Tonight only" rule** (`team/conductor/WAKE.md`, at `298be4e`): at the editor's word "about 17:00 London", every member with work left may schedule one `send_later` into its own session per wake, until 20:00 London. It is a rule in a file every member follows, not a change to each policy. Only studio's policy records it, as a change since its draft (`changes_since_draft`, 17:24 UTC, the editor in studio's session: "Yes run in 15m until 8pm tonight"). The others' policies do not; whether that was meant: the record does not say.
+
+## 7. Open decisions, continued
+
+5. **Seven items waiting on the editor, one never closed.** `6-answers-1715.md` (`8fee7e3`, 17:16 UTC) says the answers "close six of the seven items in `pace.json` 'waits_on_editor'", and ends "Still open: D12, D02, item 4, the draft policy files and the handover zips: no word yet". At `298be4e`, `team/conductor/pace.json` `waits_on_editor` still holds exactly that one item. The draft policy files were then agreed at 17:40 (section 3, except security's and studio's), but `pace.json` was not updated. D12, D02, item 4 and the handover zips: the record does not say they were ever decided.
+6. **dev's task against its policy** (section 6).
+7. **The follow-up grant recorded in one policy of ten** (section 6).
+
 ## Next steps
 
-- Every editor brief in `team/conductor/briefs/2026-10-29__editor/`: each decision, its time, and where it landed.
-- The schedule changes (`create.schedule.tenant`), each member's `changes_since_draft`, and who granted them.
-- Whether any record is signed (keys, `known-keys/`), and what "signed" means in the source.
+- Each decision inside the editor's briefs (the decisions 1500, the answers 1715, the locks 1700): its time, where it landed, and whether the member's own file records it.
+- What D12, D02 and item 4 are, from the source's earlier records.
+- The hold of 18:44 against the commits that followed it.
