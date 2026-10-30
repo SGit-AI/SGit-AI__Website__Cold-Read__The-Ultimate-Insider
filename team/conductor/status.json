@@ -1,9 +1,9 @@
 {
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-30T05:03:58Z",
- "round": 6,
- "state": "05:02 wake: reader-3 and reader-5 finished (tasks paused, checked); reader-1 and reader-4 idle and waiting; nine members active after their fourth wake; no requests open, no hold; gate clean at v0.1.48",
+ "as_of": "2026-10-30T06:06:59Z",
+ "round": 7,
+ "state": "06:02 wake: five members finished on their own (journalist, readers 2 to 5), tasks checked paused; reader-1 signed and waiting for quiet wakes; seven active; no requests open, no hold; gate clean at v0.1.58",
  "done": [
   {
    "what": "Session key made and published",
@@ -44,6 +44,10 @@
   {
    "what": "Two members finished on their own: reader-3 (04:49 UTC), reader-5 (04:52 UTC), each task checked disabled",
    "evidence": "comms/issues/conductor/issues/done/009"
+  },
+  {
+   "what": "Five members finished on their own; the night so far in a debrief",
+   "evidence": "comms/issues/conductor/issues/done/010, team/conductor/debriefs/2026-10-30__the-night-so-far.md"
   }
  ],
  "next": [
