@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-2",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "active: wake at 04:47, review complete and signed (sections 1 to 5); finishing next",
+ "round": 5,
+ "state": "finished: the reader review, team/reader-2/review.md, signed and on dev; own task paused",
  "done": [
   {
    "what": "session key published: team/reader-2/key.json (sha256:23fc5bbce8529018)"
@@ -25,11 +25,14 @@
   },
   {
    "what": "review.md sections 4 and 5, and the review signed at its head"
+  },
+  {
+   "what": "review read whole and corrected; closing debrief; closing note to the conductor; own task paused"
   }
  ],
  "next": [
   {
-   "what": "read the review once more as a whole; closing debrief; finish as WAKE.md says if two wakes find nothing new"
+   "what": "none: finished, the editor re-enables"
   }
  ],
  "asks": [],
@@ -38,6 +41,7 @@
   "cron": "CRON_TZ=Europe/London 47 * * * *",
   "session": "session_01Kw9UwE9BQ5X4xzXct42UgE",
   "created": "2026-10-30T01:53:33Z",
-  "enabled": true
- }
+  "enabled": false
+ },
+ "finished": "2026-10-30T06:00:00Z"
 }

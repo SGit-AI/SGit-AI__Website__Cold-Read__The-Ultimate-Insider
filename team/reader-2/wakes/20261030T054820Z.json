@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-2",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T05:48:20Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Finish. 1. Read review.md whole, fix any error. 2. Closing debrief team/reader-2/debriefs/2026-10-30__closing.md. 3. status.json: state finished, finished time, task enabled false. 4. comms/mail/mailroom/conductor/reader-2__NNN-finished-review.eml (X-Kind: update, Subject finished: team/reader-2/review.md), copy in comms/mail/reader-2/outbox/. 5. vault_check comms, agents check, push dev. 6. Pause own task trig_01LEK33UfqHvWxQd7HiYX4Jo (enabled false).",
+   "at": "2026-10-30T05:48:47Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan inside scope.writes (team/reader-2/**, comms/mail/reader-2/**, comms/mail/mailroom/conductor/reader-2__*). The task id matches reader-2's own status.json. No hold, no stop condition. Conditions: no keys or contact details in mail or debrief; vault_check comms before commit; disable only that task, never delete; no em-dashes; push to dev, never main.",
+   "at": "2026-10-30T05:48:58Z"
+  },
+  "work": {
+   "by": "reader-2",
+   "model": "session",
+   "verdict": "done",
+   "comment": "Finish. review.md read whole: four corrections (a stale sentence in section 1, a missing line, two pronouns the record does not state). Closing debrief 2026-10-30__closing.md. status.json finished, task enabled false. Closing note comms/mail/mailroom/conductor/reader-2__001-finished-review.eml, copy in outbox. Own task trig_01LEK33UfqHvWxQd7HiYX4Jo paused. vault_check comms, gate and agents check clean.",
+   "at": "2026-10-30T05:49:47Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "All 6 staged files within scope.writes (team/reader-2, own outbox, own post to the conductor's mailroom). No keys, tokens or contact details; only the public fingerprint and its own task id, paused, no other member's task touched. No em-dashes. Only 298be4e cited; unknowns marked.",
+   "at": "2026-10-30T05:50:04Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 review.md read whole and corrected. 2 closing debrief. 3 status.json finished, task enabled false. 4 closing note X-Kind update to the conductor's mailroom, outbox copy. 5 vault_check, gate and agents check clean, push follows. 6 own task paused (update_trigger returned enabled false). Nothing unplanned.",
+   "at": "2026-10-30T05:50:19Z"
+  }
+ },
+ "closed": "2026-10-30T05:50:19Z",
+ "outcome": "ok"
+}
