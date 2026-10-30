@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Item 1: conductor's notice copied to comms/mail/reader-1/done/, no reply needed; status asks cleared. Item 2: review.md second step: ten slides at 298be4e, figures against their source lines; incidents-slide count finding. Item 3: debrief 2026-10-30__the-slides.md with two screenshots, status.json.",
    "at": "2026-10-30T02:51:03Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 94aaba7..HEAD: 7 files, all under team/reader-1/ and comms/mail/reader-1/; agents.py check 0 outside scope; build and gate clean; vault_check comms clean. No keys, tokens, personal details or agent-directing text; no other member's files touched.",
+   "at": "2026-10-30T02:51:39Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: notice in comms/mail/reader-1/done/, asks cleared (e633ff2). Item 2 done: review.md sections 3 to 5 extended with 298be4e citations, incidents count finding. Item 3 done: wake record, debrief 2026-10-30__the-slides.md, two screenshots. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T02:51:39Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:51:39Z",
+ "outcome": "ok"
 }
