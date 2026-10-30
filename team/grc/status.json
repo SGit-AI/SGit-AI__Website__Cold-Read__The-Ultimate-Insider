@@ -10,11 +10,17 @@
   },
   {
    "what": "own hourly task at :32 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "governance.md first step: authority map, the ten policies and their agreement, four open items (draft, unsigned)"
   }
  ],
  "next": [
   {
-   "what": "governance map: the decisions in the source at 298be4e, who made them, where recorded"
+   "what": "governance map: every editor brief at 298be4e, the schedule grants, whether any record is signed"
+  },
+  {
+   "what": "open the sealed vault keys when the editor hands them over; read mail and board"
   }
  ],
  "asks": [],

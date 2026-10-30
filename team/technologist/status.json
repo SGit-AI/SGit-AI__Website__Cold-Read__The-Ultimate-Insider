@@ -3,21 +3,32 @@
  "agent": "technologist",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, architecture started",
+ "state": "active: first wake done (editor's request); architecture section 1 of 4 drafted; waiting for the vault-key zip",
  "done": [
   {
    "what": "session key published: team/technologist/key.json (sha256:6a07488b6dfe36f4)"
   },
   {
    "what": "own hourly task at :17 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "architecture section 1 (the parts and how they connect) from the source at 298be4e: team/technologist/architecture.md"
   }
  ],
  "next": [
   {
-   "what": "architecture: first section from the source at 298be4e (the parts and how they connect)"
+   "what": "architecture section 2: the build, the gate and the release in depth"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip; clone cr-tui-issues-public and cr-tui-mail-public into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "of": "editor",
+   "what": "the zip of vault keys sealed to sha256:543361cb30951666"
+  }
+ ],
  "task": {
   "id": "trig_01KpJTgvQn1Xb1CrQLzt8uft",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
