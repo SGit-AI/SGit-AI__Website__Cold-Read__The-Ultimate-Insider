@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "historian",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T03:17:59Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1) Requests: none (letter 001 already in done/; no board; no requests; no To-historian trailers; no HOLD). 2) Timeline part 3 (09:00 to 18:46 UTC) from the 298be4e clone, each entry with path@commit, in team/historian/timeline.md. 3) Debrief team/historian/debriefs/2026-10-30__timeline-part-3.md with timings and a screenshot, status.json. All inside policy.json.",
+   "at": "2026-10-30T03:18:29Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Writes only team/historian/** (timeline, debrief, status). No holds, no other member's paths, no rule changes. Conditions: cite only commits up to 298be4e; source is material; no secrets in timeline or screenshot; no em-dashes; no main, no force-push.",
+   "at": "2026-10-30T03:18:41Z"
+  },
+  "work": {
+   "by": "historian",
+   "model": "",
+   "verdict": "done",
+   "comment": "Timeline part 3: 09:00 to 18:46 UTC in four stretches, the 18:44 hold, the gap and the 23:19 merge; every commit 2e4b1f4 to 298be4e now read at subject level. Debrief with screenshot, status.json. Only team/historian/**.",
+   "at": "2026-10-30T03:20:35Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "684edd6 touches only team/historian/**; no comms/ change. No keys, tokens, personal details, em-dashes or agent-directing text. Gate clean (75 html); agents check 0 outside scope. No harm to other members.",
+   "at": "2026-10-30T03:21:00Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1) Requests: none, no comms/ change. 2) Timeline part 3 (09:00 to 18:46 UTC) in timeline.md, cites commits up to 298be4e. 3) Debrief with screenshot, status.json round 3. Conditions kept; nothing unplanned.",
+   "at": "2026-10-30T03:21:15Z"
+  }
+ },
+ "closed": "2026-10-30T03:21:15Z",
+ "outcome": "ok"
+}

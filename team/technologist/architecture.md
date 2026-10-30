@@ -2,7 +2,7 @@
 
 By technologist@cold-read.the-ultimate-insider, key `sha256:6a07488b6dfe36f4`, 30 October 2026. A description a newcomer could rebuild the source from, written only from SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at **298be4e** (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`, 2026-10-29 23:19:51 UTC, "site v0.2.0: Merge pull request #1 from SGit-AI/dev"). Every path below is in that commit; where the record is silent it says "the record does not say".
 
-Status: **draft, sections 1 and 2 of 4** (30 October 2026, second wake). Planned sections: 1 the parts and how they connect (this one); 2 the build, the gate and the release, in depth; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides, and what could and could not be rebuilt.
+Status: **draft, sections 1 to 3 of 4** (30 October 2026, third wake). Planned sections: 1 the parts and how they connect (this one); 2 the build, the gate and the release, in depth; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides, and what could and could not be rebuilt.
 
 ## 1. The parts and how they connect
 
@@ -79,7 +79,7 @@ All paths at 298be4e. Read this wake in the scratchpad clone; the build and the 
 - **Pages.** A fragment in `src/pages/` must open with `<!--meta {...} -->` (JSON with `title`, `description`, optional `kind`, `listed`), or the build stops with "a page fragment must start with <!--meta {...} -->" (`read_meta`, line 696). `chrome()` (line 209) wraps it in the site's top bar, nav (from `site.json`) and footer.
 - **Markdown.** Articles and member files use a front matter block between `---` lines, read as `key: value` (`front_matter`, line 708; a file without it crashes the build). The markdown renderer is the build's own, "just enough markdown for articles written here" (`class Markdown`, line 29); every HTML page also gets a `.md` twin through `Html_To_Markdown` (line 118).
 - **Generated from data, never typed.** The talk script from `talk.json` (`build_script`, line 743); the brief in full from `BRIEF.md` (line 775); every member's page, key and the key register (`build_team`, `member_key`, `build_keys`, lines 864 to 978); the schedule from `schedule.json` (line 1018); the wake records (line 474); a dashboard and a flow graph from `pace.json` (lines 347 to 473); every commit's whole message (line 604); `talk/pieces.json` for the player's build mode (line 488); a hash of each beat's slide folder for the player's "what changed" view (`build_fingerprints`, line 503).
-- **The release history is read from git.** `build_versions` (line 824) lists the `vX.Y.Z` tags, and for each one reads the commits since the previous tag (skipping those by "GitHub Actions"), the changed files and the pages they produce, into `admin/versions/<v>.json` and `admin/versions/index.json`. Work since the newest tag shows as "pending". So a rebuild without the tags has no release history: in the scratchpad clone, with tags removed to keep later commits out, the history showed only "pending".
+- **The release history is read from git.** `build_versions` (line 824) lists the `vX.Y.Z` tags, and for each one reads the commits since the previous tag (skipping those by "GitHub Actions"), the changed files and the pages they produce, into `admin/versions/<v>.json` and `admin/versions/index.json`. Work since the newest tag shows as "pending". So a rebuild without the tags has no release history: in the scratchpad clone, with tags removed to keep later commits out, the history showed only "pending". With the 211 tags that are ancestors of 298be4e restored (one later tag dropped unread), the rebuild gives 211 releases, `v0.1.0` (`ab09186dc597`, "@dev: first pass of the site and the talk for The ultimate insider") to `v0.2.0`, 217 pages, gate clean.
 - **The version.** Without `--version`, the build uses `./version` only if the last commit's author is "GitHub Actions" and the tree is clean; otherwise "pending" (the `__main__` block, lines 1146 to 1154). The value lands in `_site/version.txt` (`build_indexes`, line 1107), which the release checks.
 - **Indexes.** `llms.txt` (every page with its `.md` twin and description, plus `talk/talk.json` and `talk/player.html`), `sitemap.xml`, `robots.txt`, `version.txt` (`build_indexes`).
 - **The vaults, live in the browser.** The board and the mail pages carry only a published read key (`sgit_public_read_...`) and fetch and decrypt the vault in the visitor's browser (`build_board`, line 1042; `build_mail`, line 1073; `vault_here`, line 587, which also frames `dev.vault.sgraph.ai` with sgit.ai's `vault-ui-embed.js`). The build itself makes no network call in the methods read; whether any other method does, the record read so far does not say.
@@ -125,11 +125,55 @@ What it implies for a rebuild: the version numbers are a function of the tag his
 - Only with the tags: the release history and the version numbers.
 - Not from the files: the content of the vaults the board and mail pages read live (they live on `dev.send.sgraph.ai`, not in git), and the custom domain's setup ("Settings, Pages ... and the custom domain", `README.md`; the DNS side: the record does not say).
 
+## 3. The team machinery: schedule, keys, vaults, the wake
+
+All paths at 298be4e. Section 1.3 gave the outline; this is the detail.
+
+### 3.1 The schedule: `team/conductor/schedule.json`
+
+- **Shape.** Keys `about`, `status`, `timezone`, `hours`, `slot_minutes`, `step_limit_minutes`, `why_this_order`, `asking_for_work`, `how_each_task_is_made`, `runs`, `not_scheduled`, `prompt_rule`, `stopping`, `tasks`.
+- **Rhythm.** Time zone `Europe/London`; `slot_minutes` 15; `step_limit_minutes` 45; `hours` "every hour, round the clock, from 29 October 2026 at the editor's word, to see how it works overnight". Each `runs` entry gives a member, its minute and a cron of the form `CRON_TZ=Europe/London M * * * *` (nine entries, listed in 1.3); `about` says each member wakes "fifteen minutes after the one before, in the order work flows (route, decide, make, release)".
+- **Who makes a task.** `how_each_task_is_made`: "A scheduled task fires into the session it belongs to, so each member creates its own, from its own session, at the editor's word: the cron and the prompt below, word for word, and writes the task id into its status.json." It also records the mistake behind the rule: the conductor first created four tasks from its own session; the three for dev, deck and ruv-sgit "were disabled before any fired (kept, disabled, as the record)". `tasks` keeps each task's id (`trig_...`), the session it fires into, its first wake and `enabled`.
+- **The prompt.** `prompt_rule`: each prompt "says only who the member is, where its records are, and to follow team/conductor/WAKE.md and its ROLE.md: behaviour changes by a commit to those files, never by editing a stored prompt."
+- **The service.** The record names the ids (`trig_...`), sessions (`session_...`) and the call to pause one, `update_trigger` (`team/conductor/WAKE.md`, line 58). It does not name the product that runs them beyond that; how a scheduled prompt reaches a session: the record does not say.
+- **Not scheduled.** `not_scheduled`: security, "proposed, not agreed".
+
+### 3.2 Keys: `admin/tools/pki-agent.mjs` and `team/<id>/key.json`
+
+- **The tool.** A single Node 18+ file with no dependencies, "generated from this file and assets/people/ by admin/build/gen_agent_tool.mjs" (that generator is not in this repository: the record does not say more), pinned by `admin/tools/pki-agent.mjs.sha256` and described in `admin/tools/pki-agent.README.md`. Its header: the agent makes its own key, the private halves never leave the machine, and what it hands out is a signed public record on pki.sgit.ai, which an operator may confirm.
+- **The key.** Two pairs: RSA-OAEP 4096 with SHA-256 for encryption, ECDSA P-256 with SHA-256 for signing (`pki-agent.mjs`, lines 2341 to 2344). Stored where the sgit CLI keeps keys, `~/.sg-send/keys/sha256_<encryption fp>/`, "the same five files", so `sgit pki` uses the same key; private halves are encrypted with `SG_SEND_PASSPHRASE` if set, else written plain with mode 0600 (header).
+- **A session key.** A cloud session is a fresh container, so a key either travels as an encrypted `PKI_AGENT_KEY` secret or, as this team chose, is made new per session (`keygen --session`) and published: `team/<id>/key.json` (fingerprints, the `k1.` public key, both public PEMs, session, times, `replaces`), `key.png` (its QR), and `team/<id>/sessions/<session>/` (`SESSION.json`, `key.json`, `key.png`) (`pki-agent.README.md`). At 298be4e nine members have a `key.json` and there are nine session folders.
+- **Trust.** From v0.2.8, `send` and `seal` refuse a recipient that does not chain to a pinned root given out of band, optionally checked against a DNS TXT record at `_pki.sgit.ai.<domain>` (header).
+- **Keys of others.** `team/conductor/known-keys/dc-vault-registry.json` (and its QR): the editor's vaults manager, "DC Vault Registry (the vault of vaults)", with its signing and encryption fingerprints, confirmed "by the editor, Dinis Cruz, in the conductor's session on 29 October 2026", used to seal vault keys to it.
+
+### 3.3 Vaults: sgit on `dev.send.sgraph.ai`
+
+- **Which.** `team/conductor/vaults.json`: `tui-issues-public` (the board, Issues-FS lite), `tui-mail-public` (the mail, Email-FS lite), `tui-evidence-public` (sources, the claims register, ideas, incidents), all on `https://dev.send.sgraph.ai`, all "public: the read key is published on purpose". The read-key QR images of the first two are in `team/conductor/vault-qr/`.
+- **Reading.** A read key (`sgit_public_read_...`) reads, never writes; the site's board and mail pages decrypt in the visitor's browser with it (section 2.1).
+- **Writing.** Needs the vault key. A member's session gets it sealed to its published key (`vault_handover.py --to-member`, opened with `sgit pki decrypt <file> --fingerprint <its encryption fingerprint>`); the creator hands every vault key to the vaults manager as a QR sealed to it, in a zip the editor stores (`admin/tools/vault_handover.py`, header). `sgit vault info` and `show-key` print the vault key, so their output goes to a file (the source's `CLAUDE.md`).
+- **Before every vault commit.** `admin/tools/vault_check.py` scans every file in the clone with the gate's leak patterns plus `sgit_private_` credentials, an OpenRouter key pattern and email addresses; it names the file and line, never the match.
+- **Pulling.** `start.py --vaults <folder>` runs `sgit pull` in each clone before the banner (its header).
+- **What the vaults hold at 298be4e:** not in git. The record holds their names, ids, server and read keys, not their contents, which live on the server; whether a newcomer could still read them: the record does not say.
+
+### 3.4 The wake: `start.py`, `wake.py`, `banner.py`, `WAKE.md`
+
+1. `admin/tools/start.py <you> ...`: fetch `dev` and merge it into the session's branch (a conflict aborts the merge and stops), `sgit pull` each vault clone, open a wake record, print the start banner with the commit. If `team/HOLD.md` or any `team/<id>/HOLD.md` exists, print the hold banner and exit 3: no work (its header; `holds()`, line 59; the exit, line 89).
+2. `admin/tools/wake.py`: one record per wake, `team/<you>/wakes/<started>.json`, with five steps and their allowed verdicts: `plan` (conductor: go, stop), `pre_review` (security: go, change, stop), `work` (the member: done, partial, none), `post_review` (security: clean, finding, stop), `post_check` (conductor: as-planned, partial, off-plan, stop) (the `STEPS` table, line 26). `gate` exits 0 only if plan and pre-review both say go; `close` refuses a record with a missing step; `check` finds any closed record without five steps, and the site's gate runs it (section 2.2). A `stop` writes `team/<you>/HOLD.md` itself (`hold()`, line 53).
+3. The reviewers are sub-agents on a smaller model, briefed from `team/conductor/reviews/` and shown the plan and the diff, never the raw messages; "defence in depth inside one session, not a separate identity" (`wake.py` header).
+4. `admin/tools/banner.py`: start and end banners, inner width 68, a double frame and `>>>` to start, a solid block and `<<<` to end, then boxes for blockers and for what waits on the editor; the shape is credited to the PHP newsroom's brief (its header).
+5. `team/conductor/WAKE.md`: the checklist that strings these together, and the Stopping section (who may stop, how: `HOLD.md` pushed to `dev`, then `update_trigger` with `enabled: false` on one's own task).
+
+At 298be4e the machinery was in the state its own rule produces: `team/conductor/HOLD.md` present ("the editor's usage limit is at 95%; pause all actions"), so every `start.py` there exits 3.
+
+### 3.5 What a newcomer can rebuild from this section alone
+
+- Yes: the schedule (crons and prompts are in `schedule.json`), the key tool (pinned, with its hash), the wake record and its gate, the banners, the hold.
+- With outside services only: keys on `pki.sgit.ai` beyond keygen, the vaults on `dev.send.sgraph.ai`, and the vaults manager's key, which lives at `web-summit.sgit.ai` (`known-keys/dc-vault-registry.json`, `source`).
+- Not from the record: the scheduling product itself (3.1), the generator of the key tool (3.2), and the vaults' contents (3.3).
+
 ### Open questions for the next sections
 
-- Which scheduling service fired the wakes, and how a task was made (`schedule.json` keys `how_each_task_is_made`, `tasks`).
 - The player in full: keys, presenter view, how it loads `talk.json`, `assets/pane.js`.
 - Whether any part was locked at 298be4e, and the `showcase` engine.
-- The source's tags up to 298be4e, to rebuild its release history (section 2.1).
 
 Signed: technologist@cold-read.the-ultimate-insider, key `sha256:6a07488b6dfe36f4` (`team/technologist/key.json`), 30 October 2026.

@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "technologist",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T03:17:55Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none new (the one letter already in done/; no board, no request files, no To-technologist trailers). 2. Restore in the scratchpad clone only the source's tags that are ancestors of 298be4e (no later commit read), to rebuild its release history. 3. architecture.md section 3 (schedule, keys, vaults, the wake) with path citations at 298be4e; status.json, wake record, debrief; all inside team/technologist/**.",
+   "at": "2026-10-30T03:18:17Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside scope.writes (team/technologist/**). Conditions: keep only tags that pass git merge-base --is-ancestor <tag> 298be4e, never read, cite or log one that fails; scratchpad clone only, never push to the source, no live site; cite paths at 298be4e; no keys in output.",
+   "at": "2026-10-30T03:18:42Z"
+  },
+  "work": {
+   "by": "technologist",
+   "model": "technologist",
+   "verdict": "done",
+   "comment": "tags reachable from 298be4e restored in the scratchpad clone (211 kept, 1 dropped unread), release history rebuilt; architecture.md section 3 (schedule, keys, vaults, the wake); status.json; debrief",
+   "at": "2026-10-30T03:20:44Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4 files, all in team/technologist/**; gate clean; agents check 0 outside scope; no keys, tokens, vault keys or personal details; no agent-directing text; citations stop at 298be4e / v0.2.0, the one later tag dropped unread and only counted.",
+   "at": "2026-10-30T03:21:18Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 requests none new: done; 2 tag restore, ancestors of 298be4e only: done per debrief (211 kept, 1 dropped unread); 3 architecture section 3, status, debrief: done. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T03:21:19Z"
+  }
+ },
+ "closed": "2026-10-30T03:21:19Z",
+ "outcome": "ok"
+}
