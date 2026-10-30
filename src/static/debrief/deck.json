@@ -1,0 +1,366 @@
+{
+ "schema": "cold-read.the-ultimate-insider/deck/v1",
+ "title": "The ultimate insider, read cold: the conductor's debrief",
+ "by": "conductor@cold-read.the-ultimate-insider",
+ "as_of": "2026-10-30T10:00:00Z",
+ "source": "SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at 298be4e",
+ "repo": "https://github.com/SGit-AI/SGit-AI__Website__Cold-Read__The-Ultimate-Insider/blob/dev/",
+ "slides": [
+  {
+   "kind": "title",
+   "kicker": "Cold read \u00b7 the conductor's debrief",
+   "title": "The ultimate insider, read cold",
+   "lead": "One repository at one commit, thirteen agents, one night. What the team did, what it found, and what it took to find it.",
+   "points": [
+    "conductor@cold-read.the-ultimate-insider, 30 October 2026, as of 10:00 UTC",
+    "Ten of twelve members finished; critic and grc in their last quiet wakes"
+   ],
+   "cite": [
+    "team/conductor/status.json",
+    "team/*/status.json"
+   ]
+  },
+  {
+   "title": "The brief",
+   "points": [
+    "One source: SGit-AI__Website__Presentation__The-Ultimate-Insider at 298be4e, read-only. Nothing else; offers of more declined.",
+    "Rule of ignorance: every claim cites a path and a commit, or says \"the record does not say\".",
+    "Nine deliverables by Sunday 1 November: timeline, architecture, controls and threats, governance, story pitches, numbers, five reader reviews and a synthesis, the critic's report, this debrief.",
+    "The editor's instruction: run on the source team's own machinery, ported, not reinvented."
+   ],
+   "cite": [
+    "BRIEF.md",
+    "team/conductor/briefs/2026-10-30__editor/conductor-prompt.md"
+   ]
+  },
+  {
+   "title": "Hour 1: the machinery, ported",
+   "table": [
+    [
+     "Piece",
+     "UTC"
+    ],
+    [
+     "Brief and prompt read",
+     "01:00 to 01:02"
+    ],
+    [
+     "Source cloned, pruned to 298be4e",
+     "01:02 to 01:04"
+    ],
+    [
+     "Rules, tools, build, gate read",
+     "01:04 to 01:08"
+    ],
+    [
+     "Copied and renamed",
+     "01:08 to 01:10"
+    ],
+    [
+     "The talk taken out of build and gate",
+     "01:10 to 01:12"
+    ],
+    [
+     "Session key made and published",
+     "01:11 to 01:13"
+    ],
+    [
+     "Own hourly task at :02",
+     "01:14"
+    ],
+    [
+     "Twelve roles, schedule, onboarding",
+     "01:12 to 01:16"
+    ],
+    [
+     "Gate: 342 findings, 3, then 0",
+     "01:15 to 01:17"
+    ],
+    [
+     "First five-step wake, first release v0.1.0",
+     "01:17 to 01:20"
+    ]
+   ],
+   "points": [
+    "The source's own gate is clean at 298be4e (304 html files), built in the scratchpad."
+   ],
+   "cite": [
+    "team/conductor/debriefs/2026-10-30__hour-1-the-machinery.md"
+   ]
+  },
+  {
+   "title": "The team",
+   "table": [
+    [
+     "Slot (London)",
+     "Members",
+     "Deliverable"
+    ],
+    [
+     ":02",
+     "conductor",
+     "the debrief"
+    ],
+    [
+     ":17",
+     "historian, technologist, analyst",
+     "timeline, architecture, numbers"
+    ],
+    [
+     ":32",
+     "security, grc, critic",
+     "controls and threats, governance, critique"
+    ],
+    [
+     ":47",
+     "journalist, reader-1 to reader-5",
+     "story pitches, five reviews and a synthesis"
+    ]
+   ],
+   "points": [
+    "Each member in its own session, with its own key and its own hourly task: all twelve onboarded 01:47 to 01:54 UTC.",
+    "Scopes without overlap; the gate fails if two members claim a file."
+   ],
+   "cite": [
+    "team/conductor/schedule.json",
+    "team/*/key.json",
+    "admin/build/agents.py"
+   ]
+  },
+  {
+   "title": "What changed on the way, at the editor's word",
+   "points": [
+    "The two public vaults became two folders in git: comms/issues and comms/mail, the same layouts, one writer per file. No vault keys to hand over.",
+    "Work is finite: a \"Done when\" list in every ROLE.md; a finished member pauses its own task and says so. The conductor finishes last.",
+    "Round the clock until the editor woke.",
+    "The key tool protected: CI compares it and its pin with the copy published at pki.sgit.ai."
+   ],
+   "cite": [
+    "comms/README.md",
+    "team/conductor/WAKE.md (Finishing)",
+    ".github/workflows/release.yml",
+    "comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md"
+   ]
+  },
+  {
+   "title": "The night, in numbers",
+   "table": [
+    [
+     "Measure",
+     "Value"
+    ],
+    [
+     "Commits on dev",
+     "349 (262 not merges)"
+    ],
+    [
+     "Releases, numbered by CI",
+     "78, to v0.1.77"
+    ],
+    [
+     "Wake records, five steps each",
+     "85"
+    ],
+    [
+     "Words in the deliverables",
+     "about 42,400"
+    ],
+    [
+     "Holds",
+     "0"
+    ],
+    [
+     "Requests left unanswered",
+     "0"
+    ]
+   ],
+   "points": [
+    "Counted from git and the wake records at 10:00 UTC."
+   ],
+   "cite": [
+    "git rev-list origin/dev",
+    "git tag",
+    "team/*/wakes/",
+    "team/*/*.md"
+   ]
+  },
+  {
+   "title": "Finishing on their own",
+   "table": [
+    [
+     "Member",
+     "Finished (UTC)"
+    ],
+    [
+     "reader-3",
+     "04:49"
+    ],
+    [
+     "reader-5",
+     "04:52"
+    ],
+    [
+     "reader-4",
+     "05:50"
+    ],
+    [
+     "journalist",
+     "05:55"
+    ],
+    [
+     "reader-2",
+     "06:00"
+    ],
+    [
+     "technologist",
+     "06:19"
+    ],
+    [
+     "analyst",
+     "06:25"
+    ],
+    [
+     "historian",
+     "07:22"
+    ],
+    [
+     "security",
+     "07:34"
+    ],
+    [
+     "reader-1 (review and synthesis)",
+     "07:50"
+    ],
+    [
+     "critic, grc",
+     "in their last quiet wakes"
+    ]
+   ],
+   "points": [
+    "Each wrote a closing debrief, mailed the conductor, and paused its own task; the conductor checked every task disabled, by id."
+   ],
+   "cite": [
+    "team/*/status.json",
+    "comms/mail/mailroom/conductor/"
+   ]
+  },
+  {
+   "title": "Found: the record, counted",
+   "points": [
+    "816 commits reachable from 298be4e, from 00:16 to 23:19 UTC on 29 October: 603 by Claude, 211 by GitHub Actions, 2 by Dinis Cruz.",
+    "Busiest hour 17:00 to 17:59 (109 commits); no commit at all from 18:46 to 23:19.",
+    "All the work reached the default branch in one merge.",
+    "The timeline: 125 entries, every one checked against its commit."
+   ],
+   "cite": [
+    "team/analyst/numbers.md",
+    "team/historian/timeline.md"
+   ]
+  },
+  {
+   "title": "Found: controls, and what they missed",
+   "points": [
+    "22 controls, 11 threats and 8 findings on the key tool, each with what it stopped and what it missed.",
+    "The source's gate never checked the key tool's pin; this team fixed that in its own gate, then in CI.",
+    "Residuals left with the editor: a tool and its pin changed together, and no pinned root (K3)."
+   ],
+   "cite": [
+    "team/security/controls-and-threats.md",
+    "admin/build/validate.py",
+    "comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md"
+   ]
+  },
+  {
+   "title": "Found: decisions left open",
+   "points": [
+    "Fourteen open decisions at 298be4e, among them:",
+    "The hold of 18:44 was never lifted in the record before the 23:19 merge (O2).",
+    "No written rule on who may release to the default branch (O8).",
+    "The source's security role was never held: every security verdict was a sub-agent in another member's wake (O11).",
+    "The five steps gave way to the editor's presence three times, with no recorded waiver (O12)."
+   ],
+   "cite": [
+    "team/grc/governance.md, section 22"
+   ]
+  },
+  {
+   "title": "Found: the critic's seven",
+   "points": [
+    "\"Not one hold\": the talk's second beat says it; a hold was written at 18:44.",
+    "510 commits, then 405: the talk's count and the record's do not meet.",
+    "REALITY.md is not the reality; the security register and the talk do not meet.",
+    "\"About four thousand users\"; the talk's header; the live demos, and how the live slides passed review."
+   ],
+   "cite": [
+    "team/critic/critique.md"
+   ]
+  },
+  {
+   "title": "Found: the stories",
+   "points": [
+    "Sixteen minutes before the livestream, the team was told to stop.",
+    "The lock that was built and never turned.",
+    "The fact-checker found the numbers wrong at 02:10; at 02:47 the deck was frozen.",
+    "A brake any agent could pull, and only the human's quota pulled it.",
+    "Was the talk given? The record does not say."
+   ],
+   "cite": [
+    "team/journalist/pitches.md"
+   ]
+  },
+  {
+   "title": "Found: five strangers read the talk",
+   "points": [
+    "All five: the first half convinces, and \"only a boundary is a control\" is the sentence worth the twenty minutes.",
+    "All five, independently: the sources page breaks its own promise; per-beat sources are missing from it.",
+    "The way out is honest, early, and rests on the speaker's own projects; the disclosure is good and in the wrong place.",
+    "They split on where to put it down, on one headline count, and on what a book of it is worth: from nothing to a full advance."
+   ],
+   "cite": [
+    "team/reader-1/synthesis.md",
+    "team/reader-*/review.md"
+   ]
+  },
+  {
+   "title": "Hard to find, undocumented, inferred",
+   "points": [
+    "status.json \"next\" items must be objects; a string crashes the build. Found by a crash.",
+    "The board and mail pages are built only when a vault exists; the menu links them regardless.",
+    "lane.json carried the source's lane vault and its conductor's key: a straight port would have aimed this team's pane at the source.",
+    "vault_check exempted agent addresses only because the source's had no dot after the @; ours do.",
+    "Creating the vaults needed an access token the editor gave; the source's rules do not say so.",
+    "The gate checked vendored pins in src/static only; the key tool's pin was never checked."
+   ],
+   "cite": [
+    "team/conductor/debriefs/",
+    "REALITY.md"
+   ]
+  },
+  {
+   "title": "Come across, and not used",
+   "points": [
+    "The account's session and task listings showed another team on this subject, and the source team's own scheduled tasks.",
+    "Both are outside the source at 298be4e: seen only as names in a listing, never opened, never used, never cited.",
+    "Since then tasks are checked one at a time, by id."
+   ],
+   "cite": [
+    "team/conductor/debriefs/2026-10-30__the-night-so-far.md",
+    "team/conductor/debriefs/2026-10-30__the-mail-in-git-and-finishing.md"
+   ]
+  },
+  {
+   "title": "Open, and for the editor",
+   "points": [
+    "Set the GitHub ruleset on admin/tools/** and .github/workflows/**, bypass for the editor only (issue 007).",
+    "K3, no pinned root: no live use without vaults.",
+    "critic and grc: expected to finish at their 10:32 wakes; then the conductor writes the closing debrief and pauses its own task.",
+    "This deck is regenerated then, with the final counts."
+   ],
+   "cite": [
+    "comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md",
+    "team/critic/status.json",
+    "team/grc/status.json"
+   ]
+  }
+ ]
+}
