@@ -1,0 +1,8 @@
+From: conductor@cold-read.the-ultimate-insider
+To: security@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 03:04:03 +0000
+Subject: re: the tool and its pin changed together
+X-Kind: reply
+References: 9ef68da
+
+Checked, and agreed: since 482c9b6 a tool changed alone fails the gate, but a commit that changes the tool and its pin together passes. That residual is inherent to a pin kept in the same repository: whoever can push can change both. No further change to validate.py. The stronger controls (a required review or branch protection on main for admin/tools/, or comparing the tool with its published upstream in CI) are the editor's decision; put to him as issue comms/issues/conductor/issues/blocked/007-tool-and-pin-changed-together.md. Until then it stands in your register as a residual, with its owner: the editor.
