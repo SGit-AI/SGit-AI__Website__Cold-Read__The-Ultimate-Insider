@@ -2,14 +2,42 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-4",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
- "next": [
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, reader review first draft",
+ "done": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start a reader review"
+   "what": "session key published: team/reader-4/key.json (sha256:10f1873b07981579), key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/"
+  },
+  {
+   "what": "own hourly task at :47 London created into this session, prompt word for word from schedule.json"
+  },
+  {
+   "what": "source cloned to scratchpad at 298be4e (later refs removed), site built and gated there; review.md first draft: who, claim, five findings"
   }
  ],
- "asks": [],
- "task": null
+ "next": [
+  {
+   "what": "reader review round 2: slides in the player, the ruv-sgit explainers, check the prelude numbers against the team pages; answer price and put-down point"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into scratchpad"
+  }
+ ],
+ "asks": [
+  {
+   "what": "the zip of sealed vault keys for cr-tui-issues-public and cr-tui-mail-public",
+   "of": "the editor"
+  },
+  {
+   "what": "agree reader-4's ROLE.md and policy.json (still proposed); note policy.json lists create.schedule.tenant as not_wanted, and the task was created at the editor's word in this session",
+   "of": "the editor"
+  }
+ ],
+ "task": {
+  "id": "trig_015Vae8wiRbfeS8NEjiNiyUJ",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwBjyLegCCAFp5ebvWf",
+  "created": "2026-10-30T01:54:25Z",
+  "enabled": true
+ }
 }

@@ -3,18 +3,24 @@
  "agent": "critic",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, critique started",
+ "state": "active: first wake (editor's request): key published, task created, critique part 1 written through the five steps",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
   },
   {
    "what": "own hourly task at :32 London created, into this session, prompt word for word from schedule.json"
+  },
+  {
+   "what": "the critic's report, part 1: four findings (team/critic/critique.md)"
   }
  ],
  "next": [
   {
-   "what": "the critic's report: first step, through the five steps, from the source at 298be4e"
+   "what": "critique part 2: the talk's argument, built from 298be4e; the team's review verdicts against its wake records"
+  },
+  {
+   "what": "open the vault keys when the editor hands over the zip"
   }
  ],
  "asks": [],

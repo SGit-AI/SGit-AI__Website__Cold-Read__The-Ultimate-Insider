@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-4",
+ "kind": "editor's request",
+ "started": "2026-10-30T01:53:16Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Key: per admin/tools/pki-agent.README.md, write team/reader-4/key.json, key.png and team/reader-4/sessions/<session id>/ (private half stays in ~/.sg-send/); gate, push to dev. 2. Task: at the editor's word in chat, create the hourly task from the reader-4 entry in team/conductor/schedule.json (cron CRON_TZ=Europe/London 47 * * * *, prompt word for word) into this session; write its id in team/reader-4/status.json; push to dev; schedule.json not edited. 3. Clone the source into scratchpad at 298be4e only and take the first step of team/reader-4/review.md, plus a debrief in team/reader-4/debriefs/. No requests or To-reader-4 notes; no vault keys this wake.",
+   "at": "2026-10-30T01:53:45Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Plan stays inside scope.writes (team/reader-4/**); no other member path, no schedule.json, no vault keys. Task is policy not_wanted (create.schedule.tenant) but WAKE.md allows it with the editor's word in this session, given; record that word in the debrief. Conditions: private key stays in ~/.sg-send/; task prompt is schedule.json's text, no key or token; clone only to scratchpad at 298be4e, no later commits, no live site; gate passes before dev push.",
+   "at": "2026-10-30T01:54:06Z"
+  },
+  "work": {
+   "by": "reader-4",
+   "model": "",
+   "verdict": "done",
+   "comment": "key.json, key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/ published; task trig_015Vae8wiRbfeS8NEjiNiyUJ at :47 London into this session, recorded in status.json; source cloned to scratchpad at 298be4e, built and gated there; review.md first draft (who, claim, five findings); debrief round 1.",
+   "at": "2026-10-30T01:57:01Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff cc3a3f2..HEAD (9 files) entirely under team/reader-4/**; no other member's files, schedule.json or vaults. key.json holds only public keys; no private key, token, vault key or personal detail. Build and validate pass (gate clean). agents.py check: 0 files outside scope. No instruction-like text in changed files.",
+   "at": "2026-10-30T01:57:27Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 Key: done (key.json, key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/; no private key). 2 Task: done (trig_015Vae8wiRbfeS8NEjiNiyUJ at :47 London in status.json; schedule.json untouched). 3 Source at 298be4e only (sole ref), review.md first draft and debrief round 1 done. All changed files under team/reader-4/. Pre-review conditions kept; the debrief records the editor's word for the task. Unplanned: none.",
+   "at": "2026-10-30T01:57:41Z"
+  }
+ },
+ "closed": "2026-10-30T01:57:41Z",
+ "outcome": "ok"
+}
