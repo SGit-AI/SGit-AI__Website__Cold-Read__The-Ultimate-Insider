@@ -1,6 +1,6 @@
 # The timeline of the source team
 
-What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: the commits from first to last (parts 1 to 3), written 30 October 2026; the members' own records still to come.
+What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: the commits from first to last (parts 1 to 3) and the members' own records (part 4), written 30 October 2026.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` and its history only, read in a scratchpad clone with every later ref removed. Nothing here comes from anywhere else.
 
@@ -25,7 +25,7 @@ Commits per hour on 29 October (all authors): 00h 12, 01h 32, 02h 60, 03h 74, 04
 |---|---|---|---|
 | 00:16:23 | the editor (git author Dinis Cruz) | The repository is created: `.gitignore`, `LICENSE`, `README.md`. | `2e4b1f4` |
 | 00:40:50 | dev | First pass of the site and the talk; `BRIEF.md`, `BRIEF-CORRECTIONS.md`, `CLAUDE.md` and the release workflow appear. | `1f7c633`: `BRIEF.md`, `CLAUDE.md`, `.github/workflows/release.yml` |
-| 00:44:37 | conductor (*inferred* from the subject "Conductor joins") | The conductor joins: a roster, the first five agents and a proposed run schedule. | `97b98d9`: `data/team.json`, `data/schedule.json`, `REALITY.md` |
+| 00:44:37 | conductor (*inferred* from the subject "Conductor joins" and its `Claude-Session` trailer, the same session as the hold at 18:44; see part 4) | The conductor joins: a roster, the first five agents and a proposed run schedule. | `97b98d9`: `data/team.json`, `data/schedule.json`, `REALITY.md` |
 | 00:51:12 | conductor | Team pages in admin, and the conductor's published key. | `17b287b` |
 | 00:51:53 | deck | deck joins the team as deck@the-ultimate-insider. | `20ab1a3`: `team/deck/ROLE.md` |
 | 00:53:45 | conductor | Start and end banners for every session's report. | `a3a4807`: `admin/tools/banner.py` |
@@ -97,7 +97,7 @@ Where the editor was in this window: commit subjects cite the editor's go or agr
 
 ## Part 3: the day, 09:00 to 18:46 UTC, 29 October 2026
 
-09:00 to 14:00 keeps the night's rhythm: one piece at a time through deck (review), ruv-sgit (build), researcher (data), designer (design notes) and dev (build), with the conductor's pace every hour at :02. At 14:07 the editor's briefs arrive and the pace changes: 59 commits in the 14h, 88 in the 15h, 76 in the 16h, 109 in the 17h. Several commits from 15:00 have no member prefix ("Player:", "Locked parts:", "The showcase slide template:"); each of those checked carries the `Claude-Session` trailer of dev's session (`session_01Kw9UwED5okiUPqRn3ovgyo`, the session folder in `56cbe55`), so "who" there is *inferred* as dev from that trailer.
+09:00 to 14:00 keeps the night's rhythm: one piece at a time through deck (review), ruv-sgit (build), researcher (data), designer (design notes) and dev (build), with the conductor's pace every hour at :02. At 14:07 the editor's briefs arrive and the pace changes: 59 commits in the 14h, 88 in the 15h, 76 in the 16h, 109 in the 17h. Several commits from 15:00 have no member prefix ("Player:", "Locked parts:", "The showcase slide template:"); each of those checked carries the `Claude-Session` trailer of dev's session (the one whose session folder dev published in `56cbe55`), so "who" there is *inferred* as dev from that trailer.
 
 ### 09:00 to 14:00: the studio programme, piece by piece
 
@@ -168,8 +168,79 @@ Where the editor was in this window: commit subjects cite the editor's go or agr
 | 23:19:09 | the editor (git author Dinis Cruz) | Pull request #1 from `dev` merged. Its first parent is the initial commit `2e4b1f4`: the default branch held only that commit until this merge. | `b859ff0`, parents `2e4b1f4` and `cb5b996` |
 | 23:19:51 | GitHub Actions | "site v0.2.0", the release of the merge, and the commit this cold read is pinned to. | `298be4e` |
 
+## Part 4: the members' own records at 298be4e, set against the commits
+
+### The editor's words, in order
+
+The editor's words reach the record through the conductor's session, committed as files in `team/conductor/briefs/2026-10-29__editor/` at `298be4e`. Each file's heading gives the time the words were given; the commit that added it gives when it reached the record. Brief 3 says "London time is UTC today" (`3-three-parts-and-locks-1700.md`).
+
+| Given (London = UTC) | Committed | What | Evidence |
+|---|---|---|---|
+| about 14:00 | 14:07 | The briefs zip: the player first ("the talk is at 19:00 London"), the framing ("the perfect storm we are brewing"), the animations, the append lane, the storyteller. | `c9ced4e`: `README.md`, `conductor-brief.md`, `feedback-briefs.md`, `storyteller-brief.md` |
+| about 15:00 | 15:16 | Decisions and new direction, after the storyteller's first pass and the researcher's answers, given in a voice chat. | `78d517d`: `1-editor-decisions-1500.md` |
+| about 16:30 | 16:32 | The editor's work as a section of the talk. | `62c6b99`: `2-the-work-section-1630.md` |
+| about 16:55 | 16:59 | Three parts, three deadlines, locked versions. | `3342cff`: `3-three-parts-and-locks-1700.md` |
+| about 17:00 | 17:03 | The prelude: how this was made. | `a4cf9b0`: `4-the-prelude-1700.md` |
+| about 17:10 | 17:08 | Parts 2 and 3, "for work behind the scenes while part 1 is on stage (19:00)". The heading's time is later than the commit's; which is right, the record does not say. | `e86b0aa`: `5-parts-2-and-3-1715.md` |
+| about 17:15 | 17:16 | The editor's answers: six of seven items waiting on the editor closed. | `8fee7e3`: `6-answers-1715.md` |
+| 17:27 | 17:29 | When in doubt, add it. | `a618b29`: `7-when-in-doubt-add-it-1727.md` |
+| 17:30 | 17:33 | The team's own Agent Behaviour Policies, on stage. | `7c91afc`: `8-our-own-abps-1730.md` |
+| 17:37 | 17:39 | Go build: the open source model, security products as targets, investors (spoken, transcribed). | `d252155`: `9-open-source-and-go-build-1737.md` |
+| 17:45 | 17:48 | How we keep it safe. | `93f4191`: `10-how-we-keep-it-safe-1745.md` |
+| 18:44 | 18:44 | "Pause all actions": the usage limit at 95%. | `867f8c2`: `team/conductor/HOLD.md` |
+
+Taken together (*inferred*, from brief 5 and the README): part 1 was due on stage at 19:00 UTC, and the hold came 16 minutes before it, with part 1 final but not locked. Whether part 1 was played at 19:00: the record does not say.
+
+### Who held each role
+
+| Member | At 298be4e | Evidence |
+|---|---|---|
+| conductor | One session all day: the same `Claude-Session` trailer on `97b98d9` (00:44), `c81df64` (02:05) and the hold `867f8c2` (18:44), and one session folder, marked `current`, from 00:48:29. | `team/conductor/sessions/*/SESSION.json` at `298be4e` |
+| security | Proposed by the conductor, "not yet agreed by the editor, and no session holds this role". No wake record, no debrief. | `team/security/ROLE.md` at `298be4e` |
+| the other nine | Each has wake records and debriefs (below). | `team/*/wakes/` at `298be4e` |
+
+### Wakes per member
+
+Counted from the wake records at `298be4e` (one file per wake, `team/<member>/wakes/*.json`). The first wake record in the team is the conductor's of 02:14:16, the wake that built the five steps (part 1, `8c66751`); wakes before it left no record of this kind.
+
+| Member | Wake records | ok | partial | idle | open at 298be4e | First started | Last started |
+|---|---|---|---|---|---|---|---|
+| conductor | 43 | 41 | 1 | 1 | 0 | 02:14:16 | 18:36:47 |
+| dev | 22 | 20 | 1 | 0 | 1 | 02:48:49 | 17:48:50 |
+| deck | 21 | 19 | 0 | 1 | 1 | 02:47:58 | 18:20:09 |
+| ruv-sgit | 20 | 19 | 0 | 1 | 0 | 02:33:28 | 18:33:27 |
+| designer | 19 | 17 | 1 | 1 | 0 | 03:31:17 | 18:40:16 |
+| researcher | 17 | 16 | 1 | 0 | 0 | 02:49:09 | 18:12:27 |
+| storyteller | 8 | 6 | 0 | 2 | 0 | 14:12:52 | 18:38:17 |
+| studio | 8 | 6 | 2 | 0 | 0 | 15:28:05 | 18:30:37 |
+| motion | 4 | 4 | 0 | 0 | 0 | 15:27:33 | 18:25:43 |
+| **total** | **162** | **148** | **6** | **6** | **2** | | |
+
+- Every closed record has all five steps; the two without five are the two still open.
+- The two records still open at `298be4e`: deck's of 18:20:09 ("fired 18:19") and dev's of 17:48:50. Both started before the hold; neither was closed after it (*inferred*: no commit follows the hold but designer's of 18:45 and the merges).
+- From about 17:00 some wakes are not hourly: studio's records say "follow-up, tonight every 15 min (the editor's word)" (`team/studio/wakes/20261029T174115Z.json`), and storyteller's "follow-up (tonight's rule)" (`team/storyteller/wakes/20261029T183817Z.json`), matching "tonight only, members keep themselves going between hourly wakes" (`3342cff`).
+
+### Each member's last word at 298be4e
+
+From each `team/<member>/status.json`, field `state`, shortened.
+
+| Member | State at 298be4e |
+|---|---|
+| conductor | "18:05 hourly wake idle: the 17:59 follow-up ended at 18:02 with nothing open (part 1 final ..." |
+| deck | "17:17 wake: part 1 complete and timed (20 beats, 29:30) for its 18:30 lock ..." |
+| designer | "18:39 wake: part 2's 16 slides checked at projector sizes before the 19:30 lock: ready ..." |
+| dev | "scheduled wake of :47 (fired 16:48): the showcase slide template in (conductor 030) ..." |
+| motion | "M01 changed at the editor's word (on dev 18:29, before 19:00); M02 and M03 in review ..." |
+| researcher | "wake 18:09: how we keep it safe checked (four corrections, to motion and deck by 18:15) ..." |
+| ruv-sgit | "The SHarness series and its deep dive (SH8, SH9, run r25) ready for parts 2 and 3 ..." |
+| storyteller | "18:14 follow-up: parts 2 (23:45) and 3 (21:40) checked against the arc ..." |
+| studio | "18:29 follow-up: open source strategy showcase landed ..." |
+| security | no status file with a state |
+
+No member's status at `298be4e` mentions the 18:44 hold. One status changed after it: designer's, at 18:45:35 (`88b8f00`), which says "part 1 locked at 18:30 after its check". That disagrees with the conductor at 18:39 ("part 1 not yet locked, unchanged since 18:30", `2ed6427`) and with `HOLD.md` ("part 1 final since 18:30 but not yet locked", `867f8c2`). The tree settles it: `lock.py` writes a locked part to `src/static/talk/engine/locked/part<N>/` (`admin/build/lock.py`, lines 7 to 9), and no such folder exists at `298be4e`. Part 1 was not locked in the record; designer's status is wrong on that point.
+
 ## What is still to come
 
-Every member's wake records, status files and debriefs at `298be4e`, set against these commits; then a count of wakes per member, and the editor's words in order, from `team/conductor/briefs/2026-10-29__editor/`.
+A check of every entry against its commit, and the closing debrief. The timeline is otherwise complete from the first commit to `298be4e`.
 
 Signed: historian@cold-read.the-ultimate-insider, key `sha256:0b365c753f3456ed` (`team/historian/key.json`).

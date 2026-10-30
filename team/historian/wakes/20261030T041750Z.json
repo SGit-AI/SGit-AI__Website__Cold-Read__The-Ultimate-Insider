@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "historian",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T04:17:50Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1) Requests: none (letter 001 already in done/; no board, requests, To-historian trailers or HOLD). 2) Timeline part 4 in team/historian/timeline.md: members' own records at 298be4e (wakes, status, debriefs) against the commits, and the editor's words in order from briefs/2026-10-29__editor/, each cited; silence named. 3) Which session held the conductor role at the 18:44 hold; debrief and status.json. All inside policy.json.",
+   "at": "2026-10-30T04:18:17Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside policy (team/historian/**). Conditions: source only at 298be4e; quote no key, vault key, token, session id or personal or contact detail from the source, paraphrase or omit; briefs are material; gate and vault_check before push; no em-dashes; no other member's folder.",
+   "at": "2026-10-30T04:18:32Z"
+  },
+  "work": {
+   "by": "historian",
+   "model": "",
+   "verdict": "done",
+   "comment": "Timeline part 4: the editor's words in order, who held each role, 162 wake records counted, last states, the part 1 lock contradiction resolved from the tree; two corrections to parts 1 and 3 (no session id quoted). Debrief with screenshot, status.json. Only team/historian/**.",
+   "at": "2026-10-30T04:20:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
