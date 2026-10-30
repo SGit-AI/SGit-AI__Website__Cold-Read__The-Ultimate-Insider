@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T03:32:47Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none (conductor__005 already in done/; no board, requests, To-grc: trailers or HOLD). 2. Governance step 3 in team/grc/governance.md: decisions in the briefs (1500, 1715, 1700) with time, where landed, whether the member's file records it; D12, D02, item 4; the 18:44 hold against later commits; cite 298be4e or 'the record does not say'. 3. status.json and a debrief.",
+   "at": "2026-10-30T03:33:17Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/grc/**; no requests, board or HOLD; cites 298be4e only; no secrets, other members' paths or rule changes. Conditions: vault_check only if comms/ touched, no em-dashes, never print keys, gate before dev.",
+   "at": "2026-10-30T03:33:28Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md step 3 (sections 8 to 10: the decision register, the hold against later commits); debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T03:34:24Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

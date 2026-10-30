@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 and 2 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 3 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -74,8 +74,46 @@ Fifteen files in `team/conductor/briefs/2026-10-29__editor/` at `298be4e`. Two k
 6. **dev's task against its policy** (section 6).
 7. **The follow-up grant recorded in one policy of ten** (section 6).
 
+## 8. The editor's decision register
+
+The source kept one register of decisions put to the editor: `evidence/proposals/editor-decisions.json`, last changed in `94e313d` (29 October 13:18 UTC), never after that up to `298be4e`.
+
+| Id | Decision asked | Status at `298be4e` | What the rest of the record says |
+|---|---|---|---|
+| D01 | Act one: "three of those five were not attacks" (the researcher's "item 4", option A or B) | open | "item 4 ... no word yet" (`6-answers-1715.md`, 17:16 UTC) |
+| D02 | What a decision you sign on this page means | open | "no word yet" (`6-answers-1715.md`) |
+| D03 | deck's `policy.json` | open | agreed in deck's own file, 16:50 UTC (section 3) |
+| D04 | dev's `policy.json` | open | agreed in dev's own file, 17:40 UTC (section 3) |
+| D05 | conductor's `policy.json` | open | agreed in the conductor's own file, 17:40 UTC (`c3f546e`) |
+| D06 | security: agree, change or drop the role | open | security's policy still `proposed` (section 3) |
+| D07 | The team's hours | open | the record does not say, in what this step read |
+| D08 | Store the handover zips | open | "the handover zips: no word yet" (`6-answers-1715.md`) |
+| D09 | Upload the key zips into deck's and ruv.sgit's sessions | done | "by the members' own records" (deck `983782b`, ruv.sgit `b5213de`, designer `f04c531`) |
+| D10 | Rotate the SG/Send access token | open | the record does not say, in what this step read |
+| D11 | The morning review | open | the record does not say, in what this step read |
+| D12 | The evidence vault's history: keep it, or rotate the vault | open | "D12 ... no word yet" (`6-answers-1715.md`) |
+
+- **The register stopped at 13:18 UTC.** Decisions taken later (three policies, D03 to D05) were recorded in the members' own files and never in the register. At `298be4e`, eleven of twelve read `open`, and only one is `done`.
+- **D02 is the question this map keeps meeting:** what it means for the editor to sign a decision. At `298be4e` it is unanswered. So no decision in the source has a defined signed form (section 5).
+
+## 9. The hold of 18:44 against what followed
+
+- The hold went in at `867f8c2` (18:44:13 UTC) and was released as `7968c99` (18:44:49).
+- After `867f8c2`, up to `298be4e`, there are six commits: the hold's release (`7968c99`), one member's work, a merge and its release, and the editor's merge and its release.
+  - `88b8f00`, 18:45:35 UTC, designer: "part 2 on a projector, checked before the 19:30 lock: ready". Its wake opened at 18:40 (`team/designer/wakes/20261029T184016Z.json`), before the hold.
+  - `3f5d7fc` and `cb5b996`, 18:45 to 18:46: a merge of `dev` and its release.
+  - `b859ff0`, 23:19:09 UTC, the editor: "Merge pull request #1 from SGit-AI/dev", and its release `298be4e`, 23:19:51 UTC.
+- So no member committed work in a wake that started after the hold. The record then goes silent for four and a half hours.
+- **The editor merged `dev` with the hold still in place.** `team/conductor/HOLD.md` is in the tree at `298be4e`, and the hold says only the editor lifts it, "by deleting this file and re-enabling the paused tasks". Whether the merge was meant to lift it, and whether the paused tasks were re-enabled: the record does not say.
+- Whether the talk at 19:00 London was given from the state at 18:46: the record does not say, in what this step read.
+
+## 10. Open decisions, continued
+
+8. **Eleven of twelve register decisions open at `298be4e`** (section 8). Three of them were in fact decided elsewhere (D03 to D05). Eight have no answer anywhere in what this map has read: D01, D02, D06, D07, D08, D10, D11, D12.
+9. **The hold was never lifted in the record** (section 9; item 2 above).
+
 ## Next steps
 
-- Each decision inside the editor's briefs (the decisions 1500, the answers 1715, the locks 1700): its time, where it landed, and whether the member's own file records it.
-- What D12, D02 and item 4 are, from the source's earlier records.
-- The hold of 18:44 against the commits that followed it.
+- D07, D10 and D11 in the earlier records (the morning review, the token, the hours).
+- Each decision inside the editor's briefs of 15:00 and 17:15 against the member's own file.
+- Who may decide what for the release itself: the merge to the default branch, and who could make it.
