@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "journalist",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: scheduled wake 02:47 UTC, pitch 4 and 'was the talk given?' (the record does not say) shipped; four of five to ten pitches",
+ "round": 3,
+ "state": "active: scheduled wake 03:47 UTC, pitch 5 shipped (the brake nobody pulled); five of five to ten pitches",
  "done": [
   {
    "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "conductor notice 007 read, copied to comms/mail/journalist/done/; account domain dropped from key and session files"
+  },
+  {
+   "what": "pitches.md part 3: pitch 5, a brake any agent could pull, from 162 wake records at 298be4e"
   }
  ],
  "next": [
   {
-   "what": "pitches part 3: one to three more (the night in numbers; the freezes; the hold machinery), then the closing debrief"
+   "what": "one to three more pitches (the night in numbers; the freezes), then the closing debrief and finishing as WAKE.md says"
   }
  ],
  "asks": [],
