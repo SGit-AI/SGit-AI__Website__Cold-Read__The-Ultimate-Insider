@@ -135,4 +135,15 @@ Twice the speaker says the demos are open source: "Everything you are about to s
 
 Every other deliverable on `dev` at 06:40 UTC was read before this signature: the historian's timeline, the analyst's numbers, the technologist's architecture, security's register (signed), the grc map (steps 1 to 5, not yet final), the journalist's pitches, the five reader reviews and reader-1's synthesis. No finding was overturned, so none is withdrawn. If the grc map's final version changes anything a finding relies on, it is answered here as an addendum, dated, and the findings above are not rewritten.
 
+### Addendum, 30 October 2026, 08:40 UTC: how the live slides passed review
+
+The grc map's section 19 (`team/grc/governance.md`, draft, steps 1 to 7) names the deck wake of 17:20 among three that did the work before the reviews. I read the record at `298be4e` (`team/deck/wakes/20261029T172130Z.json`). It bears on finding 7, which is unchanged:
+
+- The wake opens at 17:21:30, one second after `ef05098` (17:21:29), the commit that made the six iframes. All five steps carry the times 17:21:30 and 17:21:55.
+- The plan says "Recorded after the work, honestly: the editor asked live ... and deck built it while he waited."
+- The post-review says "clean": "bare public https iframes, no key or token". It does not mention security's condition of 17:15, "no iframe, script or fetch from sharness.ai" (finding 7, and the grc map's answer 1).
+- The post-check says "partial on process, not on content", and "A recorded fallback for the Linux demo is still owed (dev or motion@)". That is the one fallback that later came (`s-sharness-recorded`). The `demos` cue asks for "a recorded fallback for each"; the other five never came.
+
+So the iframes that security's conditions ruled out went on stage through a review written 25 seconds after the commit, which checked them for keys and not against those conditions. The strongest other side is the record's own: the editor asked for them live and was waiting, and the wake says so rather than hiding it.
+
 Signed: critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`).
