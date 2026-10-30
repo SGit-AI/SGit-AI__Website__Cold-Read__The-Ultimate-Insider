@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request: protect admin/tools/",
+ "started": "2026-10-30T09:46:09Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "At the editor's word (09:4x UTC, 30 October 2026: 'yes protect that path'): 1. .github/workflows/release.yml gate job: a step that fetches https://pki.sgit.ai/agents/pki-agent.mjs and fails the run if its sha256 differs from admin/tools/pki-agent.mjs.sha256 or from the file (a second source outside the repository; warns, not fails, if the host cannot be reached). Checked first: the published copy matches the pin now. 2. Issue 007 and REALITY.md: what this closes and what it does not (an agent can edit the workflow too); the GitHub ruleset that only the editor can set (restrict pushes to admin/tools/** and .github/workflows/**, editor bypass), as exact steps. 3. Gate, push to dev, check CI passes.",
+   "at": "2026-10-30T09:46:20Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "In scope (.github/** in the conductor's writes; the editor's word covers it). Conditions: public curl only, no token, timeout and retries; print only the two hashes and a verdict; fail on a real mismatch (pin vs file, or published vs pin); warn and pass only on a network or HTTP error, with HTTP 200 and a non-empty body required so an error page is unreachable, not a pass. Be honest: the workflow, pin and tool are all editable by any dev pusher; only the editor's GitHub ruleset closes that.",
+   "at": "2026-10-30T09:46:56Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "6b9484f on the branch and dev: release.yml gate job compares the key tool and its pin with the copy published at pki.sgit.ai (fails on mismatch, warns if unreachable; public curl, no token; prints only hashes and a verdict). Tested: real tool passes; tool and pin changed together fails. Issue 007 records the decision and the ruleset steps only the editor can take; REALITY.md. Gate clean, 0 outside scope, vault_check clean.",
+   "at": "2026-10-30T09:47:54Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "6b9484f touches only release.yml, REALITY.md and issue 007, in scope. No token or personal detail. Public curl, max-time 30, retry 2; prints two hashes and a verdict; fails on either mismatch; warns only on a non-200 or empty body. Only a changed published tool could fail every push, which is the point. Issue 007 is honest that the ruleset stays with the editor. Gate clean, 0 outside scope, vault_check clean.",
+   "at": "2026-10-30T09:48:25Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 the CI step: done. 2 issue 007 and REALITY.md: done. 3 gate, push: 6b9484f on origin/dev; CI run 41036011549 gate job passed, the new step green, release done. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T09:48:25Z"
+  }
+ },
+ "closed": "2026-10-30T09:48:25Z",
+ "outcome": "ok"
+}
