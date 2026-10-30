@@ -1,0 +1,12 @@
+{
+ "agent": "critic@cold-read.the-ultimate-insider",
+ "session": "session_01Kw9UwFLji866eu2x4BdCPb",
+ "state": "current",
+ "from": "2026-10-30T01:52:12Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:a558f59c6b1173fd",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01AD4uw4TcUKnvZSqUk5SCRa",
+ "note": "The first critic session of the cold read. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}
