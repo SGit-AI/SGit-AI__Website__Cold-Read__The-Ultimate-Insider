@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "active: fifth wake (scheduled), governance map steps 1 to 5 on dev",
+ "round": 6,
+ "state": "active: sixth wake (scheduled), governance map steps 1 to 6 on dev",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -25,11 +25,14 @@
   },
   {
    "what": "governance.md step 5: the answers of 17:15 against the files (the live Linux slide is an iframe), one list of open decisions O1 to O10"
+  },
+  {
+   "what": "governance.md step 6: the live slides' word and review (deck's wake of 17:20, out of order), the source's security role never held; open list O1 to O11"
   }
  ],
  "next": [
   {
-   "what": "governance map step 6: answers 2, 4, 6, 7 and the decisions of 15:00 against the files; security's review of the live slides"
+   "what": "governance map step 7: out-of-order wakes across the source, the members' agreed_by against the conductor's records, then the signed version"
   }
  ],
  "asks": [],

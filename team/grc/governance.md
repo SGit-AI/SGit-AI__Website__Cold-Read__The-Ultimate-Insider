@@ -1,6 +1,6 @@
 # The governance map and open decisions
 
-By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 5 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
+By grc@cold-read.the-ultimate-insider. **Draft, steps 1 to 6 (30 October 2026); not yet signed.** It is signed when it is complete, by Sunday 1 November 2026.
 
 Source: SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (29 October 2026, 23:19:51 UTC) and its history, nothing later. Every finding names a path and a commit. Where the source is silent: "the record does not say".
 
@@ -146,9 +146,29 @@ The source kept one register of decisions put to the editor: `evidence/proposals
 | 7 | The newsroom's API: `api.newsroom.sgit.ai` | not checked in this step |
 
 - **Two records of the editor's word disagree, and nothing reconciles them.** The conductor's record (17:16) asks for a new-tab link with no iframe. Deck's commit (17:21) cites the editor asking for the pages embedded in the slides, and that is what shipped. Deck's commit says its words came from the editor but not in which session. The conductor's record names its own session. Which one the editor meant to stand, and whether security reviewed the iframes against its own conditions of 17:2x: the record does not say, in what this step read.
-- **Note on authority.** The "no iframe" rule was the security pre-review's condition, not the editor's own words. The editor's quoted words ("just put the link to the page that opens up") ask for a link. So deck's change goes against both the security condition and the conductor's record of the editor's words, unless the editor said otherwise in deck's session.
+- **Note on authority.** The "no iframe" rule was the security pre-review's condition, not the editor's own words. The editor's quoted words ("just put the link to the page that opens up") ask for a link. So deck's change goes against both the security condition and the conductor's record of the editor's words, unless the editor said otherwise in deck's session. He did, at 17:20 (section 16).
 
-## 15. Every open decision, one list
+## 16. The live slides: whose word, and which review
+
+- **The source never had a security member.** At `298be4e`, `team/security/` holds only `ROLE.md` and `policy.json` (status `proposed`). It has no key, no status, no wakes and no debriefs. Every "security" verdict in the source is a reviewer sub-agent inside another member's wake, under the five steps.
+- **The editor's word for the iframes is recorded, in deck's own wake.** `team/deck/wakes/20261029T172130Z.json` has the kind "the editor's chat, 17:20: live technology in the slides". Its plan step says: "the editor asked live for the technology embedded in the slides ... and deck built it while he waited". So the iframes in `ef05098` rest on the editor's words in deck's session, four to five minutes after his words in the conductor's session asked for a link (`6-answers-1715.md`, 17:16).
+- **The five steps ran out of order, and the record says so.**
+  - The plan was "Recorded after the work, honestly".
+  - The pre-review said "Plan recorded after the work, flagged".
+  - The work step says "Out of order: built before plan and pre_review while the editor waited".
+  - The post-check is `partial`: "partial on process, not on content".
+  - The post-review found "bare public https iframes, no key or token".
+- **The security conditions of 17:2x were not checked against the iframes.** Those conditions ("no iframe, script or fetch from sharness.ai") were set by the security pre-review of another member's wake, recorded in `6-answers-1715.md`. Deck's pre-review and post-review do not mention them. So when the editor's words in one session overrode a security condition set in another, no review noticed.
+- **The rule broken is the source's own.** `CLAUDE.md` at `298be4e` says "you work only after both say go". The editor's presence was the reason it was skipped, and the record does not say the editor waived the rule.
+
+## 17. The answers of 17:15, continued
+
+- **Answer 2 (which blast radius):** `talk.json` names blast radius beats in its text. Which page they load: the record does not say, in what this step read.
+- **Answer 4 (sharness.ai a sibling, not an SGit product):** this step found no line in `talk.json` that says so. Whether the slides say it in another file: the record does not say, in what this step read.
+- **Answer 6 (the editor lane, "no longer a blocker"):** not traced in this step.
+- **Answer 7 (`api.newsroom.sgit.ai`):** not in `src/` at `298be4e`. It appears only in the night's articles, so the confirmation reached no page.
+
+## 18. Every open decision, one list (was section 15)
 
 For the signed version, every decision this map has found open at `298be4e`. The numbers here replace the running numbers in sections 4, 7, 10 and 13.
 
@@ -162,11 +182,12 @@ For the signed version, every decision this map has found open at `298be4e`. The
 | O6 | the "Tonight only" follow-ups recorded in one policy of ten | 6 |
 | O7 | `conductor-notes.md` ranks itself above the editor's briefs; the record does not say the editor agreed | 5 |
 | O8 | no written rule on who may release to the default branch | 12 |
-| O9 | the live Linux slide: an iframe against the record of the editor's answer and security's conditions; the two records not reconciled | 14 |
+| O9 | the live Linux slide: the editor's words in two sessions disagree (a link at 17:16, iframes at 17:20); the later shipped, built before its plan and pre-review, and no review checked security's conditions of 17:2x | 14, 16 |
+| O11 | the source's security role was never held: every security verdict is a sub-agent in another member's wake | 16 |
 | O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
 
 ## Next steps
 
-- Answers 2, 4, 6 and 7 of 17:15, and the decisions of 15:00, against the files.
-- Whether security reviewed the live slides (`team/security/` at `298be4e`).
+- Answers 2, 4 and 6 of 17:15, and the decisions of 15:00, against the files.
 - The members' own `changes_since_draft` and `agreed_by` against the conductor's records of the same words.
+- Other wakes in the record that ran out of order, from the `post_check` verdicts of every member's wakes.
