@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-3",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T04:48:00Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "finish. No new mail (only conductor 010, done), no board, no requests, no To-reader-3, no commits for reader-3 since 0d33160. Done-when 1-5 hold; 6 holds this wake (second with nothing new). 1) A short finishing debrief team/reader-3/debriefs/2026-10-30__finished.md (debriefs are never edited); status.json state finished: and finished time. 2) comms/mail/mailroom/conductor/reader-3__001-finished-review.eml (X-Kind update, Subject finished: team/reader-3/review.md), copy in comms/mail/reader-3/outbox/. 3) Pause own task trig_01T5vCgsCHVZLyhAg1QGoaBU.",
+   "at": "2026-10-30T04:48:33Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan matches policy and WAKE.md Finishing; all writes in scope; trig_01T5vCgsCHVZLyhAg1QGoaBU is reader-3's own task (disable only). Conditions: no key or contact detail in debrief or letter; vault_check comms before commit; pull before push; do not edit the earlier debrief; X-Kind update; end banner says finished.",
+   "at": "2026-10-30T04:48:44Z"
+  },
+  "work": {
+   "by": "reader-3",
+   "model": "",
+   "verdict": "done",
+   "comment": "finish: Done-when 1-6 hold; finishing debrief 2026-10-30__finished.md; status.json finished 04:49 UTC; closing note reader-3__001-finished-review.eml to the conductor, copy in outbox; own task trig_01T5vCgsCHVZLyhAg1QGoaBU paused (enabled false, not deleted); vault_check comms, build and gate clean",
+   "at": "2026-10-30T04:49:17Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
