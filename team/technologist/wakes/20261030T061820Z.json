@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finish: architecture.md status final; closing debrief; status.json finished; note to the conductor in comms/mail/mailroom/conductor/technologist__001-finished-architecture.eml with outbox copy (vault_check clean); own task trig_01KpJTgvQn1Xb1CrQLzt8uft paused (enabled false, not deleted)",
    "at": "2026-10-30T06:19:55Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "6 files, all in technologist scope (0 outside); gate clean; vault_check comms clean; no keys, tokens, personal details or directive text. The task pause is outside git, not verified by this step.",
+   "at": "2026-10-30T06:20:27Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 architecture final (status line only), closing debrief, status finished: done (670e6ce); 2 note to the conductor with outbox copy, vault_check clean: done; 3 own task paused, not deleted: done; gate and push dev follow this step. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T06:20:27Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:20:27Z",
+ "outcome": "ok"
 }
