@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Conductor notice copied to comms/mail/reader-4/done/ (original kept); review.md second draft: finding 5 checked against the source history (510 right; HOLD at 18:44 UTC, 867f8c2, after the 17:25 script line), new findings 6 (no evidence test for autonomy) and 7 (grant derived, not measured), price and put-down answered; round-2 debrief; status.json.",
    "at": "2026-10-30T02:50:15Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 94aaba7..HEAD: 5 files (comms mail .eml copy, debrief, review.md, status.json, wake record), all in reader-4's scope. Build and validate clean; agents.py check 0 outside scope; vault_check comms clean. No key, token, secret, personal detail or agent-directing text. No effect on other members' files.",
+   "at": "2026-10-30T02:50:38Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) Mail copy to comms/mail/reader-4/done/, mailroom original kept; vault_check comms clean. (2) review.md round 2: finding 5 checked, findings 6 and 7, price and put-down. (3) Round-2 debrief and status.json done. Pre-review conditions kept; only reader-4 files; no key. Nothing unplanned. Minor: the work step's model field is empty.",
+   "at": "2026-10-30T02:50:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:50:53Z",
+ "outcome": "ok"
 }
