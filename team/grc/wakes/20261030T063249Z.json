@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md step 6 (sections 16 to 18, O9 revised, O11 added); debrief, status.json; gate clean; comms/ untouched",
    "at": "2026-10-30T06:34:29Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4 files under team/grc/** only; comms/ unchanged; gate clean; agents check 0 outside scope; no key, token, secret or contact detail; no directive text or em-dashes; no other member affected.",
+   "at": "2026-10-30T06:34:56Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 16 to 18 (7790a64); 3 status.json and sixth-wake debrief; conditions kept; all in team/grc/**; push to dev follows the close.",
+   "at": "2026-10-30T06:34:56Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:34:56Z",
+ "outcome": "ok"
 }
