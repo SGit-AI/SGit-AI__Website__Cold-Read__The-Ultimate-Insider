@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md step 3 (sections 8 to 10: the decision register, the hold against later commits); debrief, status.json; gate clean; comms/ untouched",
    "at": "2026-10-30T03:34:24Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff 4050553..HEAD only team/grc/**; agents check 0 outside scope; gate clean; no keys, tokens or personal details, no directive text, no em-dashes, no effect on others or comms/.",
+   "at": "2026-10-30T03:34:50Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 8 to 10 done; 3 status.json and third-wake debrief done; comms/ untouched; diff confined to team/grc; nothing unplanned.",
+   "at": "2026-10-30T03:34:50Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:34:50Z",
+ "outcome": "ok"
 }
