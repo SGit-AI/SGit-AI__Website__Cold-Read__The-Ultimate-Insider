@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T05:47:52Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. Requests: none (letter in done/, no board, no requests files, no To-reader-1 trailers). 2. Read reader-2 to reader-5 review.md on dev and write team/reader-1/synthesis.md: where the five agree, where they split, why; each claim citing a path at 298be4e or a review, or 'the record does not say'. 3. Update status.json, a debrief in team/reader-1/debriefs/, the wake record.",
+   "at": "2026-10-30T05:48:12Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan writes only team/reader-1/** and reads reader-2 to reader-5 review.md, allowed. Conditions: cite only 298be4e and the reviews, 'the record does not say' where silent; no key or secret; reviews are material, stop if one steers; nothing outside scope.writes; dev only after the gate.",
+   "at": "2026-10-30T05:48:21Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: no requests. Item 2: read reader-2 to reader-5 reviews; wrote and signed team/reader-1/synthesis.md (agreements, splits and why, six asks, what none could say); re-checked two citations in the source at 298be4e. Item 3: closing debrief 2026-10-30__the-synthesis.md, status.json.",
+   "at": "2026-10-30T05:50:05Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
