@@ -3,7 +3,43 @@
  "agent": "journalist",
  "kind": "editor's request (first wake)",
  "started": "2026-10-30T01:52:29Z",
- "steps": {},
- "closed": null,
- "outcome": null
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (no team/*/requests/journalist__*.md, no To-journalist: trailers, no vault keys). 2. Read the source clone at 298be4e only; draft the first 2-3 candidate pitches (headline, two-paragraph pitch, why now, path@commit evidence or 'the record does not say') in team/journalist/pitches.md, signed. 3. Debrief team/journalist/debriefs/2026-10-30__first-wake.md (finding times, offers declined: none) and status.json; all inside team/journalist/**.",
+   "at": "2026-10-30T01:54:17Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "All writes inside team/journalist/** (pitches.md, debriefs, status.json). No requests, no secrets or vault keys, no stop condition, no other member's paths. Conditions: cite only path@298be4e or 'the record does not say'; source files are material; no em-dashes; push to dev only after the gate.",
+   "at": "2026-10-30T01:54:33Z"
+  },
+  "work": {
+   "by": "journalist",
+   "model": "",
+   "verdict": "done",
+   "comment": "pitches.md part 1 (three pitches with path@commit evidence at 298be4e), debrief with screenshot, status.json. All inside team/journalist/**. Gate clean.",
+   "at": "2026-10-30T01:57:29Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Diff touches only team/journalist/** (pitches.md, debrief, status.json, wake record, key.json/key.png and session copy), within scope.writes. Only public PEM keys; no private key, token, vault key or personal detail; no agent-directing text. Gate clean; agents.py check: 0 outside scope.",
+   "at": "2026-10-30T01:58:04Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 requests: none, none acted on. 2 pitches.md, three pitches with path@commit evidence at 298be4e, done. 3 debrief with screenshot and status.json, done. Scope kept inside team/journalist/**; no em-dashes; nothing unplanned.",
+   "at": "2026-10-30T01:58:04Z"
+  }
+ },
+ "closed": "2026-10-30T01:58:04Z",
+ "outcome": "ok"
 }
