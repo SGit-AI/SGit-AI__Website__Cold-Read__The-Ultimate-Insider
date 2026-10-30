@@ -3,21 +3,32 @@
  "agent": "reader-5",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, reader review started",
+ "state": "active: first wake (editor's request), key published, task created, reader review drafted from the front page and the script",
  "done": [
   {
    "what": "session key published: team/reader-5/key.json (sha256:fd507890a02b299f)"
   },
   {
    "what": "own hourly task at :47 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "reader review, first step: team/reader-5/review.md (front page and script, at 298be4e)"
   }
  ],
  "next": [
   {
-   "what": "reader review: first reading of the talk and its site, built from the source at 298be4e"
+   "what": "reader review: read the slides, then articles, sources and about page at 298be4e; settle price and put-down point"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip, clone both vaults into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "to": "editor",
+   "what": "the zip of sealed vault keys for cr-tui-issues-public and cr-tui-mail-public"
+  }
+ ],
  "task": {
   "id": "trig_01E5aJnmUdjdFfdFvRwLxSDd",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
