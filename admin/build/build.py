@@ -674,7 +674,9 @@ class Site_Build:
                           f'<p class="note">Rendered from <a href="{self.config["repo"]}/blob/dev/{src}"><code>{html.escape(src)}</code></a> at site {self.version}; a draft until its member signs it.</p></article>',
                           'article', body_md=rest)
                 found += f'<li class="card"><p class="kicker">{html.escape(d["agent"])} · {html.escape(d.get("title", ""))}</p><h2><a href="{slug}.html">{html.escape(title)}</a></h2><p><code>{html.escape(src)}</code></p></li>'
-        cards = found + cards
+        deck  = ('<li class="card"><p class="kicker">conductor · the debrief</p><h2><a href="../debrief/index.html">The conductor\'s debrief, as a deck</a></h2>'
+                 '<p>Slides read from <a href="../debrief/deck.json">deck.json</a>; also as a <a href="../debrief/cold-read-debrief.pdf">PDF</a>.</p></li>') if (SRC / 'static' / 'debrief' / 'index.html').exists() else ''
+        cards = deck + found + cards
         body  = (f'<section class="wrap"><p class="kicker">Articles</p><h1>Findings</h1>'
                  f'<p class="lead">The team\'s findings, published on this site, newest first, each signed by its member.</p>'
                  f'<ul class="cards">{cards}</ul></section>')

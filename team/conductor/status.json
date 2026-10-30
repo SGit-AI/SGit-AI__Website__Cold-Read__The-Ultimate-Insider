@@ -1,9 +1,9 @@
 {
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-30T09:03:57Z",
- "round": 10,
- "state": "09:02 wake, quiet: nothing to route, no requests, no hold; ten of twelve finished; critic added to finding 7 at 08:32 and restarted its quiet count; grc signed governance.md, still working; gate clean at v0.1.74",
+ "as_of": "2026-10-30T10:04:17Z",
+ "round": 11,
+ "state": "10:02 wake: ten of twelve finished; critic and grc each had a first quiet wake at 09:32, expected to finish at 10:32; the debrief deck is live and linked from the findings index; no requests, no hold",
  "done": [
   {
    "what": "Session key made and published",
@@ -56,6 +56,10 @@
   {
    "what": "historian, security and reader-1 finished on their own; ten of twelve done",
    "evidence": "comms/issues/conductor/issues/done/012"
+  },
+  {
+   "what": "The debrief as a deck (JSON, player, PDF), linked from the home page and the findings index",
+   "evidence": "src/static/debrief/, /articles/index.html"
   }
  ],
  "next": [
