@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside scope.writes (comms/mail/conductor/**, comms/issues/conductor/**, team/conductor/**). Conditions: copy letters, never edit or delete mailroom originals; check tasks read-only, by id, touch none; the debrief says only that the listing showed the source team's tasks, with no names, ids or details, and cites nothing from outside 298be4e; no secrets or ids in comms; vault_check.",
    "at": "2026-10-30T06:06:59Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "007ccd6 on the branch and dev: three letters copied to the conductor's inbox and done (originals untouched); issue 010 done (no ids); debrief 2026-10-30__the-night-so-far.md (the listing named only as showing the source team's tasks, nothing used); status.json. vault_check comms clean, gate clean (108 html), 0 outside scope.",
+   "at": "2026-10-30T06:07:21Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "007ccd6 touches only team/conductor/** and the conductor's comms folders (0 outside scope); additions only, no mailroom file edited or deleted; gate clean (108 html), vault_check clean. No key, token or personal detail. The debrief says only that a listing showed the source team's tasks: no names, ids or details, nothing used or cited. Conditions kept.",
+   "at": "2026-10-30T06:07:53Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 letters copied to inbox and done, originals untouched; issue 010 done. 2 debrief the-night-so-far written. 3 status.json; 007ccd6 on origin/dev. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T06:07:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:07:53Z",
+ "outcome": "ok"
 }
