@@ -2,14 +2,27 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, source cloned at 298be4e, governance map started",
+ "done": [
+  {
+   "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
+  },
+  {
+   "what": "own hourly task at :32 London created, prompt word for word from schedule.json"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :32; start the governance map and open decisions"
+   "what": "governance map: the decisions in the source at 298be4e, who made them, where recorded"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_01DfJexG9TfV5b8v1LqPDsS8",
+  "cron": "CRON_TZ=Europe/London 32 * * * *",
+  "session": "session_01Kw9UwBfSz48uj9wXSTPeUV",
+  "created": "2026-10-30T01:52:05Z",
+  "enabled": true
+ }
 }
