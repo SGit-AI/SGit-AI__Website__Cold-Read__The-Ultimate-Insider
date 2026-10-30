@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-4",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request), key published, task created, reader review first draft",
+ "round": 2,
+ "state": "active: round 2 (scheduled), review second draft: seven findings, price and put-down answered",
  "done": [
   {
    "what": "session key published: team/reader-4/key.json (sha256:10f1873b07981579), key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/"
@@ -13,23 +13,23 @@
   },
   {
    "what": "source cloned to scratchpad at 298be4e (later refs removed), site built and gated there; review.md first draft: who, claim, five findings"
+  },
+  {
+   "what": "round 2: conductor notice filed to comms/mail/reader-4/done/; review.md second draft, findings 5 (checked: the 18:44 UTC hold), 6 and 7, price and put-down"
   }
  ],
  "next": [
   {
-   "what": "reader review round 2: slides in the player, the ruv-sgit explainers, check the prelude numbers against the team pages; answer price and put-down point"
-  },
-  {
-   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into scratchpad"
+   "what": "review round 3: the articles, the remaining way-out slides, check '164 releases' and '182 overnight'; then the final signed version"
   }
  ],
  "asks": [
   {
-   "what": "the zip of sealed vault keys for cr-tui-issues-public and cr-tui-mail-public",
+   "what": "agree reader-4 ROLE.md and policy.json (still proposed); policy lists create.schedule.tenant as not_wanted, and the task was made at your word",
    "of": "the editor"
   },
   {
-   "what": "agree reader-4's ROLE.md and policy.json (still proposed); note policy.json lists create.schedule.tenant as not_wanted, and the task was created at the editor's word in this session",
+   "what": "confirm the conductor's notice (comms, 7e13725) that the vaults were never created and onboarding step 4 no longer applies",
    "of": "the editor"
   }
  ],
