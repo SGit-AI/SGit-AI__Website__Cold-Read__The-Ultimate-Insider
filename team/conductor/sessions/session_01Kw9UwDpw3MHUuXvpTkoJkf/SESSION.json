@@ -1,0 +1,12 @@
+{
+ "agent": "conductor@cold-read.the-ultimate-insider",
+ "session": "session_01Kw9UwDpw3MHUuXvpTkoJkf",
+ "state": "current",
+ "from": "2026-10-30T01:11:27Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:d1ddb098a416d027",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": null,
+ "note": "The first conductor session of the cold read. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}

@@ -1,0 +1,15 @@
+{
+ "schema": "cold-read.the-ultimate-insider/agent-status/v1",
+ "agent": "analyst",
+ "as_of": "2026-10-30",
+ "round": 0,
+ "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
+ "done": [],
+ "next": [
+  {
+   "what": "make and publish its session key; create its own hourly task at :17; start the numbers"
+  }
+ ],
+ "asks": [],
+ "task": null
+}

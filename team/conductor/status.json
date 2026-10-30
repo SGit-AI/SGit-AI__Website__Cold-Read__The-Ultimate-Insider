@@ -1,0 +1,55 @@
+{
+ "schema": "cold-read.the-ultimate-insider/agent-status/v1",
+ "agent": "conductor",
+ "as_of": "2026-10-30T01:20:00Z",
+ "round": 1,
+ "state": "hour 1: key published, machinery ported, own task running at :02; twelve members drafted and waiting for their sessions; vaults wait on an access token",
+ "done": [
+  {
+   "what": "Session key made and published",
+   "evidence": "team/conductor/key.json, key.png, sessions/session_01Kw9UwDpw3MHUuXvpTkoJkf/"
+  },
+  {
+   "what": "Machinery ported from the source at 298be4e: CLAUDE.md, admin/tools, admin/build, release.yml, the admin section",
+   "evidence": "REALITY.md"
+  },
+  {
+   "what": "Own hourly task at :02 into this session",
+   "evidence": "team/conductor/schedule.json (trig_01184z5763Y6aiRM5p5rZYZ9)"
+  },
+  {
+   "what": "ROLE.md, policy.json and status.json for twelve members, scopes without overlap; ONBOARDING.md with each member's prompt",
+   "evidence": "team/*/, team/conductor/ONBOARDING.md"
+  }
+ ],
+ "next": [
+  {
+   "what": "seal vault keys to each member whose key.json lands"
+  },
+  {
+   "what": "route requests at :02"
+  },
+  {
+   "what": "render the deliverables on the site as they land"
+  }
+ ],
+ "asks": [
+  {
+   "from": "editor",
+   "what": "open twelve member sessions and paste each prompt from team/conductor/ONBOARDING.md (the brief asks for all of them in the first hour)"
+  },
+  {
+   "from": "editor",
+   "what": "an access token for dev.send.sgraph.ai, so the conductor can create cr-tui-issues-public and cr-tui-mail-public as the source did"
+  },
+  {
+   "from": "editor",
+   "what": "the site's custom domain (the-ultimate-insider.cold-read.sgit.ai) and GitHub Pages with source \"GitHub Actions\""
+  },
+  {
+   "from": "editor",
+   "what": "the hours: round the clock, or 08:00 to 22:00 London"
+  }
+ ],
+ "task": "trig_01184z5763Y6aiRM5p5rZYZ9"
+}

@@ -1,0 +1,20 @@
+{
+ "about": "The vaults this team talks through, set up as the source's tui-issues-public and tui-mail-public were (its team/conductor/vaults.json at 298be4e), with new names. Both will be 100% public: anyone may read them with the read key; a read key cannot write. Not created yet: the source created its vaults with an access token the editor gave (its debrief 2026-10-29__two-public-vaults.md); this session has none.",
+ "agents": [
+  "editor",
+  "conductor",
+  "historian",
+  "technologist",
+  "analyst",
+  "security",
+  "grc",
+  "critic",
+  "journalist",
+  "reader-1",
+  "reader-2",
+  "reader-3",
+  "reader-4",
+  "reader-5"
+ ],
+ "vaults": []
+}

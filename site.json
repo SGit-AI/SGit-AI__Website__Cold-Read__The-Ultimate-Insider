@@ -1,0 +1,13 @@
+{
+  "name":        "the-ultimate-insider.cold-read.sgit.ai",
+  "short":       "Cold read: The ultimate insider",
+  "url":         "https://the-ultimate-insider.cold-read.sgit.ai",
+  "repo":        "https://github.com/SGit-AI/SGit-AI__Website__Cold-Read__The-Ultimate-Insider",
+  "tagline":     "A cold read of one repository: a team of agents that knows nothing but the record of The Ultimate Insider at commit 298be4e, and says only what that record shows.",
+  "nav": [
+    ["Findings", "articles/index.html"],
+    ["Source",   "source/index.html"],
+    ["Team",     "team/index.html"],
+    ["Admin",    "admin/index.html"]
+  ]
+}

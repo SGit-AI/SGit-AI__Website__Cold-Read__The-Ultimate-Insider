@@ -1,0 +1,172 @@
+{
+ "about": "The conductor's working file: what each member has in flight, the queue, and the flow from the brief to the deliverables. Drawn on the dashboard.",
+ "schedule": {},
+ "nodes": [
+  {
+   "id": "brief",
+   "kind": "brief",
+   "title": "BRIEF.md: the cold read",
+   "owner": "editor",
+   "status": "given",
+   "at": "2026-10-30T00:59:00Z"
+  },
+  {
+   "id": "d-historian",
+   "kind": "request",
+   "title": "The timeline",
+   "owner": "historian",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-technologist",
+   "kind": "request",
+   "title": "The architecture",
+   "owner": "technologist",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-analyst",
+   "kind": "request",
+   "title": "The numbers",
+   "owner": "analyst",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-security",
+   "kind": "request",
+   "title": "The control register and threat model",
+   "owner": "security",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-grc",
+   "kind": "request",
+   "title": "The governance map and open decisions",
+   "owner": "grc",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-critic",
+   "kind": "request",
+   "title": "The critic's report",
+   "owner": "critic",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-journalist",
+   "kind": "request",
+   "title": "The story pitches",
+   "owner": "journalist",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-reader-1",
+   "kind": "request",
+   "title": "A reader review and the synthesis of all five",
+   "owner": "reader-1",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-reader-2",
+   "kind": "request",
+   "title": "A reader review",
+   "owner": "reader-2",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-reader-3",
+   "kind": "request",
+   "title": "A reader review",
+   "owner": "reader-3",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-reader-4",
+   "kind": "request",
+   "title": "A reader review",
+   "owner": "reader-4",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  },
+  {
+   "id": "d-reader-5",
+   "kind": "request",
+   "title": "A reader review",
+   "owner": "reader-5",
+   "status": "scheduled",
+   "at": "2026-10-30T01:30:00Z"
+  }
+ ],
+ "edges": [
+  {
+   "from": "brief",
+   "to": "d-historian",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-technologist",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-analyst",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-security",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-grc",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-critic",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-journalist",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-reader-1",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-reader-2",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-reader-3",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-reader-4",
+   "kind": "asks"
+  },
+  {
+   "from": "brief",
+   "to": "d-reader-5",
+   "kind": "asks"
+  }
+ ]
+}

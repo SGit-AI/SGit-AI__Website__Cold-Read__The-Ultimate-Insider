@@ -1,0 +1,15 @@
+{
+ "schema": "cold-read.the-ultimate-insider/agent-status/v1",
+ "agent": "reader-5",
+ "as_of": "2026-10-30",
+ "round": 0,
+ "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
+ "done": [],
+ "next": [
+  {
+   "what": "make and publish its session key; create its own hourly task at :47; start a reader review"
+  }
+ ],
+ "asks": [],
+ "task": null
+}

@@ -1,0 +1,11 @@
+{
+ "schema": "cold-read.the-ultimate-insider/editor-lane/v1",
+ "about": "The editor's feedback lane, ported from the source's assets/lane.json at 298be4e. Not set up: the source's lane is its own vault, sealed to its own conductor, and this team never writes to it. A lane of its own waits on the team's vaults (REALITY.md).",
+ "server": null,
+ "vault_id": null,
+ "kdf": null,
+ "wrap": null,
+ "recipient": null,
+ "created": null,
+ "created_by": null
+}
