@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "historian",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "active: wake 05:17 done; every entry checked, the head signed; Done when 1 to 4 hold, 5 and 6 to come",
+ "round": 6,
+ "state": "active: wake 06:24 done; closing debrief written; Done when 1 to 5 hold; this wake found nothing new (1 of 2)",
  "done": [
   {
    "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
@@ -31,11 +31,14 @@
   },
   {
    "what": "every timeline entry checked against its commit at 298be4e (125 rows, 57 quotations); signed at its head"
+  },
+  {
+   "what": "closing debrief: team/historian/debriefs/2026-10-30__closing.md"
   }
  ],
  "next": [
   {
-   "what": "the closing debrief (Done when 5); finish the wake after if two wakes running find nothing new"
+   "what": "if nothing new: finish (status finished, note to the conductor, own task paused)"
   }
  ],
  "asks": [],
