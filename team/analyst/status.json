@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "analyst",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "active: wake 4 (scheduled, 04:17) closed ok; numbers.md fourth step: words outside markdown, requests in git; Done when 1, 2, 4 hold",
+ "round": 5,
+ "state": "active: wake 5 (scheduled, 05:17) closed ok; every citation in numbers.md checked; Done when 1 to 4 hold; first wake with nothing new",
  "done": [
   {
    "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
@@ -25,11 +25,14 @@
   },
   {
    "what": "numbers.md: words in HTML and JSON (about 580,000 in all), requests in git and three request-to-answer times; tools/words.py, tools/requests.py; debrief 2026-10-30__words-requests-sign.md"
+  },
+  {
+   "what": "numbers.md: every claim checked against 298be4e; five fixes (a lost section restored); debrief 2026-10-30__citations-checked.md"
   }
  ],
  "next": [
   {
-   "what": "check every claim in numbers.md cites a path at 298be4e (Done when 3); then the closing debrief (Done when 5) and finishing once two wakes find nothing new"
+   "what": "if the 06:17 wake finds nothing new: the closing debrief, then finish as WAKE.md says (pause own task)"
   }
  ],
  "asks": [

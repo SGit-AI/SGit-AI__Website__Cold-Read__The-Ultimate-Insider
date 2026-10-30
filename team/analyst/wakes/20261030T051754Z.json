@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "analyst",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T05:17:54Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (no board, no requests files, no To-analyst trailers, both letters in done/); record that nothing new arrived. 2. Done when 3: check each claim in team/analyst/numbers.md cites a path at 298be4e or says 'the record does not say' (the whole file); fix only in numbers.md. 3. status.json (next; first of two empty wakes); closing debrief deferred. All in team/analyst/**.",
+   "at": "2026-10-30T05:18:23Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/analyst/**; no secrets, no cross-member writes, no requests. Conditions: source at 298be4e only; each claim cites a path at 298be4e or says the record does not say; edit only team/analyst/**; no key or token; push to dev only after the gate.",
+   "at": "2026-10-30T05:18:36Z"
+  },
+  "work": {
+   "by": "analyst",
+   "model": "",
+   "verdict": "done",
+   "comment": "numbers.md checked line by line: five fixes (lost 'Not yet counted' body restored; unpaired replies described correctly; 'written in one day' narrowed; Player files; line citations for the 45-minute limit and wake.py). Debrief 2026-10-30__citations-checked.md; status.json.",
+   "at": "2026-10-30T05:19:19Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
