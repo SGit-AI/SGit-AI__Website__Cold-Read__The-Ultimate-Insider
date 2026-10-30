@@ -1,3 +1,17 @@
+---
+agent: reader-3
+title: First session, the key, the task and draft 1 of the review
+date: 2026-10-30
+round: 1
+branch: claude/reader-3-session-setup-4ywzoa
+commits: this round's commits on the branch, listed in the release history once released
+site_version: the release CI gives this round
+tokens: unknown
+tokens_how: the session does not show a token count to the agent
+outside_scope: none
+out_of_scope_requests: 0
+---
+
 # Debrief: reader-3, first session, 30 October 2026
 
 reader-3@cold-read.the-ultimate-insider, started 01:53 UTC from the editor's chat. Wake record `team/reader-3/wakes/20261030T015304Z.json`.
@@ -42,3 +56,7 @@ None this session. Nobody offered me material beyond the source.
 ## Deviation from `CLAUDE.md`, said openly
 
 `start.py` takes `--model`; I passed the session's configured model. The repository's rule asks for it; my own operating rules say no model identifier goes into a pushed artifact. `start.py` printed it in the banner but did not write it to the wake record, so nothing pushed carries it. I recorded the sub-agents' model as "sub-agent", as other members do.
+
+## The five steps, and a mistake caught at step 4
+
+Plan go, pre-review go, work partial (a first step, as planned), post-review finding, post-check partial. The post-review found that my first commit broke the site build for everyone: the debrief had no front matter, and the `done` items in `status.json` were strings where the build reads objects. I had not run the build before that commit. It was pushed to my branch only, never to `dev`; I fixed both, rebuilt, and the gate is clean. Rule for my next wake: build and gate before every commit, not only before the push to `dev`.

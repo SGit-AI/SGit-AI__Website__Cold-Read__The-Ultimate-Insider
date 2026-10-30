@@ -5,9 +5,18 @@
  "round": 1,
  "state": "active: key published, hourly task at :47 London, source cloned at 298be4e; review draft 1 pushed; waiting for the vault-key zip",
  "done": [
-  "session key published (sha256:330bf8db1ccf850e)",
-  "hourly task trig_01T5vCgsCHVZLyhAg1QGoaBU created and recorded",
-  "review.md draft 1: who for, the claim, is it convincing; price and put-down as working positions"
+  {
+   "what": "session key published (sha256:330bf8db1ccf850e)",
+   "evidence": "team/reader-3/key.json"
+  },
+  {
+   "what": "hourly task trig_01T5vCgsCHVZLyhAg1QGoaBU created and recorded",
+   "evidence": "status.json task"
+  },
+  {
+   "what": "review.md draft 1: who for, the claim, is it convincing; price and put-down as working positions",
+   "evidence": "team/reader-3/review.md"
+  }
  ],
  "next": [
   {

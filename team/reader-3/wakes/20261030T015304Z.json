@@ -24,8 +24,22 @@
    "verdict": "partial",
    "comment": "review.md draft 1 (who for, claim, convincing; price and put-down as working positions), debrief with two screenshots and finding times, status.json; source rebuilt clean after dropping refs later than 298be4e",
    "at": "2026-10-30T01:59:38Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "finding",
+   "comment": "No secrets (only public key.json/key.png), all changes in team/reader-3/**, no agent-directing text. Finding: build.py crashed because the debrief had no front matter (and status.json done items were strings, not objects). Fixed by reader-3 before release: front matter added, done items as {what, evidence}; build and gate clean, agents.py check 0 outside scope.",
+   "at": "2026-10-30T02:00:51Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "partial",
+   "comment": "1 requests: done, none found. 2 review.md: partial as planned for a first step; who for, claim and convincing quoted with paths at 298be4e; price and put-down are working positions. 3 debrief with two screenshots and status.json: done (debrief named first-session, not first-review). Conditions kept: scope, no em-dashes, no key, nothing later than 298be4e cited, no live site.",
+   "at": "2026-10-30T02:00:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:00:51Z",
+ "outcome": "partial"
 }
