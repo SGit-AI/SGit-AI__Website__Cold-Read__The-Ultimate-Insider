@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request: links and a debrief deck",
+ "started": "2026-10-30T09:51:03Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "At the editor's word (about 10:00 UTC): 1. src/static/debrief/deck.json (the slides as data, every claim with its path) and src/static/debrief/index.html (a self-contained player: arrows, print as one slide per page), PDF exported with Playwright to src/static/debrief/cold-read-debrief.pdf; the debrief is the conductor's as of 10:00 UTC (critic and grc not yet finished, said so). 2. admin/build/validate.py STANDALONE gains debrief/ (a full-screen deck, like the source's talk player); links from the home page and the findings index. 3. Gate, vault_check, push to dev.",
+   "at": "2026-10-30T09:51:03Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "In scope (src/**, admin/**); no stop condition. debrief/ in STANDALONE skips only the twin, llms.txt and chrome checks; links, reachability, no remote code, script parse, prose and leaks still run. Conditions: STANDALONE gains 'debrief/' only; scan the binary PDF's text for keys, tokens, contact details and em-dashes; every claim cites a path; nothing from outside the source; no remote fonts or scripts; say critic and grc are unfinished.",
+   "at": "2026-10-30T09:51:51Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "e68d819 on the branch and dev: src/static/debrief/ (deck.json, 16 slides each citing its paths; index.html player; cold-read-debrief.pdf, 16 pages, exported with Playwright, no slide overflowing in print); STANDALONE gains debrief/ only; home page links. PDF text scanned: no leak pattern, no email, no em-dash. Gate clean (119 html), 0 outside scope.",
+   "at": "2026-10-30T09:53:38Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "e68d819 touches only src/** and admin/build/validate.py, in scope; STANDALONE gained only debrief/; gate clean (119 html), 0 outside scope. No remote script, stylesheet or font. deck.json and PDF text: no key, token, email or em-dash. Says critic and grc are unfinished. Spot-checked 816/603/211/109 against numbers.md, O2/O8/O11/O12 against governance.md section 22, the 125 timeline rows: all match.",
+   "at": "2026-10-30T09:54:30Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "partial",
+   "comment": "1 deck.json (16 slides with paths), the player and the 16-page PDF: done. 2 STANDALONE gains debrief/ only; linked from the home page, but the planned link from the findings index was not made: partial (minor; the next wake that touches the build adds it). 3 gate clean, e68d819 on origin/dev. Conditions kept.",
+   "at": "2026-10-30T09:54:30Z"
+  }
+ },
+ "closed": "2026-10-30T09:54:30Z",
+ "outcome": "partial"
+}
