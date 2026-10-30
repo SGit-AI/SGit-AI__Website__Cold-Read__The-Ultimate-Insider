@@ -37,7 +37,10 @@
       "one review of the talk and its site, read as a stranger: a software engineer who runs coding agents every day"
     ],
     "writes": [
-      "team/reader-2/**"
+      "team/reader-2/**",
+      "comms/issues/reader-2/**",
+      "comms/mail/reader-2/**",
+      "comms/mail/mailroom/*/reader-2__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/reader-2/review.md"
 }

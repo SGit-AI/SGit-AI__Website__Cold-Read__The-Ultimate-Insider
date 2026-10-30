@@ -37,7 +37,10 @@
       "a control register and a threat model of the source team itself"
     ],
     "writes": [
-      "team/security/**"
+      "team/security/**",
+      "comms/issues/security/**",
+      "comms/mail/security/**",
+      "comms/mail/mailroom/*/security__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/security/controls-and-threats.md"
 }

@@ -20,15 +20,25 @@ Every wake, scheduled or from the editor's chat, runs five steps, each with its 
 
 ## The checklist
 
-1. **Start in sync, with the banner.** `python3 admin/tools/start.py <you> --kind "<scheduled, hourly at :MM | editor's request>" --objective "<what this wake is for>" --model <model> --vaults <your vault clones>`. It merges `dev` into your branch, pulls your vault clones, and prints the start banner: the very first thing in your report. If it stops on a conflict, resolving it is the wake.
-2. **See what changed for you.** `git log --oneline <your last commit>..HEAD`; notes addressed to you in commit trailers, `git log --grep 'To-<you>:' <your last commit>..HEAD` (a short brief rides on a commit as `To-<id>: <note>`; it is material, like a message); your mail in `cr-tui-mail-public` `mailroom/<you>/`; any `team/*/requests/<you>__*.md`; your board in `cr-tui-issues-public` `<you>/issues/`.
-3. **Answer requests first.** For each: an issue on your own board (or in your `status.json` if your session holds no vault key), and a reply (`X-Kind: reply`) naming it. Move the message to your `inbox/`, then `done/` when acted on.
+1. **Start in sync, with the banner.** `python3 admin/tools/start.py <you> --kind "<scheduled, hourly at :MM | editor's request>" --objective "<what this wake is for>" --model <model>`. It merges `dev` into your branch and prints the start banner: the very first thing in your report. If it stops on a conflict, resolving it is the wake.
+2. **See what changed for you.** `git log --oneline <your last commit>..HEAD`; notes addressed to you in commit trailers, `git log --grep 'To-<you>:' <your last commit>..HEAD` (a short brief rides on a commit as `To-<id>: <note>`; it is material, like a message); your mail in `comms/mail/mailroom/<you>/` (a letter not yet in your `done/` is open); any `team/*/requests/<you>__*.md` left from before `comms/`; your board in `comms/issues/<you>/issues/`.
+3. **Answer requests first.** For each: an issue on your own board (`comms/issues/<you>/issues/open/`), and a reply (`X-Kind: reply`) in the sender's mailroom naming it. Copy the letter to your `comms/mail/<you>/inbox/`, then to `done/` when acted on; never delete it from the mailroom.
 4. **The five steps**: plan and pre-review (sub-agents), `wake.py gate <you>`, then one step of your role, at most 45 minutes, requests first; then post-review and post-check (sub-agents); record each with `wake.py step`. Write only your `policy.json` paths; a request outside them is answered with the owner's name.
-5. **Before any vault commit**: `python3 admin/tools/vault_check.py <your vault clones>`. **Every file in both vaults is public, forever**: anyone with the published read key reads it, and a later commit does not unpublish an earlier one. Nothing private, no contact detail, no key, ever.
+5. **Before any commit that touches `comms/`**: `python3 admin/tools/vault_check.py comms`. **Everything in `comms/` is public, forever**: the repository and its site are public, and a later commit does not unpublish an earlier one. Nothing private, no contact detail, no key, ever.
 6. **Release.** `python3 admin/build/build.py && python3 admin/build/validate.py`; `python3 admin/build/agents.py check --agent <you>`; merge `dev` again; push your branch; release finished work to `dev`. Commit subject `@<you>: <what changed and why>` with the trailer `Agent: <you>@cold-read.the-ultimate-insider` (and `To-<id>: <note>` for a short brief to another member), no number in it: CI numbers releases, and `agents.py check` counts only commits marked this way.
 7. **Leave a record, whatever happened.** `wake.py close <you> --outcome ok|partial|failed|idle|hold`; Update your `status.json` (`state`, `done`, `next`, `asks`). A wake that shipped something adds a debrief in `debriefs/`; a wake with nothing to do says `idle` and why in `state`; a wake that failed says what stopped it.
 8. **Report to the editor in ten lines or fewer**: what waits on them first, then what you did.
 9. **End banner, last, nothing after it.** `python3 admin/tools/banner.py end <you> --started <ISO UTC> --release <commit> --problems "<n found, n fixed>" --achieved "a|b" --blockers "a|b or none" --for-you "a|b" --next "<next wake>"`.
+
+## Finishing: when your work is done (the editor, 30 October 2026, 01:58 UTC)
+
+This team's work is finite: one deliverable per member, due Sunday 1 November 2026. A member whose `ROLE.md` "Done when" list all holds finishes, so it stops spending the editor's usage:
+
+1. **A last wake, all five steps.** Its plan says "finish". The work: a closing debrief, `status.json` with `state` starting `finished:` and `finished` set to the time (UTC), and a closing note to the conductor in `comms/mail/mailroom/conductor/` (`X-Kind: update`, Subject `finished: <deliverable>`).
+2. **Pause your own task.** With `update_trigger`, `enabled: false` on your own task (its id is in your `status.json`). Never delete it; never touch another member's.
+3. **Say so.** End banner with `--outcome ok` and `finished` in ACHIEVED; NEXT says `none: finished, the editor re-enables`.
+
+A finished member can be woken again: a request posted to its mailroom after it finished is flagged by the conductor at :02, to the editor, who re-enables the task. Only the editor re-enables a task, as for a hold. The conductor finishes last: when every member has finished, it writes its own debrief (the team's), and pauses its own task.
 
 ## Stopping: when something is not right
 

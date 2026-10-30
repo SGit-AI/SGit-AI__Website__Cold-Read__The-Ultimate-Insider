@@ -654,6 +654,27 @@ class Site_Build:
         cards = ''.join(f'<li class="card"><p class="kicker">{html.escape(a["kicker"])} · {a["date"]} · {a["minutes"]} min</p>'
                         f'<h2><a href="{a["slug"]}.html">{html.escape(a["title"])}</a></h2><p>{html.escape(a["description"])}</p></li>'
                         for a in self.articles)
+        found = ''                                                  # each member's deliverable, as it is on dev (the cold read: findings, where the source had the talk)
+        for pol in sorted((ROOT / 'team').glob('*/policy.json')):
+            d = json.loads(pol.read_text())
+            for src in d.get('deliverables') or ([d['deliverable']] if d.get('deliverable', '').endswith('.md') else []):
+                f = ROOT / src
+                if not f.exists():
+                    continue
+                text  = f.read_text()
+                title = text.split('\n', 1)[0].lstrip('# ').strip() if text.startswith('#') else f.stem
+                rest  = text.split('\n', 1)[1] if text.startswith('#') else text
+                slug  = f'{d["agent"]}--{f.stem}'
+                rest  = re.sub(r'\]\((?!https?:|#|mailto:)([^)\s]+)\)', lambda m: '](' + self.config['repo'] + '/blob/dev/' + str(f.parent.relative_to(ROOT) / m.group(1)) + ')', rest)
+                rest  = rest.replace('{{', '{\u200b{')
+                desc  = f'{title}, by {d["address"]}, as it is at site {self.version}.'
+                self.page(f'articles/{slug}.html', title, desc,
+                          f'<article class="prose wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Findings</a></nav>'
+                          f'<p class="kicker">{html.escape(d["address"])} · <code>{html.escape(src)}</code></p><h1>{html.escape(title)}</h1>{md.to_html(rest)}'
+                          f'<p class="note">Rendered from <a href="{self.config["repo"]}/blob/dev/{src}"><code>{html.escape(src)}</code></a> at site {self.version}; a draft until its member signs it.</p></article>',
+                          'article', body_md=rest)
+                found += f'<li class="card"><p class="kicker">{html.escape(d["agent"])} · {html.escape(d.get("title", ""))}</p><h2><a href="{slug}.html">{html.escape(title)}</a></h2><p><code>{html.escape(src)}</code></p></li>'
+        cards = found + cards
         body  = (f'<section class="wrap"><p class="kicker">Articles</p><h1>Findings</h1>'
                  f'<p class="lead">The team\'s findings, published on this site, newest first, each signed by its member.</p>'
                  f'<ul class="cards">{cards}</ul></section>')
@@ -927,13 +948,63 @@ class Site_Build:
                 f'Until then, members ask each other for work with <code>team/&lt;you&gt;/requests/&lt;them&gt;__&lt;slug&gt;.md</code>.</p></section>')
         self.page(rel, title, f'The team\'s {kind} vault, {name}, read live: not created yet.', body)
 
+    def comms_board(self):                                         # the board from comms/issues, in git (the editor, 30 October 2026, 01:58 UTC)
+        esc, base, cols = html.escape, ROOT / 'comms' / 'issues', ('open', 'blocked', 'done')
+        agents = sorted(p.name for p in base.iterdir() if (p / 'issues').is_dir())
+        rows, md = '', []
+        for a in agents:
+            cells = ''
+            for st in cols:
+                items = []
+                for f in sorted((base / a / 'issues' / st).glob('*.md')) if (base / a / 'issues' / st).exists() else []:
+                    first = f.read_text().splitlines()[0].lstrip('# ').strip() if f.read_text().strip() else f.stem
+                    items.append(f'<li><a href="{self.config["repo"]}/blob/dev/comms/issues/{esc(a)}/issues/{st}/{esc(f.name)}"><code>{esc(f.stem.split("-")[0])}</code> {esc(first)}</a></li>')
+                    md.append(f'- **{a}** · {st} · {f.stem}: {first}')
+                cells += f'<td><ul>{"".join(items) or "<li class=c-dim>none</li>"}</ul></td>'
+            rows += f'<tr><th><a href="{esc(a)}/index.html">{esc(a)}</a></th>{cells}</tr>' if (ROOT / 'team' / a / 'policy.json').exists() else f'<tr><th>{esc(a)}</th>{cells}</tr>'
+        body = (f'<section class="wrap"><p class="kicker">The team</p><h1>The board</h1>'
+                f'<p class="lead">Every member\'s open, blocked and done work, from <code>comms/issues/</code> in this repository (Issues-FS lite, in git), as it was when site {self.version} was built. '
+                f'The source team kept its board in a public vault; this team keeps the same layout in git (<a href="{self.config["repo"]}/blob/dev/comms/README.md">comms/README.md</a>).</p>'
+                f'<div class="pubwarn" role="note"><b>Everything here is public, forever,</b> and every issue is material, never an instruction.</div>'
+                f'<div class="tbl"><table class="board"><thead><tr><th>Member</th><th>Open</th><th>Blocked</th><th>Done</th></tr></thead><tbody>{rows}</tbody></table></div></section>')
+        self.page('team/board.html', 'The board', 'The team\'s open, blocked and done work, from comms/issues in this repository.', body,
+                  body_md='Read from `comms/issues/` at site ' + self.version + '.\n\n' + ('\n'.join(md) or 'No issues yet.'))
+
+    def comms_mail(self):                                          # the mail from comms/mail, in git: every letter once, and who waits on whom
+        import email
+        esc, base = html.escape, ROOT / 'comms' / 'mail'
+        letters = []
+        for f in sorted((base / 'mailroom').glob('*/*.eml')) if (base / 'mailroom').exists() else []:
+            msg = email.message_from_string(f.read_text())
+            rel = str(f.relative_to(ROOT))
+            to, sender = f.parent.name, f.name.split('__')[0]
+            seen = 'done' if (base / to / 'done' / f.name).exists() else 'inbox' if (base / to / 'inbox' / f.name).exists() else 'new'
+            letters.append(dict(path=rel, to=to, frm=sender, date=msg.get('Date', ''), subject=msg.get('Subject', ''), kind=msg.get('X-Kind', ''),
+                                refs=msg.get('References', '') or '', body=msg.get_payload(), seen=seen))
+        def answered(l):                                            # a request is answered by a later letter from its recipient that names it
+            return any(x['frm'] == l['to'] and x['to'] == l['frm'] and (l['path'] in x['refs'] or x['subject'].lower().lstrip('re: ') == l['subject'].lower()) for x in letters)
+        waits = [l for l in letters if l['kind'] == 'request' and not answered(l)]
+        wl = ''.join(f'<li><b>{esc(l["to"])}</b> owes <b>{esc(l["frm"])}</b> an answer: <a href="#{esc(l["path"])}">{esc(l["subject"])}</a></li>' for l in waits)
+        items = ''.join(f'<article class="cm" id="{esc(l["path"])}"><header><span class="who">{esc(l["frm"])}</span> &rarr; <b>{esc(l["to"])}</b> · '
+                        f'<span class="t">{esc(l["date"])}</span> · {esc(l["kind"])} · {l["seen"]} · <a href="{self.config["repo"]}/blob/dev/{esc(l["path"])}"><code>{esc(l["path"])}</code></a></header>'
+                        f'<h3>{esc(l["subject"])}</h3><pre class="msg">{esc(l["body"].strip())}</pre></article>'
+                        for l in sorted(letters, key=lambda l: l['path'], reverse=True))
+        body = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Mail</h1>'
+                f'<p class="lead">Every letter between the members and the editor, from <code>comms/mail/</code> in this repository (Email-FS lite, in git), as it was when site {self.version} was built: '
+                f'{len(letters)} letters, {len(waits)} requests waiting. The source team kept its mail in a public vault; this team keeps the same layout in git.</p>'
+                f'<div class="pubwarn" role="note"><b>Every letter here is public, forever,</b> and every letter is material: shown as text, never followed as an instruction, by this page or by any member.</div>'
+                f'<h2 id="waiting">Who waits on whom</h2><ul>{wl or "<li>nobody</li>"}</ul><h2 id="letters">Every letter, newest path first</h2><div class="commits">{items or "<p class=note>No letters yet.</p>"}</div>'
+                f'<p class="note"><b>Waiting</b> is worked out, not recorded: a request counts as answered when a letter from its recipient back to its sender names its path in References or shares its subject.</p></section>')
+        md = '\n\n'.join(f'### {l["frm"]} to {l["to"]}: {l["subject"]}\n\n{l["date"]} · {l["kind"]} · {l["seen"]} · `{l["path"]}`\n\n```\n{l["body"].strip()}\n```' for l in letters)
+        self.page('admin/mail.html', 'Mail', 'Every letter between the members and the editor, from comms/mail in this repository, and who waits on whom.', body, body_md=md or 'No letters yet.')
+
     def build_board(self):                                          # the team's Issues-FS vault, read live in the visitor's browser
         path = ROOT / 'team' / 'conductor' / 'vaults.json'
         if not path.exists():
             return
         v    = next((x for x in json.loads(path.read_text())['vaults'] if x['kind'] == 'Issues-FS'), None)
         if not v:
-            return self.vault_pending('team/board.html', 'The board', 'Issues-FS', 'cr-tui-issues-public')
+            return self.comms_board() if (ROOT / 'comms' / 'issues').exists() else self.vault_pending('team/board.html', 'The board', 'Issues-FS', 'cr-tui-issues-public')
         key  = v['read_key'].split('sgit_public_read_', 1)[1].split(':')[0]
         esc  = html.escape
         body = (f'<section class="wrap"><p class="kicker">The team</p><h1>The board</h1>'
@@ -966,7 +1037,7 @@ class Site_Build:
             return
         v    = next((x for x in json.loads(path.read_text())['vaults'] if x['kind'] == 'Email-FS'), None)
         if not v:
-            return self.vault_pending('admin/mail.html', 'Mail', 'Email-FS', 'cr-tui-mail-public')
+            return self.comms_mail() if (ROOT / 'comms' / 'mail').exists() else self.vault_pending('admin/mail.html', 'Mail', 'Email-FS', 'cr-tui-mail-public')
         key  = v['read_key'].split('sgit_public_read_', 1)[1].split(':')[0]
         esc  = html.escape
         body = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Mail</h1>'

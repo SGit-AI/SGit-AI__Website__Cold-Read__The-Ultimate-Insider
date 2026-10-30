@@ -37,7 +37,10 @@
       "the governance map of the source team, and a list of decisions left open"
     ],
     "writes": [
-      "team/grc/**"
+      "team/grc/**",
+      "comms/issues/grc/**",
+      "comms/mail/grc/**",
+      "comms/mail/mailroom/*/grc__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/grc/governance.md"
 }

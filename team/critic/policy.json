@@ -37,7 +37,10 @@
       "a critic's report on the talk and on the source team's own record"
     ],
     "writes": [
-      "team/critic/**"
+      "team/critic/**",
+      "comms/issues/critic/**",
+      "comms/mail/critic/**",
+      "comms/mail/mailroom/*/critic__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/critic/critique.md"
 }

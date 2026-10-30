@@ -1,5 +1,5 @@
 {
- "about": "The vaults this team talks through, set up as the source's tui-issues-public and tui-mail-public were (its team/conductor/vaults.json at 298be4e), with new names. Both will be 100% public: anyone may read them with the read key; a read key cannot write. Not created yet: the source created its vaults with an access token the editor gave (its debrief 2026-10-29__two-public-vaults.md); this session has none.",
+ "about": "The source team talked through two public vaults (its team/conductor/vaults.json at 298be4e). This team never created them: at the editor's word (30 October 2026, 01:58 UTC) the same layouts live as folders in this repository, comms/issues (Issues-FS lite) and comms/mail (Email-FS lite), with git as the medium. Both are as public as the vaults were: the repository and its site are public. No vault, so no read key and no vault key.",
  "agents": [
   "editor",
   "conductor",
@@ -16,5 +16,17 @@
   "reader-4",
   "reader-5"
  ],
- "vaults": []
+ "vaults": [],
+ "folders": [
+  {
+   "name": "comms/issues",
+   "kind": "Issues-FS",
+   "layout": "comms/issues/<agent>/issues/{open,blocked,done}/NNN-kebab-slug.md; read every folder, write only your own"
+  },
+  {
+   "name": "comms/mail",
+   "kind": "Email-FS",
+   "layout": "comms/mail/mailroom/<recipient>/<sender>__NNN-slug.eml (new; the sender owns it); comms/mail/<agent>/{inbox,done,outbox}/ (only that agent writes)"
+  }
+ ]
 }

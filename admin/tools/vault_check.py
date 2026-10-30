@@ -5,7 +5,8 @@
 #
 # It scans every file in the working copy (not .sg_vault/) with the site gate's leak patterns (private keys, cloud and
 # API keys, sgit vault keys), plus sgit_private_ credentials and email addresses (agent addresses such as
-# conductor@cold-read.the-ultimate-insider have no dot after the @ and do not match). A finding names the file and line, never
+# conductor@cold-read.the-ultimate-insider are the team's own and do not match: the source's had no dot after the @, ours do).
+# Also run on comms/ in this repository, the team's mail and board, before every commit to it. A finding names the file and line, never
 # the match. Remove what it found before committing; if it was already pushed, stop: team/conductor/WAKE.md, Stopping.
 # Apache-2.0.
 
@@ -18,7 +19,7 @@ from validate import Gate                                           # one list o
 
 EXTRA = [('sgit private credential', re.compile(r'sgit_private_[a-z]+_')),
          ('OpenRouter key',          re.compile(r'\bsk-or-v1-[0-9A-Za-z]{20,}')),   # the editor's voice key lives in his browser only
-         ('email address',           re.compile(r'\b[\w.+-]+@[\w-]+(\.[\w-]+)+\b'))]
+         ('email address',           re.compile(r'\b[\w.+-]+@(?!cold-read\.the-ultimate-insider\b)[\w-]+(\.[\w-]+)+\b'))]
 
 
 def scan(vault):

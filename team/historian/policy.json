@@ -37,7 +37,10 @@
       "a timeline of the source team, every entry with its evidence (a path and the commit that shows it)"
     ],
     "writes": [
-      "team/historian/**"
+      "team/historian/**",
+      "comms/issues/historian/**",
+      "comms/mail/historian/**",
+      "comms/mail/mailroom/*/historian__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/historian/timeline.md"
 }

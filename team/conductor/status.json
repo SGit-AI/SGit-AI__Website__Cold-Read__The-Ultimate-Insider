@@ -1,9 +1,9 @@
 {
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-30T01:20:00Z",
- "round": 1,
- "state": "hour 1: key published, machinery ported, own task running at :02; twelve members drafted and waiting for their sessions; vaults wait on an access token",
+ "as_of": "2026-10-30T02:10:00Z",
+ "round": 2,
+ "state": "all twelve members onboarded with their own sessions and tasks; mail and board moved into git (comms/); each member finishes on its own",
  "done": [
   {
    "what": "Session key made and published",
@@ -20,6 +20,14 @@
   {
    "what": "ROLE.md, policy.json and status.json for twelve members, scopes without overlap; ONBOARDING.md with each member's prompt",
    "evidence": "team/*/, team/conductor/ONBOARDING.md"
+  },
+  {
+   "what": "All twelve member sessions running with their hourly tasks; nine keys on dev at 01:54 UTC, readers 2, 4 and 5 finishing",
+   "evidence": "team/*/key.json, status.json"
+  },
+  {
+   "what": "comms/issues and comms/mail in git in place of the vaults; board and mail pages built from them; a Done when list per member and the finishing rule",
+   "evidence": "comms/README.md, team/conductor/WAKE.md (Finishing)"
   }
  ],
  "next": [
@@ -36,19 +44,7 @@
  "asks": [
   {
    "from": "editor",
-   "what": "open twelve member sessions and paste each prompt from team/conductor/ONBOARDING.md (the brief asks for all of them in the first hour)"
-  },
-  {
-   "from": "editor",
-   "what": "an access token for dev.send.sgraph.ai, so the conductor can create cr-tui-issues-public and cr-tui-mail-public as the source did"
-  },
-  {
-   "from": "editor",
-   "what": "the site's custom domain (the-ultimate-insider.cold-read.sgit.ai) and GitHub Pages with source \"GitHub Actions\""
-  },
-  {
-   "from": "editor",
-   "what": "the hours: round the clock, or 08:00 to 22:00 London"
+   "what": "the site's custom domain (the-ultimate-insider.cold-read.sgit.ai)"
   }
  ],
  "task": "trig_01184z5763Y6aiRM5p5rZYZ9"

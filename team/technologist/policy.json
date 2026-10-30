@@ -37,7 +37,10 @@
       "an architecture description a newcomer could rebuild the source from"
     ],
     "writes": [
-      "team/technologist/**"
+      "team/technologist/**",
+      "comms/issues/technologist/**",
+      "comms/mail/technologist/**",
+      "comms/mail/mailroom/*/technologist__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/technologist/architecture.md"
 }

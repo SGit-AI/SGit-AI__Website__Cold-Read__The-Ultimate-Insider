@@ -1,6 +1,6 @@
 # What exists
 
-What is in this repository now, kept current by whoever ships. Last updated by conductor@cold-read.the-ultimate-insider, 30 October 2026, hour 1. Where this and the code disagree, the code is right and this file is wrong: fix it.
+What is in this repository now, kept current by whoever ships. Last updated by conductor@cold-read.the-ultimate-insider, 30 October 2026, 02:10 UTC. Where this and the code disagree, the code is right and this file is wrong: fix it.
 
 ## The source
 
@@ -18,12 +18,24 @@ What is in this repository now, kept current by whoever ships. Last updated by c
 - The admin section: dashboard (now, holds, what waits on the editor, the pace grid, the flow), wakes, mail, commits and messages, releases, the board, the schedule, the team and each member's page, the key register, the public vaults, the sources of truth (the brief, `REALITY.md`, `CLAUDE.md`, `BRIEF-CORRECTIONS.md`, onboarding, the wake protocol, the pace).
 - `team/conductor/`: `ROLE.md`, `policy.json`, `status.json`, `key.json`, `key.png`, `sessions/`, `schedule.json`, `pace.json`, `ONBOARDING.md`, `WAKE.md` (the source's "tonight only" section dropped: it was for the night of the talk), `reviews/` (the four briefs), `vaults.json` (no vaults yet), `known-keys/dc-vault-registry.json` (the editor's vaults manager, copied from the source; its public key only), `briefs/2026-10-30__editor/conductor-prompt.md` (the editor's prompt as given).
 
+## The mail and the board: folders in git, not vaults
+
+- At the editor's word (30 October 2026, 01:58 UTC), the source's two public vaults became two folders here, same layouts: `comms/issues/` (Issues-FS lite) and `comms/mail/` (Email-FS lite), with one writer per file (`comms/README.md`). Each member's `policy.json` names its board, its mail folders and its own posts. The vaults were never created.
+- The board (`/team/board.html`) and the mail (`/admin/mail.html`) are built from the folders at every release, not read live in the browser. The source's live vault readers (`board.js`, `mail.js`, `vault-*.js`, the vendored embeds) are still copied in, unused.
+- `vault_check.py` now runs on `comms/`. Its email pattern exempted agent addresses because the source's had no dot after the `@`; ours do, so it exempts `@cold-read.the-ultimate-insider` by name.
+
+## Finishing
+
+- Each member's `ROLE.md` has a "Done when" list; `WAKE.md` (Finishing) says how a member pauses its own task when done. The conductor finishes last.
+
+## Findings on the site
+
+- Each member's deliverable (`deliverable` in its `policy.json`) is rendered on `/articles/` as it is on `dev`, a draft until signed.
+
 ## Not working yet
 
-- **The editor's pane** (`src/static/assets/pane.js`): ported, but `lane.json` pointed at the source's lane vault and the source conductor's key. It now holds no lane, so a note cannot be sent anywhere; this team never writes to the source's lane. A lane of its own waits on the vaults.
-- **The vaults**: `cr-tui-issues-public` and `cr-tui-mail-public` are not created. The source created its vaults with an access token from the editor; this session has none.
-- **The members**: twelve roles drafted (`team/<id>/ROLE.md`, `policy.json`, `status.json`), none with a session, key or task yet.
-- **The site's domain and Pages**: waiting on the editor (custom domain, Pages source "GitHub Actions").
+- **The editor's pane** (`src/static/assets/pane.js`): ported, but `lane.json` pointed at the source's lane vault and the source conductor's key. It now holds no lane, so a note cannot be sent anywhere; this team never writes to the source's lane.
+- **The site's domain**: Pages is on (source "GitHub Actions", turned on by the release workflow's first run); the custom domain waits on the editor.
 
 ## The team
 

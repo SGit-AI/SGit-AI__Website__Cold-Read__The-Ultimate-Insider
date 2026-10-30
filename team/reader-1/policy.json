@@ -37,7 +37,10 @@
       "one review of the talk and its site, read as a stranger: a CISO at a large bank"
     ],
     "writes": [
-      "team/reader-1/**"
+      "team/reader-1/**",
+      "comms/issues/reader-1/**",
+      "comms/mail/reader-1/**",
+      "comms/mail/mailroom/*/reader-1__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,10 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
+  ],
+  "deliverable": "team/reader-1/review.md",
+  "deliverables": [
+    "team/reader-1/review.md",
+    "team/reader-1/synthesis.md"
   ]
 }

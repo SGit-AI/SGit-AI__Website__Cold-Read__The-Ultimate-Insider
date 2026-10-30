@@ -1,0 +1,24 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request: Issues-FS and Email-FS as folders in git; finishing",
+ "started": "2026-10-30T02:00:56Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. In scope: comms/issues and comms/mail folders in the vaults' layout; board and mail pages built from them (admin/build/**); CLAUDE.md, WAKE.md (finishing rule: a member pauses its own task, records it), ONBOARDING.md, vaults.json, REALITY.md, schedule.json (round the clock); a notice to each member's mailroom; the conductor's own comms paths (comms/README.md, its board, mail and posts; not comms/** whole, which would overlap). 2. Outside scope, at the editor's 01:58 UTC word: each member's policy.json (its own comms paths only) and a Done when list in each ROLE.md. 3. Never create or edit another member's task.",
+   "at": "2026-10-30T02:01:32Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Proportionate if the editor's 01:58 word is as stated. Conditions: other members' policy.json and ROLE.md changed only to add their own comms paths and a Done when list, each named in the commit; comms scopes disjoint, gate before any push; vault_check on comms/ (public: no keys, contact details or vault keys); finishing pauses only one's own task; round the clock creates no task; no em-dashes.",
+   "at": "2026-10-30T02:01:47Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -37,7 +37,10 @@
       "one review of the talk and its site, read as a stranger: a commissioning editor at a non-fiction publisher"
     ],
     "writes": [
-      "team/reader-3/**"
+      "team/reader-3/**",
+      "comms/issues/reader-3/**",
+      "comms/mail/reader-3/**",
+      "comms/mail/mailroom/*/reader-3__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/reader-3/review.md"
 }

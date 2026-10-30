@@ -37,7 +37,10 @@
       "one review of the talk and its site, read as a stranger: a curious generalist with no security background"
     ],
     "writes": [
-      "team/reader-5/**"
+      "team/reader-5/**",
+      "comms/issues/reader-5/**",
+      "comms/mail/reader-5/**",
+      "comms/mail/mailroom/*/reader-5__*"
     ],
     "holds": [],
     "appends": [
@@ -57,5 +60,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/reader-5/review.md"
 }

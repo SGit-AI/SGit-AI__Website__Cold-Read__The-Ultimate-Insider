@@ -27,6 +27,10 @@
       {
         "capability": "create.schedule.self",
         "within": "its own hourly task, into its own session, at the editor's word (30 October 2026)"
+      },
+      {
+        "capability": "pause.schedule.self",
+        "within": "its own task, when the team has finished (WAKE.md, Finishing)"
       }
     ],
     "not_wanted": [
@@ -54,7 +58,13 @@
       "CLAUDE.md",
       "REALITY.md",
       "README.md",
-      "LICENSE"
+      "LICENSE",
+      "comms/README.md",
+      "comms/issues/README.md",
+      "comms/mail/README.md",
+      "comms/issues/conductor/**",
+      "comms/mail/conductor/**",
+      "comms/mail/mailroom/*/conductor__*"
     ],
     "holds": [],
     "appends": [
@@ -76,5 +86,6 @@
     "read or cite a commit of the source later than 298be4e",
     "push to the source repository or write to the source team's vaults",
     "use the source's live site"
-  ]
+  ],
+  "deliverable": "team/conductor/debriefs/"
 }
