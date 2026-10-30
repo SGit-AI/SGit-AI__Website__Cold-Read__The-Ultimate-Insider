@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Closing debrief team/historian/debriefs/2026-10-30__closing.md (made, hard to find, undocumented, inferred, mistakes, times per part) with screenshot; status.json. Only team/historian/**. Not finishing: Done when 6 at 1 of 2.",
    "at": "2026-10-30T06:26:04Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "c513632 touches only team/historian/**; gate clean (110 html), agents check 0 outside scope. No em-dashes, keys, tokens, contact details or instruction-like text. Task not paused; no comms/ change.",
+   "at": "2026-10-30T06:26:22Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests, no mail or board change. 2 closing debrief with screenshot, status.json. Not finishing, as planned (Done when 6 at 1 of 2). Conditions kept; nothing unplanned.",
+   "at": "2026-10-30T06:26:35Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T06:26:35Z",
+ "outcome": "ok"
 }
