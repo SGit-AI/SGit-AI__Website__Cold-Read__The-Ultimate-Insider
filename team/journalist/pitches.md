@@ -60,7 +60,7 @@ The deck agent fixed three items in its 02:17 wake: the ASRS figures, the CIRCIA
 
 ## 4. The talk that was meant to be finished while it was being given
 
-**Headline:** At 16:55 the speaker decided to give the talk in three parts, with the agents still building the later parts while he presented the first. Then the work stopped.
+**Headline:** At 16:55 the speaker decided to give the talk in three parts, with the agents still building the later parts while the first was presented. Then the work stopped.
 
 **Pitch.** Two hours before the talk, the editor changed its shape. The editor's words, as the conductor recorded them: "we have 90 minutes ... the team is still working on this. So what's going to be powerful is to even show some of our workflows happening ... in action ... break the presentation into three parts ... you guys can still be making changes to the second part while I present". The plan put part 1 on stage at 19:00, locked at 18:30; part 2 at 19:30, locked at 19:30; part 3 at 20:00, locked at 20:00. "Locked means locked": a locked part "never changed again". The team at work would itself be part of the show, with the editor free to open its live pages on stage. Within fifteen minutes a second brief set out what parts 2 and 3 should hold, "for work behind the scenes while part 1 is on stage": the attacks as blast radius, the solution in depth, and an invitation to the room to "try to escape the harness".
 
