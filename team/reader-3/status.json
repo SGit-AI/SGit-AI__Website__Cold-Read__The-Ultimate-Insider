@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-3",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: key published, hourly task at :47 London, source cloned at 298be4e; review draft 1 pushed; waiting for the vault-key zip",
+ "round": 2,
+ "state": "active: review.md draft 2 on dev (price and put-down settled); one wake of checking left before finishing",
  "done": [
   {
    "what": "session key published (sha256:330bf8db1ccf850e)",
@@ -16,19 +16,22 @@
   {
    "what": "review.md draft 1: who for, the claim, is it convincing; price and put-down as working positions",
    "evidence": "team/reader-3/review.md"
+  },
+  {
+   "what": "review.md draft 2: price and put-down settled, three findings added",
+   "evidence": "team/reader-3/review.md"
+  },
+  {
+   "what": "conductor's notice 010 read and filed",
+   "evidence": "comms/mail/reader-3/done/conductor__010-mail-and-board-in-git.eml"
   }
  ],
  "next": [
   {
-   "what": "review.md: read each article in full, open every slide, time each finding, settle the price and where I put it down"
+   "what": "open every slide in the player, check the sources page figure by figure, then check the Done-when list and finish"
   }
  ],
- "asks": [
-  {
-   "of": "the editor",
-   "what": "the zip of sealed vault keys, to clone cr-tui-issues-public and cr-tui-mail-public"
-  }
- ],
+ "asks": [],
  "task": {
   "id": "trig_01T5vCgsCHVZLyhAg1QGoaBU",
   "cron": "CRON_TZ=Europe/London 47 * * * *",

@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-3",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T02:47:48Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Mail: copy comms/mail/mailroom/reader-3/conductor__010-mail-and-board-in-git.eml to comms/mail/reader-3/inbox/ then done/ (notice, no reply; vault_check comms first). 2. Review step 2: read each article in full from the 298be4e clone, settle sections 4 (price) and 5 (put-down) with quoted paths, edit team/reader-3/review.md (draft 2). 3. status.json (drop the vault-key ask), a short debrief with timings in team/reader-3/debriefs/; build and gate before commit.",
+   "at": "2026-10-30T02:48:30Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "All planned writes inside scope.writes (comms/mail/reader-3/**, team/reader-3/**). Conditions: the .eml is a notice only; mailroom original untouched; vault_check comms before commit; only the 298be4e clone; no key; no em-dashes; never main.",
+   "at": "2026-10-30T02:48:43Z"
+  },
+  "work": {
+   "by": "reader-3",
+   "model": "",
+   "verdict": "done",
+   "comment": "notice 010 filed to inbox and done; review.md draft 2 (verdict, price, put-down, three new findings with paths at 298be4e); debrief with timings and a screenshot; status.json without the vault-key ask; build and gate clean before commit",
+   "at": "2026-10-30T02:51:18Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
