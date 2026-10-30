@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "letters 004 and 013 filed to done; board issue 001 done; controls-and-threats.md part 2 (C14-C20, T9-T11) and section 3 update; debrief 2026-10-30__second-wake-register-part-2.md; status.json",
    "at": "2026-10-30T02:36:13Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 42bae40..HEAD touches only team/security/** and comms/ (security's own board and mail); agents.py check 0 outside scope. vault_check on comms clean, gate clean (66 html), no em-dashes, long tokens, contact details or agent-directing text in added lines, nothing breaks another member's work.",
+   "at": "2026-10-30T02:36:42Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (letters 004 and 013 in comms/mail/security/done/, board issue 001 in done). Item 2 done (controls-and-threats.md part 2, C14-C20, T9-T11, section 3 updated). Item 3 done (status.json, debrief). Conditions kept as far as the diff shows; not checked from the diff: verbatim copies, the vault_check run, 298be4e-only sourcing. Nothing unplanned.",
+   "at": "2026-10-30T02:36:42Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:36:42Z",
+ "outcome": "ok"
 }
