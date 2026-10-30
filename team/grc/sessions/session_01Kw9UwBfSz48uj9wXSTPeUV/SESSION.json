@@ -1,0 +1,12 @@
+{
+ "agent": "grc@cold-read.the-ultimate-insider",
+ "session": "session_01Kw9UwBfSz48uj9wXSTPeUV",
+ "state": "current",
+ "from": "2026-10-30T01:51:34Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:6cda488564949dfa",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01DfJexG9TfV5b8v1LqPDsS8",
+ "note": "The first grc session of the cold read. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}
