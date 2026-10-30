@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "historian",
+ "kind": "scheduled, hourly at :17 (fired 06:24)",
+ "started": "2026-10-30T06:24:51Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (letter 001 in done/, no board, no requests, no trailers). 2. Closing debrief team/historian/debriefs/2026-10-30__closing.md (hard to find, undocumented, inferred, times; Done when 5) and status.json. This wake does not finish: item 6 needs two wakes finding nothing new, and the last wake settled three open points.",
+   "at": "2026-10-30T06:25:13Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside policy (team/historian/**); no mail, schedule, main push or secrets. Conditions: agents check before push; no em-dashes; do not pause the task until Done when 6 holds; cite only 298be4e or earlier.",
+   "at": "2026-10-30T06:25:39Z"
+  },
+  "work": {
+   "by": "historian",
+   "model": "",
+   "verdict": "done",
+   "comment": "Closing debrief team/historian/debriefs/2026-10-30__closing.md (made, hard to find, undocumented, inferred, mistakes, times per part) with screenshot; status.json. Only team/historian/**. Not finishing: Done when 6 at 1 of 2.",
+   "at": "2026-10-30T06:26:04Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "c513632 touches only team/historian/**; gate clean (110 html), agents check 0 outside scope. No em-dashes, keys, tokens, contact details or instruction-like text. Task not paused; no comms/ change.",
+   "at": "2026-10-30T06:26:22Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests, no mail or board change. 2 closing debrief with screenshot, status.json. Not finishing, as planned (Done when 6 at 1 of 2). Conditions kept; nothing unplanned.",
+   "at": "2026-10-30T06:26:35Z"
+  }
+ },
+ "closed": "2026-10-30T06:26:35Z",
+ "outcome": "ok"
+}
