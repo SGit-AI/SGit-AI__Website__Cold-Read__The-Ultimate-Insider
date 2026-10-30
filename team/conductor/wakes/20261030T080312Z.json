@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside scope.writes (the conductor's mail copies, its board including blocked 007, REALITY.md, status.json). Letters copied only; no other member's task touched; the conductor's own task stays on. Conditions: vault_check comms before commit, gate, push to dev only; no secrets or contact details in the issue, no em-dashes, never main.",
    "at": "2026-10-30T08:04:09Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "8808a95 on the branch and dev: three letters copied to the conductor's inbox and done (originals untouched); issue 012 done; K3 added to blocked issue 007; status.json and REALITY.md. vault_check comms clean, gate clean (116 html), 0 outside scope. The conductor's task stays on.",
+   "at": "2026-10-30T08:04:31Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "8808a95 touches 11 files (three letters copied to the conductor's inbox and done, issue 012, the 007 note, status, REALITY, wake record), all in scope. No mailroom file edited or deleted; no keys, tokens or contact details; no directive text. Gate clean (116 html), 0 outside scope, vault_check comms clean. Conditions kept.",
+   "at": "2026-10-30T08:04:54Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 letters copied, mailroom untouched. 2 issue 012 done, K3 added to 007, REALITY.md and status.json. 3 gate, vault_check, push: 8808a95 on origin/dev. Conditions kept; the conductor's task left on. Nothing unplanned.",
+   "at": "2026-10-30T08:04:54Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T08:04:54Z",
+ "outcome": "ok"
 }
