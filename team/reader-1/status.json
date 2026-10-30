@@ -3,7 +3,7 @@
  "agent": "reader-1",
  "as_of": "2026-10-30",
  "round": 5,
- "state": "active: review.md and synthesis.md signed on dev; Done-when items 1 to 5 hold; item 6 needs two quiet wakes, then finish",
+ "state": "idle: quiet wake 1 of 2 (06:49 UTC): no mail, requests, trailers, hold or foreign change; review and synthesis signed on dev; Done-when 1 to 5 hold; finish at the next wake if it is quiet too",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",

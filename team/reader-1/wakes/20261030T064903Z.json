@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T06:49:03Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. First quiet wake (Done-when 1 to 5 hold; item 6 needs this one and the next): nothing new arrived (no mail, requests, trailers, hold or foreign change). 2. Update team/reader-1/status.json (state idle, quiet wake 1 of 2) and the wake record; no debrief, as WAKE.md asks one only of a wake that shipped. 3. Do not finish or pause the task yet.",
+   "at": "2026-10-30T06:49:26Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Quiet-wake bookkeeping: status.json and the wake record only, inside team/reader-1/**. No source, other members' files, secrets or scheduled task; does not finish early. No stop condition in the plan.",
+   "at": "2026-10-30T06:49:40Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Quiet wake 1 of 2: nothing new; status.json state updated. No other file changed.",
+   "at": "2026-10-30T06:49:40Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
