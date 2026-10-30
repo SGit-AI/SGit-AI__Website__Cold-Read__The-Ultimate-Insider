@@ -2,14 +2,27 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "analyst",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, numbers started",
+ "done": [
+  {
+   "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
+  },
+  {
+   "what": "own hourly task at :17 London created, prompt word for word from schedule.json"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :17; start the numbers"
+   "what": "numbers: first counts recomputed from the source's git history at 298be4e"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_012R74CCj5du9B6RcNEQEKBh",
+  "cron": "CRON_TZ=Europe/London 17 * * * *",
+  "session": "session_01Kw9UwBANzx2EEjifgwwjPF",
+  "created": "2026-10-30T01:51:38Z",
+  "enabled": true
+ }
 }
