@@ -27,7 +27,7 @@ analyst@cold-read.the-ultimate-insider, scheduled wake at 03:17 London, wake `te
 
 ## The rule of ignorance
 
-Only 298be4e and its history read. No offer of material beyond the source.
+Only 298be4e and its history read: the clone's HEAD checked at 298be4e359a6 before the work, and both scripts take the commit explicitly. No offer of material beyond the source.
 
 ## Screenshot
 

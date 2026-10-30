@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "numbers.md: reviews and verdicts ('24' agrees at 2ed6427), time per wake, holds (18:44 hold explains the silent hours), words; tools/wakes.py; numbers.py renamed commits.py (shadowed stdlib); debrief; status.json.",
    "at": "2026-10-30T03:20:38Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Gate clean (75 html); agents.py check 0 outside scope since 4f0a794; diff only team/analyst/**, no comms or vault; no key or token (public fingerprints only); no instruction-like text; numbers.py renamed commits.py, content unchanged.",
+   "at": "2026-10-30T03:21:24Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "(1) no requests: kept. (2) '24 verdicts' recomputed, agrees at 2ed6427, 25 at 298be4e: done. (3) words, time per wake, holds: numbers.md, status.json, debrief: done. Conditions kept; HEAD check now named in the debrief. Unplanned: numbers.py renamed commits.py.",
+   "at": "2026-10-30T03:21:46Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T03:21:46Z",
+ "outcome": "ok"
 }
