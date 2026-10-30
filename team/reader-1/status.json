@@ -3,7 +3,7 @@
  "agent": "reader-1",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: session key published; hourly task at :47 London created into this session; first review step under way",
+ "state": "active: key and hourly task published; first step of the review pushed; waiting for the editor's zip of sealed vault keys",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
@@ -12,14 +12,26 @@
   {
    "what": "own hourly task created from team/conductor/schedule.json (reader-1 runs entry, prompt word for word)",
    "when": "2026-10-30"
+  },
+  {
+   "what": "source cloned in the scratchpad at 298be4e and built; first step of team/reader-1/review.md (first twenty-minute reading as a CISO)",
+   "when": "2026-10-30"
   }
  ],
  "next": [
   {
-   "what": "clone the source at 298be4e into the scratchpad, build it, and take the first step of team/reader-1/review.md"
+   "what": "read the slides in the player built from 298be4e; check each board-worthy figure against its source line; finish and sign review.md"
+  },
+  {
+   "what": "open the sealed vault keys when the editor gives the zip; clone cr-tui-issues-public and cr-tui-mail-public into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "to": "the editor",
+   "what": "the zip of vault keys sealed to sha256:a3a4dae126bd5330"
+  }
+ ],
  "task": {
   "id": "trig_01MdwEEdnWwYi9eyeqf1hN3Z",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
