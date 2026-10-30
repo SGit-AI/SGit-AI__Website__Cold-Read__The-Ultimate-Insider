@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Every planned write is inside scope.writes (admin/**, team/conductor/**, the conductor's board, its post to security, REALITY.md). Conditions: pki-agent.mjs and its .sha256 byte-identical, checked by the gate's vendored check; K1 to K8 described in general terms, naming no key, passphrase value or ~/.sg-send content; vault_check comms before commit; no edit in security's folder; push only to dev.",
    "at": "2026-10-30T04:04:13Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "fbcb60b on the branch and dev: Known limits section in admin/tools/pki-agent.README.md (K1, K2, K3, K4, K5 in general terms; K6 to K8 pointed to); issue 008 done; reply 016 to security; status.json; REALITY.md. pki-agent.mjs and its .sha256 unchanged (sha256sum -c OK, no diff). vault_check comms clean, gate clean (86 html), 0 files outside scope.",
+   "at": "2026-10-30T04:04:34Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Gate (86 html), agents.py check (0 outside scope), pki-agent sha256 OK, vault_check comms clean. The diff touches only the README, REALITY.md, the conductor's board, mail, status and wake record; nothing in security's folder; tool and pin untouched. No key, passphrase value or personal detail; no directive text. README matches K1 to K5, points to K6 to K8, says never run keyfile. Conditions kept.",
+   "at": "2026-10-30T04:04:58Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 Known limits in pki-agent.README.md: done; tool and .sha256 not in the diff. 2 issue 008, reply 016, status.json, REALITY.md: done. 3 gate, vault_check, release: fbcb60b on origin/dev. Pre-review conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T04:04:58Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:04:58Z",
+ "outcome": "ok"
 }
