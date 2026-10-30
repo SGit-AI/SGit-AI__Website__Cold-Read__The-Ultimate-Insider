@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md step 7 (sections 19 and 20; O12, O13 in section 18); debrief, status.json; gate clean; comms/ untouched",
    "at": "2026-10-30T07:34:44Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4 files under team/grc/ only; comms/ unchanged; gate clean; agents check 0 outside scope; no keys, tokens, secrets, contact details, em-dashes or directive text.",
+   "at": "2026-10-30T07:35:13Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 19 and 20, O12 and O13; 3 status.json and seventh-wake debrief; only team/grc/** changed; nothing unplanned.",
+   "at": "2026-10-30T07:35:13Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T07:35:13Z",
+ "outcome": "ok"
 }
