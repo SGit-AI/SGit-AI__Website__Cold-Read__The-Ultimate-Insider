@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "letter 016 to inbox and done, board issue 003; correction mailed to the conductor (security__001-read-line-by-line.eml, outbox copy); register: the source team's own words (7 quotes, checked at 298be4e), C7 count corrected (12 change verdicts in history); debrief 2026-10-30__fourth-wake-their-own-words.md; status.json",
    "at": "2026-10-30T04:35:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Checked fbf2efc..HEAD (9 files, all under team/security and comms/): vault_check clean, gate clean, agents.py check 0 outside scope. No em-dashes, key, token or long hex in added lines, no agent-directing text. The mail to the conductor is in the member's own mailroom slot, within policy. Nothing touches another member's work.",
+   "at": "2026-10-30T04:36:01Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 done: letter 016 in inbox and done, board issue 003, correction mailed (security__001 plus outbox copy), README untouched. 2 done: register extended with source quotes at 298be4e, plus the C7 count fix. 3 done: debrief, status.json, wake record. Conditions kept as far as the diff shows. Unplanned: only the C7 correction, minor.",
+   "at": "2026-10-30T04:36:01Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:36:01Z",
+ "outcome": "ok"
 }
