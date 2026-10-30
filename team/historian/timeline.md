@@ -1,6 +1,6 @@
 # The timeline of the source team
 
-What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: parts 1 and 2 of the timeline, written 30 October 2026.
+What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: the commits from first to last (parts 1 to 3), written 30 October 2026; the members' own records still to come.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` and its history only, read in a scratchpad clone with every later ref removed. Nothing here comes from anywhere else.
 
@@ -95,8 +95,81 @@ From about 03:00 the record settles into an hourly rhythm. The minutes each memb
 
 Where the editor was in this window: commit subjects cite the editor's go or agreement (`7a7d4ac`, `f448345`) and dev records "the editor's session of 03:07" and "of 03:20" (`f007b26`, `48daf0f`), but no commit in the window is authored by the editor. When the editor gave each go, the record does not say in the commits read so far.
 
+## Part 3: the day, 09:00 to 18:46 UTC, 29 October 2026
+
+09:00 to 14:00 keeps the night's rhythm: one piece at a time through deck (review), ruv-sgit (build), researcher (data), designer (design notes) and dev (build), with the conductor's pace every hour at :02. At 14:07 the editor's briefs arrive and the pace changes: 59 commits in the 14h, 88 in the 15h, 76 in the 16h, 109 in the 17h. Several commits from 15:00 have no member prefix ("Player:", "Locked parts:", "The showcase slide template:"); each of those checked carries the `Claude-Session` trailer of dev's session (`session_01Kw9UwED5okiUPqRn3ovgyo`, the session folder in `56cbe55`), so "who" there is *inferred* as dev from that trailer.
+
+### 09:00 to 14:00: the studio programme, piece by piece
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 09:13 | researcher | The editor's register refreshed "from every member's asks, in their own words"; D09 closed: "every member opened its own vault keys". | `66d0fa5`, `6af2051` |
+| 09:48 | ruv-sgit | E04 over-enthusiastic agent v1, run r9 kept. | `c1c6443` |
+| 09:54 | dev | Design note 3 built: eight type sizes, and a gate that keeps them (dev 012). | `8917847` |
+| 10:47 | ruv-sgit | E09 mandate and grant v1, run r10 kept. | `57d24d3` |
+| 10:53 | dev | Design note 4 built; rule T2 in the gate (dev 013, dev 015). | `ebdd367` |
+| 11:25 | researcher | "Gartner's own release captured, the 40 per cent claim to A6." | `5c3d0b0` |
+| 11:44 | ruv-sgit | E04 v2, four paths, run r11 on r9's vault. | `14f23e6` |
+| 12:30 | deck | E04 v2 reviewed: "keep, ready for the editor". | `f735b9b` |
+| 12:52 | designer | "The first design pass built and checked in full." | `0a2d2cc` |
+| 12:53 | ruv-sgit | E02 v3, run r12 on r5's vault; reviewed by deck at 13:48 as "ready for the editor". | `8012b00`, `19e7f2d` |
+| 13:08 | dev | The dashboard, part 3: `pace.json` drawn as a flow (dev 017). | `aa2785c` |
+| 13:41 | ruv-sgit | An idle wake at 13:32: "no request in the mailroom". | `41d4757` |
+
+### 14:00 to 15:00: the editor's briefs, and the review of the studio
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 14:07 | conductor | "The editor's briefs of 29 October committed and routed." | `c9ced4e`: `team/conductor/briefs/2026-10-29__editor/README.md`, `conductor-brief.md` |
+| 14:14 | conductor | "How this talk was built": a mini deck of the team from its own records. | `79a7fcb`: `admin/tools/workflow_deck.py`, `content/articles/how-this-talk-was-built.md` |
+| 14:15 | storyteller | storyteller joins: role, draft policy, session key, the :54 wake. Its first pass at 14:19: a story tree, three Wardley maps, the arc against the beats. | `7d0244d`: `team/storyteller/ROLE.md`, `key.json`; `df37797` |
+| 14:26 to 14:48 | deck | The editor's spoken feedback on the studio pieces, "recorded as given", E01 to E09; at 14:47, "at his word, the rest of the programme sent to ruv.sgit in parallel". | `64735b6`, `fd31308`, `3d49daf`, `3a22743`, `e0292b2`, `fa70d8a` |
+| 14:28 | dev | The editor's feedback pane and lane, with voice. | `9a51c28` |
+| 14:56 | conductor | "Moments: what changed, run by run." | `10ba28c`: `admin/tools/moments.py`, `content/articles/moments.md` |
+
+### 15:00 to 16:30: parallel builds, two more members, the player
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 14:59 to 15:12 | ruv-sgit | Runs r13 to r16 open in parallel; E11, E07, E10 and E13 v1 kept. | `c1380c5`, `4ec4201` |
+| 15:07 | dev | The player, "ported from ruv.sgit.ai": a countdown against the editor's time, two stops per step. | `3314ffe`: `src/static/talk/player.html` |
+| 15:16 | conductor | "The editor's decisions of 15:00 committed and routed: the frame, act three, seven new beats." | `78d517d`: `team/conductor/briefs/2026-10-29__editor/1-editor-decisions-1500.md` |
+| 15:21 | conductor | "The work step's limit is 45 minutes, at the editor's word (it was 8)." The body quotes the editor and says wakes now overlap, so every member pulls `dev` again before each push. | `545a473` |
+| 15:25 | conductor | Briefs and first prompts for motion and studio. | `f00734f`: `team/conductor/briefs/2026-10-29__onboarding-motion.md`, `2026-10-29__onboarding-studio.md` |
+| 15:31 | motion, studio | Both join at the same minute: motion with the :24 task, studio with the :12 wake. Members in the record now: dev, conductor, deck, ruv-sgit, researcher, designer, storyteller, motion, studio (nine). | `f1cbca0`: `team/motion/ROLE.md`; `8d208d3`: `team/studio/ROLE.md` |
+| 15:42 | deck | "The opening recast as the perfect storm we are brewing." | `e1190dc` |
+| 15:46 | ruv-sgit | E12, E08, E14, E05, E06 v1 and the SHarness series, runs r17 to r22 kept. | `b831821` |
+| 16:04 | storyteller | The editor's 15:00 decisions folded in: beats 3a to 3g, a 19-beat sequence to deck. | `2afe0d7` |
+
+### 16:30 to 18:46: the talk in three parts, the locks, the hold
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 16:32 | conductor | "The talk is 90 minutes, and a section on the editor's work: routed to six members." | `62c6b99`: `team/conductor/briefs/2026-10-29__editor/2-the-work-section-1630.md` |
+| 16:36 | deck | "The talk in the editor's order: the storm, the insider with no limits, explorer coding, brakes and the opportunity." | `ca59986` |
+| 16:36 to 18:37 | dev (*inferred*, from the `Claude-Session` trailer) | Fourteen commits headed "Player:", all in dev's session: offline after one load, skip with undo, back steps, a 90-minute clock, each with the editor's time where the subject gives it ("the editor, 18:05", "18:10", "18:15", "18:25"). | `28fe01d`, `525a38c`, `23739cc`, `12e93db`, `013d97e`, `dbd75ad` |
+| 16:59 | conductor | "The talk in three parts with locks at 18:30, 19:30, 20:00; tonight only, members keep themselves going between hourly wakes." | `3342cff`: `team/conductor/WAKE.md`, `team/conductor/briefs/2026-10-29__editor/3-three-parts-and-locks-1700.md` |
+| 17:09 | deck | "deck's policy agreed by the editor." | `7f522de` |
+| 17:16 to 17:48 | conductor | The editor's answers and words, each committed with the time the editor gave them: 17:16 (Linux in the browser as a link slide), "17:27: when in doubt add it", 17:30 (this team's own Agent Behaviour Policies), "17:35: go build", 17:45 (how we keep it safe). | `8fee7e3`, `a618b29`, `7c91afc`, `d252155`, `93f4191` |
+| 17:41 | conductor | "The editor agrees the six remaining policies." | `c3f546e`: `team/conductor/policy.json` |
+| 17:52 | deck | "Part 1 final for its lock: meet the team opens the talk." | `b1c9bab` |
+| 17:54 | dev (*inferred*, from the `Claude-Session` trailer) | "Locked parts: lock.py freezes a part of the talk." | `4a2481b`: `admin/build/lock.py` |
+| 17:48, 18:45 | designer | Part 1 "on a projector, checked before the 18:30 lock: ready"; part 2 the same before 19:30, the last member commit in the record. | `ec962a2`, `88b8f00` |
+| 18:14 | researcher | "How we keep it safe, nine claims checked against the record, four to correct." | `7323986` |
+| 18:39 | conductor | "18:36: part 1 not yet locked, unchanged since 18:30; dev asked to lock it now." | `2ed6427` |
+| 18:44:13 | conductor | **Hold**: "the editor's usage limit is at 95%, pause all actions". `HOLD.md` quotes the editor, says part 1 was final since 18:30 but not locked and parts 2 and 3 in progress, and that only the editor lifts it. The file is still present at `298be4e`. | `867f8c2`: `team/conductor/HOLD.md` |
+| 18:46:22 | GitHub Actions | The last release before the gap, site v0.1.209. | `cb5b996` |
+
+### 18:46 to 23:19: the gap, and the merge
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 18:46 to 23:19 | | No commit. Whether the talk was given, and when: the record does not say in its commits. | `git log 298be4e` |
+| 23:19:09 | the editor (git author Dinis Cruz) | Pull request #1 from `dev` merged. Its first parent is the initial commit `2e4b1f4`: the default branch held only that commit until this merge. | `b859ff0`, parents `2e4b1f4` and `cb5b996` |
+| 23:19:51 | GitHub Actions | "site v0.2.0", the release of the merge, and the commit this cold read is pinned to. | `298be4e` |
+
 ## What is still to come
 
-Part 3 onward: 09:00 to 18:46, the gap to 23:19, and the merge of pull request #1 into the default branch by the editor at 23:19:09 (`b859ff0`). Then every member's wake records, status files and debriefs at `298be4e`, set against these commits.
+Every member's wake records, status files and debriefs at `298be4e`, set against these commits; then a count of wakes per member, and the editor's words in order, from `team/conductor/briefs/2026-10-29__editor/`.
 
 Signed: historian@cold-read.the-ultimate-insider, key `sha256:0b365c753f3456ed` (`team/historian/key.json`).
