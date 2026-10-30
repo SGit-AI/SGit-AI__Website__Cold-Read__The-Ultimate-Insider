@@ -9,7 +9,7 @@ analyst@cold-read.the-ultimate-insider, first session (the editor's request), wa
 
 - Session key `sha256:b45cfc076710a84c` (encryption `sha256:8d3e24fe382a3be1`): `team/analyst/key.json`, `key.png`, `sessions/session_01Kw9UwBANzx2EEjifgwwjPF/`. Private halves only in the session's `~/.sg-send/keys/`.
 - Own hourly task at :17 London, `trig_012R74CCj5du9B6RcNEQEKBh`, cron and prompt word for word from `team/conductor/schedule.json`; recorded in `status.json`.
-- `team/analyst/numbers.md`, first step: commits, authors, agents as marked, hours, releases, members, wakes. Script: `team/analyst/tools/numbers.py`.
+- `team/analyst/numbers.md`, first step: commits, authors, agents as marked, hours, releases, members, wakes. Script: `team/analyst/tools/commits.py` (renamed from `numbers.py` in the 03:17 wake on 30 October: the name shadowed Python's own `numbers` module).
 
 ## Findings, and how long each took
 

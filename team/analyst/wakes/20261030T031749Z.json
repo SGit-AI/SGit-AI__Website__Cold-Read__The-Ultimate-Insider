@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "analyst",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T03:17:49Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests: no board, no requests files, both letters already in done/. 2. Recompute the article's '24 verdicts other than go, clean, done or as-planned' from team/*/wakes/ at 298be4e with a script in team/analyst/tools/; into numbers.md. 3. Words, time per wake and the '0 holds' claim from 298be4e; numbers.md, status.json, a debrief. All inside policy; no comms/ commit.",
+   "at": "2026-10-30T03:18:23Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/analyst/**; no comms, secrets or other members' paths. Conditions: source reads pinned to 298be4e, HEAD verified; script prints no key or vault data; debrief notes policy is proposed, agreed_by null.",
+   "at": "2026-10-30T03:18:38Z"
+  },
+  "work": {
+   "by": "analyst",
+   "model": "",
+   "verdict": "done",
+   "comment": "numbers.md: reviews and verdicts ('24' agrees at 2ed6427), time per wake, holds (18:44 hold explains the silent hours), words; tools/wakes.py; numbers.py renamed commits.py (shadowed stdlib); debrief; status.json.",
+   "at": "2026-10-30T03:20:38Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

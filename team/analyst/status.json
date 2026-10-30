@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "analyst",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: wake 2 (scheduled, 02:17) closed ok; numbers.md second step",
+ "round": 3,
+ "state": "active: wake 3 (scheduled, 03:17) closed ok; numbers.md third step: reviews, time, holds, words",
  "done": [
   {
    "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "two conductor letters read and copied to comms/mail/analyst/done/"
+  },
+  {
+   "what": "numbers.md: verdicts ('24' agrees at 2ed6427), wake time, the 18:44 hold behind the silent hours, words; tools/wakes.py; tools/numbers.py renamed commits.py; debrief 2026-10-30__verdicts-time-holds-words.md"
   }
  ],
  "next": [
   {
-   "what": "numbers: words, time per wake, reviews and verdicts (the article's 24), holds"
+   "what": "numbers: words outside markdown, request-to-answer time from the record; then sign and check against ROLE.md 'Done when'"
   }
  ],
  "asks": [
