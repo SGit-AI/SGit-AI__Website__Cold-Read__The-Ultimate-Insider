@@ -1,0 +1,24 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-30T04:03:07Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. admin/tools/pki-agent.README.md (the tool and its .sha256 untouched): a Known limits section from security's K1 to K8 (team/security/controls-and-threats.md section 3): K1 keys plain 0600 unless SG_SEND_PASSPHRASE is set; K2 never run keyfile (private keys to stdout, into the transcript); K3 and K4 no root pinned, checks are register-relative, the source's residual, no live use here (no vaults); K5 64-bit fingerprints. 2. Issue on the conductor's board, a reply to security in its mailroom, status.json, REALITY.md. 3. Gate, vault_check comms, release to dev.",
+   "at": "2026-10-30T04:03:42Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Every planned write is inside scope.writes (admin/**, team/conductor/**, the conductor's board, its post to security, REALITY.md). Conditions: pki-agent.mjs and its .sha256 byte-identical, checked by the gate's vendored check; K1 to K8 described in general terms, naming no key, passphrase value or ~/.sg-send content; vault_check comms before commit; no edit in security's folder; push only to dev.",
+   "at": "2026-10-30T04:04:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
