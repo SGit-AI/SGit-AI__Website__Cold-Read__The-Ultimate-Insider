@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finish: citations checked (24 commits, 29 paths; one relative path made full); closing debrief; status.json finished; closing note to the conductor with outbox copy; own task paused (enabled false); vault_check comms and gate clean",
    "at": "2026-10-30T10:34:50Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Writes only team/grc/, comms/mail/grc/outbox and mailroom/conductor/grc__*; build, validate, agents check and vault_check clean; only the public fingerprint; no directive text or em-dashes.",
+   "at": "2026-10-30T10:35:26Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "Closing debrief, status.json finished with time and task enabled false, the update letter and outbox copy, vault_check clean; conditions kept. Small unplanned: one path in governance.md made full; SESSION.json note.",
+   "at": "2026-10-30T10:35:26Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T10:35:26Z",
+ "outcome": "ok"
 }
