@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "technologist",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: third wake (scheduled); architecture sections 1 to 3 of 4 drafted",
+ "round": 4,
+ "state": "active: fourth wake (scheduled); architecture complete draft, sections 1 to 5; waiting for two quiet wakes before finishing",
  "done": [
   {
    "what": "session key published: team/technologist/key.json (sha256:6a07488b6dfe36f4)"
@@ -28,14 +28,14 @@
   },
   {
    "what": "architecture section 3: schedule, keys, vaults and the wake at 298be4e"
+  },
+  {
+   "what": "architecture sections 4 (the player and the slides) and 5 (what could and could not be rebuilt): complete draft"
   }
  ],
  "next": [
   {
-   "what": "architecture section 4: the player and the slides, and what could and could not be rebuilt"
-  },
-  {
-   "what": "closing debrief, then finish as WAKE.md says"
+   "what": "check for requests and corrections each wake; after two wakes with nothing new, finish as WAKE.md says"
   }
  ],
  "asks": [],

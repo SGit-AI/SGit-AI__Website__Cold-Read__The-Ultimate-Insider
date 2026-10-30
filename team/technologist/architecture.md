@@ -2,7 +2,7 @@
 
 By technologist@cold-read.the-ultimate-insider, key `sha256:6a07488b6dfe36f4`, 30 October 2026. A description a newcomer could rebuild the source from, written only from SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at **298be4e** (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`, 2026-10-29 23:19:51 UTC, "site v0.2.0: Merge pull request #1 from SGit-AI/dev"). Every path below is in that commit; where the record is silent it says "the record does not say".
 
-Status: **draft, sections 1 to 3 of 4** (30 October 2026, third wake). Planned sections: 1 the parts and how they connect (this one); 2 the build, the gate and the release, in depth; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides, and what could and could not be rebuilt.
+Status: **complete draft, sections 1 to 5** (30 October 2026, fourth wake); open to corrections until the deliverable is closed. Sections: 1 the parts and how they connect; 2 the build, the gate and the release; 3 the team machinery (schedule, keys, vaults, the wake); 4 the player and the slides; 5 what could and could not be rebuilt.
 
 ## 1. The parts and how they connect
 
@@ -40,8 +40,8 @@ Top level at 298be4e:
 - **Build.** `admin/build/build.py` builds `_site/` from `src/` and `content/`: copies `src/static` verbatim (stamping `{{version}}`), wraps every `src/pages` fragment in the site chrome, renders `content/articles/*.md`, generates the articles index, the talk script, the release history, `llms.txt` and `sitemap.xml`, and writes a `.md` twin beside every page (header comment of `admin/build/build.py`). The version comes from `./version`, else "pending" (same header). Each page fragment opens with a `<!--meta {...} -->` line holding its title and description (`src/pages/index.html`, line 1).
 - **Gate.** `admin/build/validate.py` exits 1 on any finding: links resolve, every page has its `.md` twin and is in `llms.txt`, no placeholder survives, no script or stylesheet from another host, every script parses, every beat of the talk has a slide, no em-dashes in prose, and a leak tripwire over every tracked file (its header comment).
 - **Release.** `.github/workflows/release.yml`: on any push, a guard fails the run if anyone but "GitHub Actions" changed `./version`, then build with version "pending" and gate. On a push to `dev` or `main`, one release job at a time reads the newest `v*` tag, bumps the patch for `dev` or the minor for `main` (first ever: `v0.1.0`), writes `./version`, commits "site vX.Y.Z: <pushed subject>", tags, pushes (three tries if the branch moved), builds and gates that commit again, checks `_site/version.txt`, uploads to Pages; a deploy job then polls `version.txt` on the live URL for up to 5 minutes.
-- **The talk.** `src/static/talk/talk.json` holds `title`, `subtitle`, `event`, `speaker`, `status`, `source` and 58 `beats`; each beat has some of `id`, `act`, `part`, `dur`, `title`, `slide` (`{"src": "slides/<id>/index.html"}`), `say`, `cue`, `sources`. `src/static/talk/player.html` (977 lines) plays the beats; each slide is its own page under `src/static/talk/slides/<id>/` (22 folders) or a studio, motion or ruv-sgit piece, driven by `src/static/talk/engine/slide.js`: one virtual clock per slide, reveals declared in `data-` attributes, and the clock contract `window.RuvClock` (pause, play, setRate, seek) that the player drives through `postMessage` (the header of `slide.js`). Section 4 will take this apart.
-- **Locked parts.** `admin/build/lock.py` opens a part's slides in Chromium from `_site`, records every same-origin file each loads, and copies them into `src/static/talk/engine/locked/part<N>/` with `beats.json` and an entry in `locks.json`; the player then plays a locked part from that frozen copy, and a part is never locked twice (its header comment). Whether any part was locked at 298be4e: to check in section 4.
+- **The talk.** `src/static/talk/talk.json` holds `title`, `subtitle`, `event`, `speaker`, `status`, `source` and 58 `beats`; each beat has some of `id`, `act`, `part`, `dur`, `title`, `slide` (`{"src": "slides/<id>/index.html"}`), `say`, `cue`, `sources`. `src/static/talk/player.html` (977 lines) plays the beats; each slide is its own page under `src/static/talk/slides/<id>/` (22 folders) or a studio, motion or ruv-sgit piece, driven by `src/static/talk/engine/slide.js`: one virtual clock per slide, reveals declared in `data-` attributes, and the clock contract `window.RuvClock` (pause, play, setRate, seek) that the player drives through `postMessage` (the header of `slide.js`). Section 4 takes this apart.
+- **Locked parts.** `admin/build/lock.py` opens a part's slides in Chromium from `_site`, records every same-origin file each loads, and copies them into `src/static/talk/engine/locked/part<N>/` with `beats.json` and an entry in `locks.json`; the player then plays a locked part from that frozen copy, and a part is never locked twice (its header comment). At 298be4e no part was locked (section 4.2).
 - **The records feed the site.** `admin/tools/night_log.py`, `moments.py`, `workflow_deck.py` and `team_numbers.py` read the team's public records (wake records, commits, `team/conductor/night/*.json`, `schedule.json`, `pace.json`) and write `content/articles/the-night-hour-by-hour.md`, `moments.md`, `how-this-talk-was-built.md` and `team/conductor/team-in-numbers.json` (each one's docstring). So the site documents the team that builds it, and the build renders what the tools wrote.
 
 ### 1.3 The team machinery, in one paragraph (section 3 goes deeper)
@@ -171,9 +171,56 @@ At 298be4e the machinery was in the state its own rule produces: `team/conductor
 - With outside services only: keys on `pki.sgit.ai` beyond keygen, the vaults on `dev.send.sgraph.ai`, and the vaults manager's key, which lives at `web-summit.sgit.ai` (`known-keys/dc-vault-registry.json`, `source`).
 - Not from the record: the scheduling product itself (3.1), the generator of the key tool (3.2), and the vaults' contents (3.3).
 
-### Open questions for the next sections
+## 4. The player and the slides
 
-- The player in full: keys, presenter view, how it loads `talk.json`, `assets/pane.js`.
-- Whether any part was locked at 298be4e, and the `showcase` engine.
+All paths at 298be4e. The player was opened from a local build in the scratchpad (screenshot in `debriefs/2026-10-30__first-wake.md`), never from the live site.
+
+### 4.1 The talk as data: `src/static/talk/talk.json`
+
+58 beats, 4495 seconds in all (74:55, the length the player shows), in seven acts: "Opening", "Prelude: how this was made", "Part one: the insider with no limits", "From part one to part two", "Part two: explorer coding", "Part three: brakes, and the opportunity", "Close"; `part` is 1, 2 or 3 where set. Each beat's slide is a page: 25 in `talk/slides/`, 24 in `studio/lab/`, 5 in `studio-ports/`, 3 in `motion/lab/`, 1 an article (counted from `talk.json`). The same file feeds the readable script (`build_script`, section 2.1), and the gate fails a beat whose slide is missing or that has no `title`, `say` or `dur` (`check_talk`, section 2.2).
+
+### 4.2 The player: `src/static/talk/player.html` (977 lines)
+
+- **Origin.** "ported on 29 October 2026 by dev@the-ultimate-insider from ruv.sgit.ai's player (talk/player.html and assets/clock.js, github.com/SGit-AI/SGit-AI__Website__Ruv), Apache-2.0"; what changed: this site's `talk.json`, two themes, a countdown with a plan scaled to the time the presenter has, acts in the picker, a build mode and the site's offline cache (its head comment). That upstream repository is outside the record.
+- **Loading** (`load()`, line 276). Fetches `talk.json` (or `?talk=`), passes it through `withLocks` and `adapt`, then `pieces.json` and `fingerprints.json` (both made by the build, section 2.1), and any `data` files the talk names. `adapt` gives each beat an iframe layout and a start time `at`, the sum of the durations before it. A failed load shows "Could not load ... Serve the site ... or use the offline file."
+- **Slides as live pages.** Each beat plays as an iframe of its slide page, with the theme passed in the query (line 618); the player drives the slide's clock through the contract in `talk/engine/slide.js` (`window.RuvClock`: pause, play, setRate, seek; section 1.2).
+- **Locked parts** (`withLocks`, line 313). If `engine/locked/locks.json` exists, a locked part's beats come from its frozen copy, whatever `talk.json` says now; `?nolocks` plays `talk.json` as it is. At 298be4e `src/static/talk/engine/locked/` does not exist: no part was locked, so the talk plays entirely from the latest sources.
+- **Views and keys** (`onKey`, line 807; the listener, line 862): Space or K play and pause; Right and Left step; Down, PageDown or N next slide, Up previous; PageUp back; `]` and `[` next and previous act; P presenter view (also `?presenter`); W overview; C what changed; J skip a slide, U undo the skip; O build mode; S speed; H hold; Z the talk timer; G the slide picker; 0 or Home the start; F full screen; B or `.` black screen; `?` help; Escape closes panels; X leaves. A opens the audience view (`?view=audience`) in a second window, so the presenter keeps the presenter view on their own screen (line 839); `?review` sets review mode (line 271). Keys typed into the build panel are not shortcuts (line 862).
+- **Offline.** `warm()` (line 881) registers the site's service worker `../sw.js` unless `src/static/sw.json` says `"enabled": false` (a kill switch: "every browser empties its cache and drops the worker on its next page load"), then fetches every slide once in the background so the talk can run without a network. `sw.js` caches same-origin GETs only and never the lane's vault server or openrouter.ai (its header).
+
+### 4.3 The slide engines: `src/static/talk/engine/`
+
+- `slide.js` (115 lines) and `slide.css`: one virtual clock per slide, reveals declared in `data-in`, `data-out`, `data-on`, `data-count`, `data-grow`, `data-draw`, a `window.SLIDE_RENDER` hook for anything else, and the steps the player stops on (`window.RUV_STEPS`, `data-stops`, else one per reveal) (its header). A slide is "mostly markup".
+- `showcase.js`, `showcase.css`, `showcase.md`, with `showcase-example/` and `showcase-sharness-linux/`: a slide that is a cropped screenshot of a page in stages, with callouts and a QR of the link drawn in the browser by `qrcode.js`; how to fill one is in `showcase.md` ("for the conductor's request 030").
+- `view.html`: a single-slide viewer; what it adds beyond the player: the record read so far does not say.
+
+### 4.4 The editor's feedback pane: `src/static/assets/pane.js` (237 lines)
+
+Loaded by the player and, by its own header, on every page: notes on the page and the selected phrase, kept in the browser, then sent to "the editor's lane, a write-only append lane on dev.send.sgraph.ai drained by the conductor" (`admin/build/lane.py`, section 1.3). The lane's append token is unlocked from `assets/lane.json` with "the editor's four words" (PBKDF2-SHA256, then AES-GCM) and kept in localStorage; an OpenRouter key typed into the pane is kept there too and sent only to openrouter.ai; each note is encrypted to the conductor's public key (RSA-OAEP-SHA256 wrapping AES-256-GCM) before it leaves (its header). So the talk's own feedback loop runs through the same vault service as the team's mail.
+
+### 4.5 Vendored code
+
+`src/static/assets/vendor/` holds `vault-embed.js` and `vault-ui-embed.js`, each pinned by a `.sha256` that the gate checks (`check_vendored`, section 2.2); `talk/engine/qrcode.js` and the QR code in `pki-agent.mjs` are vendored too (the latter marked "qrcode-generator/2.0.4 ... MIT" in its body).
+
+## 5. What could and could not be rebuilt from the record alone
+
+Checked by doing it, in the scratchpad, at 298be4e: the site builds (217 pages), the gate is clean (304 html files), and with the 211 tags reachable from 298be4e the release history rebuilds in full (`v0.1.0` to `v0.2.0`); the player plays the talk from the local build (58 slides, 74:55).
+
+| Part | From the record alone? | What else it needs, or what is missing |
+|---|---|---|
+| Site, articles, script, indexes | yes | Python 3 |
+| Gate | yes | Python 3; Node for the script check |
+| Release history and version numbers | only with the tags | the `v*` tags (section 2.1) |
+| Release and deploy | yes, as a workflow | a GitHub repository, Pages set to "GitHub Actions", the custom domain (DNS: the record does not say) |
+| Player and slides | yes | a browser; offline mode needs a served site, not `file:` |
+| Locked parts | nothing to rebuild | none locked at 298be4e; `lock.py` needs Playwright |
+| Schedule and wake | yes, as files and rules | a service that fires a stored prompt into a session (which one: the record does not say) |
+| Session keys | yes | Node 18+; pki.sgit.ai for anything beyond keygen, whoami, keyqr |
+| Vaults (board, mail, evidence) | no | their contents live on `dev.send.sgraph.ai`, not in git; only names, ids and read keys are recorded |
+| The editor's lane and pane | no | the lane's token (unlocked with the editor's words), the conductor's private key |
+| The key tool's generator | no | `admin/build/gen_agent_tool.mjs` is not in the repository |
+| The player's upstream | no | `SGit-AI__Website__Ruv` is outside the record |
+
+In one line: everything that is the site rebuilds from the record with Python and a browser; everything that is the team (its keys' register, its vaults, its lane, its scheduler) depends on services and secrets the record names but does not contain.
 
 Signed: technologist@cold-read.the-ultimate-insider, key `sha256:6a07488b6dfe36f4` (`team/technologist/key.json`), 30 October 2026.
