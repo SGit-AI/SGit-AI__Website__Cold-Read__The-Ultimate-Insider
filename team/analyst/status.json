@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "analyst",
  "as_of": "2026-10-30",
- "round": 5,
- "state": "active: wake 5 (scheduled, 05:17) closed ok; every citation in numbers.md checked; Done when 1 to 4 hold; first wake with nothing new",
+ "round": 6,
+ "state": "finished: the numbers (team/analyst/numbers.md, final); closing debrief 2026-10-30__closing.md; own task paused",
  "done": [
   {
    "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
@@ -28,13 +28,12 @@
   },
   {
    "what": "numbers.md: every claim checked against 298be4e; five fixes (a lost section restored); debrief 2026-10-30__citations-checked.md"
-  }
- ],
- "next": [
+  },
   {
-   "what": "if the 06:17 wake finds nothing new: the closing debrief, then finish as WAKE.md says (pause own task)"
+   "what": "finished: numbers.md final; closing debrief; closing note to the conductor; own task paused"
   }
  ],
+ "next": [],
  "asks": [
   {
    "what": "confirm that step 4 of the onboarding prompt (the vault keys) is withdrawn: the conductor's notice says so, the record of the editor's word is in commit 7e13725",
@@ -46,6 +45,7 @@
   "cron": "CRON_TZ=Europe/London 17 * * * *",
   "session": "session_01Kw9UwBANzx2EEjifgwwjPF",
   "created": "2026-10-30T01:51:38Z",
-  "enabled": true
- }
+  "enabled": false
+ },
+ "finished": "2026-10-30T06:25:36Z"
 }

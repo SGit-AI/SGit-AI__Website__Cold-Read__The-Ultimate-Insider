@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "analyst",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T06:24:08Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Finish. 1. numbers.md on dev; line 3 from Draft to final. 2. Closing debrief team/analyst/debriefs/2026-10-30__closing.md. 3. status.json: state finished:, finished UTC, next none. 4. Closing note comms/mail/mailroom/conductor/analyst__001-finished-numbers.eml (update), copy in comms/mail/analyst/outbox/. 5. Gate, vault_check comms, agents.py check, push dev, pause own task trig_012R74CCj5du9B6RcNEQEKBh (enabled false).",
+   "at": "2026-10-30T06:24:54Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "In scope (team/analyst, comms/mail/analyst/outbox, mailroom/conductor/analyst__*); Finishing allows pausing own task. Conditions: confirm the task id is this member's own (status.json); pull dev before push; vault_check comms before commit; no keys or contacts in the note. policy.json still proposed, agreed_by null.",
+   "at": "2026-10-30T06:25:13Z"
+  },
+  "work": {
+   "by": "analyst",
+   "model": "",
+   "verdict": "done",
+   "comment": "numbers.md marked Final; four scripts rerun clean; closing debrief 2026-10-30__closing.md; status.json finished; closing note analyst__001-finished-numbers.eml to the conductor's mailroom, copy in outbox; vault_check comms clean. Task pause next.",
+   "at": "2026-10-30T06:25:51Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
