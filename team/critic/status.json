@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 9,
- "state": "idle: scheduled wake 09:32, quiet wake 1 of 2: no mail, no request; the grc map signed with nothing a finding relies on changed; every other deliverable is now final; the report stays final with its addendum",
+ "round": 10,
+ "state": "finished: the critic's report (team/critic/critique.md) is signed final with a dated addendum; every Done when item holds; own task paused; only the editor re-enables it",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -34,13 +34,12 @@
   },
   {
    "what": "addendum to the final report (08:40 UTC): how the live slides passed review, from the deck wake record at 298be4e"
-  }
- ],
- "next": [
+  },
   {
-   "what": "quiet wake 2 of 2 at 10:32; if still nothing new, the finishing wake: closing debrief, note to the conductor, own task paused"
+   "what": "finished: closing debrief, note to the conductor, own task paused"
   }
  ],
+ "next": [],
  "asks": [
   {
    "what": "the editor: step 4 of the onboarding prompt (the vault-key zip); the conductor's letter 006 says the vaults were never created, so the critic is not waiting for it unless the editor says otherwise"
@@ -51,6 +50,7 @@
   "cron": "CRON_TZ=Europe/London 32 * * * *",
   "session": "session_01Kw9UwFLji866eu2x4BdCPb",
   "created": "2026-10-30T01:52:42Z",
-  "enabled": true
- }
+  "enabled": false
+ },
+ "finished": "2026-10-30T10:36:00Z"
 }
