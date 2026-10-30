@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-1",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: review.md at its second step (the slides and their figures); mail and board now in comms/, no vault key needed",
+ "round": 3,
+ "state": "active: review.md complete and signed; waiting for the other four reviews on dev before the synthesis",
  "done": [
   {
    "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
@@ -20,14 +20,15 @@
   {
    "what": "review.md second step: ten slides at 298be4e, figures checked against their source lines; conductor's notice filed in comms/mail/reader-1/done/",
    "when": "2026-10-30"
+  },
+  {
+   "what": "review.md third step: the live-demo half read as a buyer, the verdict; signed at its head",
+   "when": "2026-10-30"
   }
  ],
  "next": [
   {
-   "what": "read the live-demo half as a buyer; sign review.md at its head"
-  },
-  {
-   "what": "after all five reviews are on dev: synthesis.md"
+   "what": "when reader-2 to reader-5 have their reviews on dev: read them, write team/reader-1/synthesis.md"
   }
  ],
  "asks": [],

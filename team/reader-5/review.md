@@ -4,7 +4,7 @@ By reader-5@cold-read.the-ultimate-insider, key sha256:fd507890a02b299f (`team/r
 
 A curious generalist with no security background, who reads the tech pages of a newspaper and stops the moment they are lost.
 
-**Status: draft, second step (30 October 2026, 02:50 UTC).** Read so far, in the site built from the source at 298be4e (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider): the front page, the script, all 58 slides, and the about page. Still to read: the articles and the sources page. Every quote gives the file it comes from at 298be4e.
+**Status: draft, third step (30 October 2026, 03:55 UTC).** Read, in the site built from the source at 298be4e (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider): the front page, the script, all 58 slides, the about page, the six articles and the sources page. Every quote gives the file it comes from at 298be4e.
 
 ## What I read, and how
 
@@ -12,6 +12,8 @@ A curious generalist with no security background, who reads the tech pages of a 
 - The script: `src/static/talk/talk.json`, built as `talk/script.html` ("Every beat of the talk, in order, with what is said, the cue for the speaker and the sources on screen. Planned length 74 min 55 s.").
 - The slides: the 58 pages `talk.json` lists, in its order, each opened in a browser at 1280 by 720 and looked at after its animation had run a few seconds. Slide numbers below are the order in `talk.json`.
 - The about page: `src/pages/about/index.html`.
+- The six articles in `content/articles/`: the speaker's own (`introducing-this-site.md`) in full, the other five as far as a stranger would read them (below).
+- The sources page: `src/pages/sources/index.html`.
 
 I built the site myself from 298be4e (`admin/build/build.py`). I did not use its live site, and I did not follow its links out. Six slides are marked LIVE and load another site inside the slide (slides 44, 47, 51 to 54, each with its address at the foot); I kept them closed, so I saw them empty. What they show on the night, the record I read does not say.
 
@@ -57,14 +59,31 @@ And the way out, said three times and on the last slide: "We put brakes in cars 
 
 **One thing that made me trust it less:** the opening slide says "Nine agents. One editor." (slide 2, `src/static/motion/lab/meet-the-team/v1/`), and slide 33 says "By 17:40 the editor had agreed all ten" (`src/static/studio-ports/lab/abp-review/`). Nine or ten, the record I read does not settle it. A small thing, but a talk about counting what agents can do should count itself the same way twice.
 
+## The articles: where a stranger stops
+
+The site has six articles (`content/articles/`, 298be4e). Only one is about the talk; the other five are about the team of agents that built the site.
+
+- **"A site for one talk, built the way the talk says to build things"** (`introducing-this-site.md`), bylined "Dinis Cruz". The best page on the site for me: "In short" gives six plain bullets, and "What this does not claim" is honest ("The script is a draft, written from the article before rehearsal. The talk on the night will differ from it"). Two things a reader notices. Its last line says it was "Written up by dev@the-ultimate-insider, this site's developer agent ... the argument and the editorial responsibility are mine", so the byline is the speaker's but the words are an agent's. And it says "The talk is that article cut to forty minutes", while the script says "Planned length 74 min 55 s" (`talk/script.html`, from `talk.json`). Which length the talk ran to, the record does not say.
+- **The other five** are the team's own records: a mini deck (`how-this-talk-was-built.md`), a conductor's guide (`running-this-agent-team.md`), "Moments" (`moments.md`), a member's how-to (`how-ruv-sgit-works.md`) and "The night, hour by hour" (`the-night-hour-by-hour.md`, about 32,000 words of the site's 52,000 in articles). I stopped each within its first screen. The guide opens with a table of members ("dev@", "deck@", "ruv.sgit@") and words like "wake", "policy draft", "vaults"; the ruv.sgit article opens "a Ruflo hive gets a queen, one worker per deliverable"; "Moments" and "The night" open on charts of "wakes" and "verdicts". These are written for people who run the team, not for someone who came for the talk.
+- **The team cannot agree on its own size.** "Six agents, one editor, one hour each." (the first scene of the mini deck, `how-this-talk-was-built.md`); "seven agents and one editor" (its own description, same file); "Nine agents. One editor." (slide 2); "the editor had agreed all ten" (slide 33); "159 wakes by 9 members" (`the-night-hour-by-hour.md`). Each may be right at its own hour, and the files do say when they were written; but the talk makes the team its example of order ("This is what agentic work will look like: order and structure", `talk.json`, beat 25), and a stranger who reads five counts for one team stops trusting the counts.
+- **The same goes for the work done.** The script: "By five this afternoon, that was 510 commits and 164 releases" (`talk.json`, beat 2). The mini deck: "154 wakes, 405 commits, 267 letters and 15 studio pieces, as of 18:21 UTC" (`how-this-talk-was-built.md`). Fewer commits an hour and a half later. Why the two counts differ, the record I read does not say.
+
+## The sources page
+
+Short and clear (`src/pages/sources/index.html`, about 370 words): each source by act, with what kind it is, "a prediction", "preliminary, not peer reviewed", "to be checked on the day". This is the page that made me trust the first half.
+
+But it promises more than it holds. It is headed "Every number on screen, and where it comes from", and the sources of several stories the script tells are not on it: the gym booking (ABC News), SolarWinds (the White House briefing), Storm-0558 and Midnight Blizzard (Microsoft), the UK court case (Ayinde v Haringey), Google's threat report, Lovable's sixty million projects and the PHP finding. Each is named under its beat in the script (`talk.json`, beats 10, 11, 12, 14, 23, 26 and 58), so a reader can find them there; the sources page does not list them.
+
 ## What would I pay for the book of it
 
-Leaning, before the articles: the first half as a long read, free, and I would share it; as a short book (part one alone, the incidents and the pictures), about the price of a paperback novel, because the stories are good and the slides show they can be drawn. The second half as it stands I would not pay for: it is a catalogue of the speaker's own projects (the disclosure says so), and I could not follow it. To be settled after the articles.
+The price of a paperback novel, for a short book of part one: the incidents, the building, the loop, "a thief takes a copy", with the slides as its pictures and the sources page as its notes. The stories are good, the pictures make them stick, and the sources are listed with honest labels. I would give it to a friend who uses these tools at work.
+
+Nothing for the second half as it stands, and nothing for the articles about the team. The second half is a tour of the speaker's own projects (the about page says so), in words I could not follow; the team articles are records, written for the team. If the book explained, in the first half's plain words, what "a boundary" is and what one costs, I would pay for that too: the record I read does not have that chapter yet.
 
 ## Where would I put it down
 
 Slide 28, "Reach, mandate, the gap, and what stands in it." (`src/static/talk/slides/abp/`; `talk.json`, beat 28). The slide itself is simple, two bars and a gap, and I followed it. The slides after it are where I would leave: slide 30's table of "verb.object.reach" rules and slide 31's "Ruflo default (legacy)" are the first pages I could not read at all. The script told me the same thing (my first reading), and the slides confirm it.
 
-## Still to read
+## Still to do
 
-The articles in `content/articles/` and the sources page, at 298be4e.
+Nothing left to read. A last pass on my own wording and quotes, then the review is finished.

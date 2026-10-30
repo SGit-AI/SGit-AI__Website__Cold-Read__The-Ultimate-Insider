@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-2",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: wake at 02:47, review sections 1 and 2 written; the vaults were never created (comms/ in git instead), so the vault-key step is moot",
+ "round": 3,
+ "state": "active: wake at 03:47, review sections 1 to 3 written",
  "done": [
   {
    "what": "session key published: team/reader-2/key.json (sha256:23fc5bbce8529018)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "account domain dropped from key.json and the session files (conductor issue 006)"
+  },
+  {
+   "what": "review.md section 3, is it convincing: the talk's sources checked against its sources page at 298be4e"
   }
  ],
  "next": [
   {
-   "what": "review.md section 3, is it convincing: the numbers against the site's sources page, built from 298be4e"
+   "what": "review.md sections 4 and 5: what I would pay for the book, where I would put it down; then sign it at its head"
   }
  ],
  "asks": [],
