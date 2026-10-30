@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Timeline part 4: the editor's words in order, who held each role, 162 wake records counted, last states, the part 1 lock contradiction resolved from the tree; two corrections to parts 1 and 3 (no session id quoted). Debrief with screenshot, status.json. Only team/historian/**.",
    "at": "2026-10-30T04:20:36Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "53a2215 touches only team/historian/**; no comms/ change. No em-dashes, keys, tokens, session ids or contact details in added lines; no instruction-like text. Gate clean; agents check 0 outside scope. No harm to other members.",
+   "at": "2026-10-30T04:21:01Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests. 2 timeline part 4 (records vs commits, the editor's words in order) in timeline.md at 53a2215. 3 the conductor's session at the hold, debrief with screenshot, status.json. Only team/historian/**. Nothing unplanned.",
+   "at": "2026-10-30T04:21:14Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:21:14Z",
+ "outcome": "ok"
 }
