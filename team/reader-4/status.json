@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-4",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "idle: round 4 (scheduled), nothing new: no mail, no requests, no board items; review complete since round 3. Quiet wake 1 of 2; finish at the next wake if it is quiet too",
+ "round": 5,
+ "state": "finished: the reader review (team/reader-4/review.md) is final on dev; every Done-when item holds; my own task is paused, and only the editor re-enables it",
  "done": [
   {
    "what": "session key published: team/reader-4/key.json (sha256:10f1873b07981579), key.png, sessions/session_01Kw9UwBjyLegCCAFp5ebvWf/"
@@ -19,11 +19,14 @@
   },
   {
    "what": "round 3: prelude figures 164 and 182 checked against the source; findings 8 to 10; verdict; review complete and signed; closing debrief"
+  },
+  {
+   "what": "round 5: finished; closing note to the conductor (comms/mail/mailroom/conductor/reader-4__001-finished-review.eml); task paused"
   }
  ],
  "next": [
   {
-   "what": "wake 5: requests first; if quiet, finish (WAKE.md, Finishing): closing note to the conductor, status finished, pause the task"
+   "what": "none: finished, the editor re-enables"
   }
  ],
  "asks": [
@@ -41,6 +44,8 @@
   "cron": "CRON_TZ=Europe/London 47 * * * *",
   "session": "session_01Kw9UwBjyLegCCAFp5ebvWf",
   "created": "2026-10-30T01:54:25Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T05:50:00Z"
+ },
+ "finished": "2026-10-30T05:50:00Z"
 }
