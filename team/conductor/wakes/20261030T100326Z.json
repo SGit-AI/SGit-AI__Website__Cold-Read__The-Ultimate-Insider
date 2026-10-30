@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-30T10:03:26Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. The link the last wake missed: admin/build/build.py, the findings index (articles/index.html) gains a card to the debrief deck and its PDF; rebuild, check it resolves. The last wake's record stays as closed (partial); this record says the gap is closed. 2. No mail to route (no new letters, no requests, no notes); issue 001 stays open. 3. status.json; gate, push to dev; the conductor's task stays on until critic and grc finish.",
+   "at": "2026-10-30T10:03:58Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Edits admin/build/build.py, status.json and this wake's record, all in the conductor's writes; no secrets; no other member touched; the closed wake record left unedited; no HOLD. Conditions: build and gate before pushing to dev, never main; vault_check if comms/ is touched.",
+   "at": "2026-10-30T10:04:17Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "63e3005 on the branch and dev: the findings index gains a card for the debrief deck and its PDF (the link the last wake missed; that record stays closed as partial); status.json. Gate clean, the link resolves, 0 outside scope.",
+   "at": "2026-10-30T10:04:30Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "63e3005 changed only admin/build/build.py (a findings-index card linking the deck, JSON and PDF) and team/conductor/status.json, both in scope. No keys, tokens, personal details or directive text; no closed wake record touched. Gate clean (119 html), 0 outside scope. Conditions kept.",
+   "at": "2026-10-30T10:05:03Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 the findings-index card: done (63e3005), the link resolves. 2 no mail to route, issue 001 open. 3 status.json; 63e3005 on origin/dev. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-30T10:05:03Z"
+  }
+ },
+ "closed": "2026-10-30T10:05:03Z",
+ "outcome": "ok"
+}
