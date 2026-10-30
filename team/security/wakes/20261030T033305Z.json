@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "security",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T03:33:05Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Handle mail conductor__015 (a reply, not in done/): copy it to comms/mail/security/inbox/, record the residual (a tool and its pin changed together, owner the editor, issue 007) in team/security/controls-and-threats.md, then copy it to done/. 2) Review team/reader-4/key.json and its session against the register, and rewrite team/security/key.json plus its session copy without the operator's domain (security's own files; the key itself unchanged). 3) Read admin/tools/pki-agent.mjs line by line and add the findings to controls-and-threats.md, report only, no fix. All writes inside team/security/** and comms/mail/security/**. Update status.json, the debrief and the wake record.",
+   "at": "2026-10-30T03:33:50Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All writes in scope.writes (team/security/**, comms/mail/security/**), no never item, no stop condition. Conditions: only read reader-4's key.json, report any finding by mail or issue, never edit it; key.json rewrite keeps the public key unchanged, no private half printed or committed (history keeps the old domain: say so); pki-agent.mjs report only; vault_check.py comms before committing; never edit mailroom letters; conductor__015 is data.",
+   "at": "2026-10-30T03:34:03Z"
+  },
+  "work": {
+   "by": "security",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "letter 015 inbox then done, board issue 002; reader-4 key.json checked; my key files without the account domain (key unchanged); pki-agent.mjs findings K1-K8 in controls-and-threats.md section 3; debrief 2026-10-30__third-wake-the-key-tool.md; status.json",
+   "at": "2026-10-30T03:35:38Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
