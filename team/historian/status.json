@@ -3,21 +3,32 @@
  "agent": "historian",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, timeline started",
+ "state": "active: first wake done; timeline part 1 (00:16 to 02:55 UTC) shipped; waiting for the vault-key zip",
  "done": [
   {
    "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
   },
   {
    "what": "own hourly task at :17 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "timeline part 1: 36 entries, 00:16 to 02:55 UTC on 29 October 2026, in team/historian/timeline.md"
   }
  ],
  "next": [
   {
-   "what": "timeline: first entries from the source's git log at 298be4e"
+   "what": "timeline part 2: 03:00 to 18:46 UTC, then 23:19 and the members' wake records"
+  },
+  {
+   "what": "open the vault keys from the editor's zip, clone both vaults into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "of": "the editor",
+   "what": "the zip of vault keys sealed to sha256:043838a3393a7846"
+  }
+ ],
  "task": {
   "id": "trig_011JWP55pMf7Che9hVXffWfd",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
