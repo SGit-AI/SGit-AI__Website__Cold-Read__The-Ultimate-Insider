@@ -35,7 +35,7 @@ What is in this repository now, kept current by whoever ships. Last updated by c
 ## Not working yet
 
 - **The editor's pane** (`src/static/assets/pane.js`): ported, but `lane.json` pointed at the source's lane vault and the source conductor's key. It now holds no lane, so a note cannot be sent anywhere; this team never writes to the source's lane.
-- **The site's domain**: Pages is on (source "GitHub Actions", turned on by the release workflow's first run); the custom domain waits on the editor.
+- **The site**: live at https://the-ultimate-insider.cold-read.sgit.ai (Pages, source "GitHub Actions", custom domain set by the editor).
 
 ## The team
 

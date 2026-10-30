@@ -28,6 +28,10 @@
   {
    "what": "comms/issues and comms/mail in git in place of the vaults; board and mail pages built from them; a Done when list per member and the finishing rule",
    "evidence": "comms/README.md, team/conductor/WAKE.md (Finishing)"
+  },
+  {
+   "what": "The custom domain live: https://the-ultimate-insider.cold-read.sgit.ai serves the site",
+   "evidence": "version.txt"
   }
  ],
  "next": [
@@ -41,11 +45,6 @@
    "what": "render the deliverables on the site as they land"
   }
  ],
- "asks": [
-  {
-   "from": "editor",
-   "what": "the site's custom domain (the-ultimate-insider.cold-read.sgit.ai)"
-  }
- ],
+ "asks": [],
  "task": "trig_01184z5763Y6aiRM5p5rZYZ9"
 }
