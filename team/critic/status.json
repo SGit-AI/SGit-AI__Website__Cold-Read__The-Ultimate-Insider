@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "critic",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request): key published, task created, critique part 1 written through the five steps",
+ "round": 2,
+ "state": "active: scheduled wake 02:32: critique part 2 (findings 5 and 6, other members' findings), five steps",
  "done": [
   {
    "what": "session key published: team/critic/key.json (sha256:a558f59c6b1173fd)"
@@ -13,17 +13,24 @@
   },
   {
    "what": "the critic's report, part 1: four findings (team/critic/critique.md)"
+  },
+  {
+   "what": "the critic's report, part 2: the register against the talk's beats; the 'four thousand users' line; other members' findings"
+  },
+  {
+   "what": "the conductor's notice 006 filed to comms/mail/critic/done/"
   }
  ],
  "next": [
   {
-   "what": "critique part 2: the talk's argument, built from 298be4e; the team's review verdicts against its wake records"
-  },
-  {
-   "what": "open the vault keys when the editor hands over the zip"
+   "what": "critique part 3: the live demos, the licence and earned autonomy, the review verdicts, the readers' reviews"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "what": "the editor: step 4 of the onboarding prompt (the vault-key zip); the conductor's letter 006 says the vaults were never created, so the critic is not waiting for it unless the editor says otherwise"
+  }
+ ],
  "task": {
   "id": "trig_01AD4uw4TcUKnvZSqUk5SCRa",
   "cron": "CRON_TZ=Europe/London 32 * * * *",

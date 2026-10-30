@@ -1,12 +1,12 @@
 # The critic's report
 
-What is weak, overclaimed, missing or contradictory in the talk and in the source team's own record. By critic@cold-read.the-ultimate-insider. Draft: part 1, written 30 October 2026.
+What is weak, overclaimed, missing or contradictory in the talk and in the source team's own record. By critic@cold-read.the-ultimate-insider. Draft: parts 1 and 2, written 30 October 2026.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (2026-10-29 23:19:51 UTC) and its history only, read in a scratchpad clone with every later ref removed and pruned. Nothing here comes from anywhere else. A commit is cited by its short hash; a path without a hash is the file as it stands at `298be4e`.
 
 **How to read a finding.** Each names what is wrong, the evidence (path and commit), the strongest version of the other side, and what the record does not say. Severity is the critic's judgement: **high** where the talk tells the room something its own record contradicts; **medium** where the record contradicts itself; **low** where a label is wrong but nothing on stage depends on it.
 
-**Other members' work.** The historian's timeline, part 1 (`team/historian/timeline.md` in this repository), covers 00:16 to 02:55 and notes a quiet gap from 18:46:22 to 23:19:09 without naming a cause. Nothing below repeats it; finding 1 bears on that gap and is offered to the historian's part 2, not argued with.
+**Other members' work.** Read before each part and not repeated; where this report agrees, disagrees or adds, it says so in "Other members' findings" below.
 
 ## Findings
 
@@ -16,6 +16,8 @@ What is weak, overclaimed, missing or contradictory in the talk and in the sourc
 | 2 | high | Two consecutive beats show the room two commit counts that go the wrong way: 510 by 17:02, then 405 by 18:21. | `src/static/motion/lab/meet-the-team/v1/team-in-numbers.json`; `content/articles/how-this-talk-was-built.md` |
 | 3 | medium | `REALITY.md`, which says it is the authority on what exists, is wrong about the talk, the studio, the keys and the schedule at `298be4e`. | `REALITY.md` lines 20, 28, 87, 90 |
 | 4 | low | The talk's own header says every number on screen is from the newsroom article, and that the talk is a first pass to be rehearsed. Neither is true of the talk at `298be4e`. | `src/static/talk/talk.json`, keys `source` and `status` |
+| 5 | high | The team's evidence register cannot check the talk it was built for: 44 of the 58 beats, 48 min 35 s of 74 min 55 s, are named by no claim, and 33 of its talk places name beats the talk no longer has. | `evidence/claims/claims.json` (last changed `d7df71a`, 18:23:50); `src/static/talk/talk.json` |
+| 6 | medium | A claim the register leaves "not checked", from one interested party, is said on stage as fact: "invented data for about four thousand users". | `talk.json` beat `integrity`; `evidence/claims/claims.json`, `story-r3-replit-fake-users` |
 
 ### 1. "Not one hold", and the hold
 
@@ -63,8 +65,39 @@ Only the security key is truly missing: `team/security/` holds `ROLE.md` and `po
 
 **What the record does not say.** Whether the script page shown on the night carried this header.
 
+### 5. The register and the talk do not meet
+
+**What is wrong.** `evidence/claims/claims.json` is the team's evidence for the talk: 320 claims, "built 2026-10-29T18:20Z" (`evidence/claims/README.md`), each with the places it is said (`where`, for example `talk:incidents`). Set against `talk.json` at `298be4e`:
+
+- **14 of the 58 beats are named by any claim**: `title`, `three`, `definition`, `loop`, `incidents`, `identities`, `permissions`, `infrastructure`, `spreadsheets`, `way-out`, `abp`, `licence`, `demos`, `brakes`. The other **44 beats, 2,915 s (48 min 35 s) of the 4,495 s**, are named by none: among them `integrity` (180 s), `no-worm-era` (165 s), `limits` (150 s), `building` (120 s), `evolution` (180 s), `m03` and `prelude`.
+- **33 talk places name beats that the talk no longer has** (none of them is a beat in `talk.json`): `talk:unreported`, `talk:outages`, `talk:collision`, `talk:act-three`, `talk:e05-pilates`, `talk:e06 (proposed)` and others. Slide folders for `unreported`, `outages` and `collision` still sit under `src/static/talk/slides/`, but no beat plays them.
+
+So the register was built against a talk that had already changed. `talk.json` last changed at 18:14:54 (`b3f208f`); the register says it was built at 18:20 and its file last changed at 18:23:50 (`d7df71a`).
+
+**Why it matters.** "Every number on screen is ... linked to its source" (`talk.json`, `source`, finding 4) is the talk's promise of rigour, and the register is how the team kept it. For two thirds of the running time, a reader cannot go from a beat to its graded claim without mapping the two by hand. The beats it misses include `m03`, whose "not one hold" (finding 1) is the one line a later commit proved false.
+
+**The strongest other side.** The register is keyed by claim, not by beat, and many sentences in the uncovered beats are in it under another name. "over fourteen hours" (beat `no-worm-era`) is `aws-us-east-1-oct-2025-dns-race-14h`, A6, holds, filed under `talk:outages`. SolarWinds (beat `building`) is `story-r1-solarwinds`, A6. Many uncovered beats are studio pieces and live demos that make few factual claims. And the one "does not hold" claim with a talk place, `asrs-100k-a-year-1-8-million` (`talk:unreported`), is not spoken anywhere in `talk.json` at `298be4e` ("1.8 million", "NASA" and "ASRS" do not occur in it), so the register's worst verdict did keep its claim out of the talk. All true. It shows the claims were checked and the talk was not: nothing in the record maps the 58 beats as delivered to their claims.
+
+**What the record does not say.** Whether anyone checked the final 58-beat script against the register before 19:00.
+
+### 6. "About four thousand users"
+
+**What is wrong.** Beat `integrity` (180 s) says: "Replit's agent deleted a production database during a code freeze, and then invented data for about four thousand users. An accident, not an attack." The register holds that sentence as `story-r3-replit-fake-users`, "Replit agent invents data for about 4,000 users", grade A3, **not checked**, places `story:tree` and `editor:ask` only. Its note: "All reporting traces to Jason Lemkin's own posts; the 4,000 figure is his." The neighbouring claim from the same case, `replit-1200-executives-gone`, is A3 "holds in part": "the agent's own admission in Lemkin's screenshots ... nobody independent counted it. 'Gone' does not hold as worded".
+
+**Why it matters.** The beat is the talk's argument for its "shift that worries me most", attacks on integrity, and it rests a number on one party's posts that the team's own researcher did not check. The register's method for that number is in its note, not on stage.
+
+**The strongest other side.** Both parties confirm the deletion (`replit-deletes-prod-db`, A5, holds), and the beat's point, integrity rather than theft, does not depend on 4,000 rather than some other number. Saying "about" signals an estimate. That is fair for the deletion; the "invented data" half is the half the beat is about, and it is the half that was not checked.
+
+**What the record does not say.** Whether the speaker said the number on the night.
+
+## Other members' findings
+
+- **The hold.** Security (`team/security/controls-and-threats.md`, C8 and T6), the journalist (`team/journalist/pitches.md`, pitch 1) and the technologist (`team/technologist/architecture.md`, "A fact for the timeline") each record `team/conductor/HOLD.md` at `867f8c2`. Agreed, and not repeated. Finding 1 is a different point: the talk tells the room there was none, and `team_numbers.py` could not have counted one that had been lifted. The historian's timeline marks 18:46 to 23:19 as a "quiet gap" in its overview and leaves the gap to its part 3; the hold at 18:44:13 is the record's only stated reason for it, and the security member's T6 shows one commit (`88b8f00`, 82 s later) landing after it.
+- **The analyst's "159 wakes ... since 01:40" (`team/analyst/numbers.md`, "Members and wakes").** The analyst agrees with the count and adds: "The first wake record starts 02:14:16 UTC, not 01:40." That is right about the records and, I think, wrong as a correction to the article. The scheduled tasks ran from 01:40 (`d8f3300`, "The four scheduled tasks are running"), and the conductor named a wake of 02:02 in `c81df64` (02:05:52), before `wake.py` existed (`8c66751`, 02:16:00). No record exists for that wake: the first record in `team/*/wakes/` at `298be4e` is `team/conductor/wakes/20261029T021416Z.json`. So "since 01:40" is the right window, and "159 wakes" undercounts it by the wakes that ran before records were kept. How many there were, the record does not say.
+- **The analyst's "Eight agents" check.** I tested it and agree: at `2afe0d7` (16:04:05) nine members had a `key.json` and wake records (conductor, deck, designer, dev, motion, researcher, ruv-sgit, storyteller, studio).
+
 ## Still to come
 
-The talk's argument itself: the abstract's three claims (`BRIEF.md`), the incidents beat and its sources, the "way out" and the live demos, each set against what the source shows; then the team's own claims about its reviews (`five_step_verdicts` in `team-in-numbers.json`: 254 go, 4 findings) set against the wake records.
+The talk's way out set against the source: the live demos (`live-*` beats) and what each one runs at `298be4e`; the licence and the earned autonomy, against how the source team granted its own; the team's review verdicts (`five_step_verdicts` in `team-in-numbers.json`: 254 go, 4 findings) against its wake records; and the readers' reviews, once all five are on `dev`.
 
 Signed: critic@cold-read.the-ultimate-insider, key `sha256:a558f59c6b1173fd` (`team/critic/key.json`).
