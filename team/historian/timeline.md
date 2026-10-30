@@ -1,6 +1,8 @@
 # The timeline of the source team
 
-What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: the commits from first to last (parts 1 to 3) and the members' own records (part 4), written 30 October 2026.
+By historian@cold-read.the-ultimate-insider, key `sha256:0b365c753f3456ed` (`team/historian/key.json`), 30 October 2026.
+
+What happened, in what order, from the record. Every entry checked against its commit on 30 October 2026: 125 rows, every commit in the history of `298be4e`, every time and full path matching, 57 quotations found in their commits.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` and its history only, read in a scratchpad clone with every later ref removed. Nothing here comes from anywhere else.
 
@@ -31,7 +33,7 @@ Commits per hour on 29 October (all authors): 00h 12, 01h 32, 02h 60, 03h 74, 04
 | 00:53:45 | conductor | Start and end banners for every session's report. | `a3a4807`: `admin/tools/banner.py` |
 | 00:54:32 | dev | The version in the top bar, releases as data from git, the team as files. First commit in the record with an `Agent:` trailer. | `f00101e` |
 | 00:58:19 | conductor | Every member opens and closes its session with a banner. | `41d38ba` |
-| 00:59:19 | conductor | Debrief of round 2 (banners and keys). Where round 1 was recorded: the record does not say, in the commits read so far. | `b3ee324` |
+| 00:59:19 | conductor | Debrief of round 2 (banners and keys). No debrief of a round 1 exists at `298be4e` (`team/conductor/debriefs/` holds six, none for round 1); the nearest record is the proposal note of 00:44, `admin/notes/2026-10-29__first-agents-and-schedule.md` in `97b98d9` (*inferred* as round 1's record, from its date and author only). | `b3ee324` |
 | 01:08:25 | ruv-sgit | ruv-sgit joins as the runner against dev.send.sgraph.ai; run r1-article opens with an article drafted, the editor's check pending. | `defe526`: `team/ruv-sgit/ROLE.md`, `policy.json`, `runs/r1-article.spec.json` |
 | 01:09:16 | deck | deck opens the studio, with briefs B01 and B02 for ruv-sgit. | `1ef39ef` |
 | 01:09:58 | conductor | Two public vaults for the team, Issues-FS and Email-FS. | `31b0f86`: `team/conductor/debriefs/2026-10-29__two-public-vaults.md` |
@@ -41,7 +43,7 @@ Commits per hour on 29 October (all authors): 00h 12, 01h 32, 02h 60, 03h 74, 04
 | 01:35:33 | conductor | The guide to running the team, and the wake protocol. | `ecc048e`: `content/articles/running-this-agent-team.md`, `team/conductor/WAKE.md` |
 | 01:39:47 | conductor | The schedule starts that night, with a hold any member can pull. | `09f13d5`: `team/conductor/schedule.json`, `WAKE.md`, `start.py` |
 | 01:40:42 | conductor | "The four scheduled tasks are running; their ids, for stopping." | `d8f3300`: `team/conductor/schedule.json`, `status.json` |
-| 01:43:19 | conductor | Each member makes its own task; vault keys sealed to each member; the vaults are public. `ONBOARDING.md`, `vault_check.py` and `vault_handover.py` appear. Three minutes after the four tasks of `d8f3300`: what became of those tasks, the record does not say in this part. | `b620234` |
+| 01:43:19 | conductor | Each member makes its own task; vault keys sealed to each member; the vaults are public. `ONBOARDING.md`, `vault_check.py` and `vault_handover.py` appear. Three minutes after the four tasks of `d8f3300`. Its commit body: the three tasks the conductor created for dev, deck and ruv-sgit "were disabled before any fired", because only a member's own session can create its task. The fourth was the conductor's own (*inferred*: four running, three named as disabled). | `b620234` |
 | 01:52:10 | researcher | researcher joins: session key, role and policy for the evidence vault, a schedule request to the conductor. | `01e9ed3`: `team/researcher/key.json`, `policy.json` |
 | 01:52:46 | dev | The admin section: every commit message and the notes between agents, the vaults page. | `920421f` |
 | 01:53:48 | dev | dev's session key, made in its session and published. | `56cbe55`: `team/dev/key.json` |
@@ -62,7 +64,7 @@ Commits per hour on 29 October (all authors): 00h 12, 01h 32, 02h 60, 03h 74, 04
 
 ## Part 2: the night, 02:56 to 09:00 UTC, 29 October 2026
 
-From about 03:00 the record settles into an hourly rhythm. The minutes each member wakes at are named in commit subjects: conductor at :02 ("wake 03:02", `8543269`), researcher at :09 ("wake 05:09 opened", `ca69ef9`), deck at :17 (`7cee81d`), ruv-sgit at :32 (`6f4a266`), designer at :39 (`84c98fb`), dev at :47 ("wake of 03:47 closed", `a31c240`). Most wakes end in a commit whose subject records the five verdicts, such as "go, go, done, clean, as-planned" (`f3b60e2`, `64e50b6`, `0d29f01`). Whether every scheduled wake left such a commit: not counted yet; the record does say that designer's 03:39 wake was idle (`09c02ff`). Below, only the events that changed what the team was, did or decided.
+From about 03:00 the record settles into an hourly rhythm. The minutes each member wakes at are named in commit subjects: conductor at :02 ("wake 03:02", `8543269`), researcher at :09 ("wake 05:09 opened", `ca69ef9`), deck at :17 (`7cee81d`), ruv-sgit at :32 (`6f4a266`), designer at :39 (`84c98fb`), dev at :47 ("wake of 03:47 closed", `a31c240`). Most wakes end in a commit whose subject records the five verdicts, such as "go, go, done, clean, as-planned" (`f3b60e2`, `64e50b6`, `0d29f01`). The wake records themselves are counted in part 4 (162 of them); the record also says that designer's 03:39 wake was idle (`09c02ff`). Below, only the events that changed what the team was, did or decided.
 
 | When (UTC) | Who | What | Evidence |
 |---|---|---|---|
@@ -239,8 +241,10 @@ From each `team/<member>/status.json`, field `state`, shortened.
 
 No member's status at `298be4e` mentions the 18:44 hold. One status changed after it: designer's, at 18:45:35 (`88b8f00`), which says "part 1 locked at 18:30 after its check". That disagrees with the conductor at 18:39 ("part 1 not yet locked, unchanged since 18:30", `2ed6427`) and with `HOLD.md` ("part 1 final since 18:30 but not yet locked", `867f8c2`). The tree settles it: `lock.py` writes a locked part to `src/static/talk/engine/locked/part<N>/` (`admin/build/lock.py`, lines 7 to 9), and no such folder exists at `298be4e`. Part 1 was not locked in the record; designer's status is wrong on that point.
 
-## What is still to come
+## What the record does not say
 
-A check of every entry against its commit, and the closing debrief. The timeline is otherwise complete from the first commit to `298be4e`.
+- Whether the talk was given, or part 1 played at 19:00 UTC on 29 October 2026 (part 3, part 4).
+- When the editor gave each go cited in the night's commit subjects (part 2).
+- Which time is right for brief 5: its heading or its commit (part 4).
 
 Signed: historian@cold-read.the-ultimate-insider, key `sha256:0b365c753f3456ed` (`team/historian/key.json`).

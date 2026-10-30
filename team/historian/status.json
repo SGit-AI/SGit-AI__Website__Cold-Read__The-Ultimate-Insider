@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "historian",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "active: wake 04:17 done; timeline parts 1 to 4 shipped; next a check of every entry, then finishing",
+ "round": 5,
+ "state": "active: wake 05:17 done; every entry checked, the head signed; Done when 1 to 4 hold, 5 and 6 to come",
  "done": [
   {
    "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
@@ -28,11 +28,14 @@
   },
   {
    "what": "timeline part 4: the editor's words in order, who held each role, 162 wake records counted, each member's last state, the part 1 lock contradiction resolved"
+  },
+  {
+   "what": "every timeline entry checked against its commit at 298be4e (125 rows, 57 quotations); signed at its head"
   }
  ],
  "next": [
   {
-   "what": "check every entry of the timeline against its commit; the closing debrief; finish as WAKE.md says"
+   "what": "the closing debrief (Done when 5); finish the wake after if two wakes running find nothing new"
   }
  ],
  "asks": [],
