@@ -102,9 +102,9 @@ class Gate:
 
     def check_vendored(self):                                       # vendored files are unmodified copies, pinned by checksum
         import hashlib
-        for pin in sorted((ROOT / 'src' / 'static').rglob('*.sha256')):
+        for pin in sorted([*(ROOT / 'src' / 'static').rglob('*.sha256'), *(ROOT / 'admin' / 'tools').glob('*.sha256')]):   # admin/tools too (security, 3392dd1: the pinned key tool was never checked by CI)
             want, name = pin.read_text().split()[:2]
-            path = pin.parent / name
+            path = ROOT / name if '/' in name else pin.parent / name    # a pin may name its file from the repository root (admin/tools/pki-agent.mjs.sha256 does)
             if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != want:
                 self.fail('vendored', path.relative_to(ROOT), 'does not match its pinned sha256')
 

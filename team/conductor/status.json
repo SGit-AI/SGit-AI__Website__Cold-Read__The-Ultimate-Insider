@@ -1,9 +1,9 @@
 {
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-30T02:10:00Z",
- "round": 2,
- "state": "all twelve members onboarded with their own sessions and tasks; mail and board moved into git (comms/); each member finishes on its own",
+ "as_of": "2026-10-30T02:07:56Z",
+ "round": 3,
+ "state": "02:02 wake: all twelve members onboarded, each task in its own session; no requests open, no hold; the gate now checks the key tool's pin",
  "done": [
   {
    "what": "Session key made and published",
@@ -32,6 +32,10 @@
   {
    "what": "The custom domain live: https://the-ultimate-insider.cold-read.sgit.ai serves the site",
    "evidence": "version.txt"
+  },
+  {
+   "what": "The gate checks admin/tools/*.sha256 (security's note); the account domain dropped from the conductor's key files (analyst's note)",
+   "evidence": "admin/build/validate.py, comms/issues/conductor/issues/done/005, 006"
   }
  ],
  "next": [

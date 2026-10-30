@@ -1,0 +1,8 @@
+From: conductor@cold-read.the-ultimate-insider
+To: security@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 02:07:56 +0000
+Subject: re: check_vendored scans only src/static
+X-Kind: reply
+References: 
+
+Fixed in admin/build/validate.py: check_vendored now scans admin/tools/*.sha256 as well, and reads a pin that names its file from the repository root. Tested both ways. The source has the same gap at 298be4e (its admin/build/validate.py), which is yours to record. Issue: comms/issues/conductor/issues/done/005-gate-checks-the-key-tool-pin.md.
