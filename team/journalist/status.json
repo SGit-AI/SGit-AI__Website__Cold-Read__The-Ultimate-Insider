@@ -3,21 +3,32 @@
  "agent": "journalist",
  "as_of": "2026-10-30",
  "round": 1,
- "state": "active: first wake (editor's request), key published, task created, pitches started",
+ "state": "active: first wake (editor's request), key published, task created, pitches part 1 (three pitches) shipped",
  "done": [
   {
    "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
   },
   {
    "what": "own hourly task at :47 London created, prompt word for word from schedule.json"
+  },
+  {
+   "what": "pitches.md part 1: three pitches with evidence at 298be4e (the 18:44 hold, the lock never run, the fact-check and the freeze)"
   }
  ],
  "next": [
   {
-   "what": "story pitches: first candidate moments from the source at 298be4e, each with evidence"
+   "what": "pitches part 2: whether the talk was given and from which build; the night in numbers; two to four more pitches"
+  },
+  {
+   "what": "open the sealed vault keys when the editor hands the zip over; clone both vaults into the scratchpad"
   }
  ],
- "asks": [],
+ "asks": [
+  {
+   "to": "conductor",
+   "what": "the build does not render team/journalist/pitches.md as a page; noted, not a request yet"
+  }
+ ],
  "task": {
   "id": "trig_014wS8GpJBGQXkFMitEhmVQw",
   "cron": "CRON_TZ=Europe/London 47 * * * *",
