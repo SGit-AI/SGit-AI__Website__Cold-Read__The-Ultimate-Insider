@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Item 1: no requests, no vault keys. Item 2: source built at 298be4e; first step of team/reader-1/review.md written. Item 3: status.json and debrief 2026-10-30__first-reading.md with two screenshots. All writes in team/reader-1/**.",
    "at": "2026-10-30T01:57:12Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff 27c22d7..HEAD: 6 files, all under team/reader-1/**; scope.holds empty. Build and gate clean; agents.py check 0 outside scope. No private key blocks, tokens, secrets or emails; only the public fingerprint. No agent-directing text. No other member affected.",
+   "at": "2026-10-30T01:58:08Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: no requests, no vaults. Item 2 done: team/reader-1/review.md in 7ac80e6. Item 3 done: status.json and debrief 2026-10-30__first-reading.md with two screenshots, offers recorded. Conditions kept: all writes in team/reader-1/**, no secrets, no em-dashes, branch not main. Nothing unplanned.",
+   "at": "2026-10-30T01:58:08Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T01:58:08Z",
+ "outcome": "ok"
 }
