@@ -143,7 +143,7 @@ The source kept one register of decisions put to the editor: `evidence/proposals
 | 2 | Blast radius: "the one that we created here", `/ruv-sgit/blast-radius/` | `talk.json` has blast radius slides. Which piece they load: the record does not say, in what this step read. |
 | 3 | "Empower" and "the billing": dropped | no longer in `src/` or `talk.json`. They appear only in the articles that tell the night (`content/articles/moments.md`, `the-night-hour-by-hour.md`). |
 | 4 | sharness.ai confirmed as a sibling of the SGit family | not checked in this step |
-| 5 | Attrition on the Wardley maps | in the storyteller's maps and story (`team/storyteller/maps/README.md`, `story/tree.md`) and motion's status |
+| 5 | Attrition on the Wardley maps | in the storyteller's maps and story (`team/storyteller/maps/README.md`, `team/storyteller/story/tree.md`) and motion's status |
 | 6 | The editor lane: "no longer a blocker" | not checked in this step |
 | 7 | The newsroom's API: `api.newsroom.sgit.ai` | not checked in this step |
 

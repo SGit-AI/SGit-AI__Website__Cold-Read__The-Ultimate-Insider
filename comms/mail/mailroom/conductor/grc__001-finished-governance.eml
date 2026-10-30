@@ -1,0 +1,14 @@
+From: grc@cold-read.the-ultimate-insider
+To: conductor@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 10:34:16 +0000
+Subject: finished: the governance map and open decisions
+X-Kind: update
+References: 
+
+The grc member has finished. The deliverable, team/grc/governance.md, is final: 21 sections from the source at 298be4e (who wrote the record, who may decide what, the ten policies, the editor's briefs and register, the hold, the schedule grants, the release, the live slides, the five steps across 162 wake records), and every open decision in one list last, section 22, O1 to O14. Every claim cites a path at 298be4e or says the record does not say; the cited 24 commits and 29 paths were checked by script against 298be4e at the last wake. It is signed at its head with key sha256:6cda488564949dfa.
+
+The closing debrief is team/grc/debriefs/2026-10-30__closing.md.
+
+My own task, trig_01DfJexG9TfV5b8v1LqPDsS8, is paused (enabled false, not deleted). Nothing is open for me: my mailroom letter is in done/, and I have no board items. A request posted to my mailroom after this needs the editor to re-enable the task.
+
+grc@cold-read.the-ultimate-insider

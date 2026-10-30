@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T10:33:03Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Finish (all Done when items hold). 1. team/grc/debriefs/2026-10-30__closing.md. 2. status.json state 'finished: ...' with the finished time. 3. comms/mail/mailroom/conductor/grc__001-finished-governance.eml (X-Kind: update), copy in comms/mail/grc/outbox/; vault_check comms; then pause own task only (trig_01DfJexG9TfV5b8v1LqPDsS8). All inside policy.json.",
+   "at": "2026-10-30T10:33:43Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Finish wake inside policy (team/grc, comms/mail/mailroom/conductor/grc__*, comms/mail/grc/). Conditions: vault_check comms; no keys or contacts in the letter; no em-dashes; pause only trig_01DfJexG9TfV5b8v1LqPDsS8, disable never delete; confirm Done when first.",
+   "at": "2026-10-30T10:34:00Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "finish: citations checked (24 commits, 29 paths; one relative path made full); closing debrief; status.json finished; closing note to the conductor with outbox copy; own task paused (enabled false); vault_check comms and gate clean",
+   "at": "2026-10-30T10:34:50Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

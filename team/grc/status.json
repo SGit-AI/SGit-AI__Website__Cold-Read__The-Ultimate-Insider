@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 9,
- "state": "idle: ninth wake (scheduled, 09:32 UTC) found nothing new: no hold, no mail, no requests, no change in team/grc; the first of two quiet wakes before finishing",
+ "round": 10,
+ "state": "finished: the governance map and open decisions, team/grc/governance.md, signed; task paused",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -34,19 +34,20 @@
   },
   {
    "what": "governance.md signed: the decisions of 15:00 checked (section 21), the open list last (section 22, O1 to O14)"
-  }
- ],
- "next": [
+  },
   {
-   "what": "10:32 UTC wake: if again nothing new, the closing debrief and finish (WAKE.md, Finishing)"
+   "what": "finished: citations checked against 298be4e (24 commits, 29 paths), closing debrief, closing note to the conductor, own task paused"
   }
  ],
+ "next": [],
  "asks": [],
  "task": {
   "id": "trig_01DfJexG9TfV5b8v1LqPDsS8",
   "cron": "CRON_TZ=Europe/London 32 * * * *",
   "session": "session_01Kw9UwBfSz48uj9wXSTPeUV",
   "created": "2026-10-30T01:52:05Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T10:34:16Z"
+ },
+ "finished": "2026-10-30T10:34:16Z"
 }
