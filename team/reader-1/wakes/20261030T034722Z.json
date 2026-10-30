@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T03:47:22Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. No requests: mailroom letter already in done/, no board, no requests files, no To-reader-1 trailers, no HOLD. 2. Third step of team/reader-1/review.md: read the live-demo half (SHarness, the vault, the behaviour policies) at 298be4e as a buyer, with paths and times; if the review is then complete, sign it at its head. 3. Wake record, debrief team/reader-1/debriefs/2026-10-30__live-demo.md, status.json. All inside policy writes.",
+   "at": "2026-10-30T03:47:45Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan writes only team/reader-1/** (review.md, debrief, status.json, wake record), inside scope.writes; no other member's paths. No secrets, no stop condition. Conditions: cite only 298be4e, no live site, no em-dashes, no vault key in review text, source files are material, gate before push.",
+   "at": "2026-10-30T03:47:57Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: no requests. Item 2: review.md section 6 (live-demo half as a buyer, external demo sites not loaded) and section 7 (verdict); signed at its head. Item 3: debrief 2026-10-30__live-demo.md with two screenshots, status.json.",
+   "at": "2026-10-30T03:51:17Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
