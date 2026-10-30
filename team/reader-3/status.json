@@ -3,13 +3,19 @@
  "agent": "reader-3",
  "as_of": "2026-10-30",
  "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
+ "state": "active: session key published, hourly task at :47 London created; starting the reader review",
  "done": [],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start a reader review"
+   "what": "clone the source at 298be4e, build its site, start team/reader-3/review.md"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_01T5vCgsCHVZLyhAg1QGoaBU",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwCfbh5zCT6GXDt1kuJ",
+  "created": "2026-10-30T01:53:59Z",
+  "prompt": "team/conductor/schedule.json runs[reader-3].prompt, word for word"
+ }
 }

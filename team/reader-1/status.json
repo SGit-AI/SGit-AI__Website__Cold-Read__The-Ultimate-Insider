@@ -2,14 +2,29 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-1",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: session key published; hourly task at :47 London created into this session; first review step under way",
+ "done": [
+  {
+   "what": "session key published: team/reader-1/key.json, key.png, sessions/session_01Kw9UwEkNUTDi3xo671Le9Y/",
+   "when": "2026-10-30"
+  },
+  {
+   "what": "own hourly task created from team/conductor/schedule.json (reader-1 runs entry, prompt word for word)",
+   "when": "2026-10-30"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start a reader review and the synthesis of all five"
+   "what": "clone the source at 298be4e into the scratchpad, build it, and take the first step of team/reader-1/review.md"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_01MdwEEdnWwYi9eyeqf1hN3Z",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwEkNUTDi3xo671Le9Y",
+  "created": "2026-10-30T01:53:09Z",
+  "enabled": true
+ }
 }

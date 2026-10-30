@@ -2,14 +2,27 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "journalist",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, pitches started",
+ "done": [
+  {
+   "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
+  },
+  {
+   "what": "own hourly task at :47 London created, prompt word for word from schedule.json"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start the story pitches"
+   "what": "story pitches: first candidate moments from the source at 298be4e, each with evidence"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_014wS8GpJBGQXkFMitEhmVQw",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwDN4mw1BZGYPbaTcNm",
+  "created": "2026-10-30T01:52:56Z",
+  "enabled": true
+ }
 }

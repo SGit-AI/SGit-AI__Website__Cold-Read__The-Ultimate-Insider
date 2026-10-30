@@ -2,14 +2,27 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-2",
  "as_of": "2026-10-30",
- "round": 0,
- "state": "proposed: waiting for the editor to open its session with the prompt in team/conductor/ONBOARDING.md",
- "done": [],
+ "round": 1,
+ "state": "active: first wake (editor's request), key published, task created, source cloned at 298be4e, review started",
+ "done": [
+  {
+   "what": "session key published: team/reader-2/key.json (sha256:23fc5bbce8529018)"
+  },
+  {
+   "what": "own hourly task at :47 London created, prompt word for word from schedule.json (create.schedule.tenant is not_wanted in policy.json: the editor's direct word in this session authorised it)"
+  }
+ ],
  "next": [
   {
-   "what": "make and publish its session key; create its own hourly task at :47; start a reader review"
+   "what": "reader review, team/reader-2/review.md: build the site from 298be4e and read the talk as a stranger"
   }
  ],
  "asks": [],
- "task": null
+ "task": {
+  "id": "trig_01LEK33UfqHvWxQd7HiYX4Jo",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwE9BQ5X4xzXct42UgE",
+  "created": "2026-10-30T01:53:33Z",
+  "enabled": true
+ }
 }
