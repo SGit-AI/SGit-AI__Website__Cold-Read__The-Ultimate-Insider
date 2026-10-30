@@ -218,11 +218,11 @@ For the signed version, every decision this map has found open at `298be4e`. The
 | O7 | `conductor-notes.md` ranks itself above the editor's briefs; the record does not say the editor agreed | 5 |
 | O8 | no written rule on who may release to the default branch | 12 |
 | O9 | the live Linux slide: the editor's words in two sessions disagree (a link at 17:16, iframes at 17:20); the later shipped, built before its plan and pre-review, and no review checked security's conditions of 17:2x | 14, 16 |
+| O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
 | O11 | the source's security role was never held: every security verdict is a sub-agent in another member's wake | 16 |
 | O12 | the five steps gave way to the editor's presence three times, with no recorded waiver | 19 |
 | O13 | two wakes (dev 17:47, deck 18:19) never closed | 19 |
 | O14 | answers 2, 4 and 6 of 17:15 not traced to a file by this map | 17, 21 |
-| O10 | `BRIEF-CORRECTIONS.md` says "None yet" though the frame changed at 15:00 | 4 |
 
 ## Next steps
 

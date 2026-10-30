@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "governance.md: section 21 (decisions of 15:00), open list last as section 22 (O1 to O14), signed at the head; debrief, status.json; gate clean; comms/ untouched",
    "at": "2026-10-30T08:34:44Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4 files under team/grc/** only; comms/ unchanged; only a public fingerprint; no secrets, personal details or directive text; gate clean; agents check 0 outside scope.",
+   "at": "2026-10-30T08:35:23Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "partial",
+   "comment": "1 no requests; 2 section 21 done, but answers 2, 4, 6 of 17:15 not traced (recorded as O14); 3 open list last, signed, debrief, status done; conditions kept. Unplanned: O10 out of order in the list (fixed in this wake before close).",
+   "at": "2026-10-30T08:35:23Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T08:35:23Z",
+ "outcome": "ok"
 }
