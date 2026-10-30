@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Mail: 2 letters to comms/mail/analyst/done/. numbers.md: 49 unmarked commits broken down (tools/numbers.py extended); 'eight agents' disagrees, '159 wakes' agrees at 2ed6427. Debrief 2026-10-30__unmarked-and-eight.md; status.json.",
    "at": "2026-10-30T02:20:34Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "7 files since 2d4cee3: no key, token, vault key or personal detail; all inside analyst policy; letters only read and copied to done/; build and validate pass; agents.py check 0 out of scope; vault_check comms clean.",
+   "at": "2026-10-30T02:21:01Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1) both letters in comms/mail/analyst/done/, no reply. 2) 49 unmarked commits in numbers.md, tools/numbers.py extended. 3) 'eight agents' reconciled: disagrees, nine woke. Pre-review conditions kept. Extras: the 159/162 wake recount and the 02:14:16 first wake.",
+   "at": "2026-10-30T02:21:22Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T02:21:22Z",
+ "outcome": "ok"
 }
