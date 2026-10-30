@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "grc",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T06:32:49Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none (conductor__005 in done/; no board, requests or To-grc: trailers). 2. governance.md step 6: answers 2, 4, 6, 7 of 17:15, the 15:00 decisions and security's review of the live slides against the files at 298be4e; cited or 'the record does not say'; unsigned. 3. status.json and a debrief with timings. All inside team/grc/**.",
+   "at": "2026-10-30T06:33:09Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside team/grc/**; no holds, other members' paths, shared rules, gate or dev touched; no key, later commit or live site; no stop condition. Conditions: cite 298be4e or 'the record does not say'; no em-dashes; keep unsigned; vault_check if comms touched; push to dev after the gate.",
+   "at": "2026-10-30T06:33:21Z"
+  },
+  "work": {
+   "by": "grc",
+   "model": "",
+   "verdict": "done",
+   "comment": "governance.md step 6 (sections 16 to 18, O9 revised, O11 added); debrief, status.json; gate clean; comms/ untouched",
+   "at": "2026-10-30T06:34:29Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "4 files under team/grc/** only; comms/ unchanged; gate clean; agents check 0 outside scope; no key, token, secret or contact detail; no directive text or em-dashes; no other member affected.",
+   "at": "2026-10-30T06:34:56Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "1 no requests; 2 governance.md sections 16 to 18 (7790a64); 3 status.json and sixth-wake debrief; conditions kept; all in team/grc/**; push to dev follows the close.",
+   "at": "2026-10-30T06:34:56Z"
+  }
+ },
+ "closed": "2026-10-30T06:34:56Z",
+ "outcome": "ok"
+}
