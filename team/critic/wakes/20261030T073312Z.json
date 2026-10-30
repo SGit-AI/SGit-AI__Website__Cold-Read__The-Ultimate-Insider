@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "critic",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T07:33:12Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. Idle wake, first of two quiet wakes: since a9c7ba7 only status.json files, wake records and finished-notes between other members and the conductor changed; none of the deliverables changed. Mailroom holds only 006, already in done/; board empty; no requests, no To-critic: commits. 2. Edit only team/critic/status.json (quiet wake 1 of 2) and the wake record; no finish yet.",
+   "at": "2026-10-30T07:33:40Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan is an idle wake (quiet wake 1 of 2): edit only team/critic/status.json and the wake record, both inside scope.writes. No deliverable change, no mail, no secrets, no cross-member effect, no stop condition. Conditions: touch nothing outside team/critic/**; do not finish or pause the task yet; push to dev only.",
+   "at": "2026-10-30T07:33:55Z"
+  },
+  "work": {
+   "by": "critic (this session)",
+   "model": "",
+   "verdict": "none",
+   "comment": "idle: quiet wake 1 of 2; nothing new (no mail, no request, no deliverable changed since a9c7ba7); status.json updated",
+   "at": "2026-10-30T07:33:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
