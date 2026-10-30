@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "journalist",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T04:48:47Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. No requests (notice 007 in done/, no board, no requests files, no To-journalist: trailers, no HOLD). 2. pitches part 4 in team/journalist/pitches.md: one or two pitches (the 19 releases in 89 minutes, the freezes) with path@298be4e evidence or 'the record does not say'. 3. Debrief with finding times in team/journalist/debriefs/, status.json. All inside scope.",
+   "at": "2026-10-30T04:49:08Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside scope.writes (team/journalist/**); no stop condition. Conditions: cite only 298be4e, path@commit or 'the record does not say'; no em-dashes; no keys, tokens or contact details; no other member's paths; gate before dev, never main.",
+   "at": "2026-10-30T04:49:25Z"
+  },
+  "work": {
+   "by": "journalist",
+   "model": "",
+   "verdict": "done",
+   "comment": "pitches.md part 4: pitch 6 ('and not one hold', beat m03 at 17:25 against the 18:44 hold), counts checked at 298be4e; debrief with screenshot, status.json. All inside team/journalist/**. Gate clean.",
+   "at": "2026-10-30T04:50:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

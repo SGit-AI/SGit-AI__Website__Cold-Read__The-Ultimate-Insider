@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "journalist",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: scheduled wake 03:47 UTC, pitch 5 shipped (the brake nobody pulled); five of five to ten pitches",
+ "round": 4,
+ "state": "active: scheduled wake 04:48 UTC, pitch 6 shipped ('and not one hold'); six of five to ten pitches",
  "done": [
   {
    "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
@@ -22,11 +22,14 @@
   },
   {
    "what": "pitches.md part 3: pitch 5, a brake any agent could pull, from 162 wake records at 298be4e"
+  },
+  {
+   "what": "pitches.md part 4: pitch 6, the opening line 'and not one hold' set at 17:25, the hold at 18:44"
   }
  ],
  "next": [
   {
-   "what": "one to three more pitches (the night in numbers; the freezes), then the closing debrief and finishing as WAKE.md says"
+   "what": "review all six pitches against 298be4e once more; at most one more; then the closing debrief and finishing as WAKE.md says"
   }
  ],
  "asks": [],
