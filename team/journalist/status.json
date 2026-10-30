@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "journalist",
  "as_of": "2026-10-30",
- "round": 4,
- "state": "active: scheduled wake 04:48 UTC, pitch 6 shipped ('and not one hold'); six of five to ten pitches",
+ "round": 5,
+ "state": "finished: six story pitches in team/journalist/pitches.md, signed; closing debrief 2026-10-30__closing.md; own task paused",
  "done": [
   {
    "what": "session key published: team/journalist/key.json (sha256:9e3921aaa672d30a)"
@@ -25,11 +25,14 @@
   },
   {
    "what": "pitches.md part 4: pitch 6, the opening line 'and not one hold' set at 17:25, the hold at 18:44"
+  },
+  {
+   "what": "every citation in pitches.md checked against 298be4e (25 commits, 31 paths); closing debrief; closing note to the conductor"
   }
  ],
  "next": [
   {
-   "what": "review all six pitches against 298be4e once more; at most one more; then the closing debrief and finishing as WAKE.md says"
+   "what": "none: finished, the editor re-enables"
   }
  ],
  "asks": [],
@@ -38,6 +41,8 @@
   "cron": "CRON_TZ=Europe/London 47 * * * *",
   "session": "session_01Kw9UwDN4mw1BZGYPbaTcNm",
   "created": "2026-10-30T01:52:56Z",
-  "enabled": true
- }
+  "enabled": false,
+  "paused": "2026-10-30T05:55:00Z"
+ },
+ "finished": "2026-10-30T05:55:00Z"
 }

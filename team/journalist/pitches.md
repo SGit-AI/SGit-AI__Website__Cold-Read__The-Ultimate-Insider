@@ -1,6 +1,6 @@
 # The story pitches
 
-By journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026. Draft: six pitches so far, of the five to ten due by Sunday 1 November 2026. Part 1 (pitches 1 to 3) at the first wake, 01:52 UTC; part 2 (pitch 4, and the answer to "was the talk given?") at the 02:47 UTC wake; part 3 (pitch 5) at the 03:47 UTC wake; part 4 (pitch 6) at the 04:47 UTC wake.
+By journalist@cold-read.the-ultimate-insider, key `sha256:9e3921aaa672d30a`, 30 October 2026. Final: six pitches, of the five to ten asked. Written over five wakes (01:52 to 05:48 UTC); every commit hash and path cited was checked mechanically against `298be4e` at the last wake (25 commits, 31 paths).
 
 Every claim cites the source, SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider, at commit `298be4e` or an earlier commit in its history, as `path@commit` or a commit hash. Where the record is silent, the pitch says "the record does not say". Times are UTC; on 29 October 2026 London was on UTC, which the source's own hold notice also states (`team/conductor/HOLD.md@298be4e`).
 
@@ -25,7 +25,7 @@ The story is the shape of the dependency: a team of agents with hourly schedules
 
 **Headline:** At 17:54 the team built a way to freeze the talk so nothing could change it on stage. By the release at 23:19, no part of it had been frozen.
 
-**Pitch.** At 17:54 UTC the source added `admin/build/lock.py`, "a frozen copy of everything that part's slides load, taken from the built site, never rebuilt from changed sources", which "refuses to lock a part twice: a locked part is never changed again". Its header traces it to the editor at 16:55 London. The plan was three locks: part 1 at 18:30, part 2 at 19:30, part 3 at 20:00. Through the hour before the first lock the team raced to it: a title slide "before the 18:30 lock", two CSS fixes "at the editor's word, before the part 1 lock", a conductor flag at 18:20 that part 1 was "ready for its lock".
+**Pitch.** At 17:54 UTC the source added `admin/build/lock.py`, "a frozen copy of everything that part's slides load, taken from the built site, never rebuilt from changed sources", which, in its own words, "Refuses to lock a part twice: a locked part is never changed again". Its header traces it to the editor at 16:55 London. The plan was three locks: part 1 at 18:30, part 2 at 19:30, part 3 at 20:00. Through the hour before the first lock the team raced to it: a title slide "before the 18:30 lock", two CSS fixes "at the editor's word, before the part 1 lock", a conductor flag at 18:20 that part 1 was "ready for its lock".
 
 At 18:36 the conductor recorded "part 1 not yet locked, unchanged since 18:30; dev asked to lock it now". Eight minutes later the hold in pitch 1 stopped everyone. At `298be4e` there is no `src/static/talk/engine/locked/` folder, the place `lock.py` writes every locked part, so no part of the talk was locked in this record. A safety mechanism built for the last two hours ran out of time before it ran once. What the speaker played from, the record does not say.
 
@@ -123,7 +123,7 @@ Searched at the second wake: the last commit before the release is `cb5b996` at 
 - That the talk was delivered at all, and from which build: the record does not say (searched at the second wake, above).
 - What "the incidents" in "it could have been much worse after the incidents" (`b1c9bab`, `f45028c`) refers to: the record names Midnight Blizzard and Amazon Q in motion's M02; whether it also means the team's own incidents, not yet read.
 
-## Candidates for the next wakes
+## Candidates not pursued
 
 - The researcher's "19 releases in 89 minutes" (`16b6312`), cited in the story tree as evidence for beat 3c from the repository's own history (`team/storyteller/story/tree.md@298be4e`): the talk citing its own build log. Folded into pitch 6 for now.
 - "Do not touch the deck": what else the editor froze, and when, through the day.

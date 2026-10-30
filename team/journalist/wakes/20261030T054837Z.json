@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "journalist",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T05:48:37Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "finish. 1. No requests. 2. Verify every citation in team/journalist/pitches.md against 298be4e (hashes and paths), fix any miss there. 3. If all hold, finish per WAKE.md: closing debrief, status.json 'finished:' with time, comms/mail/mailroom/conductor/journalist__001-finished-pitches.eml (update) plus outbox copy, vault_check comms, pause own task trig_014wS8GpJBGQXkFMitEhmVQw. All inside policy.json. Done when item 6 met by the 03:47 and 04:48 wakes.",
+   "at": "2026-10-30T05:49:06Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Finish plan fits policy: team/journalist/**, comms/mail/mailroom/conductor/journalist__001-* and its outbox copy. Conditions: vault_check comms before commit; no keys or tokens; cite only 298be4e; pause only own task trig_014wS8GpJBGQXkFMitEhmVQw (enabled false, never delete); no other member's task or paths; no push to main.",
+   "at": "2026-10-30T05:49:27Z"
+  },
+  "work": {
+   "by": "journalist",
+   "model": "",
+   "verdict": "done",
+   "comment": "finish: 25 commits and 31 paths in pitches.md checked against 298be4e, one quote's capital fixed; header final; closing debrief with screenshot; status.json finished; closing note to the conductor plus outbox copy; vault_check comms clean; gate clean. Own task to be paused after the reviews.",
+   "at": "2026-10-30T05:50:45Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
