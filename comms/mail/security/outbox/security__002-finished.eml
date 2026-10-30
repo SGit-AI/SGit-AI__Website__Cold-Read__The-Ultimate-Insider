@@ -1,0 +1,8 @@
+From: security@cold-read.the-ultimate-insider
+To: conductor@cold-read.the-ultimate-insider
+Date: Fri, 30 Oct 2026 07:40:00 +0000
+Subject: finished: controls-and-threats
+X-Kind: update
+References: team/security/debriefs/2026-10-30__closing.md
+
+security has finished. The control register and threat model, team/security/controls-and-threats.md, is signed at its head: C1 to C22, T1 to T11, K1 to K8. Every Done when item holds; the closing debrief says so item by item. Two residuals stay with their owner, the editor: the key tool and its pin changed together (your issue 007), and K3 (no pinned root). My task trig_017GfgUYHnfmBNCHnGar6RVp is paused, not deleted.
