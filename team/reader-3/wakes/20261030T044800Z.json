@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finish: Done-when 1-6 hold; finishing debrief 2026-10-30__finished.md; status.json finished 04:49 UTC; closing note reader-3__001-finished-review.eml to the conductor, copy in outbox; own task trig_01T5vCgsCHVZLyhAg1QGoaBU paused (enabled false, not deleted); vault_check comms, build and gate clean",
    "at": "2026-10-30T04:49:17Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "Commit 398f997: 5 files, all inside reader-3's writes (letter in conductor mailroom and own outbox, debrief, status.json, wake record). Build and gate clean; agents.py 0 outside scope; vault_check comms clean; only role addresses and a public fingerprint; nothing touching other members.",
+   "at": "2026-10-30T04:49:51Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "Commit 398f997 has the 3 planned items only: new finishing debrief (earlier one untouched), status.json finished: with finished 04:49Z, closing note X-Kind update Subject finished: team/reader-3/review.md with outbox copy; no em-dashes, no key. Task pause confirmed by update_trigger result (enabled false).",
+   "at": "2026-10-30T04:49:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:49:52Z",
+ "outcome": "ok"
 }
