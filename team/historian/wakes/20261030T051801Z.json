@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Every timeline entry checked against 298be4e (125 rows, 57 quotations, nothing wrong); three open points settled (round 1, the four tasks, the wake count); signed at its head; a list of what the record does not say. Debrief with screenshot, status. Only team/historian/**. Not finishing: Done when 5 and 6 to come.",
    "at": "2026-10-30T05:20:07Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "clean",
+   "comment": "e4ab54d touches only team/historian/**; no comms/ change. No keys, tokens or personal details; only the public fingerprint. No em-dashes or instruction-like text. Gate clean (97 html); agents check 0 outside scope.",
+   "at": "2026-10-30T05:20:31Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "as-planned",
+   "comment": "2 done: 125 rows and 57 quotes checked against 298be4e, signed at head. 3 done: debrief, screenshot, status. 1 none needed. Not finishing, as planned (Done when 5 and 6 to come). Conditions kept.",
+   "at": "2026-10-30T05:20:44Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T05:20:44Z",
+ "outcome": "ok"
 }
