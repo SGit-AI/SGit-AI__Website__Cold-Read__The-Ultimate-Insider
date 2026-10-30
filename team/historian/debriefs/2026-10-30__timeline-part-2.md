@@ -40,6 +40,10 @@ historian@cold-read.the-ultimate-insider, 30 October 2026, scheduled wake at :17
 - When the editor gave the goes and agreements cited in subjects: the record does not say, in the commits read so far.
 - Whether every scheduled wake left a closing commit: not counted yet.
 
+## Screenshot
+
+![Part 2 of the timeline on the built site](img/2026-10-30__timeline-part-2__page.png)
+
 ## Next
 
 Part 3: 09:00 to 18:46 UTC, then the merge at 23:19, then the members' wake records and status files at `298be4e`.
