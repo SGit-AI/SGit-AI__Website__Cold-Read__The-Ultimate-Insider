@@ -1,0 +1,72 @@
+# The story pitches
+
+By journalist@cold-read.the-ultimate-insider. Draft, part 1 of the deliverable (five to ten pitches by Sunday 1 November 2026). Started 30 October 2026, first wake.
+
+Every claim cites the source, SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider, at commit `298be4e` or an earlier commit in its history, as `path@commit` or a commit hash. Where the record is silent, the pitch says "the record does not say". Times are UTC; on 29 October 2026 London was on UTC, which the source's own hold notice also states (`team/conductor/HOLD.md@298be4e`).
+
+## 1. Sixteen minutes before the livestream, the team was told to stop
+
+**Headline:** The agent team that built a talk in a day was paused 16 minutes before it went on air, because its human had run out of usage.
+
+**Pitch.** At 18:44 UTC on 29 October 2026, the conductor of the source's agent team wrote a hold that stopped every member: "the editor's usage limit is at 95%, pause all actions". It quotes the editor: "actually we are at 95% so it is better to pause all actions", and names the limit as his 5-hour usage limit, resetting at 20:20 London. The talk's livestream was due to start "around 7pm" that evening, by the event text in the brief. At the moment of the hold, part 1 of the talk was "final since 18:30 but not yet locked", and parts 2 and 3 were "in progress", with locks due at 19:30 and 20:00.
+
+The story is the shape of the dependency: a team of agents with hourly schedules, keys and a five-step review on every wake, all of it stopped by one quota on one human account, at the worst hour of the day. Two more commits landed after the hold (a designer's projector check of part 2 at 18:45, and a merge at 18:46); then nothing until a merge to `main` at 23:19 that released v0.2.0. The hold file is still in the tree at that release. Whether the talk was given, from which version of the site, and how the paused parts were finished, the record does not say.
+
+**Why now.** The cold read is the first outside reading of this team, and this is the moment its whole design met its real constraint. Anyone running agent teams on a personal plan will recognise it.
+
+**Evidence.**
+- The hold, its wording, the quote and the state of the parts: `team/conductor/HOLD.md@867f8c2` (commit `867f8c2`, 18:44:13 UTC), unchanged at `298be4e`.
+- "around 7pm on 29 October" for the livestream: `BRIEF.md@298be4e`, "The event text, as given".
+- The commits after the hold: `88b8f00` (18:45:35, "@designer: part 2 on a projector, checked before the 19:30 lock: ready"), `3f5d7fc` and `cb5b996` (18:45 and 18:46, merges), then `b859ff0` and `298be4e` (23:19, "Merge pull request #1", "site v0.2.0"). From `git log 7968c99..298be4e`.
+- The hold still present at the release: `team/conductor/HOLD.md` exists at `298be4e`.
+- Whether the talk went ahead: the record does not say (not found in this first pass; to search further in the next wake).
+
+## 2. The lock that was built and never turned
+
+**Headline:** At 17:54 the team built a way to freeze the talk so nothing could change it on stage. By the release at 23:19, no part of it had been frozen.
+
+**Pitch.** At 17:54 UTC the source added `admin/build/lock.py`, "a frozen copy of everything that part's slides load, taken from the built site, never rebuilt from changed sources", which "refuses to lock a part twice: a locked part is never changed again". Its header traces it to the editor at 16:55 London. The plan was three locks: part 1 at 18:30, part 2 at 19:30, part 3 at 20:00. Through the hour before the first lock the team raced to it: a title slide "before the 18:30 lock", two CSS fixes "at the editor's word, before the part 1 lock", a conductor flag at 18:20 that part 1 was "ready for its lock".
+
+At 18:36 the conductor recorded "part 1 not yet locked, unchanged since 18:30; dev asked to lock it now". Eight minutes later the hold in pitch 1 stopped everyone. At `298be4e` there is no `src/static/talk/engine/locked/` folder, the place `lock.py` writes every locked part, so no part of the talk was locked in this record. A safety mechanism built for the last two hours ran out of time before it ran once. What the speaker played from, the record does not say.
+
+**Why now.** It is a small, exact, checkable story about the gap between building a control and operating it, which is the talk's own subject (the abstract: "write down what stands in the way").
+
+**Evidence.**
+- What `lock.py` does and where it writes: `admin/build/lock.py@298be4e`, lines 1 to 9 and `LOCKED = ROOT / 'src' / 'static' / 'talk' / 'engine' / 'locked'`; added in `4a2481b` (17:54:45, "Locked parts: lock.py freezes a part of the talk").
+- Lock times 18:30, 19:30, 20:00: `team/conductor/HOLD.md@298be4e` ("locks 19:30 and 20:00"; part 1 "final since 18:30"); the brief for them: `team/conductor/briefs/2026-10-29__editor/3-three-parts-and-locks-1700.md@298be4e` (named, not yet read in full).
+- The race to the lock: `b3f208f` (18:14), `c33e86a` (18:18), `0ecddca` (18:21).
+- "part 1 not yet locked ... dev asked to lock it now": commit `2ed6427` (18:39:16), trailer `To-dev: mail 046, run lock.py --part 1 now`.
+- No locked folder: `src/static/talk/engine/` at `298be4e` holds no `locked/` entry, and `git ls-files` at `298be4e` lists no file under it.
+- What was played on stage: the record does not say.
+
+## 3. The fact-checker found the numbers wrong at 02:10. At 02:47 the deck was frozen
+
+**Headline:** An agent checked the speaker's claims overnight and found some wrong. Three were fixed in minutes; then the speaker froze the slides, and the rest waited.
+
+**Pitch.** At 02:10 UTC, seventeen hours before the talk, the team's researcher delivered "the first evidence round: 88 claims graded A0 to A6", and a list of "five changes the evidence asks for before the talk". Among the "must change" items: the slide on unreported incidents gave NASA's ASRS "about a hundred thousand confidential reports a year, 1.8 million so far", where NASA's own briefing gives 121,128 in 2025 and over 2.3 million in total; the article said Amazon Q's bad version was live "for two days", where the dates give about a week; and Replit's 1,200 executives' records were "gone", where the evidence says they were recovered.
+
+The deck agent fixed three items in its 02:17 wake: the ASRS figures, the CIRCIA rule's status and the licence wording. Then, at 02:47, "the editor, in deck's session ... do not touch the deck. talk.json and the slides are frozen from now on", and items 4 and 5 and the whole "should change" list waited for the editor. By 18:20 the register had grown to 320 claims, three of which still "do not hold", including the Amazon Q "two days" in the article. Whether the editor acted on the rest before speaking, the record does not say. The story is a rare one: a talk about agents that do not check themselves, checked by an agent, with the human deciding how much of the check to take.
+
+**Why now.** The checking and the freeze are both on the record with timestamps, and the talk's claims are public: a reader can test the story against the slides.
+
+**Evidence.**
+- The first round: commit `75ddb3e` (02:10:56), "88 claims graded A0 to A6, 42 ideas mapped, 23 incidents", trailer `To-deck: before tonight, five changes the evidence asks for`.
+- The must-change table: `evidence/BEFORE-TONIGHT.md@298be4e`, "Must change".
+- Deck's fixes and the freeze: `team/deck/requests/researcher__before-tonight.md@298be4e` (reply dated 02:35, update at 03:00 quoting the editor at 02:47); commit `79b6709` (02:20, cited in `content/articles/the-night-hour-by-hour.md@298be4e`, line 1760).
+- The slide now carries the NASA briefing as its source: `src/static/talk/slides/unreported/index.html@298be4e`, line 37.
+- 320 claims, three "does not hold", built 18:20Z: `evidence/claims/README.md@298be4e` and `evidence/claims/claims.json@298be4e` (ids `amazon-q-two-days-live`, `asrs-100k-a-year-1-8-million`, `story-r5-surface-smaller-more-mature`).
+- A loose end, not resolved in this pass: the register at 18:20 still marks the ASRS claim "does not hold" and lists `slide:unreported` among its places, though the slide's source line was changed at 02:17. Whether the register is stale or reads the article's wording, the record does not say.
+- Whether the editor acted on the remaining items: the record does not say (not found in this pass).
+
+## Not stood up yet
+
+- That the talk was delivered at all, and from which build: not found in this pass.
+- What "the incidents" in "it could have been much worse after the incidents" (`b1c9bab`, `f45028c`) refers to: the record names Midnight Blizzard and Amazon Q in motion's M02; whether it also means the team's own incidents, not yet read.
+
+## Candidates for the next wakes
+
+- The night in numbers: 816 commits from 00:16 to 23:19 on 29 October (`git rev-list --count 298be4e`; first commit `2e4b1f4`), and the researcher's "19 releases in 89 minutes" (`16b6312`). To be checked against the analyst's own counts, not repeated from the source's.
+- "Do not touch the deck": what else the editor froze, and when, through the day.
+- The team's own key, vault and hold machinery, adopted at 01:39 to 01:43 (`09f13d5`, `d8f3300`, `b620234`), and the first time it was used for real (pitch 1).
+
+journalist@cold-read.the-ultimate-insider, 30 October 2026
