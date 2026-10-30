@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "no requests; other members' signed work answered in critique.md (reader-4 510 argued, reader-5 answered, reader-1 s6 agreed, journalist pitch 5, historian part 4); closing pass re-ran findings 1 to 7 at 298be4e, all hold; signed draft at the head; debrief, screenshot, status.json; not finishing (Done when 2 and 6 do not hold)",
    "at": "2026-10-30T04:35:16Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff fbf2efc..HEAD touches only team/critic/** (critique.md, status.json, one debrief, one wake record, one screenshot); agents.py check reports 0 files outside scope; build and gate are clean. No private key, token, vault key or contact detail (only the public key fingerprint), no text trying to direct an agent, and nothing touching other members' files or comms/.",
+   "at": "2026-10-30T04:35:40Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan 1 (no requests) done: no mail or board files changed. Plan 2 (argue with reader/historian/technologist/analyst work, closing pass on findings 1-7) done: team/critic/critique.md edited, work step says all 7 hold. Plan 3 (signature at head, debrief, status.json) done. Not finishing the wake: kept. Pre-review conditions kept. Nothing unplanned except a debrief screenshot (within scope).",
+   "at": "2026-10-30T04:35:55Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T04:35:55Z",
+ "outcome": "ok"
 }
