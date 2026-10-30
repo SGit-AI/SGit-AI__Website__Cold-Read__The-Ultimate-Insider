@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "grc",
  "as_of": "2026-10-30",
- "round": 3,
- "state": "active: third wake (scheduled), governance map steps 1 to 3 on dev",
+ "round": 4,
+ "state": "active: fourth wake (scheduled), governance map steps 1 to 4 on dev",
  "done": [
   {
    "what": "session key published: team/grc/key.json (sha256:6cda488564949dfa)"
@@ -19,11 +19,14 @@
   },
   {
    "what": "governance.md step 3: the editor's decision register (11 of 12 open at 298be4e), the hold of 18:44 never lifted in the record"
+  },
+  {
+   "what": "governance.md step 4: D07, D10, D11; who may release to the default branch; section 6 corrected"
   }
  ],
  "next": [
   {
-   "what": "governance map step 4: D07, D10, D11; the briefs' decisions against members' files; who could release to the default branch"
+   "what": "governance map step 5: the briefs' decisions against members' files; one numbered list of open decisions for the signed version"
   }
  ],
  "asks": [],
