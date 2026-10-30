@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "critic",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-30T09:33:08Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. No request; mail holds only conductor__006 (in done/), board empty, no To-critic: commits. The signed grc map changes nothing a finding relies on: finding 7 cites answer 1, O9 and section 19, all unchanged (the diff adds only the signed header, section 21, O14 and the renumbered list). 2. Idle wake, quiet wake 1 of 2: edit only team/critic/status.json and the wake record; critique.md untouched, no debrief.",
+   "at": "2026-10-30T09:33:36Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan is an idle wake: edits only team/critic/status.json and the wake record, both inside scope.writes. No mail, no request, nothing outside scope or in the never list, no secrets, no cross-member effect, no stop condition. Conditions: keep critique.md untouched; run the gate; push to dev only.",
+   "at": "2026-10-30T09:33:48Z"
+  },
+  "work": {
+   "by": "critic (this session)",
+   "model": "",
+   "verdict": "none",
+   "comment": "idle: quiet wake 1 of 2; the grc map signed (section 21, O14, renumbered list) changes nothing a finding relies on; status.json updated",
+   "at": "2026-10-30T09:33:48Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
