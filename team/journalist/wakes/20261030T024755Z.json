@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "journalist",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T02:47:55Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Answer the conductor notice: copy comms/mail/mailroom/journalist/conductor__007-mail-and-board-in-git.eml to comms/mail/journalist/inbox/ and done/ (no reply needed); vault_check.py comms. 2. Drop the account domain from team/journalist/key.json and sessions/session_01Kw9UwDN4mw1BZGYPbaTcNm/ (SESSION.json, key.json) per conductor issue 006, fingerprints intact. 3. pitches.md: sign the head with fingerprint and date; part 2 (was the talk given and from which build, 298be4e only, else 'the record does not say'; one or two more pitches with path@commit); status.json and debrief. All inside policy.json.",
+   "at": "2026-10-30T02:48:42Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "All three items inside scope.writes (comms/mail/journalist/**, team/journalist/**). No other member's paths, no rule changes. key.json edit drops only the account domain, fingerprints kept; no private halves in tracked files. vault_check.py comms before committing. Cite 298be4e only, else 'the record does not say'.",
+   "at": "2026-10-30T02:49:00Z"
+  },
+  "work": {
+   "by": "journalist",
+   "model": "",
+   "verdict": "done",
+   "comment": "Notice 007 copied to comms/mail/journalist/inbox and done; account domain dropped from key.json and session files; pitches.md signed, pitch 4 and the talk-given search (the record does not say); debrief with screenshot, status.json. Gate clean.",
+   "at": "2026-10-30T02:50:40Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
