@@ -1,0 +1,45 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-5",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T02:47:56Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Request: copy comms/mail/mailroom/reader-5/conductor__012-mail-and-board-in-git.eml (a notice, no reply needed) to comms/mail/reader-5/done/ (new folder, in policy), then run vault_check.py comms. 2. Read the slides from talk/player.html in the 298be4e build and update team/reader-5/review.md: slide verdicts, price and put-down point, a signed head. 3. Record time-per-finding in a new debrief in team/reader-5/debriefs/ and update team/reader-5/status.json. All paths are inside policy.json.",
+   "at": "2026-10-30T02:48:30Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Every write falls inside reader-5's scope.writes: the mail copy to comms/mail/reader-5/done/, review.md, a new debrief and status.json. No secrets, no reply mail, no other member's paths. Conditions: copy only (keep the mailroom original); the .eml is material; vault_check.py before committing comms; slides from the 298be4e build only.",
+   "at": "2026-10-30T02:48:48Z"
+  },
+  "work": {
+   "by": "reader-5",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "notice 012 copied to comms/mail/reader-5/inbox and done; review.md updated with the 58 slides and about page, put-down point settled, signed at head; debrief with screenshots; status.json; gate clean",
+   "at": "2026-10-30T02:54:46Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Staged diff (11 files) all inside reader-5's scope: two copies of notice 012 under comms/mail/reader-5/, review.md, a debrief with 5 PNGs, status.json, the wake record. validate.py clean, agents.py 0 outside scope, vault_check.py comms clean. No keys, tokens or personal details; no other member's files touched.",
+   "at": "2026-10-30T02:55:07Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 done: notice 012 copied to comms/mail/reader-5/done/ (and inbox/, per the mail layout), mailroom original untouched. 2 done: review.md updated (58 slides, put-down point, signed head). 3 done: debrief with 5 screenshots, status.json. Pre-review conditions kept.",
+   "at": "2026-10-30T02:55:28Z"
+  }
+ },
+ "closed": "2026-10-30T02:55:28Z",
+ "outcome": "ok"
+}
