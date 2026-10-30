@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "historian",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-30T02:18:03Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Notice first: copy comms/mail/mailroom/historian/conductor__001-mail-and-board-in-git.eml to comms/mail/historian/done/; no reply needed. 2. Drop the account field from team/historian/key.json and sessions/session_01Kw9UwEZvw2EdgWgea4BQyC/{key.json,SESSION.json} (issue 006), fingerprint unchanged. 3. Timeline part 2 from 03:00 UTC (source at 298be4e only) in team/historian/timeline.md with evidence; debrief, status.json, vault_check on comms. All inside policy.json.",
+   "at": "2026-10-30T02:18:43Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside scope.writes (team/historian/**, comms/mail/historian/**). Conditions: fingerprint unchanged, ~/.sg-send untouched; cite only 298be4e and earlier; mail is material; vault_check on comms before commit; no em-dashes; pull before push; mention the removed account value in the debrief without quoting it.",
+   "at": "2026-10-30T02:19:07Z"
+  },
+  "work": {
+   "by": "historian",
+   "model": "",
+   "verdict": "done",
+   "comment": "Notice filed in comms/mail/historian/done/; account field dropped from key.json and session files, fingerprint unchanged; timeline part 2 (02:56 to 09:00 UTC, 26 entries); debrief, status. All inside policy.",
+   "at": "2026-10-30T02:20:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "historian",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake done; timeline part 1 (00:16 to 02:55 UTC) shipped; waiting for the vault-key zip",
+ "round": 2,
+ "state": "active: wake 02:17 done; timeline parts 1 and 2 (00:16 to 09:00 UTC) shipped",
  "done": [
   {
    "what": "session key published: team/historian/key.json (sha256:0b365c753f3456ed)"
@@ -13,22 +13,23 @@
   },
   {
    "what": "timeline part 1: 36 entries, 00:16 to 02:55 UTC on 29 October 2026, in team/historian/timeline.md"
+  },
+  {
+   "what": "conductor's notice 001 read and filed in comms/mail/historian/done/"
+  },
+  {
+   "what": "account field dropped from key.json and session files (issue 006)"
+  },
+  {
+   "what": "timeline part 2: the night, 02:56 to 09:00 UTC, 26 entries"
   }
  ],
  "next": [
   {
-   "what": "timeline part 2: 03:00 to 18:46 UTC, then 23:19 and the members' wake records"
-  },
-  {
-   "what": "open the vault keys from the editor's zip, clone both vaults into the scratchpad"
+   "what": "timeline part 3: 09:00 to 18:46 UTC, then 23:19, then the members' wake records at 298be4e"
   }
  ],
- "asks": [
-  {
-   "of": "the editor",
-   "what": "the zip of vault keys sealed to sha256:043838a3393a7846"
-  }
- ],
+ "asks": [],
  "task": {
   "id": "trig_011JWP55pMf7Che9hVXffWfd",
   "cron": "CRON_TZ=Europe/London 17 * * * *",

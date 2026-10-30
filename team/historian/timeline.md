@@ -1,6 +1,6 @@
 # The timeline of the source team
 
-What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: part 1 of the timeline, written 30 October 2026.
+What happened, in what order, from the record. By historian@cold-read.the-ultimate-insider. Draft: parts 1 and 2 of the timeline, written 30 October 2026.
 
 **Source.** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` and its history only, read in a scratchpad clone with every later ref removed. Nothing here comes from anywhere else.
 
@@ -60,8 +60,43 @@ Commits per hour on 29 October (all authors): 00h 12, 01h 32, 02h 60, 03h 74, 04
 | 02:52:11 | deck | The studio programme: fourteen experiments for the editor's morning review. | `60af587` |
 | 02:52:56 | researcher | researcher's policy agreed by the editor. | `a082c52` |
 
+## Part 2: the night, 02:56 to 09:00 UTC, 29 October 2026
+
+From about 03:00 the record settles into an hourly rhythm. The minutes each member wakes at are named in commit subjects: conductor at :02 ("wake 03:02", `8543269`), researcher at :09 ("wake 05:09 opened", `ca69ef9`), deck at :17 (`7cee81d`), ruv-sgit at :32 (`6f4a266`), designer at :39 (`84c98fb`), dev at :47 ("wake of 03:47 closed", `a31c240`). Most wakes end in a commit whose subject records the five verdicts, such as "go, go, done, clean, as-planned" (`f3b60e2`, `64e50b6`, `0d29f01`). Whether every scheduled wake left such a commit: not counted yet; the record does say that designer's 03:39 wake was idle (`09c02ff`). Below, only the events that changed what the team was, did or decided.
+
+| When (UTC) | Who | What | Evidence |
+|---|---|---|---|
+| 02:57 | conductor | "The next hours": a brief, the pace as a graph, the evidence vault listed. `pace.json` appears. | `c531560`: `team/conductor/briefs/2026-10-29__the-next-hours.md`, `team/conductor/pace.json` |
+| 02:57 | ruv-sgit | A studio lab enters ruv-sgit's policy "(the editor's go)"; the B01 storyboard is drafted in run r2-b01-storyboard. | `7a7d4ac`, `ecdcdf9` |
+| 03:05 | conductor | Wake 03:02: "deck's programme is the queue; pace.json mirrors it". | `8543269`: `team/conductor/pace.json`, `team/conductor/wakes/20261029T030304Z.json` |
+| 03:07 to 03:08 | ruv-sgit, deck | Both open their vault keys and start using the board and mail; deck says the programme is agreed with the conductor and E01 with ruv-sgit. | `b5213de`, `983782b`: `src/static/studio/data/programme.json` |
+| 03:10 | conductor | dev's two new asks scheduled; "backlog, then schedule, then execute, for everyone". | `648feee` |
+| 03:16 | researcher | The editor's decisions deck started: "11 things waiting on him"; token-shaped values redacted from captures. | `59ac8ab` |
+| 03:23 | conductor | A brief to onboard designer, at :39, and how design reviews reach dev. | `84c98fb`: `team/conductor/briefs/2026-10-29__onboarding-a-designer.md`, `team/conductor/schedule.json` |
+| 03:27 | conductor | "The night, hour by hour": an article regenerated after each round from the team's records; at 03:29 the night log becomes "a duty of every conductor wake". | `794008c`: `admin/tools/night_log.py`, `content/articles/the-night-hour-by-hour.md`; `3616efc`: `team/conductor/ROLE.md` |
+| 03:34 | dev | A rule: "a push is done when the commit is in origin/dev". The commit body says a rejected push was counted as pushed and two commits stayed off dev until checked. | `6a6be6d`: `team/dev/ROLE.md` |
+| 03:38 to 03:42 | ruv-sgit | E01 agent-evolution, two versions and an explainer, in run r3-e01-agent-evolution. | `90f0b41`, `e8bd87a` |
+| 03:41 | designer | designer joins: role, policy, session key, the :39 task, design note 1 on width. Sixth member in the record, after dev, conductor, deck, ruv-sgit and researcher (part 1). | `c6dcf89`: `team/designer/ROLE.md`, `team/designer/debriefs/2026-10-29__first-design-pass.md` |
+| 03:44 | conductor | Vault keys sealed to designer; dev's schedule sets width at 04:47. | `95d1f66` |
+| 03:51 | dev | The dashboard, part 1: Now and the pace grid. | `ddb0f48`: `admin/build/build.py`, `src/static/assets/dashboard.js` |
+| 04:03 | designer | "The editor agrees designer's policy." | `f448345`: `team/designer/policy.json`, `team/designer/debriefs/2026-10-29__policy-agreed.md` |
+| 04:24, 06:23 | researcher | Cookie values (04:24) and anti-forgery tokens (06:23) redacted from captures, each a post-review finding fixed. | `af0010b`, `f30b73f` |
+| 04:38 to 06:44 | ruv-sgit | B01 v1 (04:42) and v2 (06:44), each a further pass on run r2's kept vault; E02 blast-radius (05:42). | `4582466`, `abe49da`, `eef9079` |
+| 05:23 | researcher | First wake in this window to close `partial`: three E04 cases not yet written; completed at 06:19. | `094b01c`, `bb01179` |
+| 05:51 | dev | Design note 1 built: one frame for every page, a reading measure, card grids. designer checks it "as designed" at 06:45. | `23fde17`, `51b2497` |
+| 07:00 | dev | The mail reader: the team's Email-FS vault as a mail client in the browser. | `db553b5`: `src/static/assets/mail.js` |
+| 07:07 | conductor | The morning review for the editor; the night log's fifth edition. | `3d94be9`: `team/conductor/debriefs/2026-10-29__the-morning-review.md` |
+| 07:18 | researcher | The evidence vault's history checked per commit for the morning review; D12 raised for the editor. | `aa7a3eb`: `evidence/proposals/editor-decisions.json` |
+| 07:23 | deck | B01 v2 reviewed: "keep, ready for the editor". | `45d6f3a` |
+| 07:54 | dev | The embedded vault: each public vault opens on `/admin/vaults.html` (dev 008). | `80101e6`: `src/static/assets/vault-here.js` |
+| 08:20 | researcher | The evidence vault opens in the browser "after about three minutes, measured, and why". | `04cf282` |
+| 08:43 | ruv-sgit | E03 injection-sources v1, run r8 kept. Subject prefix `ruv-sgit:` without the `@` this time. | `15707dc` |
+| 08:44 | designer | Design note 5, the home hero on wide screens; "the first design pass written in full". | `a45f4c8` |
+
+Where the editor was in this window: commit subjects cite the editor's go or agreement (`7a7d4ac`, `f448345`) and dev records "the editor's session of 03:07" and "of 03:20" (`f007b26`, `48daf0f`), but no commit in the window is authored by the editor. When the editor gave each go, the record does not say in the commits read so far.
+
 ## What is still to come
 
-Part 2 onward: 03:00 to 18:46 (the bulk of the record, 710 of its 816 commits), the gap to 23:19, and the merge of pull request #1 into the default branch by the editor at 23:19:09 (`b859ff0`). Then every member's wake records, status files and debriefs at `298be4e`, set against these commits.
+Part 3 onward: 09:00 to 18:46, the gap to 23:19, and the merge of pull request #1 into the default branch by the editor at 23:19:09 (`b859ff0`). Then every member's wake records, status files and debriefs at `298be4e`, set against these commits.
 
 Signed: historian@cold-read.the-ultimate-insider, key `sha256:0b365c753f3456ed` (`team/historian/key.json`).
