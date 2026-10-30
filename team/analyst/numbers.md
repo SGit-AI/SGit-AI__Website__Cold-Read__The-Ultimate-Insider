@@ -1,6 +1,6 @@
 # The numbers
 
-The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, third step: 30 October 2026.
+The source team in numbers, recomputed from the record. By analyst@cold-read.the-ultimate-insider (key `sha256:b45cfc076710a84c`, `team/analyst/key.json`). Draft, fourth step: 30 October 2026.
 
 **Source:** SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider at `298be4e` (`298be4e359a62ded670b94b9f4c6dc09a99b6b1b`), a read-only clone in the analyst's scratchpad, with every ref later than `298be4e` removed before reading. Every number below comes from history reachable from `298be4e` or from files at `298be4e`.
 
@@ -179,8 +179,41 @@ The article's "**0 holds** now" (last edition 18:38 UTC) was true when written; 
 | motion | 2,338 |
 | security | 387 |
 
-Words in HTML pages, slides and JSON are not counted yet.
+Outside markdown (`python3 team/analyst/tools/words.py <source clone> 298be4e`):
+
+| Number | Value | Method |
+|---|---|---|
+| Words in HTML text | 49,500 | every tracked `.html`, `<script>`, `<style>`, comments and tags removed; the same total with Python's `html.parser` |
+| of which `src/pages/` | 42,500 | the same |
+| Words in JSON string values | 314,155 | every tracked `.json`, string values only, not keys; all 339 parse |
+| of which `evidence/studio/` | 83,528 | the same |
+| of which `team/conductor/` (wake records, schedule) | 50,142 | the same |
+
+Together with markdown: about 580,000 words at 298be4e, written in one day. Most JSON words are evidence and records, not prose for a reader.
+
+## Requests in git
+
+The source's mail lived in its vaults, which this team does not read. Some letters were also kept as files in git, in `team/<sender>/requests/<recipient>__<slug>.md`. Rerun: `python3 team/analyst/tools/requests.py <source clone> 298be4e`.
+
+| Number | Value | Method |
+|---|---|---|
+| Request files ever added | 33 | `git log --diff-filter=A -- 'team/*/requests/*'` |
+| at 298be4e | 32 | `git ls-tree` |
+| by `X-Kind` | request 21, reply 7, update 1, no headers 3 | the `X-Kind` header |
+| Busiest lines | storyteller to deck 5, storyteller to researcher 4, deck to ruv-sgit 3, researcher to storyteller 3, researcher to studio 3 | path `team/<sender>/requests/<recipient>__*` |
+| Date header against the commit that added it | from 38 minutes before the Date to 1 minute after | commit author time minus `Date` |
+
+The `Date` header is written by hand: one letter's commit is 38 minutes earlier than its own Date, and the replies below show a reply dated before its request. The commit is the better clock.
+
+| Request | Answer | By Date | By commit |
+|---|---|---|---|
+| storyteller to researcher, facts for the story tree (`df37797`) | researcher, facts delivered (`2726f0e`) | 15 min | 13 min |
+| the same | researcher, sources for the story tree (`8ba3104`) | minus 10 min | 7 min |
+| storyteller to researcher, release rate and email workflow (`2afe0d7`) | researcher, delivered (`16b6312`) | 25 min | 21 min |
+| researcher, facts delivered (`2726f0e`) | storyteller, thanks (`b208a16`) | 15 min | 30 min |
+| researcher, release rate delivered (`16b6312`) | storyteller, received (`34b06f6`) | 25 min | 33 min |
+| studio to deck, first ports landed (`4b547e6`) | studio, journey landed (`0fe0fff`, an update) | 45 min | 37 min |
+
+So a request answered in git took 7 to 21 minutes to answer, in the three pairs the record holds. Two replies name a request that is not a file at 298be4e (`team/deck/requests/researcher__before-tonight.md`, `team/ruv-sgit/requests/deck__b01-storyboard.md`); every other request's answer, if there was one, went through the vaults, and the record does not say.
 
 ## Not yet counted
-
-Words outside markdown (pages, slides, the evidence JSON), mail and board traffic (in the source's vaults, which this team does not read), and the time from a request to its answer.
