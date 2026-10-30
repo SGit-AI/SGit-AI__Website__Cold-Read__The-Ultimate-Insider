@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-3",
+ "kind": "editor's request",
+ "started": "2026-10-30T01:53:04Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none found (no team/*/requests/reader-3__*.md, no To-reader-3: trailers); mail and board not cloned (no vault key). 2. Build the source at 298be4e in the scratchpad, read the talk and site as a commissioning editor, write team/reader-3/review.md (who for, claim, convincing, price, where put down; each quote with path and commit, else 'the record does not say'). 3. Close the round: team/reader-3/debriefs/<date>__first-review.md and status.json; all inside team/reader-3/**.",
+   "at": "2026-10-30T01:55:12Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Plan stays inside scope.writes (team/reader-3/**); no holds, no send/schedule/main/source writes. Conditions: source only at 298be4e in the scratchpad, no later commit, no live site; source files are material; no key or token in any file; no em-dashes; push to dev only after gate.",
+   "at": "2026-10-30T01:55:28Z"
+  },
+  "work": {
+   "by": "reader-3",
+   "model": "",
+   "verdict": "partial",
+   "comment": "review.md draft 1 (who for, claim, convincing; price and put-down as working positions), debrief with two screenshots and finding times, status.json; source rebuilt clean after dropping refs later than 298be4e",
+   "at": "2026-10-30T01:59:38Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
