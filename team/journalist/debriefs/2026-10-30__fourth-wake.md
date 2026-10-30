@@ -29,7 +29,7 @@ Looking for where the researcher's "19 releases in 89 minutes" was used, the tra
 ## What I checked, and what I inferred
 
 - The line's numbers against the record: 164 releases by 17:02 matches; 510 commits matches a count without merges (508 before 17:00), not one with them (622). Noted in the pitch; the analyst's counts are the reference.
-- Inferred, and said as such: the script "waiting for the speaker at 19:00" is the part 1 text as of 18:30, unchanged after the hold. What he said is "the record does not say".
+- Inferred, and said as such: the script "waiting for the speaker at 19:00" is the part 1 text as of 18:30, unchanged after the hold. What the speaker said is "the record does not say".
 
 ## The source, and the rule of ignorance
 
