@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "dated addendum to critique.md (finding 7 unchanged): the deck wake of 17:20 at 298be4e opened 1 s after ef05098, five steps in 25 s, post-review checked keys not security's no-iframe condition; debrief; status.json; not finishing, quiet count restarts",
    "at": "2026-10-30T08:34:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Diff touches only team/critic/** (critique.md addendum, debrief with screenshot, status.json, wake record); build and gate clean, agents.py check 0 files outside scope; no key, token or personal detail, no em-dashes, no text directing an agent.",
+   "at": "2026-10-30T08:35:14Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan items 1-3 all done: no requests, dated addendum under Signed final with finding 7 unchanged citing 298be4e, status.json and debrief updated. Conditions kept: no finish, no task touched, scope held; nothing unplanned.",
+   "at": "2026-10-30T08:35:14Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T08:35:14Z",
+ "outcome": "ok"
 }
