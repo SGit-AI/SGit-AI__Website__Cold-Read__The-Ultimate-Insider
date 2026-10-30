@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "finishing: closing debrief 2026-10-30__closing.md (Done when 1-7 item by item); finished note security__002-finished.eml to the conductor's mailroom with outbox copy; status.json finished 07:34:20Z; own task trig_017GfgUYHnfmBNCHnGar6RVp paused (enabled false), not deleted",
    "at": "2026-10-30T07:34:36Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 1202a52..HEAD: 5 files (own mail to the conductor's mailroom and outbox, closing debrief, status.json, wake record), all in scope. vault_check, build, validate and agents check clean. No keys, tokens, contact details, agent-directing text or em-dashes. status.json shows the task paused.",
+   "at": "2026-10-30T07:35:07Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three items done, nothing unplanned: closing debrief, status.json finished, finished note (X-Kind update) in the conductor's mailroom plus outbox copy, own task paused (enabled false) and recorded. Diff only in team/security/** and the two letter paths.",
+   "at": "2026-10-30T07:35:07Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-30T07:35:07Z",
+ "outcome": "ok"
 }
