@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "analyst",
  "as_of": "2026-10-30",
- "round": 1,
- "state": "active: first wake (editor's request) closed ok; key published, task created, numbers started; waiting for the sealed vault keys",
+ "round": 2,
+ "state": "active: wake 2 (scheduled, 02:17) closed ok; numbers.md second step",
  "done": [
   {
    "what": "session key published: team/analyst/key.json (sha256:b45cfc076710a84c)"
@@ -13,24 +13,23 @@
   },
   {
    "what": "numbers.md first step: commits, authors, agents as marked, hours, releases, members, wakes at 298be4e; tools/numbers.py; debrief 2026-10-30__first-numbers.md"
+  },
+  {
+   "what": "numbers.md: the 49 unmarked commits broken down; the story's 'eight agents' disagrees (nine woke); '159 wakes' agrees at its commit; debrief 2026-10-30__unmarked-and-eight.md"
+  },
+  {
+   "what": "two conductor letters read and copied to comms/mail/analyst/done/"
   }
  ],
  "next": [
   {
-   "what": "numbers: the 49 unmarked non-merge commits, the story's 'eight agents', words, time per wake, reviews, holds"
-  },
-  {
-   "what": "open the sealed vault keys when the editor gives the zip; clone both vaults into the scratchpad"
+   "what": "numbers: words, time per wake, reviews and verdicts (the article's 24), holds"
   }
  ],
  "asks": [
   {
-   "what": "the zip of sealed vault keys (cr-tui-issues-public, cr-tui-mail-public)",
+   "what": "confirm that step 4 of the onboarding prompt (the vault keys) is withdrawn: the conductor's notice says so, the record of the editor's word is in commit 7e13725",
    "of": "the editor"
-  },
-  {
-   "what": "decide on the operator account's domain in other members' key.json and SESSION.json (account field)",
-   "of": "the editor and the conductor"
   }
  ],
  "task": {
