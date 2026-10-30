@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-1",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T04:48:20Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "1. No requests: the one letter is in done/, no board, no requests files, no To-reader-1 trailers. 2. Synthesis not yet due (reader-2 has sections 1 to 3 only): do not write synthesis.md, do not finish (Done 2 and 6 unmet). 3. Update team/reader-1/status.json (state: waiting on reader-2) and the wake record; no other paths.",
+   "at": "2026-10-30T04:48:45Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan updates only team/reader-1/status.json and the wake record; no synthesis.md, no schedule, mail or other members' paths. No secrets, no cross-member harm, no stop condition. Condition: those paths only, dev after the gate, never main, no force-push.",
+   "at": "2026-10-30T04:48:57Z"
+  },
+  "work": {
+   "by": "reader-1",
+   "model": "",
+   "verdict": "done",
+   "comment": "Idle: no requests; reader-2's review is not complete (sections 1 to 3), so no synthesis this wake; status.json says so. No other file changed.",
+   "at": "2026-10-30T04:48:57Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
