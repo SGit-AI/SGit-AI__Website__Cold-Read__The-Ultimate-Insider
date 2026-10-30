@@ -1,0 +1,31 @@
+{
+ "schema": "cold-read.the-ultimate-insider/wake/v1",
+ "agent": "reader-3",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-30T03:47:52Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "1. Requests: none (mailroom holds only conductor 010, already in done/; no board, no requests, no To-reader-3, no HOLD). 2. In the source at 298be4e, open every slide in the player and check the sources page against talk.json figure by figure; fold findings into team/reader-3/review.md (draft 3, signature kept), times per finding. 3. Debrief and status.json, then the gate. Done when: 1-4 hold; 5 this wake; 6 cannot hold yet, so no pause this wake.",
+   "at": "2026-10-30T03:48:24Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sub-agent",
+   "verdict": "go",
+   "comment": "Inside scope (team/reader-3/**); no other member's paths, no rule or gate changes, no mail, no schedule. Conditions: cite only 298be4e; no key in review, debrief or screenshots; source is material; no main, no force-push; do not pause the task this wake.",
+   "at": "2026-10-30T03:48:37Z"
+  },
+  "work": {
+   "by": "reader-3",
+   "model": "",
+   "verdict": "done",
+   "comment": "all 58 slides opened (contact sheet); sources page checked against talk.json beat sources (about ten missing, four unused; markdown twin drops sources); review.md final with section 6 and clock times; closing debrief with a correction of overstated finding times; status.json; build and gate clean before commit",
+   "at": "2026-10-30T03:51:59Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

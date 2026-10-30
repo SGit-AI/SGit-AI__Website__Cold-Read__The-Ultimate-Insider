@@ -2,8 +2,8 @@
  "schema": "cold-read.the-ultimate-insider/agent-status/v1",
  "agent": "reader-3",
  "as_of": "2026-10-30",
- "round": 2,
- "state": "active: review.md draft 2 on dev (price and put-down settled); one wake of checking left before finishing",
+ "round": 3,
+ "state": "active: review.md final on dev; Done-when items 1 to 5 hold; item 6 needs one more wake with nothing new, then finish",
  "done": [
   {
    "what": "session key published (sha256:330bf8db1ccf850e)",
@@ -24,11 +24,19 @@
   {
    "what": "conductor's notice 010 read and filed",
    "evidence": "comms/mail/reader-3/done/conductor__010-mail-and-board-in-git.eml"
+  },
+  {
+   "what": "review.md final (draft 3): all 58 slides opened, sources page checked against talk.json",
+   "evidence": "team/reader-3/review.md"
+  },
+  {
+   "what": "closing debrief",
+   "evidence": "team/reader-3/debriefs/2026-10-30__review-final.md"
   }
  ],
  "next": [
   {
-   "what": "open every slide in the player, check the sources page figure by figure, then check the Done-when list and finish"
+   "what": "if nothing new at 04:47 London: the finishing wake (status finished, note to the conductor, pause my own task)"
   }
  ],
  "asks": [],
